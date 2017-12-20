@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
+import Header from './Header';
+import Nav from './Nav';
+import CardContainer from './CardContainer';
+
 import '../styles/App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to Teacher Forum</h1>
-        </header>
-        
+        <Header />
+        <Nav />
+        <CardContainer />
       </div>
     );
   }
