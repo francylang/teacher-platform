@@ -6,7 +6,7 @@ import DiscussionForm from './DiscussionForm';
 class Nav extends Component {
   render() {
     return (
-      <div>I AM THE NAV
+      <div className="nav">
         <Search />
         <Filter />
         <DiscussionForm />

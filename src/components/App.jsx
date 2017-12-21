@@ -3,16 +3,16 @@ import Header from './Header';
 import Nav from './Nav';
 import CardContainer from './CardContainer';
 
-import '../styles/App.css';
-
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <section className="app">
         <Header />
-        <Nav />
-        <CardContainer />
-      </div>
+        <section className="main">
+          <Nav />
+          <CardContainer />
+        </section>
+      </section>
     );
   }
 }

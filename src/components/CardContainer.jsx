@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import DiscussionCard from './DiscussionCard';
-import Comment from './Comment';
-import CommentForm from './CommentForm';
 
 class CardContainer extends Component {
   render() {
     return (
-      <div>I AM THE CardContainer
+      <div>
+        <h2 className="current-feed-title">Discussions:</h2>
         <DiscussionCard />
-        <Comment />
-        <CommentForm />
+
       </div>
     );
   }

@@ -3,8 +3,9 @@ import React, { Component } from 'react';
 class Search extends Component {
   render() {
     return (
-      <div>I AM THE Search
-      </div>
+      <aside>
+        <input type="text" placeholder="Search for a topic" />
+      </aside>
     );
   }
 }
