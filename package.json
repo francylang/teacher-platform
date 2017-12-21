@@ -19,7 +19,6 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lint": "./node_modules/.bin/eslint ./"
-
   },
   "devDependencies": {
     "babel-eslint": "^8.0.3",
