@@ -17,13 +17,14 @@ class DiscussionForm extends Component {
     });
   }
 
-  handleSubmit() {
+  handleSubmit(event) {
+    event.preventDefault();
     const { title, body } = this.state;
-
-    postNewDiscussion(title, body);
-    this.setState({
-      posted: true,
-    });
+    console.log('submit');
+    // postNewDiscussion(title, body);
+    // this.setState({
+    //   posted: true,
+    // });
   }
 
   render() {
@@ -31,16 +32,30 @@ class DiscussionForm extends Component {
       <article>
         <form action="" method="get">
           <label htmlFor="GET-dicussion-title">Quick Description:
-            <input id="GET-dicussion-title" type="text" name="title" onChange={this.handleChange.bind(this, 'title')} />
+            <input
+              id="GET-dicussion-title"
+              type="text"
+              name="title"
+              onChange={this.handleChange.bind(this, 'title')}
+            />
           </label>
           <label htmlFor="GET-dicussion-body">Detailed Question:
-            <input id="GET-dicussion-body" type="text" name="body" />
+            <input
+              id="GET-dicussion-body"
+              type="text"
+              name="body"
+            />
           </label>
-          <input className="submit-discussion" type="submit" name="submit" />
+          <input
+            className="submit-discussion"
+            type="submit"
+            name="submit"
+            onClick={(event) => this.handleSubmit(event)}
+          />
         </form>
       </article>
-    );
+    )
   }
 }
 
-export default DiscussionForm;
+export default DiscussionForm
