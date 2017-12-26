@@ -13,7 +13,10 @@ class FilterForm extends Component {
   gradeSix() {
     return math6RP.map(standard => {
       return (
-        <p>{standard}</p>
+        <div>
+          <input type="checkbox" id={standard} name={standard} value={standard}></input>
+          <label htmlFor={standard}>{standard}</label>
+        </div>
       );
     })
   };
