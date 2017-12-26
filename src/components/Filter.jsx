@@ -20,12 +20,14 @@ class Filter extends Component {
   };
 
   render() {
+    const checkShowTags = this.state.showingTags ? this.showTags() : null;
+
     return (
       <aside>
         <button onClick={() => this.toggleShowingTags()}>
           Filter
         </button>
-        { this.state.showingTags ? this.showTags() : null }
+        { checkShowTags }
       </aside>
     );
   }
