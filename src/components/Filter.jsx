@@ -9,11 +9,11 @@ class Filter extends Component {
     };
   };
 
-  toggleShowingTags = () => {
+  toggleShowingTags() {
     this.setState({ showingTags: !this.state.showingTags });
   };
 
-  showTags = () => {
+  showTags() {
     return (
       <FilterForm />
     )
