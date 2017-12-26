@@ -9,11 +9,11 @@ class Filter extends Component {
     };
   };
 
-  toggleShowingTags() {
+  toggleShowingTags = () => {
     this.setState({ showingTags: !this.state.showingTags });
   };
 
-  showTags() {
+  showTags = () => {
     return (
       <FilterForm />
     )
@@ -22,7 +22,7 @@ class Filter extends Component {
   render() {
     return (
       <aside>
-        <button onClick={this.toggleShowingTags}>
+        <button onClick={() => this.toggleShowingTags()}>
           Filter
         </button>
         { this.state.showingTags ? this.showTags() : null }

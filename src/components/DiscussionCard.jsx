@@ -30,7 +30,7 @@ class DiscussionCard extends Component {
     return (
       <article className="card">
         <h4>Discussion Topic</h4>
-        <p>Bacon ipsum d t-bone pork meatball. Pancetta ham turkey shankle turducken jerky.</p>
+        <p>Bacon d t-bone pork meatball. Pancetta ham turkey shankle turducken jerky.</p>
         <button onClick={() => this.toggleComments()}>Show/hide comments</button>
         {this.showComments()}
       </article>

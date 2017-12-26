@@ -15,7 +15,7 @@ class CardContainer extends Component {
   };
 
 
-  getDiscussions = async () => {
+  async getDiscussions() {
     try {
       const discussions = await fetchDiscussions();
       this.setState({ discussions })
