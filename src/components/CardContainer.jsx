@@ -10,19 +10,20 @@ class CardContainer extends Component {
     };
   };
 
-  async componentDidMount() {
-    await this.getDiscussions();
+  componentDidMount() {
+    this.getDiscussions();
   };
 
 
   async getDiscussions() {
-    try {
-      const discussions = await fetchDiscussions();
-      this.setState({ discussions })
-    } catch (error) {
-      console.log({ error });
-    }
-    // fetchDiscussions()
+    // try {
+    //   const discussions =  fetchDiscussions();
+    //   console.log('in component: ', discussions);
+    //   this.setState({ discussions })
+    // } catch (error) {
+    //   console.log({ error });
+    // }
+    // await fetchDiscussions()
     //   .then((discussions) => {
     //     discussions.forEach(discussion => {
     //       console.log(discussion);
