@@ -10,15 +10,17 @@ class FilterForm extends Component {
     };
   };
 
-  gradeSix() {
-    return math6RP.map(standard => {
-      return (
-        <div>
-          <input type="checkbox" id={standard} name={standard} value={standard}></input>
-          <label htmlFor={standard}>{standard}</label>
-        </div>
-      );
-    })
+  showOptions(standardsArray) {
+    if (this.state.showingDetails) {
+      return standardsArray.map(standard => {
+        return (
+          <div>
+            <input type="checkbox" id={standard} name={standard} value={standard}></input>
+            <label htmlFor={standard}>{standard}</label>
+          </div>
+        );
+      })
+    }
   };
 
   showMore() {
@@ -26,15 +28,21 @@ class FilterForm extends Component {
   };
 
   render() {
-    const showStandards = this.state.showingDetails ? this.gradeSix() : null;
-
     return (
       <section>
         <h3>Select one or more topics to filter by:</h3>
         <h4>Math 6</h4>
         <button onClick={() => this.showMore()}>show all tags for grade 6</button>
-        { showStandards }
         <p>Ratios and Proportions</p>
+        { this.showOptions(math6RP) }
+        <p>Number System</p>
+        { this.showOptions(math6NS) }
+        <p>Expressions and Equations</p>
+        { this.showOptions(math6EE) }
+        <p>Geomtery and Measurement</p>
+        { this.showOptions(math6G) }
+        <p>Statistics and Probability</p>
+        { this.showOptions(math6SP) }
 
         <h4>Math 7</h4>
         <p>Ratios and Proportions</p>
