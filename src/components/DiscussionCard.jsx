@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import Comment from './Comment';
 import CommentForm from './CommentForm';
+// import { getDiscussions } from '../utils/getDiscussions';
 
 class DiscussionCard extends Component {
-  constructor() {
+  constructor () {
     super();
     this.state = {
       displayingComment: false,
@@ -29,13 +30,12 @@ class DiscussionCard extends Component {
     return (
       <article className="card">
         <h4>Discussion Topic</h4>
-        <p>Bacon ipsum d t-bone pork meatball. Pancetta ham turkey shankle turducken jerky.</p>
+        <p>Bacon d t-bone pork meatball. Pancetta ham turkey shankle turducken jerky.</p>
         <button onClick={() => this.toggleComments()}>Show/hide comments</button>
         {this.showComments()}
       </article>
     );
   }
 }
-
 
 export default DiscussionCard;
