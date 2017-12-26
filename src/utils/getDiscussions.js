@@ -13,4 +13,4 @@ const cleanDiscussions = rawDiscussions => {
       tagId: discussion.tagId,
     };
   });
-};
+}
