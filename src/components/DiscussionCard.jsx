@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import Comment from './Comment';
 import CommentForm from './CommentForm';
+// import { getDiscussions } from '../utils/getDiscussions';
 
 class DiscussionCard extends Component {
-  constructor() {
+  constructor () {
     super();
     this.state = {
       displayingComment: false,
@@ -36,6 +37,5 @@ class DiscussionCard extends Component {
     );
   }
 }
-
 
 export default DiscussionCard;
