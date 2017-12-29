@@ -3,8 +3,8 @@ import Trie from '../utils/Trie';
 // import discussion database
 
 class Search extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.trie = {};
 
     this.state = {
@@ -12,7 +12,8 @@ class Search extends Component {
       suggestions: []
     }
     this.trie = new Trie()
-    // this.trie.populate(this.state.suggestions)
+    console.log();
+    this.trie.populate(this.props.discussions)
     this.handleClick = this.handleClick.bind(this)
     this.handleChange = this.handleChange.bind(this)
   }
@@ -34,7 +35,7 @@ class Search extends Component {
 
   render() {
     const { handleSearch, discussions } = this.props;
-console.log(discussions);
+    console.log(discussions);
     return (
       <aside>
         <input
@@ -42,7 +43,7 @@ console.log(discussions);
           type="text"
           placeholder="Search for a topic"
         />
-        <button onClick={this.handleClick}></button>
+        <button onClick={this.handleClick} discussions={discussions}></button>
       </aside>
     );
   }
