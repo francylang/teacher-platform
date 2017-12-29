@@ -28,7 +28,6 @@ class App extends Component {
   }
 
   cleanDiscussions(rawDiscussions) {
-    console.log('in clean!!!');
     return rawDiscussions.map(discussion => {
       // console.log(discussion);
       return {
@@ -40,7 +39,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state);
     return (
       <section className="app">
         <Header />

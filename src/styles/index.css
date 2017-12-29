@@ -3,6 +3,7 @@
 @import url(./Nav.css);
 @import url(./CardContainer.css);
 @import url(./DiscussionCard.css);
+@import url(./FilterForm.css);
 @import url(./normalize.css);
 body {
   margin: 0;
