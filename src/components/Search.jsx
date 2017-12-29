@@ -20,15 +20,16 @@ class Search extends Component {
   handleChange(event) {
     console.log('handleChange');
     // const keywordSuggestions = this.trie.suggest(event.target.value)
+    console.log(event.target.value);
     this.setState({
       userInput: event.target.value,
       suggestions: []
     });
   }
 
-  handleClick() {
-    console.log('in handle click');
-    this.props.handleSearch();
+  handleClick(discussion) {
+    this.props.handleSearch(this.state.userInput);
+    console.log(this.state.userInput);
   }
   // onChange search discussion database
   // set state - userInput = event.target, suggestions = stuff from database that has the same letters

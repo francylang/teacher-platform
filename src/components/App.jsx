@@ -38,13 +38,12 @@ class App extends Component {
     });
   }
 
-  handleSearch(discussions) {
-    console.log('in handle search');
-    this.fetchDiscussions(discussions)
-    console.log(discussions);
+  handleSearch() {
+    this.fetchDiscussions()
   }
 
   render() {
+    // console.log(this.state.discussions.map(discussion => discussion.body))
     return (
       <section className="app">
         <Header />
