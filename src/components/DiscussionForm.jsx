@@ -29,7 +29,8 @@ class DiscussionForm extends Component {
 
   render() {
     return (
-      <article>
+      <article className="discussion-form">
+        <h3>ASK A QUESTION!</h3>
         <form action="" method="get">
           <label htmlFor="GET-dicussion-title">Quick Description:
             <input
