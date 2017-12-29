@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { postNewDiscussion } from '../utils/postDiscussion';
+import '../styles/index.css'
 
 class DiscussionForm extends Component {
   constructor() {
