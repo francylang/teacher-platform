@@ -10,11 +10,12 @@ class App extends Component {
     this.state = {
       discussions: [],
     };
+    this.fetchDiscussions = this.fetchDiscussions.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
   }
 
   componentDidMount() {
     this.fetchDiscussions();
-    console.log('fetchDiscussions');
   }
 
   fetchDiscussions() {
@@ -23,14 +24,12 @@ class App extends Component {
       .then((rawDiscussions) => this.cleanDiscussions(rawDiscussions))
       .then((discussions) => this.setState({
         discussions
-      }, () => console.log(this.state)))
+      }))
       .catch((error) => console.error({ error }));
   }
 
   cleanDiscussions(rawDiscussions) {
-    console.log('in clean!!!');
     return rawDiscussions.map(discussion => {
-      // console.log(discussion);
       return {
         title: discussion.title,
         body: discussion.body,
@@ -39,13 +38,20 @@ class App extends Component {
     });
   }
 
+  handleSearch(discussions) {
+    console.log('in handle search');
+    this.fetchDiscussions(discussions)
+    console.log(discussions);
+  }
+
   render() {
-    console.log(this.state);
     return (
       <section className="app">
         <Header />
         <section className="main">
-          <Nav />
+          <Nav
+            handleSearch={this.handleSearch}
+          />
           <CardContainer discussions={this.state.discussions}/>
         </section>
       </section>
