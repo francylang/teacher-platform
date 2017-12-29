@@ -5,11 +5,13 @@ import DiscussionForm from './DiscussionForm';
 
 class Nav extends Component {
   render() {
-    const { handleSearch } = this.props
+    const { handleSearch, discussions } = this.props
 
     return (
       <div className="nav">
-        <Search handleSearch={handleSearch}/>
+        <Search
+          handleSearch={handleSearch}
+          discussions={discussions}/>
         <Filter />
         <DiscussionForm />
       </div>

@@ -12,15 +12,13 @@ class Search extends Component {
       suggestions: []
     }
     this.trie = new Trie()
-    // this.trie.populate()
+    // this.trie.populate(this.state.suggestions)
     this.handleClick = this.handleClick.bind(this)
     this.handleChange = this.handleChange.bind(this)
   }
 
   handleChange(event) {
-    console.log('handleChange');
-    // const keywordSuggestions = this.trie.suggest(event.target.value)
-    console.log(event.target.value);
+    // const keywordSuggestions = this.trie.suggest(event.target.value);
     this.setState({
       userInput: event.target.value,
       suggestions: []
@@ -35,8 +33,8 @@ class Search extends Component {
   // set state - userInput = event.target, suggestions = stuff from database that has the same letters
 
   render() {
-    const { handleSearch } = this.props;
-
+    const { handleSearch, discussions } = this.props;
+console.log(discussions);
     return (
       <aside>
         <input

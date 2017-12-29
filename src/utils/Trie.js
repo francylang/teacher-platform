@@ -6,10 +6,12 @@ export default class Trie {
     this.wordCount = 0;
   }
 
-  populate(discussions) {
-    const discussionsArray = discussions.data;
+  populate(suggestions) {
+    console.log(suggestions);
+    const discussionsArray = suggestions;
     discussionsArray.forEach(discussion => {
       this.insert(discussion);
+      console.log(discussion);
     });
   }
 
@@ -17,7 +19,6 @@ export default class Trie {
     if (!this.root) {
       this.root = new Node();
     }
-
     let currentNode = this.root;
 
     [...string.toLowerCase()].forEach((letter, index, array) => {
@@ -60,6 +61,7 @@ export default class Trie {
 
   findNode(string) {
     let currentNode = this.root;
+    console.log(this.root);
 
     [...string.toLowerCase()].forEach((letter) => {
       if (currentNode !== undefined) {
@@ -77,7 +79,7 @@ export default class Trie {
       let completeWord = string.toLowerCase() + letter;
 
       if (currentNode.children[letter].isWord) {
-        suggestionsArray.push( {word: completeWord, frequency: currentNode.children[letter].frequency, mostRecent: currentNode.children[letter].mostRecent} );
+        suggestionsArray.push({word: completeWord, frequency: currentNode.children[letter].frequency, mostRecent: currentNode.children[letter].mostRecent});
       }
       completeWord = this.findChildrenWords(completeWord, currentNode.children[letter], suggestionsArray);
     });
@@ -88,8 +90,8 @@ export default class Trie {
     return array.sort((a, b) => {
       return b.frequency - a.frequency || b.mostRecent - a.mostRecent
     })
-    .map(object => object.word)
-    .slice(0, 5);
+      .map(object => object.word)
+      .slice(0, 5);
   }
 
   select(selection) {

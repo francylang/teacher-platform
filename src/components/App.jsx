@@ -50,6 +50,7 @@ class App extends Component {
         <section className="main">
           <Nav
             handleSearch={this.handleSearch}
+            discussions={this.state.discussions}
           />
           <CardContainer discussions={this.state.discussions}/>
         </section>
