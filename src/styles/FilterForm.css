@@ -1,2 +1,9 @@
-.standard-checkbox {
-  outline: 1px solid magenta; }
+#R, #S, #T, #G, #E, #F {
+  outline: 2px solid yellow; }
+
+.options-container {
+  outline: 1px solid blue; }
+
+.options {
+  background-color: pink;
+  display: inline-block; }
