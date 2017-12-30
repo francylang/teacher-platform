@@ -90,6 +90,10 @@ export const math6SP = [
   "6.SP.B.5",
 ];
 
+export const mathSixStandards = [
+  math6RP, math6NS, math6EE, math6G, math6SP
+];
+
 export const mathSeven = [
   "Ratios & Proportions",
   "7.RP.A.1",
@@ -122,21 +126,21 @@ export const mathSeven = [
   "7.SP.C.8",
 ];
 
-export const math7RP = [
+const math7RP = [
   "Ratios & Proportions",
   "7.RP.A.1",
   "7.RP.A.2",
   "7.RP.A.3",
 ];
 
-export const math7NS = [
+const math7NS = [
   "The Number System",
   "7.NS.A.1",
   "7.NS.A.2",
   "7.NS.A.3",
 ];
 
-export const math7EE = [
+const math7EE = [
   "Expressions & Equations",
   "7.EE.A.1",
   "7.EE.A.2",
@@ -144,7 +148,7 @@ export const math7EE = [
   "7.EE.A.4",
 ];
 
-export const math7G = [
+const math7G = [
   "Geometry & Measurement",
   "7.G.A.1",
   "7.G.A.2",
@@ -154,7 +158,7 @@ export const math7G = [
   "7.G.B.6",
 ];
 
-export const math7SP = [
+const math7SP = [
   "Statistics & Probability",
   "7.SP.A.1",
   "7.SP.A.2",
@@ -164,6 +168,10 @@ export const math7SP = [
   "7.SP.C.6",
   "7.SP.C.7",
   "7.SP.C.8",
+];
+
+export const mathSevenStandards = [
+  math7RP, math7NS, math7EE, math7G, math7SP
 ];
 
 export const mathEight = [
@@ -248,4 +256,8 @@ export const math8SP = [
   "8.SP.A.2",
   "8.SP.A.3",
   "8.SP.B.4",
+];
+
+export const mathEightStandards = [
+  math8NS, math8F, math8EE, math8G, math8SP
 ];

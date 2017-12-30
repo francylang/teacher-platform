@@ -5,5 +5,6 @@
   outline: 1px solid blue; }
 
 .options {
-  background-color: pink;
-  display: inline-block; }
+  outline: 1px solid white;
+  display: inline-block;
+  widht: 100%; }

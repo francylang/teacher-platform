@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { math6RP, math6NS, math6EE, math6G, math6SP, math7RP, math7NS, math7EE, math7G, math7SP, math8NS, math8EE, math8F, math8G, math8SP, mathSix, mathSeven, mathEight } from '../utils/standards';
+import FilterSection from './FilterSection';
+import { mathSixStandards, mathSevenStandards, mathEightStandards } from '../utils/standards';
 
 class FilterForm extends Component {
   constructor() {
@@ -14,21 +15,30 @@ class FilterForm extends Component {
 
   showOptions(standardsArray, state) {
     if (state) {
-      return standardsArray.map(standard => {
-        let firstChar = standard.charAt(0);
-        if (firstChar === '6' || firstChar === '7' || firstChar === '8') {
-          return (
-            <div className="standard-checkbox" id={firstChar} >
-              <input type="checkbox" id={standard} name={standard} value={standard}></input>
-              <label htmlFor={standard}>{standard}</label>
-            </div>
-          );
-        } else {
-          return (
-            <h4>{standard}</h4>
-          );
-        }
-      });
+      return standardsArray.map(domainArray => {
+        return (
+          <FilterSection
+            domain={domainArray}
+            key={state}/>
+        );
+        // if (state) {
+        //   return domainArray.map(standard => {
+        //     let firstChar = standard.charAt(0);
+        //     if (firstChar === '6' || firstChar === '7' || firstChar === '8') {
+        //       return (
+        //         <div className="standard-checkbox" id={firstChar} >
+        //           <input type="checkbox" id={standard} name={standard} value={standard}></input>
+        //           <label htmlFor={standard}>{standard}</label>
+        //         </div>
+        //       );
+        //     } else {
+        //       return (
+        //         <h4>{standard}</h4>
+        //       );
+        //     }
+        //   });
+        // }
+      })
     }
   };
 
@@ -37,12 +47,10 @@ class FilterForm extends Component {
   };
 
   showMath7Tags() {
-    console.log('show math 7');
     this.setState({ showingMath6: false, showingMath7: true, showingMath8: false });
   };
 
   showMath8Tags() {
-    console.log('show math 8');
     this.setState({ showingMath6: false, showingMath7: false, showingMath8: true });
   };
 
@@ -61,16 +69,15 @@ class FilterForm extends Component {
         </button>
         <section className="options-container">
           <article className="options">
-            { this.showOptions(mathSix, this.state.showingMath6) }
+            { this.showOptions(mathSixStandards, this.state.showingMath6) }
           </article>
           <article className="options">
-            { this.showOptions(mathSeven, this.state.showingMath7) }
+            { this.showOptions(mathSevenStandards, this.state.showingMath7) }
           </article>
           <article className="options">
-            { this.showOptions(mathEight, this.state.showingMath8) }
+            { this.showOptions(mathEightStandards, this.state.showingMath8) }
           </article>
         </section>
-
         <button>FIND discussions based on what I checked!!</button>
       </section>
     );

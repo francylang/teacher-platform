@@ -14,7 +14,6 @@ class App extends Component {
 
   componentDidMount() {
     this.fetchDiscussions();
-    console.log('fetchDiscussions');
   }
 
   fetchDiscussions() {
@@ -29,7 +28,6 @@ class App extends Component {
 
   cleanDiscussions(rawDiscussions) {
     return rawDiscussions.map(discussion => {
-      // console.log(discussion);
       return {
         title: discussion.title,
         body: discussion.body,
