@@ -67,14 +67,13 @@ class App extends Component {
       showingForm: false,
       showingStandards: true,
     });
-
+  }
+  
   handleSearch() {
     this.fetchDiscussions()
   }
 
   render() {
-<<<<<<< HEAD
-=======
     const { showingDiscussions, showingForm, showingStandards } = this.state;
     const showDiscussions = showingDiscussions
       ? <CardContainer
@@ -87,7 +86,6 @@ class App extends Component {
     const showStandards = showingStandards
       ? <FilterForm rendered={this.state.showingStandards}/> : null;
 
->>>>>>> 53dbf0b8cb2e94a5f128ca68c3eeec3f0d3c6d1f
     return (
       <section className="app">
         <Header />
@@ -100,13 +98,10 @@ class App extends Component {
             discussions={this.state.discussions}
           />
           <section className="bottom-main">
-<<<<<<< HEAD
             <CardContainer discussions={this.state.discussions}/>
-=======
             { showDiscussions }
             { showForm }
             { showStandards }
->>>>>>> 53dbf0b8cb2e94a5f128ca68c3eeec3f0d3c6d1f
           </section>
         </article>
       </section>
