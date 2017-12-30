@@ -3,8 +3,17 @@
   width: 30%;
 }
 
+.toggle-discussion-form-btn {
+  background-color: #302E32;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .new-discussion-option {
   padding-right: 10px;
+  color: #fff;
 }
 
 .form {
@@ -35,13 +44,14 @@
   color: #fff;
   width: 100%;
   text-align: center;
+  margin: 7.5px 0;
 }
 
-// .down-arrow {
-//   width: 15px;
-//   height: 15px;
-//   background-image: url(../assets/down.svg);
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-// }
+.down-arrow {
+  width: 15px;
+  height: 15px;
+  background-image: url(../assets/down.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

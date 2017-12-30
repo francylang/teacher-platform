@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Header from './Header';
 import Nav from './Nav';
 import CardContainer from './CardContainer';
-import DiscussionForm from './DiscussionForm';
 // import { fetchDiscussions } from '../utils/getDiscussions';
 
 class App extends Component {
@@ -43,7 +42,6 @@ class App extends Component {
           <Nav />
           <section className="bottom-main">
             <CardContainer discussions={this.state.discussions}/>
-            <DiscussionForm />
           </section>
         </article>
       </section>

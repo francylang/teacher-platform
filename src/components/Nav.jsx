@@ -9,7 +9,7 @@ class Nav extends Component {
       <div className="nav">
         <Search />
         <Filter />
-        <h3 className="sign-out">Sign Out</h3>
+        <DiscussionForm />
       </div>
     );
   }
