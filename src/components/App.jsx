@@ -20,9 +20,7 @@ class App extends Component {
     fetch('http://localhost:3000/api/v1/discussions')
       .then((response) => response.json())
       .then((rawDiscussions) => this.cleanDiscussions(rawDiscussions))
-      .then((discussions) => this.setState({
-        discussions
-      }, () => console.log(this.state)))
+      .then((discussions) => this.setState({ discussions }))
       .catch((error) => console.error({ error }));
   }
 
@@ -40,10 +38,12 @@ class App extends Component {
     return (
       <section className="app">
         <Header />
-        <section className="main">
+        <article className="main">
           <Nav />
-          <CardContainer discussions={this.state.discussions}/>
-        </section>
+          <section className="bottom-main">
+            <CardContainer discussions={this.state.discussions}/>
+          </section>
+        </article>
       </section>
     );
   }

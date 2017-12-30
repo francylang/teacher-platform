@@ -1,2 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu+Mono");
 .nav {
-  background-color: coral; }
+  background-color: #fafafa;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2%;
+  background-color: #302E32; }

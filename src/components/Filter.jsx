@@ -23,9 +23,12 @@ class Filter extends Component {
     const checkShowTags = this.state.showingTags ? this.showTags() : null;
 
     return (
-      <aside>
-        <button onClick={() => this.toggleShowingTags()}>
-          Select Standards
+      <aside className="filter-section">
+        <button
+          className="filter-btn"
+          onClick={() => this.toggleShowingTags()}>
+          <p className="standard-option">Standards</p>
+          <div className="down-arrow"></div>
         </button>
         { checkShowTags }
       </aside>
