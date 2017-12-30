@@ -9,7 +9,6 @@ class Nav extends Component {
       <div className="nav">
         <Search />
         <Filter />
-        <DiscussionForm />
       </div>
     );
   }

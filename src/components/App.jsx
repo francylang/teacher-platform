@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './Header';
 import Nav from './Nav';
 import CardContainer from './CardContainer';
+import DiscussionForm from './DiscussionForm';
 // import { fetchDiscussions } from '../utils/getDiscussions';
 
 class App extends Component {
@@ -20,9 +21,7 @@ class App extends Component {
     fetch('http://localhost:3000/api/v1/discussions')
       .then((response) => response.json())
       .then((rawDiscussions) => this.cleanDiscussions(rawDiscussions))
-      .then((discussions) => this.setState({
-        discussions
-      }, () => console.log(this.state)))
+      .then((discussions) => this.setState({ discussions }))
       .catch((error) => console.error({ error }));
   }
 
@@ -40,10 +39,13 @@ class App extends Component {
     return (
       <section className="app">
         <Header />
-        <section className="main">
+        <article className="main">
           <Nav />
-          <CardContainer discussions={this.state.discussions}/>
-        </section>
+          <section className="bottom-main">
+            <CardContainer discussions={this.state.discussions}/>
+            <DiscussionForm />
+          </section>
+        </article>
       </section>
     );
   }
