@@ -15,29 +15,12 @@ class FilterForm extends Component {
 
   showOptions(standardsArray, state) {
     if (state) {
-      return standardsArray.map(domainArray => {
+      return standardsArray.map((domainArray, i) => {
         return (
           <FilterSection
             domain={domainArray}
-            key={state}/>
+            key={i}/>
         );
-        // if (state) {
-        //   return domainArray.map(standard => {
-        //     let firstChar = standard.charAt(0);
-        //     if (firstChar === '6' || firstChar === '7' || firstChar === '8') {
-        //       return (
-        //         <div className="standard-checkbox" id={firstChar} >
-        //           <input type="checkbox" id={standard} name={standard} value={standard}></input>
-        //           <label htmlFor={standard}>{standard}</label>
-        //         </div>
-        //       );
-        //     } else {
-        //       return (
-        //         <h4>{standard}</h4>
-        //       );
-        //     }
-        //   });
-        // }
       })
     }
   };
