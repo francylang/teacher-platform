@@ -10,7 +10,6 @@ class CardContainer extends Component {
   };
 
   render() {
-    console.log(this.props);
     return (
       <div className="card-section">
         <h2 className="current-feed-title">Discussions:</h2>
