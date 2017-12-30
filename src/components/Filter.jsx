@@ -25,7 +25,7 @@ class Filter extends Component {
     return (
       <aside>
         <button onClick={() => this.toggleShowingTags()}>
-          Filter
+          Select Standards
         </button>
         { checkShowTags }
       </aside>
