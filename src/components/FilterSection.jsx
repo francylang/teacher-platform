@@ -7,9 +7,17 @@ class FilterSection extends Component {
 
       if (firstChar === '6' || firstChar === '7' || firstChar === '8') {
         return (
-          <div className="standard-checkbox">
-            <input type="checkbox" id={standard} name={standard} value={standard}></input>
-            <label htmlFor={standard}>{standard}</label>
+          <div className="standard-checkbox pretty p-default p-curve p-fill">
+            <input
+              type="checkbox"
+              id={standard}
+              name={standard}
+              value={standard}
+            >
+            </input>
+            <label htmlFor={standard}>
+              {standard}
+            </label>
           </div>
         );
       } else {

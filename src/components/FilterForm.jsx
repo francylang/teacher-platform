@@ -26,21 +26,37 @@ class FilterForm extends Component {
   };
 
   showMath6Tags() {
-    this.setState({ showingMath6: true, showingMath7: false, showingMath8: false });
+    this.setState({
+      showingMath6: true,
+      showingMath7: false,
+      showingMath8: false,
+    });
   };
 
   showMath7Tags() {
-    this.setState({ showingMath6: false, showingMath7: true, showingMath8: false });
+    this.setState({
+      showingMath6: false,
+      showingMath7: true,
+      showingMath8: false,
+    });
   };
 
   showMath8Tags() {
-    this.setState({ showingMath6: false, showingMath7: false, showingMath8: true });
+    this.setState({
+      showingMath6: false,
+      showingMath7: false,
+      showingMath8: true,
+    });
   };
 
   render() {
+    const { showingMath6, showingMath7, showingMath8 } = this.state;
+
     return (
       <section>
-        <h3>Click on a grade level tab to choose standard(s):</h3>
+        <h3>
+          Click on a grade level tab to choose standard(s):
+        </h3>
         <button onClick={() => this.showMath6Tags()}>
           Grade 6
         </button>
@@ -52,16 +68,18 @@ class FilterForm extends Component {
         </button>
         <section className="options-container">
           <article className="options">
-            { this.showOptions(mathSixStandards, this.state.showingMath6) }
+            { this.showOptions(mathSixStandards, showingMath6) }
           </article>
           <article className="options">
-            { this.showOptions(mathSevenStandards, this.state.showingMath7) }
+            { this.showOptions(mathSevenStandards, showingMath7) }
           </article>
           <article className="options">
-            { this.showOptions(mathEightStandards, this.state.showingMath8) }
+            { this.showOptions(mathEightStandards, showingMath8) }
           </article>
         </section>
-        <button>FIND discussions based on what I checked!!</button>
+        <button>
+          FIND discussions based on what I checked!!
+        </button>
       </section>
     );
   }
