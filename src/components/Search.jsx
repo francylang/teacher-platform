@@ -3,8 +3,9 @@ import React, { Component } from 'react';
 class Search extends Component {
   render() {
     return (
-      <aside>
-        <input type="text" placeholder="Search for a topic" />
+      <aside className="search-section">
+        <label htmlFor="search-input"></label>
+        <input type="text" id="search-input" placeholder="Search discussions..." ></input>
       </aside>
     );
   }

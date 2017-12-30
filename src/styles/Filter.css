@@ -1,0 +1,17 @@
+.filter-btn {
+  background-color: #fafafa;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+.standard-option {
+  padding-right: 10px; }
+
+.down-arrow {
+  width: 15px;
+  height: 15px;
+  background-image: url(../assets/down.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
