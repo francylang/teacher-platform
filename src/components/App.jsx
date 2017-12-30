@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Header from './Header';
 import Nav from './Nav';
 import CardContainer from './CardContainer';
+import DiscussionForm from './DiscussionForm';
+import FilterForm from './FilterForm';
 // import { fetchDiscussions } from '../utils/getDiscussions';
 
 class App extends Component {
@@ -9,7 +11,13 @@ class App extends Component {
     super();
     this.state = {
       discussions: [],
+      showingDiscussions: false,
+      showingForm: true,
+      showingStandards: false,
     };
+    this.renderStandards = this.renderStandards.bind(this);
+    this.renderForm = this.renderForm.bind(this);
+    this.renderDiscussions = this.renderDiscussions.bind(this);
   }
 
   componentDidMount() {
@@ -27,6 +35,7 @@ class App extends Component {
   cleanDiscussions(rawDiscussions) {
     return rawDiscussions.map(discussion => {
       return {
+        id: discussion.id,
         title: discussion.title,
         body: discussion.body,
         tagId: discussion.tagId,
@@ -34,14 +43,56 @@ class App extends Component {
     });
   }
 
+  renderDiscussions(event) {
+    this.setState({
+      showingDiscussions: true,
+      showingForm: false,
+      showingStandards: false,
+    });
+  }
+
+  renderForm(event) {
+    this.setState({
+      showingDiscussions: false,
+      showingForm: true,
+      showingStandards: false,
+    });
+  }
+
+  renderStandards(event) {
+    this.setState({
+      showingDiscussions: false,
+      showingForm: false,
+      showingStandards: true,
+    });
+  }
+
   render() {
+    const { showingDiscussions, showingForm, showingStandards } = this.state;
+    const showDiscussions = showingDiscussions
+      ? <CardContainer
+        discussions={this.state.discussions}
+        rendered={this.state.showingDiscussions}/> : null;
+
+    const showForm = showingForm
+      ? <DiscussionForm rendered={this.state.showingForm}/> : null;
+
+    const showStandards = showingStandards
+      ? <FilterForm rendered={this.state.showingStandards}/> : null;
+
     return (
       <section className="app">
         <Header />
         <article className="main">
-          <Nav />
+          <Nav
+            renderStandards={this.renderStandards}
+            renderForm={this.renderForm}
+            renderDiscussions={this.renderDiscussions}
+          />
           <section className="bottom-main">
-            <CardContainer discussions={this.state.discussions}/>
+            { showDiscussions }
+            { showForm }
+            { showStandards }
           </section>
         </article>
       </section>

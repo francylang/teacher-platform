@@ -4,7 +4,39 @@
   border: 1px solid black;
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-between;
-  padding: 0 2%;
+  align-items: center;
   background-color: #302E32; }
+
+#search-input {
+  padding: 1% 1% 1% 2.5%;
+  background-image: url(../assets/search.svg);
+  background-size: 7.5%;
+  background-repeat: no-repeat;
+  background-position: 5%;
+  border: none;
+  border-radius: 4px;
+  background-color: rgba(74, 72, 76, 0.5); }
+
+.filter-btn {
+  background-color: #302E32;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+.standard-option {
+  padding-right: 10px;
+  color: #fff; }
+
+.toggle-discussion-form-btn,
+.toggle-discussions-btn {
+  background-color: #302E32;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+.new-discussion-option {
+  padding-right: 10px;
+  color: #fff; }
