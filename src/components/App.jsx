@@ -10,6 +10,8 @@ class App extends Component {
     this.state = {
       discussions: [],
     };
+    this.fetchDiscussions = this.fetchDiscussions.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
   }
 
   componentDidMount() {
@@ -20,7 +22,13 @@ class App extends Component {
     fetch('http://localhost:3000/api/v1/discussions')
       .then((response) => response.json())
       .then((rawDiscussions) => this.cleanDiscussions(rawDiscussions))
+<<<<<<< HEAD
       .then((discussions) => this.setState({ discussions }))
+=======
+      .then((discussions) => this.setState({
+        discussions
+      }))
+>>>>>>> search
       .catch((error) => console.error({ error }));
   }
 
@@ -34,12 +42,19 @@ class App extends Component {
     });
   }
 
+  handleSearch() {
+    this.fetchDiscussions()
+  }
+
   render() {
     return (
       <section className="app">
         <Header />
         <article className="main">
-          <Nav />
+          <Nav
+            handleSearch={this.handleSearch}
+            discussions={this.state.discussions}
+          />
           <section className="bottom-main">
             <CardContainer discussions={this.state.discussions}/>
           </section>
