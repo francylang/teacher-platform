@@ -43,7 +43,7 @@ class App extends Component {
     });
   }
 
-  renderDiscussions(event) {
+  renderDiscussions() {
     this.setState({
       showingDiscussions: true,
       showingForm: false,
@@ -51,7 +51,7 @@ class App extends Component {
     });
   }
 
-  renderForm(event) {
+  renderForm() {
     this.setState({
       showingDiscussions: false,
       showingForm: true,
@@ -59,7 +59,7 @@ class App extends Component {
     });
   }
 
-  renderStandards(event) {
+  renderStandards() {
     this.setState({
       showingDiscussions: false,
       showingForm: false,
