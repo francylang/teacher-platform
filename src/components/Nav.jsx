@@ -14,9 +14,9 @@ class Nav extends Component {
           onClick={() => this.props.renderStandards()}
           className="filter-btn"
         >
-          <p className="standard-option">
+          <h4 className="standard-option">
             Standards
-          </p>
+          </h4>
         </button>
         <button
           onClick={() => this.props.renderForm()}
