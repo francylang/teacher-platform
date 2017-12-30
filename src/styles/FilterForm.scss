@@ -17,10 +17,14 @@
 }
 
 .standard-checkbox {
-  // width: 40%;
+  margin: 4px;
 }
 
-path {
-  stroke: white;
-  fill: white;
+.icon {
+  background-image: url(../assets/check.svg);
+  height: 5px;
+  width: 5px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
 }

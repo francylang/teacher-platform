@@ -9,6 +9,13 @@
   flex-direction: row;
   align-items: flex-start; }
 
-path {
-  stroke: white;
-  fill: white; }
+.standard-checkbox {
+  margin: 4px; }
+
+.icon {
+  background-image: url(../assets/check.svg);
+  height: 5px;
+  width: 5px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none; }
