@@ -26,6 +26,10 @@ class App extends Component {
     this.fetchDiscussions();
   }
 
+  handleSearch() {
+    this.fetchDiscussions()
+  }
+
   fetchDiscussions() {
     fetch('http://localhost:3000/api/v1/discussions')
       .then((response) => response.json())
@@ -67,9 +71,6 @@ class App extends Component {
       showingForm: false,
       showingStandards: true,
     });
-      
-  handleSearch() {
-    this.fetchDiscussions()
   }
 
   render() {

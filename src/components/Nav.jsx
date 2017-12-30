@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
+import Search from './Search';
 
 class Nav extends Component {
   render() {
     const { handleSearch, discussions } = this.props
     return (
       <div className="nav">
-        <label htmlFor="search-input"></label>
-        <input
-          type="text"
-          id="search-input"
-          placeholder="Search discussions..." >
-        </input>
+        <Search
+          handleSearch={handleSearch}
+          discussions={discussions}
+        />
         <button
           onClick={() => this.props.renderStandards()}
           className="filter-btn"
@@ -35,11 +34,6 @@ class Nav extends Component {
             All Discussions
           </h4>
         </button>
-        <Search
-          handleSearch={handleSearch}
-          discussions={discussions}/>
-        <Filter />
-        <DiscussionForm />
       </div>
     );
   }
