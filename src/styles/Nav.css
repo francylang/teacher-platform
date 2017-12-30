@@ -6,9 +6,10 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2%; }
+  padding: 0 2%;
+  background-color: #302E32; }
 
 .sign-out {
-  color: #000;
+  color: #fff;
   margin: 0;
   font-family: 'Ubuntu Mono'; }

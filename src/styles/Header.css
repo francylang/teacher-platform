@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Ubuntu+Mono");
 .header {
-  background: #5c258d;
-  background: -webkit-linear-gradient(to right, #5c258d, #4389a2);
-  background: linear-gradient(to right, #5c258d, #4389a2);
+  background: #4776e6;
+  background: -webkit-linear-gradient(to right, #4776e6, #8e54e9);
+  background: linear-gradient(to right, #4776e6, #8e54e9);
   display: flex;
   flex-direction: row;
   justify-content: space-between;

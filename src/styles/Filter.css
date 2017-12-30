@@ -1,12 +1,13 @@
 .filter-btn {
-  background-color: #fafafa;
+  background-color: #302E32;
   border: none;
   display: flex;
   flex-direction: row;
   align-items: center; }
 
 .standard-option {
-  padding-right: 10px; }
+  padding-right: 10px;
+  color: #fff; }
 
 .down-arrow {
   width: 15px;
