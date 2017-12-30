@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono');
+
 .nav {
   background-color: #fafafa;
   outline: 1px solid orange;
@@ -6,4 +8,10 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 2%;
+}
+
+.sign-out {
+  color: #000;
+  margin: 0;
+  font-family: 'Ubuntu Mono';
 }
