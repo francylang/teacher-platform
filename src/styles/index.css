@@ -1,6 +1,11 @@
 @import url(./App.css);
 @import url(./Header.css);
 @import url(./Nav.css);
+@import url(./Search.css);
+@import url(./Filter.css);
+@import url(./FilterForm.css);
+@import url(./FilterSection.css);
+@import url(./DiscussionForm.css);
 @import url(./CardContainer.css);
 @import url(./DiscussionCard.css);
 @import url(./normalize.css);

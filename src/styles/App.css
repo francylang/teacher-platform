@@ -3,4 +3,11 @@
 
 .main {
   display: flex;
-  flex-direction: row; }
+  flex-direction: column; }
+
+.bottom-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 2%;
+  background-color: #fafafa; }

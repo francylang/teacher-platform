@@ -1,8 +1,19 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu+Mono");
 .header {
-  background-color: turquoise; }
+  background: #4776e6;
+  background: -webkit-linear-gradient(to right, #4776e6, #8e54e9);
+  background: linear-gradient(to right, #4776e6, #8e54e9);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  font-family: 'Ubuntu Mono'; }
 
 .app-name {
-  color: #fff; }
+  color: #fff;
+  margin: 0; }
 
 .sign-out {
-  color: #fff; }
+  color: #fff;
+  margin: 0; }

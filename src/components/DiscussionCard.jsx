@@ -29,9 +29,14 @@ class DiscussionCard extends Component {
   render() {
     return (
       <article className="card">
-        <h4>Discussion Topic</h4>
-        <p>Bacon d t-bone pork meatball. Pancetta ham turkey shankle turducken jerky.</p>
-        <button onClick={() => this.toggleComments()}>Show/hide comments</button>
+        <h4>First Discussion Topic</h4>
+        <p>
+          This is a discussion. There is all kinds of importnat information in this discussion. A very serious math question.
+        </p>
+        <button
+          onClick={() => this.toggleComments()}
+          className="show-more-btn">
+        </button>
         {this.showComments()}
       </article>
     );

@@ -1,0 +1,21 @@
+.filter-btn {
+  background-color: #302E32;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.standard-option {
+  padding-right: 10px;
+  color: #fff;
+}
+
+.down-arrow {
+  width: 15px;
+  height: 15px;
+  background-image: url(../assets/down.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

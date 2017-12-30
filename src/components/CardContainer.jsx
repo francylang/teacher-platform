@@ -11,7 +11,7 @@ class CardContainer extends Component {
 
   render() {
     return (
-      <div>
+      <div className="card-section">
         <h2 className="current-feed-title">Discussions:</h2>
         <DiscussionCard />
       </div>

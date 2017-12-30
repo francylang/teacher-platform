@@ -22,9 +22,7 @@ class App extends Component {
     fetch('http://localhost:3000/api/v1/discussions')
       .then((response) => response.json())
       .then((rawDiscussions) => this.cleanDiscussions(rawDiscussions))
-      .then((discussions) => this.setState({
-        discussions
-      }))
+      .then((discussions) => this.setState({ discussions }))
       .catch((error) => console.error({ error }));
   }
 
@@ -43,7 +41,6 @@ class App extends Component {
   }
 
   render() {
-    // console.log(this.state.discussions.map(discussion => discussion.body))
     return (
       <section className="app">
         <Header />

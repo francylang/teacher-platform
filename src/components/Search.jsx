@@ -33,12 +33,9 @@ class Search extends Component {
     const { handleSearch, discussions } = this.props;
     this.trie.populate(discussions)
     return (
-      <aside>
-        <input
-          onChange={this.handleChange}
-          type="text"
-          placeholder="Search for a topic"
-        />
+      <aside className="search-section">
+        <label htmlFor="search-input"></label>
+        <input onChange={this.handleChange} type="text" id="search-input" placeholder="Search discussions..." ></input>
         <button
           onClick={this.handleClick}
           discussions={discussions}>
