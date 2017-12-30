@@ -10,6 +10,8 @@ class App extends Component {
     this.state = {
       discussions: [],
     };
+    this.fetchDiscussions = this.fetchDiscussions.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
   }
 
   componentDidMount() {
@@ -34,16 +36,21 @@ class App extends Component {
     });
   }
 
+  handleSearch() {
+    this.fetchDiscussions()
+  }
+
   render() {
     return (
       <section className="app">
         <Header />
-        <article className="main">
-          <Nav />
-          <section className="bottom-main">
-            <CardContainer discussions={this.state.discussions}/>
-          </section>
-        </article>
+        <section className="main">
+          <Nav
+            handleSearch={this.handleSearch}
+            discussions={this.state.discussions}
+          />
+          <CardContainer discussions={this.state.discussions}/>
+        </section>
       </section>
     );
   }
