@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Header from './Header';
 import Nav from './Nav';
 import CardContainer from './CardContainer';
+import DiscussionForm from './DiscussionForm';
+import FilterForm from './FilterForm';
 // import { fetchDiscussions } from '../utils/getDiscussions';
 
 class App extends Component {
@@ -9,7 +11,13 @@ class App extends Component {
     super();
     this.state = {
       discussions: [],
+      showingDiscussions: false,
+      showingForm: true,
+      showingStandards: false,
     };
+    this.renderStandards = this.renderStandards.bind(this);
+    this.renderForm = this.renderForm.bind(this);
+    this.renderDiscussions = this.renderDiscussions.bind(this);
     this.fetchDiscussions = this.fetchDiscussions.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
   }
@@ -22,19 +30,14 @@ class App extends Component {
     fetch('http://localhost:3000/api/v1/discussions')
       .then((response) => response.json())
       .then((rawDiscussions) => this.cleanDiscussions(rawDiscussions))
-<<<<<<< HEAD
       .then((discussions) => this.setState({ discussions }))
-=======
-      .then((discussions) => this.setState({
-        discussions
-      }))
->>>>>>> search
       .catch((error) => console.error({ error }));
   }
 
   cleanDiscussions(rawDiscussions) {
     return rawDiscussions.map(discussion => {
       return {
+        id: discussion.id,
         title: discussion.title,
         body: discussion.body,
         tagId: discussion.tagId,
@@ -42,21 +45,68 @@ class App extends Component {
     });
   }
 
+  renderDiscussions() {
+    this.setState({
+      showingDiscussions: true,
+      showingForm: false,
+      showingStandards: false,
+    });
+  }
+
+  renderForm() {
+    this.setState({
+      showingDiscussions: false,
+      showingForm: true,
+      showingStandards: false,
+    });
+  }
+
+  renderStandards() {
+    this.setState({
+      showingDiscussions: false,
+      showingForm: false,
+      showingStandards: true,
+    });
+
   handleSearch() {
     this.fetchDiscussions()
   }
 
   render() {
+<<<<<<< HEAD
+=======
+    const { showingDiscussions, showingForm, showingStandards } = this.state;
+    const showDiscussions = showingDiscussions
+      ? <CardContainer
+        discussions={this.state.discussions}
+        rendered={this.state.showingDiscussions}/> : null;
+
+    const showForm = showingForm
+      ? <DiscussionForm rendered={this.state.showingForm}/> : null;
+
+    const showStandards = showingStandards
+      ? <FilterForm rendered={this.state.showingStandards}/> : null;
+
+>>>>>>> 53dbf0b8cb2e94a5f128ca68c3eeec3f0d3c6d1f
     return (
       <section className="app">
         <Header />
         <article className="main">
           <Nav
+            renderStandards={this.renderStandards}
+            renderForm={this.renderForm}
+            renderDiscussions={this.renderDiscussions}
             handleSearch={this.handleSearch}
             discussions={this.state.discussions}
           />
           <section className="bottom-main">
+<<<<<<< HEAD
             <CardContainer discussions={this.state.discussions}/>
+=======
+            { showDiscussions }
+            { showForm }
+            { showStandards }
+>>>>>>> 53dbf0b8cb2e94a5f128ca68c3eeec3f0d3c6d1f
           </section>
         </article>
       </section>
