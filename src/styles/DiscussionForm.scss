@@ -1,5 +1,26 @@
 .discussion-form-section {
-  outline: 1px solid blue;
   margin: 10px;
-  width: 30%;
+  // width: 30%;
+}
+
+.add-discussion-btn {
+  border: none;
+  outline: none;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.new-discussion-option {
+  padding-right: 10px;
+}
+
+.down-arrow {
+  width: 15px;
+  height: 15px;
+  background-image: url(../assets/down.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

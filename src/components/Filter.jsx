@@ -28,7 +28,7 @@ class Filter extends Component {
           className="filter-btn"
           onClick={() => this.toggleShowingTags()}>
           <p className="standard-option">Standards</p>
-          <div class="down-arrow"></div>
+          <div className="down-arrow"></div>
         </button>
         { checkShowTags }
       </aside>
