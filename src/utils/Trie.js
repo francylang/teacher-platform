@@ -7,11 +7,9 @@ export default class Trie {
   }
 
   populate(suggestions) {
-    console.log(suggestions);
     const discussionsArray = suggestions;
     discussionsArray.forEach(discussion => {
       this.insert(discussion);
-      console.log(discussion);
     });
   }
 
@@ -19,9 +17,13 @@ export default class Trie {
     if (!this.root) {
       this.root = new Node();
     }
-    let currentNode = this.root;
 
-    [...string.toLowerCase()].forEach((letter, index, array) => {
+    let currentNode = this.root;
+    let spreadletters = [
+      ...string.body.toLowerCase(),
+    ]
+
+    spreadletters.forEach((letter, index, array) => {
       if (!currentNode.children[letter]) {
         currentNode.children[letter] = new Node(letter);
       }
@@ -30,7 +32,6 @@ export default class Trie {
         currentNode.isWord = true;
       }
     });
-
     this.wordCount++;
   }
 
@@ -45,35 +46,31 @@ export default class Trie {
       return [];
     }
 
-    let currentNode = this.findNode(inputString);
+    const currentNode = this.findNode(inputString);
 
     if (!currentNode) {
       return '';
     }
-
     if (currentNode.isWord) {
       suggestionsArray.push([inputString.toLowerCase(), currentNode.frequency])
     }
-    let output = this.findChildrenWords(inputString, currentNode, suggestionsArray);
-
+    const output = this.findChildrenWords(inputString, currentNode, suggestionsArray);
     return this.prepareOutput(output);
   }
 
   findNode(string) {
     let currentNode = this.root;
-    console.log(this.root);
 
     [...string.toLowerCase()].forEach((letter) => {
       if (currentNode !== undefined) {
         currentNode = currentNode.children[letter]
       }
     });
-
     return currentNode;
   }
 
   findChildrenWords(string, currentNode, suggestionsArray) {
-    let keys = Object.keys(currentNode.children);
+    const keys = Object.keys(currentNode.children);
 
     keys.forEach((letter) => {
       let completeWord = string.toLowerCase() + letter;
@@ -98,6 +95,6 @@ export default class Trie {
     let currentNode = this.findNode(selection);
 
     currentNode.mostRecent = Date.now()
-    currentNode.isWord ? currentNode.frequency++ : 0;
+    // currentNode.isWord ? currentNode.frequency++ : 0;
   }
 }

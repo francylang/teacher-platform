@@ -6,7 +6,6 @@ import DiscussionForm from './DiscussionForm';
 class Nav extends Component {
   render() {
     const { handleSearch, discussions } = this.props
-    console.log(discussions);
     return (
       <div className="nav">
         <Search

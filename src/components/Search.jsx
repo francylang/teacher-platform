@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Trie from '../utils/Trie';
-// import discussion database
 
 class Search extends Component {
   constructor(props) {
@@ -12,30 +11,27 @@ class Search extends Component {
       suggestions: []
     }
     this.trie = new Trie()
-    console.log();
-    this.trie.populate(this.props.discussions)
+    // this.trie.populate(this.props.discussions)
     this.handleClick = this.handleClick.bind(this)
     this.handleChange = this.handleChange.bind(this)
   }
 
   handleChange(event) {
-    // const keywordSuggestions = this.trie.suggest(event.target.value);
+    const keywordSuggestions = this.trie.suggest(event.target.value);
+    console.log({keywordSuggestions});
     this.setState({
       userInput: event.target.value,
-      suggestions: []
+      suggestions: keywordSuggestions
     });
   }
 
-  handleClick(discussion) {
+  handleClick() {
     this.props.handleSearch(this.state.userInput);
-    console.log(this.state.userInput);
   }
-  // onChange search discussion database
-  // set state - userInput = event.target, suggestions = stuff from database that has the same letters
 
   render() {
     const { handleSearch, discussions } = this.props;
-    console.log(discussions);
+    this.trie.populate(discussions)
     return (
       <aside>
         <input
@@ -43,7 +39,10 @@ class Search extends Component {
           type="text"
           placeholder="Search for a topic"
         />
-        <button onClick={this.handleClick} discussions={discussions}></button>
+        <button
+          onClick={this.handleClick}
+          discussions={discussions}>
+        </button>
       </aside>
     );
   }
