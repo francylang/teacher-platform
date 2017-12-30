@@ -8,5 +8,6 @@
 .bottom-main {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
   padding: 2%;
   background-color: #fafafa; }

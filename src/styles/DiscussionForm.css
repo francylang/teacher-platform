@@ -2,21 +2,32 @@
   margin: 10px;
   width: 30%; }
 
-.add-discussion-btn {
-  border: none;
-  outline: none;
-  background-color: #fafafa;
-  display: flex;
-  flex-direction: row;
-  align-items: center; }
-
 .new-discussion-option {
   padding-right: 10px; }
 
-.down-arrow {
-  width: 15px;
-  height: 15px;
-  background-image: url(../assets/down.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
+.form {
+  display: flex;
+  flex-direction: column; }
+
+#dicussion-title,
+#dicussion-body {
+  width: 93%;
+  display: inline-block;
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.13);
+  border-radius: 5px;
+  padding: 3.5%;
+  border: none;
+  margin: 7.5px 0; }
+
+.submit-discussion-btn {
+  padding: 3.5%;
+  border: none;
+  outline: none;
+  background-color: #8060e6;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #fff;
+  width: 100%;
+  text-align: center; }
