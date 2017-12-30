@@ -14,22 +14,29 @@
   width: 93%;
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.13);
   border-radius: 5px;
-  border: none; }
+  border: none;
+  color: #5D5B5E; }
+
+#dicussion-title::placeholder,
+#dicussion-body::placeholder {
+  color: #9A979D; }
 
 .submit-discussion-btn {
-  display: flex;
-  flex-direction: row;
   margin: 7.5px 0;
   padding: 3.5%;
   width: 100%;
   border: none;
   outline: none;
-  background-color: #8060e6;
+  background-color: #6c6ae5;
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.13);
   border-radius: 5px;
-  align-items: center;
   color: #fff;
-  text-align: center; }
+  text-align: center;
+  transition: background-color 0.5s; }
+
+.submit-discussion-btn:hover {
+  cursor: pointer;
+  background-color: #8e54e9; }
 
 .down-arrow {
   height: 15px;

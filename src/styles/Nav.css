@@ -5,7 +5,8 @@
   justify-content: space-between;
   align-items: center;
   background-color: #302E32;
-  border: 1px solid black; }
+  border: 1px solid black;
+  padding: 0 2%; }
 
 .filter-btn {
   display: flex;
@@ -13,7 +14,8 @@
   align-items: center;
   background-color: #302E32;
   border: none;
-  outline: none; }
+  outline: none;
+  cursor: pointer; }
 
 .standard-option {
   padding-right: 10px;
@@ -26,7 +28,8 @@
   align-items: center;
   background-color: #302E32;
   border: none;
-  outline: none; }
+  outline: none;
+  cursor: pointer; }
 
 .new-discussion-option {
   padding-right: 10px;

@@ -10,11 +10,14 @@
   background-image: url(../assets/search.svg);
   background-position: 5%;
   background-repeat: no-repeat;
-  background-size: 7.5%;
+  background-size: 6.5%;
   border: none;
   border-radius: 4px;
   margin-right: 10px;
   outline: none;
+  width: 210px;
+  caret-color: #4776e6;
+  color: #fff;
 }
 
 .search-btn {
