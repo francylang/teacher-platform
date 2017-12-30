@@ -1,11 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono');
+
 .header {
-  background-color: turquoise;
+  background: #5c258d; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #5c258d, #4389a2); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #5c258d, #4389a2);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  font-family: 'Ubuntu Mono';
 }
 
 .app-name {
   color: #fff;
+  margin: 0;
 }
 
 .sign-out {
   color: #fff;
+    margin: 0;
 }
