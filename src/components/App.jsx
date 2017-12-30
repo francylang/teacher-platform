@@ -18,6 +18,8 @@ class App extends Component {
     this.renderStandards = this.renderStandards.bind(this);
     this.renderForm = this.renderForm.bind(this);
     this.renderDiscussions = this.renderDiscussions.bind(this);
+    this.fetchDiscussions = this.fetchDiscussions.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
   }
 
   componentDidMount() {
@@ -65,6 +67,9 @@ class App extends Component {
       showingForm: false,
       showingStandards: true,
     });
+      
+  handleSearch() {
+    this.fetchDiscussions()
   }
 
   render() {
@@ -88,6 +93,8 @@ class App extends Component {
             renderStandards={this.renderStandards}
             renderForm={this.renderForm}
             renderDiscussions={this.renderDiscussions}
+            handleSearch={this.handleSearch}
+            discussions={this.state.discussions}
           />
           <section className="bottom-main">
             { showDiscussions }

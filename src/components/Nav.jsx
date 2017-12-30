@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 class Nav extends Component {
   render() {
+    const { handleSearch, discussions } = this.props
     return (
       <div className="nav">
         <label htmlFor="search-input"></label>
@@ -34,6 +35,11 @@ class Nav extends Component {
             All Discussions
           </h4>
         </button>
+        <Search
+          handleSearch={handleSearch}
+          discussions={discussions}/>
+        <Filter />
+        <DiscussionForm />
       </div>
     );
   }
