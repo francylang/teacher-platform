@@ -7,4 +7,6 @@
 
 .bottom-main {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  padding: 2%;
+  background-color: #fafafa; }

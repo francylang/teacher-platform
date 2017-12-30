@@ -1,2 +1,12 @@
 .card {
-  outline: 1px solid magenta; }
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 1% 10%; }
+
+.show-more-btn {
+  background-image: url(../assets/menu.svg);
+  height: 15px;
+  width: 15px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none; }

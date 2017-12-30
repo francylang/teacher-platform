@@ -1,9 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Ubuntu+Mono");
 .header {
   background: #5c258d;
-  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #5c258d, #4389a2);
-  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #5c258d, #4389a2);
   display: flex;
   flex-direction: row;

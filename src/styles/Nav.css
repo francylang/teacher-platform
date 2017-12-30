@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Ubuntu+Mono");
 .nav {
   background-color: #fafafa;
-  outline: 1px solid orange;
+  border: 1px solid black;
   display: flex;
   flex-direction: row;
   align-items: center;
