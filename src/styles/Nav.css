@@ -5,24 +5,17 @@
   justify-content: space-between;
   align-items: center;
   background-color: #302E32;
-  border: 1px solid black; }
-
-#search-input {
-  padding: 1% 1% 1% 2.5%;
-  background-color: rgba(74, 72, 76, 0.5);
-  background-image: url(../assets/search.svg);
-  background-position: 5%;
-  background-repeat: no-repeat;
-  background-size: 7.5%;
-  border: none;
-  border-radius: 4px; }
+  border: 1px solid black;
+  padding: 0 2%; }
 
 .filter-btn {
   display: flex;
   flex-direction: row;
   align-items: center;
   background-color: #302E32;
-  border: none; }
+  border: none;
+  outline: none;
+  cursor: pointer; }
 
 .standard-option {
   padding-right: 10px;
@@ -34,7 +27,9 @@
   flex-direction: row;
   align-items: center;
   background-color: #302E32;
-  border: none; }
+  border: none;
+  outline: none;
+  cursor: pointer; }
 
 .new-discussion-option {
   padding-right: 10px;
