@@ -25,7 +25,7 @@ class FilterSection extends Component {
         );
       } else {
         return (
-          <h4>{standard}</h4>
+          <h5 className="domain-label">{standard}</h5>
         );
       }
     });

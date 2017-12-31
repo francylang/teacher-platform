@@ -53,19 +53,24 @@ class FilterForm extends Component {
     const { showingMath6, showingMath7, showingMath8 } = this.state;
 
     return (
-      <section>
-        <h3>
-          Click on a grade level tab to choose standard(s):
-        </h3>
-        <button onClick={() => this.showMath6Tags()}>
-          Grade 6
-        </button>
-        <button onClick={() => this.showMath7Tags()}>
-          Grade 7
-        </button>
-        <button onClick={() => this.showMath8Tags()}>
-          Grade 8
-        </button>
+      <section className="filter-section">
+        <article className="grade-btn-container">
+          <button
+            onClick={() => this.showMath6Tags()}
+            className="grade-btn grade-selected">
+            Grade 6
+          </button>
+          <button
+            onClick={() => this.showMath7Tags()}
+            className="grade-btn">
+            Grade 7
+          </button>
+          <button
+            onClick={() => this.showMath8Tags()}
+            className="grade-btn">
+            Grade 8
+          </button>
+        </article>
         <section className="options-container">
           <article className="options">
             { this.showOptions(mathSixStandards, showingMath6) }
@@ -77,9 +82,6 @@ class FilterForm extends Component {
             { this.showOptions(mathEightStandards, showingMath8) }
           </article>
         </section>
-        <button>
-          FIND discussions based on what I checked!!
-        </button>
       </section>
     );
   }
