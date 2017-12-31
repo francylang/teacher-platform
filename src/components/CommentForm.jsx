@@ -3,12 +3,15 @@ import React, { Component } from 'react';
 class CommentForm extends Component {
   render() {
     return (
-      <article>
-        <h4 className="comment-form-header">
-          Add a comment:
-        </h4>
-        <form action="" method="get">
-          <label htmlFor="get-comment">Comment:
+      <article className="comment-form-containter">
+        <aside className="comment-form-directions">
+          <h4 className="comment-form-header">
+            Add a comment:
+          </h4>
+          <p className="directions-text">Please be kind and specific, and provide links to any references resources. </p>
+        </aside>
+        <form className="comment-form">
+          <label htmlFor="get-comment">
             <textarea
               id="get-comment"
               type="text"

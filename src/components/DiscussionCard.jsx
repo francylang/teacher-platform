@@ -40,10 +40,12 @@ class DiscussionCard extends Component {
   render() {
     return (
       <article className="card">
-        <h4 className="card-title">First Discussion Topic</h4>
-        <p className="card-body">
-          This is a discussion. There is all kinds of important information in this discussion. A very serious math question.
-        </p>
+        <section className="top-card">
+          <h4 className="card-title">First Discussion Topic</h4>
+          <p className="card-body">
+            This is a discussion. There is all kinds of important information in this discussion. A very serious math question.
+          </p>
+        </section>
         <button
           onClick={() => this.toggleComments()}
           className="show-more-btn">
