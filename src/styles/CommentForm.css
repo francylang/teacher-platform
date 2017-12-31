@@ -1,3 +1,19 @@
+.comment-form-header {
+  text-align: left; }
+
+#get-comment {
+  display: inline-block;
+  margin: 7.5px 0;
+  padding: 3.5%;
+  width: 93%;
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.13);
+  border-radius: 5px;
+  border: none;
+  color: #5D5B5E;
+  outline: none;
+  font-size: 120%;
+  font-family: Nunito; }
+
 .submit-comment {
   margin: 7.5px 0;
   padding: 3.5%;
@@ -12,3 +28,8 @@
   transition: background-color 0.5s;
   font-family: 'Ubuntu Mono';
   font-size: 115%; }
+
+.submit-comment:hover {
+  cursor: pointer;
+  background-color: #8e54e9;
+  box-shadow: 0 14px 22px 0 rgba(0, 0, 0, 0.19); }

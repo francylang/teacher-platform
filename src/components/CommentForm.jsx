@@ -4,14 +4,17 @@ class CommentForm extends Component {
   render() {
     return (
       <article>
+        <h4 className="comment-form-header">
+          Add a comment:
+        </h4>
         <form action="" method="get">
           <label htmlFor="get-comment">Comment:
-            <input
+            <textarea
               id="get-comment"
               type="text"
               name="comment"
             >
-            </input>
+            </textarea>
           </label>
           <button
             className="submit-comment"
