@@ -5,10 +5,20 @@ class CommentForm extends Component {
     return (
       <article>
         <form action="" method="get">
-          <label htmlFor="GET-comment">Comment:
-            <input id="GET-comment" type="text" name="comment" />
+          <label htmlFor="get-comment">Comment:
+            <input
+              id="get-comment"
+              type="text"
+              name="comment"
+            >
+            </input>
           </label>
-          <input className="submit-discussion" type="submit" name="submit" />
+          <button
+            className="submit-comment"
+            type="submit"
+            name="submit"
+          >Submit
+          </button>
         </form>
       </article>
     );

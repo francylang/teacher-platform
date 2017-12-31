@@ -8,6 +8,7 @@
 @import url(./DiscussionForm.css);
 @import url(./CardContainer.css);
 @import url(./DiscussionCard.css);
+@import url(./CommentForm.css);
 @import url(./normalize.css);
 * {
   font-family: Nunito, sans-serif; }
