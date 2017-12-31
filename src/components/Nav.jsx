@@ -6,19 +6,17 @@ class Nav extends Component {
     const { handleSearch, discussions } = this.props
     return (
       <div className="nav">
-        <label htmlFor="search-input"></label>
-        <input
-          type="text"
-          id="search-input"
-          placeholder="Search discussions..." >
-        </input>
+        <Search
+          handleSearch={handleSearch}
+          discussions={discussions}
+        />
         <button
           onClick={() => this.props.renderStandards()}
           className="filter-btn"
         >
-          <p className="standard-option">
+          <h4 className="standard-option">
             Standards
-          </p>
+          </h4>
         </button>
         <button
           onClick={() => this.props.renderForm()}

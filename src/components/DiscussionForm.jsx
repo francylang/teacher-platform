@@ -45,13 +45,11 @@ class DiscussionForm extends Component {
             >
             </textarea>
           </label>
-          <input
+          <button
             className="submit-discussion-btn"
-            type="submit"
-            name="submit"
             onClick={(event) => this.handleSubmit(event)}
-          >
-          </input>
+          >Submit
+          </button>
         </form>
       </article>
     )
