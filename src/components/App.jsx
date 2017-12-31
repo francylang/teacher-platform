@@ -68,7 +68,7 @@ class App extends Component {
       showingStandards: true,
     });
   }
-  
+
   handleSearch() {
     this.fetchDiscussions()
   }

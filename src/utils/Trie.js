@@ -63,20 +63,26 @@ export default class Trie {
 
     [...string.toLowerCase()].forEach((letter) => {
       if (currentNode !== undefined) {
-        currentNode = currentNode.children[letter]
+        currentNode = currentNode.children
+        // console.log({currentNode});
       }
     });
     return currentNode;
   }
 
   findChildrenWords(string, currentNode, suggestionsArray) {
-    const keys = Object.keys(currentNode.children);
+    console.log(currentNode);
+    const keys = Object.keys(currentNode);
 
     keys.forEach((letter) => {
+      console.log(letter);
       let completeWord = string.toLowerCase() + letter;
 
       if (currentNode.children[letter].isWord) {
-        suggestionsArray.push({word: completeWord, frequency: currentNode.children[letter].frequency, mostRecent: currentNode.children[letter].mostRecent});
+        suggestionsArray.push({
+          word: completeWord,
+          frequency: currentNode.children[letter].frequency,
+          mostRecent: currentNode.children[letter].mostRecent});
       }
       completeWord = this.findChildrenWords(completeWord, currentNode.children[letter], suggestionsArray);
     });

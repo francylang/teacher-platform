@@ -35,7 +35,11 @@ class Search extends Component {
     return (
       <aside className="search-section">
         <label htmlFor="search-input"></label>
-        <input onChange={this.handleChange} type="text" id="search-input" placeholder="Search discussions..." ></input>
+        <input
+          onChange={this.handleChange}
+          type="text" id="search-input"
+          placeholder="Search discussions..." >
+        </input>
         <button
           onClick={this.handleClick}
           discussions={discussions}>

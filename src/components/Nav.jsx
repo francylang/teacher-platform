@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Search from './Search';
 
 class Nav extends Component {
   render() {
@@ -38,8 +39,8 @@ class Nav extends Component {
         <Search
           handleSearch={handleSearch}
           discussions={discussions}/>
-        <Filter />
-        <DiscussionForm />
+        {/* <Filter />
+        <DiscussionForm /> */}
       </div>
     );
   }
