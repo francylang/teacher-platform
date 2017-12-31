@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu+Mono");
 .discussion-form-section {
   margin: 10px;
   width: 30%; }
@@ -33,7 +34,9 @@
   border-radius: 5px;
   color: #fff;
   text-align: center;
-  transition: background-color 0.5s; }
+  transition: background-color 0.5s;
+  font-family: 'Ubuntu Mono';
+  font-size: 115%; }
 
 .submit-discussion-btn:hover {
   cursor: pointer;
