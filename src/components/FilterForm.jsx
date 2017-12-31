@@ -26,42 +26,62 @@ class FilterForm extends Component {
   };
 
   showMath6Tags() {
-    this.setState({ showingMath6: true, showingMath7: false, showingMath8: false });
+    this.setState({
+      showingMath6: true,
+      showingMath7: false,
+      showingMath8: false,
+    });
   };
 
   showMath7Tags() {
-    this.setState({ showingMath6: false, showingMath7: true, showingMath8: false });
+    this.setState({
+      showingMath6: false,
+      showingMath7: true,
+      showingMath8: false,
+    });
   };
 
   showMath8Tags() {
-    this.setState({ showingMath6: false, showingMath7: false, showingMath8: true });
+    this.setState({
+      showingMath6: false,
+      showingMath7: false,
+      showingMath8: true,
+    });
   };
 
   render() {
+    const { showingMath6, showingMath7, showingMath8 } = this.state;
+
     return (
-      <section>
-        <h3>Click on a grade level tab to choose standard(s):</h3>
-        <button onClick={() => this.showMath6Tags()}>
-          Grade 6
-        </button>
-        <button onClick={() => this.showMath7Tags()}>
-          Grade 7
-        </button>
-        <button onClick={() => this.showMath8Tags()}>
-          Grade 8
-        </button>
+      <section className="filter-section">
+        <article className="grade-btn-container">
+          <button
+            onClick={() => this.showMath6Tags()}
+            className="grade-btn grade-selected">
+            Grade 6
+          </button>
+          <button
+            onClick={() => this.showMath7Tags()}
+            className="grade-btn">
+            Grade 7
+          </button>
+          <button
+            onClick={() => this.showMath8Tags()}
+            className="grade-btn">
+            Grade 8
+          </button>
+        </article>
         <section className="options-container">
           <article className="options">
-            { this.showOptions(mathSixStandards, this.state.showingMath6) }
+            { this.showOptions(mathSixStandards, showingMath6) }
           </article>
           <article className="options">
-            { this.showOptions(mathSevenStandards, this.state.showingMath7) }
+            { this.showOptions(mathSevenStandards, showingMath7) }
           </article>
           <article className="options">
-            { this.showOptions(mathEightStandards, this.state.showingMath8) }
+            { this.showOptions(mathEightStandards, showingMath8) }
           </article>
         </section>
-        <button>FIND discussions based on what I checked!!</button>
       </section>
     );
   }
