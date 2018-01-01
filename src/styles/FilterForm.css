@@ -7,7 +7,8 @@
   grid-template-columns: 1fr 5fr;
   grid-template-rows: 100%;
   grid-template-areas: "buttons standards";
-  padding-top: 30px; }
+  padding-top: 30px;
+  height: 70vh; }
 
 .grade-btn-container {
   grid-area: buttons;

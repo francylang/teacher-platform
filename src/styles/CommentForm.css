@@ -10,7 +10,8 @@
   padding: 0 10px; }
 
 .comment-form-header {
-  text-align: left; }
+  text-align: left;
+  margin-top: 0; }
 
 .directions-text {
   text-align: left; }
@@ -20,7 +21,7 @@
 
 #get-comment {
   display: inline-block;
-  margin: 7.5px 0;
+  margin-bottom: 7.5px;
   padding: 3.5%;
   width: 93%;
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.13);
