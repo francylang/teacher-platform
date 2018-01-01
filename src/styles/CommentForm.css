@@ -31,6 +31,9 @@
   font-size: 120%;
   font-family: Nunito; }
 
+#get-comment::placeholder {
+  color: #9A979D; }
+
 .submit-comment {
   padding: 2% 2.5%;
   width: 100%; }
