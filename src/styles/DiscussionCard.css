@@ -12,13 +12,6 @@
 
 .show-more-btn {
   padding: 1% 2.5%;
-  border: none;
-  outline: none;
-  background-color: #6c6ae5;
-  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.13);
-  border-radius: 5px;
-  text-align: center;
-  transition: background-color 0.5s;
   float: right;
   width: 135px; }
 
@@ -27,8 +20,3 @@
   font-family: 'Ubuntu Mono';
   font-size: 90%;
   margin: 5% 0; }
-
-.show-more-btn:hover {
-  cursor: pointer;
-  background-color: #8e54e9;
-  box-shadow: 0 14px 22px 0 rgba(0, 0, 0, 0.19); }

@@ -38,22 +38,6 @@
 }
 
 .submit-comment {
-  margin: 7.5px 0;
   padding: 2% 2.5%;
-  border: none;
-  outline: none;
   width: 100%;
-  background-color: #6c6ae5;
-  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.13);
-  border-radius: 5px;
-  color: #fff;
-  text-align: center;
-  transition: background-color 0.5s;
-  font-family: 'Ubuntu Mono';
-}
-
-.submit-comment:hover {
-  cursor: pointer;
-  background-color: #8e54e9;
-  box-shadow: 0 14px 22px 0 rgba(0,0,0,0.19)
 }

@@ -19,24 +19,9 @@
 }
 
 .grade-btn {
-  border-radius: 5px;
-  border: none;
-  outline: none;
   padding: 5%;
-  background-color: #6c6ae5;
-  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.13);
-  margin: 20px 10px 5px 10px;
-  color: #fff;
   width: 150px;
-  transition: background-color 0.5s ease;
-  font-family: 'Ubuntu Mono';
   font-size: 110%;
-}
-
-.grade-btn:hover {
-  cursor: pointer;
-  background-color: #8e54e9;
-  box-shadow: 0 14px 22px 0 rgba(0,0,0,0.19);
 }
 
 .grade-selected {

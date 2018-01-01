@@ -25,24 +25,9 @@
   color: #9A979D; }
 
 .submit-discussion-btn {
-  margin: 7.5px 0;
   padding: 3.5%;
   width: 100%;
-  border: none;
-  outline: none;
-  background-color: #6c6ae5;
-  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.13);
-  border-radius: 5px;
-  color: #fff;
-  text-align: center;
-  transition: background-color 0.5s;
-  font-family: 'Ubuntu Mono';
   font-size: 115%; }
-
-.submit-discussion-btn:hover {
-  cursor: pointer;
-  background-color: #8e54e9;
-  box-shadow: 0 14px 22px 0 rgba(0, 0, 0, 0.19); }
 
 .down-arrow {
   height: 15px;
