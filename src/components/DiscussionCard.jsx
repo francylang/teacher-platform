@@ -38,10 +38,11 @@ class DiscussionCard extends Component {
   }
 
   render() {
+    const { title, body } = this.props.discussion
     return (
       <article className="card">
         <section className="top-card">
-          <h4 className="card-title">First Discussion Topic</h4>
+          <h4 className="card-title">{title}</h4>
           <p className="card-body">
             This is a discussion. There is all kinds of important information in this discussion. A very serious math question.
           </p>
