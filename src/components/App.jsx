@@ -20,6 +20,7 @@ class App extends Component {
     this.renderDiscussions = this.renderDiscussions.bind(this);
     this.fetchDiscussions = this.fetchDiscussions.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
+    this.renderFilteredDiscussions = this.renderFilteredDiscussions.bind(this);
   }
 
   componentDidMount() {
@@ -57,6 +58,11 @@ class App extends Component {
     });
   }
 
+  renderFilteredDiscussions(discussions) {
+    // console.log(discussions, this.state.discussions);
+    this.setState({ discussions });
+  }
+
   renderForm() {
     this.setState({
       showingDiscussions: false,
@@ -84,7 +90,10 @@ class App extends Component {
       ? <DiscussionForm rendered={this.state.showingForm}/> : null;
 
     const showStandards = showingStandards
-      ? <FilterForm rendered={this.state.showingStandards}/> : null;
+      ? <FilterForm
+        renderDiscussions={this.renderDiscussions}
+        renderFilteredDiscussions={this.renderFilteredDiscussions}
+        rendered={this.state.showingStandards}/> : null;
 
     return (
       <section className="app">

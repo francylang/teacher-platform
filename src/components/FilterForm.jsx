@@ -6,7 +6,6 @@ class FilterForm extends Component {
   constructor() {
     super();
     this.state = {
-      selected: [],
       showingMath6: true,
       showingMath7: false,
       showingMath8: false,
@@ -18,6 +17,8 @@ class FilterForm extends Component {
       return standardsArray.map((domainArray, i) => {
         return (
           <FilterSection
+            renderDiscussions={this.props.renderDiscussions}
+            renderFilteredDiscussions={this.props.renderFilteredDiscussions}
             domain={domainArray}
             key={i}/>
         );
