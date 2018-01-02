@@ -13,6 +13,7 @@ class CardContainer extends Component {
     return this.props.discussions.map(discussion => {
       return (
         <DiscussionCard
+          key={discussion.id}
           discussion={discussion}
         />)
     })

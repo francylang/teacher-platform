@@ -43,9 +43,7 @@ class DiscussionCard extends Component {
       <article className="card">
         <section className="top-card">
           <h4 className="card-title">{title}</h4>
-          <p className="card-body">
-            This is a discussion. There is all kinds of important information in this discussion. A very serious math question.
-          </p>
+          <p className="card-body">{body}</p>
         </section>
         <button
           onClick={() => this.toggleComments()}
