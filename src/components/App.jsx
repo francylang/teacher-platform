@@ -60,7 +60,6 @@ class App extends Component {
   }
 
   cleanComments(rawComments) {
-    console.log(rawComments);
     return rawComments.map(comment => {
       return {
         id: comment.id,
@@ -99,6 +98,7 @@ class App extends Component {
     const showDiscussions = showingDiscussions
       ? <CardContainer
         discussions={this.state.discussions}
+        comments={this.state.comments}
         rendered={this.state.showingDiscussions}/> : null;
 
     const showForm = showingForm
