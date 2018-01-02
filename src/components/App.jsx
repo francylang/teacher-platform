@@ -11,6 +11,7 @@ class App extends Component {
     super();
     this.state = {
       discussions: [],
+      comments: [],
       showingDiscussions: true,
       showingForm: false,
       showingStandards: false,
@@ -24,6 +25,7 @@ class App extends Component {
 
   componentDidMount() {
     this.fetchDiscussions();
+    this.fetchComments();
   }
 
   handleSearch() {
@@ -45,6 +47,24 @@ class App extends Component {
         title: discussion.title,
         body: discussion.body,
         tagId: discussion.tagId,
+      };
+    });
+  }
+
+  fetchComments() {
+    fetch('http://localhost:3000/api/v1/comments')
+      .then((response) => response.json())
+      .then((comments) => this.cleanComments(comments))
+      .then((comments) => this.setState({ comments }))
+      .catch((error) => console.error({ error }));
+  }
+
+  cleanComments(rawComments) {
+    return rawComments.map(comment => {
+      return {
+        id: comment.id,
+        comment: comment.body,
+        discussionId: comment.discussionId
       };
     });
   }
@@ -78,6 +98,7 @@ class App extends Component {
     const showDiscussions = showingDiscussions
       ? <CardContainer
         discussions={this.state.discussions}
+        comments={this.state.comments}
         rendered={this.state.showingDiscussions}/> : null;
 
     const showForm = showingForm

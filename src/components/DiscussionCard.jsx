@@ -17,9 +17,10 @@ class DiscussionCard extends Component {
   }
 
   showComments() {
+    console.log(this.props);
     if (this.state.displayingComment) {
       return [
-        <Comment />,
+        <Comment/>,
         <CommentForm />,
       ];
     }
@@ -38,13 +39,12 @@ class DiscussionCard extends Component {
   }
 
   render() {
+    const { title, body } = this.props.discussion
     return (
       <article className="card">
         <section className="top-card">
-          <h4 className="card-title">First Discussion Topic</h4>
-          <p className="card-body">
-            This is a discussion. There is all kinds of important information in this discussion. A very serious math question.
-          </p>
+          <h4 className="card-title">{title}</h4>
+          <p className="card-body">{body}</p>
         </section>
         <button
           onClick={() => this.toggleComments()}
