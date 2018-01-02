@@ -11,6 +11,7 @@ class App extends Component {
     super();
     this.state = {
       discussions: [],
+      comments: [],
       showingDiscussions: true,
       showingForm: false,
       showingStandards: false,
@@ -46,7 +47,6 @@ class App extends Component {
         title: discussion.title,
         body: discussion.body,
         tagId: discussion.tagId,
-        comments: discussion.comments
       };
     });
   }
@@ -54,7 +54,20 @@ class App extends Component {
   fetchComments() {
     fetch('http://localhost:3000/api/v1/comments')
       .then((response) => response.json())
-      .then((comments) => console.log(comments))
+      .then((comments) => this.cleanComments(comments))
+      .then((comments) => this.setState({ comments }))
+      .catch((error) => console.error({ error }));
+  }
+
+  cleanComments(rawComments) {
+    console.log(rawComments);
+    return rawComments.map(comment => {
+      return {
+        id: comment.id,
+        comment: comment.body,
+        discussionId: comment.discussionId
+      };
+    });
   }
 
   renderDiscussions() {
