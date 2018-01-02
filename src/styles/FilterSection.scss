@@ -18,26 +18,14 @@
   padding-bottom: 8px;
 }
 
-.standard-checkbox {
+.standard-link {
   margin: 0px 25% 10px 30%;
   display: flex;
-}
-
-.state {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.icon {
-  background-image: url(../assets/check.svg);
-  height: 5px;
-  width: 5px;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #fafafa;
+  outline: none;
   border: none;
 }
 
-label {
-  font-size: 85%;
+.standard-text {
+  margin: 0;
 }
