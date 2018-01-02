@@ -1,14 +1,28 @@
 .card {
-  border-radius: 4px;
+  border-radius: 5px;
   background-color: #fff;
-  padding: 1% 10%;
+  padding: 2.5% 2.5% 5% 2.5%;
+  margin-bottom: 2.5%;
+}
+
+.card-title {
+  text-align: left;
+  margin: 0;
+}
+
+.card-body {
+  text-align: left;
 }
 
 .show-more-btn {
-  background-image: url(../assets/menu.svg);
-  height: 15px;
-  width: 15px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border: none;
+  padding: 1% 2.5%;
+  float: right;
+  width: 135px;
+}
+
+.show-more-less-text {
+  color: #fff;
+  font-family: 'Ubuntu Mono';
+  font-size: 90%;
+  margin: 3.5% 0;
 }
