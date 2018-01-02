@@ -2,13 +2,6 @@ import React, { Component } from 'react';
 import DiscussionCard from './DiscussionCard';
 
 class CardContainer extends Component {
-  // constructor() {
-  //   super();
-  //   this.state = {
-  //     discussions: [],
-  //   };
-  // };
-
   buildDiscussionCard() {
     return this.props.discussions.map(discussion => {
       return (
