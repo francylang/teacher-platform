@@ -1,3 +1,4 @@
+
 .discussion-form-section {
   margin: 10px;
   width: 30%;
@@ -19,6 +20,8 @@
   border: none;
   color: #5D5B5E;
   outline: none;
+  font-size: 120%;
+  font-family: Nunito;
 }
 
 #dicussion-title::placeholder,
@@ -38,6 +41,8 @@
   color: #fff;
   text-align: center;
   transition: background-color 0.5s;
+  font-family: 'Ubuntu Mono';
+  font-size: 115%;
 }
 
 .submit-discussion-btn:hover {
