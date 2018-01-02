@@ -24,6 +24,7 @@ class App extends Component {
 
   componentDidMount() {
     this.fetchDiscussions();
+    this.fetchComments();
   }
 
   handleSearch() {
@@ -45,8 +46,15 @@ class App extends Component {
         title: discussion.title,
         body: discussion.body,
         tagId: discussion.tagId,
+        comments: discussion.comments
       };
     });
+  }
+
+  fetchComments() {
+    fetch('http://localhost:3000/api/v1/comments')
+      .then((response) => response.json())
+      .then((comments) => console.log(comments))
   }
 
   renderDiscussions() {
