@@ -2,3 +2,42 @@
   display: inline-block;
   width: 19%;
 }
+
+.domain-label-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.domain-label {
+  text-transform: uppercase;
+  border-bottom: 1px solid #4a484c;
+  width: 90%;
+  display: inline-block;
+  height: 28px;
+  padding-bottom: 8px;
+}
+
+.standard-checkbox {
+  margin: 0px 25% 10px 30%;
+  display: flex;
+}
+
+.state {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.icon {
+  background-image: url(../assets/check.svg);
+  height: 5px;
+  width: 5px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+}
+
+label {
+  font-size: 85%;
+}

@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Ubuntu+Mono");
 .header {
   background: #4776e6;
   background: -webkit-linear-gradient(to right, #4776e6, #8e54e9);
@@ -7,13 +6,17 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
-  font-family: 'Ubuntu Mono'; }
+  padding: 15px; }
 
 .app-name {
   color: #fff;
-  margin: 0; }
+  margin: 0;
+  font-family: 'Ubuntu Mono'; }
 
 .sign-out {
   color: #fff;
-  margin: 0; }
+  margin: 0;
+  font-family: 'Ubuntu Mono'; }
+
+.sign-out:hover {
+  cursor: pointer; }

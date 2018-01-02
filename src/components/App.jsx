@@ -11,8 +11,8 @@ class App extends Component {
     super();
     this.state = {
       discussions: [],
-      showingDiscussions: false,
-      showingForm: true,
+      showingDiscussions: true,
+      showingForm: false,
       showingStandards: false,
     };
     this.renderStandards = this.renderStandards.bind(this);

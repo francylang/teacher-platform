@@ -9,6 +9,7 @@
   grid-template-rows: 100%;
   grid-template-areas: "buttons standards";
   padding-top: 30px;
+  height: 70vh;
 }
 
 .grade-btn-container {
@@ -19,22 +20,9 @@
 }
 
 .grade-btn {
-  border-radius: 5px;
-  border: none;
-  outline: none;
   padding: 5%;
-  background-color: #6c6ae5;
-  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.13);
-  margin: 20px 10px 5px 10px;
-  color: #fff;
   width: 150px;
-  transition: background-color 0.5s ease;
-}
-
-.grade-btn:hover {
-  cursor: pointer;
-  background-color: #8e54e9;
-  box-shadow: 0 14px 22px 0 rgba(0,0,0,0.19);
+  font-size: 110%;
 }
 
 .grade-selected {
@@ -49,36 +37,4 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-}
-
-.domain-label {
-  text-transform: uppercase;
-  border-bottom: 1px solid #4a484c;
-  width: 90%;
-  display: inline-block;
-  height: 28px;
-}
-
-.standard-checkbox {
-  margin: 0px 25% 10px 30%;
-  display: flex;
-}
-
-.state {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.icon {
-  background-image: url(../assets/check.svg);
-  height: 5px;
-  width: 5px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border: none;
-}
-
-label {
-  font-size: 85%;
 }

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Comment from './Comment';
 import CommentForm from './CommentForm';
-// import { getDiscussions } from '../utils/getDiscussions';
 
 class DiscussionCard extends Component {
   constructor () {
@@ -26,16 +25,31 @@ class DiscussionCard extends Component {
     }
   }
 
+  showMoreLess() {
+    if (this.state.displayingComment) {
+      return (
+        <p className="show-more-less-text">Hide Comments</p>
+      )
+    } else {
+      return (
+        <p className="show-more-less-text">Show Comments</p>
+      )
+    }
+  }
+
   render() {
     return (
       <article className="card">
-        <h4>First Discussion Topic</h4>
-        <p>
-          This is a discussion. There is all kinds of importnat information in this discussion. A very serious math question.
-        </p>
+        <section className="top-card">
+          <h4 className="card-title">First Discussion Topic</h4>
+          <p className="card-body">
+            This is a discussion. There is all kinds of important information in this discussion. A very serious math question.
+          </p>
+        </section>
         <button
           onClick={() => this.toggleComments()}
           className="show-more-btn">
+          {this.showMoreLess()}
         </button>
         {this.showComments()}
       </article>

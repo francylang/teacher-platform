@@ -2,14 +2,40 @@
 @import url(./Header.css);
 @import url(./Nav.css);
 @import url(./Search.css);
-@import url(./Filter.css);
 @import url(./FilterForm.css);
 @import url(./FilterSection.css);
 @import url(./DiscussionForm.css);
 @import url(./CardContainer.css);
 @import url(./DiscussionCard.css);
+@import url(./CommentForm.css);
+@import url(./Comment.css);
 @import url(./normalize.css);
+* {
+  font-family: Nunito, sans-serif; }
+
 body {
   margin: 0;
-  padding: 0;
-  font-family: sans-serif; }
+  padding: 0; }
+
+.submit-comment,
+.submit-discussion-btn,
+.show-more-btn,
+.grade-btn {
+  margin: 7.5px 0;
+  border: none;
+  outline: none;
+  background-color: #6c6ae5;
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.13);
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  transition: background-color 0.5s;
+  font-family: 'Ubuntu Mono'; }
+
+.submit-comment:hover,
+.submit-discussion-btn:hover,
+.show-more-btn:hover,
+.grade-btn:hover {
+  cursor: pointer;
+  background-color: #8e54e9;
+  box-shadow: 0 14px 22px 0 rgba(0, 0, 0, 0.19); }
