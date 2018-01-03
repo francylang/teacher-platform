@@ -11,6 +11,7 @@ class CardContainer extends Component {
   }
 
   buildDiscussionCard() {
+    console.log(this.props.discussions);
     return this.props.discussions.map(discussion => {
       return (
         <DiscussionCard
@@ -24,7 +25,9 @@ class CardContainer extends Component {
   render() {
     return (
       <div className="card-section">
-        <h2 className="current-feed-title">Discussions:</h2>
+        <h2 className="current-feed-title">
+          Discussions:
+        </h2>
         {this.buildDiscussionCard()}
       </div>
     );

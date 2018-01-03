@@ -71,6 +71,7 @@ class App extends Component {
   }
 
   renderDiscussions() {
+    console.log(this.state.discussions);
     this.setState({
       showingDiscussions: true,
       showingForm: false,
@@ -79,7 +80,6 @@ class App extends Component {
   }
 
   renderFilteredDiscussions(discussions) {
-    // console.log(discussions, this.state.discussions);
     this.setState({ discussions });
   }
 
