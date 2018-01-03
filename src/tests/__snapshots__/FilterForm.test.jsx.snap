@@ -1,0 +1,1067 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FilterForm /> should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <FilterForm />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <article
+          className="grade-btn-container"
+>
+          <button
+                    className="grade-btn grade-selected"
+                    onClick={[Function]}
+          >
+                    Grade 6
+          </button>
+          <button
+                    className="grade-btn"
+                    onClick={[Function]}
+          >
+                    Grade 7
+          </button>
+          <button
+                    className="grade-btn"
+                    onClick={[Function]}
+          >
+                    Grade 8
+          </button>
+</article>,
+        <section
+          className="options-container"
+>
+          <article
+                    className="options"
+          >
+                    <FilterSection
+                              domain={
+                                        Array [
+                                                  "Ratios & Proportions",
+                                                  "6.RP.A.1",
+                                                  "6.RP.A.2",
+                                                  "6.RP.A.3",
+                                                  "6.RP.A.3.A",
+                                                  "6.RP.A.3.B",
+                                                  "6.RP.A.3.C",
+                                                ]
+                              }
+                              renderDiscussions={undefined}
+                              renderFilteredDiscussions={undefined}
+                    />
+                    <FilterSection
+                              domain={
+                                        Array [
+                                                  "The Number System",
+                                                  "6.NS.A.1",
+                                                  "6.NS.B.2",
+                                                  "6.NS.B.3",
+                                                  "6.NS.B.4",
+                                                  "6.NS.C.5",
+                                                  "6.NS.C.6",
+                                                  "6.NS.C.7",
+                                                  "6.NS.C.8",
+                                                ]
+                              }
+                              renderDiscussions={undefined}
+                              renderFilteredDiscussions={undefined}
+                    />
+                    <FilterSection
+                              domain={
+                                        Array [
+                                                  "Expressions & Equations",
+                                                  "6.EE.A.1",
+                                                  "6.EE.A.2",
+                                                  "6.EE.A.3",
+                                                  "6.EE.A.4",
+                                                  "6.EE.B.5",
+                                                  "6.EE.B.6",
+                                                  "6.EE.B.7",
+                                                  "6.EE.B.8",
+                                                  "6.EE.C.9",
+                                                ]
+                              }
+                              renderDiscussions={undefined}
+                              renderFilteredDiscussions={undefined}
+                    />
+                    <FilterSection
+                              domain={
+                                        Array [
+                                                  "Geometry & Measurement",
+                                                  "6.G.A.1",
+                                                  "6.G.A.2",
+                                                  "6.G.A.3",
+                                                  "6.G.A.4",
+                                                ]
+                              }
+                              renderDiscussions={undefined}
+                              renderFilteredDiscussions={undefined}
+                    />
+                    <FilterSection
+                              domain={
+                                        Array [
+                                                  "Statistics & Probability",
+                                                  "6.SP.A.1",
+                                                  "6.SP.A.2",
+                                                  "6.SP.A.3",
+                                                  "6.SP.A.4",
+                                                  "6.SP.B.5",
+                                                ]
+                              }
+                              renderDiscussions={undefined}
+                              renderFilteredDiscussions={undefined}
+                    />
+          </article>
+          <article
+                    className="options"
+          />
+          <article
+                    className="options"
+          />
+</section>,
+      ],
+      "className": "filter-section",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <button
+              className="grade-btn grade-selected"
+              onClick={[Function]}
+>
+              Grade 6
+</button>,
+            <button
+              className="grade-btn"
+              onClick={[Function]}
+>
+              Grade 7
+</button>,
+            <button
+              className="grade-btn"
+              onClick={[Function]}
+>
+              Grade 8
+</button>,
+          ],
+          "className": "grade-btn-container",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Grade 6",
+              "className": "grade-btn grade-selected",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Grade 6",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Grade 7",
+              "className": "grade-btn",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Grade 7",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Grade 8",
+              "className": "grade-btn",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Grade 8",
+            "type": "button",
+          },
+        ],
+        "type": "article",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <article
+              className="options"
+>
+              <FilterSection
+                            domain={
+                                          Array [
+                                                        "Ratios & Proportions",
+                                                        "6.RP.A.1",
+                                                        "6.RP.A.2",
+                                                        "6.RP.A.3",
+                                                        "6.RP.A.3.A",
+                                                        "6.RP.A.3.B",
+                                                        "6.RP.A.3.C",
+                                                      ]
+                            }
+                            renderDiscussions={undefined}
+                            renderFilteredDiscussions={undefined}
+              />
+              <FilterSection
+                            domain={
+                                          Array [
+                                                        "The Number System",
+                                                        "6.NS.A.1",
+                                                        "6.NS.B.2",
+                                                        "6.NS.B.3",
+                                                        "6.NS.B.4",
+                                                        "6.NS.C.5",
+                                                        "6.NS.C.6",
+                                                        "6.NS.C.7",
+                                                        "6.NS.C.8",
+                                                      ]
+                            }
+                            renderDiscussions={undefined}
+                            renderFilteredDiscussions={undefined}
+              />
+              <FilterSection
+                            domain={
+                                          Array [
+                                                        "Expressions & Equations",
+                                                        "6.EE.A.1",
+                                                        "6.EE.A.2",
+                                                        "6.EE.A.3",
+                                                        "6.EE.A.4",
+                                                        "6.EE.B.5",
+                                                        "6.EE.B.6",
+                                                        "6.EE.B.7",
+                                                        "6.EE.B.8",
+                                                        "6.EE.C.9",
+                                                      ]
+                            }
+                            renderDiscussions={undefined}
+                            renderFilteredDiscussions={undefined}
+              />
+              <FilterSection
+                            domain={
+                                          Array [
+                                                        "Geometry & Measurement",
+                                                        "6.G.A.1",
+                                                        "6.G.A.2",
+                                                        "6.G.A.3",
+                                                        "6.G.A.4",
+                                                      ]
+                            }
+                            renderDiscussions={undefined}
+                            renderFilteredDiscussions={undefined}
+              />
+              <FilterSection
+                            domain={
+                                          Array [
+                                                        "Statistics & Probability",
+                                                        "6.SP.A.1",
+                                                        "6.SP.A.2",
+                                                        "6.SP.A.3",
+                                                        "6.SP.A.4",
+                                                        "6.SP.B.5",
+                                                      ]
+                            }
+                            renderDiscussions={undefined}
+                            renderFilteredDiscussions={undefined}
+              />
+</article>,
+            <article
+              className="options"
+/>,
+            <article
+              className="options"
+/>,
+          ],
+          "className": "options-container",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <FilterSection
+                  domain={
+                                    Array [
+                                                      "Ratios & Proportions",
+                                                      "6.RP.A.1",
+                                                      "6.RP.A.2",
+                                                      "6.RP.A.3",
+                                                      "6.RP.A.3.A",
+                                                      "6.RP.A.3.B",
+                                                      "6.RP.A.3.C",
+                                                    ]
+                  }
+                  renderDiscussions={undefined}
+                  renderFilteredDiscussions={undefined}
+/>,
+                <FilterSection
+                  domain={
+                                    Array [
+                                                      "The Number System",
+                                                      "6.NS.A.1",
+                                                      "6.NS.B.2",
+                                                      "6.NS.B.3",
+                                                      "6.NS.B.4",
+                                                      "6.NS.C.5",
+                                                      "6.NS.C.6",
+                                                      "6.NS.C.7",
+                                                      "6.NS.C.8",
+                                                    ]
+                  }
+                  renderDiscussions={undefined}
+                  renderFilteredDiscussions={undefined}
+/>,
+                <FilterSection
+                  domain={
+                                    Array [
+                                                      "Expressions & Equations",
+                                                      "6.EE.A.1",
+                                                      "6.EE.A.2",
+                                                      "6.EE.A.3",
+                                                      "6.EE.A.4",
+                                                      "6.EE.B.5",
+                                                      "6.EE.B.6",
+                                                      "6.EE.B.7",
+                                                      "6.EE.B.8",
+                                                      "6.EE.C.9",
+                                                    ]
+                  }
+                  renderDiscussions={undefined}
+                  renderFilteredDiscussions={undefined}
+/>,
+                <FilterSection
+                  domain={
+                                    Array [
+                                                      "Geometry & Measurement",
+                                                      "6.G.A.1",
+                                                      "6.G.A.2",
+                                                      "6.G.A.3",
+                                                      "6.G.A.4",
+                                                    ]
+                  }
+                  renderDiscussions={undefined}
+                  renderFilteredDiscussions={undefined}
+/>,
+                <FilterSection
+                  domain={
+                                    Array [
+                                                      "Statistics & Probability",
+                                                      "6.SP.A.1",
+                                                      "6.SP.A.2",
+                                                      "6.SP.A.3",
+                                                      "6.SP.A.4",
+                                                      "6.SP.B.5",
+                                                    ]
+                  }
+                  renderDiscussions={undefined}
+                  renderFilteredDiscussions={undefined}
+/>,
+              ],
+              "className": "options",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": "0",
+                "nodeType": "class",
+                "props": Object {
+                  "domain": Array [
+                    "Ratios & Proportions",
+                    "6.RP.A.1",
+                    "6.RP.A.2",
+                    "6.RP.A.3",
+                    "6.RP.A.3.A",
+                    "6.RP.A.3.B",
+                    "6.RP.A.3.C",
+                  ],
+                  "renderDiscussions": undefined,
+                  "renderFilteredDiscussions": undefined,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": "1",
+                "nodeType": "class",
+                "props": Object {
+                  "domain": Array [
+                    "The Number System",
+                    "6.NS.A.1",
+                    "6.NS.B.2",
+                    "6.NS.B.3",
+                    "6.NS.B.4",
+                    "6.NS.C.5",
+                    "6.NS.C.6",
+                    "6.NS.C.7",
+                    "6.NS.C.8",
+                  ],
+                  "renderDiscussions": undefined,
+                  "renderFilteredDiscussions": undefined,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": "2",
+                "nodeType": "class",
+                "props": Object {
+                  "domain": Array [
+                    "Expressions & Equations",
+                    "6.EE.A.1",
+                    "6.EE.A.2",
+                    "6.EE.A.3",
+                    "6.EE.A.4",
+                    "6.EE.B.5",
+                    "6.EE.B.6",
+                    "6.EE.B.7",
+                    "6.EE.B.8",
+                    "6.EE.C.9",
+                  ],
+                  "renderDiscussions": undefined,
+                  "renderFilteredDiscussions": undefined,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": "3",
+                "nodeType": "class",
+                "props": Object {
+                  "domain": Array [
+                    "Geometry & Measurement",
+                    "6.G.A.1",
+                    "6.G.A.2",
+                    "6.G.A.3",
+                    "6.G.A.4",
+                  ],
+                  "renderDiscussions": undefined,
+                  "renderFilteredDiscussions": undefined,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": "4",
+                "nodeType": "class",
+                "props": Object {
+                  "domain": Array [
+                    "Statistics & Probability",
+                    "6.SP.A.1",
+                    "6.SP.A.2",
+                    "6.SP.A.3",
+                    "6.SP.A.4",
+                    "6.SP.B.5",
+                  ],
+                  "renderDiscussions": undefined,
+                  "renderFilteredDiscussions": undefined,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": "article",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+              "className": "options",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "article",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+              "className": "options",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "article",
+          },
+        ],
+        "type": "section",
+      },
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <article
+            className="grade-btn-container"
+>
+            <button
+                        className="grade-btn grade-selected"
+                        onClick={[Function]}
+            >
+                        Grade 6
+            </button>
+            <button
+                        className="grade-btn"
+                        onClick={[Function]}
+            >
+                        Grade 7
+            </button>
+            <button
+                        className="grade-btn"
+                        onClick={[Function]}
+            >
+                        Grade 8
+            </button>
+</article>,
+          <section
+            className="options-container"
+>
+            <article
+                        className="options"
+            >
+                        <FilterSection
+                                    domain={
+                                                Array [
+                                                            "Ratios & Proportions",
+                                                            "6.RP.A.1",
+                                                            "6.RP.A.2",
+                                                            "6.RP.A.3",
+                                                            "6.RP.A.3.A",
+                                                            "6.RP.A.3.B",
+                                                            "6.RP.A.3.C",
+                                                          ]
+                                    }
+                                    renderDiscussions={undefined}
+                                    renderFilteredDiscussions={undefined}
+                        />
+                        <FilterSection
+                                    domain={
+                                                Array [
+                                                            "The Number System",
+                                                            "6.NS.A.1",
+                                                            "6.NS.B.2",
+                                                            "6.NS.B.3",
+                                                            "6.NS.B.4",
+                                                            "6.NS.C.5",
+                                                            "6.NS.C.6",
+                                                            "6.NS.C.7",
+                                                            "6.NS.C.8",
+                                                          ]
+                                    }
+                                    renderDiscussions={undefined}
+                                    renderFilteredDiscussions={undefined}
+                        />
+                        <FilterSection
+                                    domain={
+                                                Array [
+                                                            "Expressions & Equations",
+                                                            "6.EE.A.1",
+                                                            "6.EE.A.2",
+                                                            "6.EE.A.3",
+                                                            "6.EE.A.4",
+                                                            "6.EE.B.5",
+                                                            "6.EE.B.6",
+                                                            "6.EE.B.7",
+                                                            "6.EE.B.8",
+                                                            "6.EE.C.9",
+                                                          ]
+                                    }
+                                    renderDiscussions={undefined}
+                                    renderFilteredDiscussions={undefined}
+                        />
+                        <FilterSection
+                                    domain={
+                                                Array [
+                                                            "Geometry & Measurement",
+                                                            "6.G.A.1",
+                                                            "6.G.A.2",
+                                                            "6.G.A.3",
+                                                            "6.G.A.4",
+                                                          ]
+                                    }
+                                    renderDiscussions={undefined}
+                                    renderFilteredDiscussions={undefined}
+                        />
+                        <FilterSection
+                                    domain={
+                                                Array [
+                                                            "Statistics & Probability",
+                                                            "6.SP.A.1",
+                                                            "6.SP.A.2",
+                                                            "6.SP.A.3",
+                                                            "6.SP.A.4",
+                                                            "6.SP.B.5",
+                                                          ]
+                                    }
+                                    renderDiscussions={undefined}
+                                    renderFilteredDiscussions={undefined}
+                        />
+            </article>
+            <article
+                        className="options"
+            />
+            <article
+                        className="options"
+            />
+</section>,
+        ],
+        "className": "filter-section",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <button
+                className="grade-btn grade-selected"
+                onClick={[Function]}
+>
+                Grade 6
+</button>,
+              <button
+                className="grade-btn"
+                onClick={[Function]}
+>
+                Grade 7
+</button>,
+              <button
+                className="grade-btn"
+                onClick={[Function]}
+>
+                Grade 8
+</button>,
+            ],
+            "className": "grade-btn-container",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Grade 6",
+                "className": "grade-btn grade-selected",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Grade 6",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Grade 7",
+                "className": "grade-btn",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Grade 7",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Grade 8",
+                "className": "grade-btn",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Grade 8",
+              "type": "button",
+            },
+          ],
+          "type": "article",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <article
+                className="options"
+>
+                <FilterSection
+                                domain={
+                                                Array [
+                                                                "Ratios & Proportions",
+                                                                "6.RP.A.1",
+                                                                "6.RP.A.2",
+                                                                "6.RP.A.3",
+                                                                "6.RP.A.3.A",
+                                                                "6.RP.A.3.B",
+                                                                "6.RP.A.3.C",
+                                                              ]
+                                }
+                                renderDiscussions={undefined}
+                                renderFilteredDiscussions={undefined}
+                />
+                <FilterSection
+                                domain={
+                                                Array [
+                                                                "The Number System",
+                                                                "6.NS.A.1",
+                                                                "6.NS.B.2",
+                                                                "6.NS.B.3",
+                                                                "6.NS.B.4",
+                                                                "6.NS.C.5",
+                                                                "6.NS.C.6",
+                                                                "6.NS.C.7",
+                                                                "6.NS.C.8",
+                                                              ]
+                                }
+                                renderDiscussions={undefined}
+                                renderFilteredDiscussions={undefined}
+                />
+                <FilterSection
+                                domain={
+                                                Array [
+                                                                "Expressions & Equations",
+                                                                "6.EE.A.1",
+                                                                "6.EE.A.2",
+                                                                "6.EE.A.3",
+                                                                "6.EE.A.4",
+                                                                "6.EE.B.5",
+                                                                "6.EE.B.6",
+                                                                "6.EE.B.7",
+                                                                "6.EE.B.8",
+                                                                "6.EE.C.9",
+                                                              ]
+                                }
+                                renderDiscussions={undefined}
+                                renderFilteredDiscussions={undefined}
+                />
+                <FilterSection
+                                domain={
+                                                Array [
+                                                                "Geometry & Measurement",
+                                                                "6.G.A.1",
+                                                                "6.G.A.2",
+                                                                "6.G.A.3",
+                                                                "6.G.A.4",
+                                                              ]
+                                }
+                                renderDiscussions={undefined}
+                                renderFilteredDiscussions={undefined}
+                />
+                <FilterSection
+                                domain={
+                                                Array [
+                                                                "Statistics & Probability",
+                                                                "6.SP.A.1",
+                                                                "6.SP.A.2",
+                                                                "6.SP.A.3",
+                                                                "6.SP.A.4",
+                                                                "6.SP.B.5",
+                                                              ]
+                                }
+                                renderDiscussions={undefined}
+                                renderFilteredDiscussions={undefined}
+                />
+</article>,
+              <article
+                className="options"
+/>,
+              <article
+                className="options"
+/>,
+            ],
+            "className": "options-container",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <FilterSection
+                    domain={
+                                        Array [
+                                                            "Ratios & Proportions",
+                                                            "6.RP.A.1",
+                                                            "6.RP.A.2",
+                                                            "6.RP.A.3",
+                                                            "6.RP.A.3.A",
+                                                            "6.RP.A.3.B",
+                                                            "6.RP.A.3.C",
+                                                          ]
+                    }
+                    renderDiscussions={undefined}
+                    renderFilteredDiscussions={undefined}
+/>,
+                  <FilterSection
+                    domain={
+                                        Array [
+                                                            "The Number System",
+                                                            "6.NS.A.1",
+                                                            "6.NS.B.2",
+                                                            "6.NS.B.3",
+                                                            "6.NS.B.4",
+                                                            "6.NS.C.5",
+                                                            "6.NS.C.6",
+                                                            "6.NS.C.7",
+                                                            "6.NS.C.8",
+                                                          ]
+                    }
+                    renderDiscussions={undefined}
+                    renderFilteredDiscussions={undefined}
+/>,
+                  <FilterSection
+                    domain={
+                                        Array [
+                                                            "Expressions & Equations",
+                                                            "6.EE.A.1",
+                                                            "6.EE.A.2",
+                                                            "6.EE.A.3",
+                                                            "6.EE.A.4",
+                                                            "6.EE.B.5",
+                                                            "6.EE.B.6",
+                                                            "6.EE.B.7",
+                                                            "6.EE.B.8",
+                                                            "6.EE.C.9",
+                                                          ]
+                    }
+                    renderDiscussions={undefined}
+                    renderFilteredDiscussions={undefined}
+/>,
+                  <FilterSection
+                    domain={
+                                        Array [
+                                                            "Geometry & Measurement",
+                                                            "6.G.A.1",
+                                                            "6.G.A.2",
+                                                            "6.G.A.3",
+                                                            "6.G.A.4",
+                                                          ]
+                    }
+                    renderDiscussions={undefined}
+                    renderFilteredDiscussions={undefined}
+/>,
+                  <FilterSection
+                    domain={
+                                        Array [
+                                                            "Statistics & Probability",
+                                                            "6.SP.A.1",
+                                                            "6.SP.A.2",
+                                                            "6.SP.A.3",
+                                                            "6.SP.A.4",
+                                                            "6.SP.B.5",
+                                                          ]
+                    }
+                    renderDiscussions={undefined}
+                    renderFilteredDiscussions={undefined}
+/>,
+                ],
+                "className": "options",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": "0",
+                  "nodeType": "class",
+                  "props": Object {
+                    "domain": Array [
+                      "Ratios & Proportions",
+                      "6.RP.A.1",
+                      "6.RP.A.2",
+                      "6.RP.A.3",
+                      "6.RP.A.3.A",
+                      "6.RP.A.3.B",
+                      "6.RP.A.3.C",
+                    ],
+                    "renderDiscussions": undefined,
+                    "renderFilteredDiscussions": undefined,
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": "1",
+                  "nodeType": "class",
+                  "props": Object {
+                    "domain": Array [
+                      "The Number System",
+                      "6.NS.A.1",
+                      "6.NS.B.2",
+                      "6.NS.B.3",
+                      "6.NS.B.4",
+                      "6.NS.C.5",
+                      "6.NS.C.6",
+                      "6.NS.C.7",
+                      "6.NS.C.8",
+                    ],
+                    "renderDiscussions": undefined,
+                    "renderFilteredDiscussions": undefined,
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": "2",
+                  "nodeType": "class",
+                  "props": Object {
+                    "domain": Array [
+                      "Expressions & Equations",
+                      "6.EE.A.1",
+                      "6.EE.A.2",
+                      "6.EE.A.3",
+                      "6.EE.A.4",
+                      "6.EE.B.5",
+                      "6.EE.B.6",
+                      "6.EE.B.7",
+                      "6.EE.B.8",
+                      "6.EE.C.9",
+                    ],
+                    "renderDiscussions": undefined,
+                    "renderFilteredDiscussions": undefined,
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": "3",
+                  "nodeType": "class",
+                  "props": Object {
+                    "domain": Array [
+                      "Geometry & Measurement",
+                      "6.G.A.1",
+                      "6.G.A.2",
+                      "6.G.A.3",
+                      "6.G.A.4",
+                    ],
+                    "renderDiscussions": undefined,
+                    "renderFilteredDiscussions": undefined,
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": "4",
+                  "nodeType": "class",
+                  "props": Object {
+                    "domain": Array [
+                      "Statistics & Probability",
+                      "6.SP.A.1",
+                      "6.SP.A.2",
+                      "6.SP.A.3",
+                      "6.SP.A.4",
+                      "6.SP.B.5",
+                    ],
+                    "renderDiscussions": undefined,
+                    "renderFilteredDiscussions": undefined,
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": "article",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+                "className": "options",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "article",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+                "className": "options",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "article",
+            },
+          ],
+          "type": "section",
+        },
+      ],
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
