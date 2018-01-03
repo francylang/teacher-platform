@@ -11,7 +11,6 @@ class CardContainer extends Component {
   }
 
   buildDiscussionCard() {
-    console.log(this.props.discussions);
     return this.props.discussions.map(discussion => {
       return (
         <DiscussionCard

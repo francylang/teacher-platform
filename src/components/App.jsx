@@ -71,7 +71,6 @@ class App extends Component {
   }
 
   renderDiscussions() {
-    console.log(this.state.discussions);
     this.setState({
       showingDiscussions: true,
       showingForm: false,

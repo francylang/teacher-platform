@@ -26,8 +26,9 @@ class DiscussionForm extends Component {
   handleSubmit(event) {
     event.preventDefault();
     const { title, body } = this.state;
-    this.clearInputs();
+    console.log(this.state);
     postNewDiscussion(title, body);
+    this.clearInputs();
   }
 
   render() {
