@@ -19,15 +19,9 @@ class FilterSection extends Component {
   }
 
   findMatchingDiscussions(rawDiscussions, standard) {
-    return rawDiscussions.reduce((acc, discussion) => {
-      if (discussion.tagTitle === standard) {
-        acc.id = discussion.id;
-        acc.title = discussion.title;
-        acc.body = discussion.body;
-        acc.tagId = discussion.tagId;
-      }
-      return acc;
-    }, {});
+    return rawDiscussions.filter((discussion) => {
+      return discussion.tagTitle === standard
+    })
   }
 
   getFilteredDiscussions(standard) {
