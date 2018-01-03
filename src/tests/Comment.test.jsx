@@ -1,31 +1,43 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import COmment from '../components/COmment';
+import Comment from '../components/Comment';
 import { shallow } from 'enzyme';
 import testSetup from './testSetup';
 
-describe('<COmment />', () => {
+describe('<Comment />', () => {
   let wrapper;
   let mockFn = jest.fn();
 
   beforeEach(() => {
-    wrapper = shallow(<COmment />);
+    wrapper = shallow(<Comment />);
   });
 
   it('should exist', () => {
     expect(wrapper).toBeDefined();
   });
 
-  it('should render a card section', () => {
-    const card = wrapper.find('.card-section');
+  it('should render a comment section', () => {
+    const comment = wrapper.find('.comment-section');
 
-    expect(card.length).toEqual(1);
+    expect(comment.length).toEqual(1);
   });
 
-  it('should render a card section title', () => {
-    const title = wrapper.find('.current-feed-title');
+  it('should render a comment header', () => {
+    const header = wrapper.find('.comments-header');
 
-    expect(title.length).toEqual(1);
+    expect(header.length).toEqual(1);
+  });
+
+  it('should render comments', () => {
+    const comment = wrapper.find('.comment');
+
+    expect(comment.length).toBeDefined();
+  });
+
+  it('should render a list with comment info', () => {
+    const list = wrapper.find('ul');
+
+    expect(list.length).toBeDefined();
   });
 
   it('should match snapshot', () => {
