@@ -21,7 +21,7 @@ describe('<FilterSection />', () => {
 
     expect(optionsContainer.length).toEqual(1);
   });
-  
+
   it('should render a button for each standard', () => {
     const btn = wrapper.find('.standard-link');
 
