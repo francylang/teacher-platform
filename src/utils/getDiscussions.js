@@ -5,7 +5,7 @@ export const fetchDiscussions = () => {
     .catch((error) => console.error({ error }));
 }
 
-const cleanDiscussions = rawDiscussions => {
+export const cleanDiscussions = rawDiscussions => {
   return rawDiscussions.map(discussion => {
     return {
       title: discussion.title,

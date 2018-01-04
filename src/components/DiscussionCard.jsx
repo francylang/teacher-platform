@@ -7,21 +7,37 @@ class DiscussionCard extends Component {
     super();
     this.state = {
       displayingComment: false,
+      displayingCommentForm: false
     };
   }
 
   toggleComments() {
     this.setState({
       displayingComment: !this.state.displayingComment,
+      displayingCommentForm: !this.state.displayingCommentForm
     });
   }
 
   showComments() {
     if (this.state.displayingComment) {
-      return [
-        <Comment/>,
-        <CommentForm />,
-      ];
+      return this.props.comments.map(comment => {
+        return (
+          <Comment
+            key={comment.id}
+            comment={comment.comment}
+            commentId={comment.discussionId}
+            discussionId={this.props.discussion.id}
+          />
+        )
+      })
+    }
+  }
+
+  showCommentForm() {
+    if (this.state.displayingCommentForm) {
+      return (
+        <CommentForm />
+      )
     }
   }
 
@@ -51,6 +67,7 @@ class DiscussionCard extends Component {
           {this.showMoreLess()}
         </button>
         {this.showComments()}
+        {this.showCommentForm()}
       </article>
     );
   }

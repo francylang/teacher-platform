@@ -2,21 +2,26 @@ import React, { Component } from 'react';
 import DiscussionCard from './DiscussionCard';
 
 class CardContainer extends Component {
-  grabCommentsForDisscussion(id) {
-    this.props.comments.filter(comment => {
-      if (comment.discussionId === id) {
-        return comment
-      }
+  matchDiscussionIds() {
+    const { comments, discussions } = this.props;
+
+    let filtered = comments.filter(comment => {
+      return discussions.forEach(discussion => {
+        if (discussion.id === comment.id) {
+          return comment.id
+        }
+      })
     })
   }
 
   buildDiscussionCard() {
+    this.matchDiscussionIds()
     return this.props.discussions.map(discussion => {
       return (
         <DiscussionCard
           key={discussion.id}
           discussion={discussion}
-          comment={this.grabCommentsForDisscussion(discussion.id)}
+          comments={this.props.comments}
         />)
     })
   }
