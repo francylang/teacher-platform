@@ -10,39 +10,24 @@ class Search extends Component {
     this.searchUpdated = this.searchUpdated.bind(this);
   }
 
-  mapTitleBody() {
-    let titlesBodies = []
-    return this.props.discussions.map(discussion => {
-      titlesBodies.push(discussion.title, discussion.body)
-      console.log(titlesBodies);
-      return titlesBodies
-    })
+  searchUpdated(searchTerm) {
+    const KEYS_TO_FILTERS = ['discussions.title', 'discussions.body'];
+    console.log(this.props);
+    this.setState({ searchTerm });
+    const filteredDiscussions = this.props.discussions.filter(createFilter(this.state.searchTerm, KEYS_TO_FILTERS));
+    this.props.renderFilteredDiscussions(filteredDiscussions);
   }
 
-  searchUpdated(term) {
-    this.setState({
-      searchTerm: term
-    })
+  shouldComponentUpdate(nextProps) {
+    return this.props !== nextProps;
   }
 
   render() {
-    this.mapTitleBody()
-    const { handleSearch, discussions } = this.props;
+    const { handleSearch, discussions, renderDiscussions, renderFilteredDiscussions } = this.props;
 
     return (
       <aside className="search-section">
-        <label htmlFor="search-input"></label>
-        <input
-          type="text"
-          id="search-input"
-          placeholder="Search discussions..."
-        >
-        </input>
-        <button
-          discussions={discussions}
-          className="search-btn"
-        >
-        </button>
+        <SearchInput className="search-input" onChange={this.searchUpdated} />
       </aside>
     );
   }

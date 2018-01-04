@@ -36,7 +36,8 @@ class DiscussionCard extends Component {
   showCommentForm() {
     if (this.state.displayingCommentForm) {
       return (
-        <CommentForm />
+        <CommentForm
+          discussionId={this.props.discussion.id}/>
       )
     }
   }

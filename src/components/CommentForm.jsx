@@ -1,6 +1,28 @@
 import React, { Component } from 'react';
+import { postComment } from '../utils/postComment.js';
 
 class CommentForm extends Component {
+  constructor() {
+    super()
+    this.state = {
+      body: ''
+    }
+  }
+
+  handleChange(event) {
+    this.setState({
+      body: event.target.value
+    })
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    postComment(this.state.body, this.props.discussionId);
+    this.setState({
+      body: ''
+    })
+  }
+
   render() {
     return (
       <article className="comment-form-containter">
@@ -16,6 +38,7 @@ class CommentForm extends Component {
               id="get-comment"
               type="text"
               name="comment"
+              onChange={this.handleChange.bind(this)}
             >
             </textarea>
           </label>
@@ -23,6 +46,7 @@ class CommentForm extends Component {
             className="submit-comment"
             type="submit"
             name="submit"
+            onClick={(event) => this.handleSubmit(event)}
           >Submit
           </button>
         </form>
