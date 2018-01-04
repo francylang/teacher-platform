@@ -4,7 +4,7 @@ import Nav from './Nav';
 import CardContainer from './CardContainer';
 import DiscussionForm from './DiscussionForm';
 import FilterForm from './FilterForm';
-// import { fetchDiscussions } from '../utils/getDiscussions';
+// import { fetchComments } from '../utils/getDiscussions';
 
 class App extends Component {
   constructor() {
@@ -94,12 +94,12 @@ class App extends Component {
   }
 
   render() {
-    const { showingDiscussions, showingForm, showingStandards } = this.state;
+    const { showingDiscussions, showingForm, showingStandards, discussions, comments } = this.state;
     const showDiscussions = showingDiscussions
       ? <CardContainer
-        discussions={this.state.discussions}
-        comments={this.state.comments}
-        rendered={this.state.showingDiscussions}/> : null;
+        discussions={discussions}
+        comments={comments}
+        rendered={showingDiscussions}/> : null;
 
     const showForm = showingForm
       ? <DiscussionForm rendered={this.state.showingForm}/> : null;
