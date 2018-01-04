@@ -79,7 +79,6 @@ class App extends Component {
   }
 
   renderFilteredDiscussions(discussions) {
-    // console.log(discussions, this.state.discussions);
     this.setState({ discussions });
   }
 

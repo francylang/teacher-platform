@@ -17,7 +17,6 @@ class DiscussionCard extends Component {
   }
 
   showComments() {
-    console.log(this.props);
     if (this.state.displayingComment) {
       return [
         <Comment/>,

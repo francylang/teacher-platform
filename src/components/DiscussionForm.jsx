@@ -7,7 +7,6 @@ class DiscussionForm extends Component {
     this.state = {
       title: '',
       body: '',
-      posted: false,
     };
   }
 
@@ -17,9 +16,18 @@ class DiscussionForm extends Component {
     });
   }
 
+  clearInputs() {
+    this.setState({
+      title: '',
+      body: '',
+    });
+  }
+
   handleSubmit(event) {
     event.preventDefault();
     const { title, body } = this.state;
+    postNewDiscussion(title, body);
+    this.clearInputs();
   }
 
   render() {
@@ -31,6 +39,7 @@ class DiscussionForm extends Component {
               id="dicussion-title"
               type="text"
               name="title"
+              value={this.state.title}
               placeholder="Title"
               onChange={this.handleChange.bind(this, 'title')}
             >
@@ -41,7 +50,9 @@ class DiscussionForm extends Component {
               id="dicussion-body"
               type="text"
               name="body"
+              value={this.state.body}
               placeholder="Detailed question"
+              onChange={this.handleChange.bind(this, 'body')}
             >
             </textarea>
           </label>

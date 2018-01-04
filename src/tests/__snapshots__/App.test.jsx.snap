@@ -1,0 +1,275 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <App />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Header />,
+        <article
+          className="main"
+>
+          <Nav
+                    discussions={Array []}
+                    handleSearch={[Function]}
+                    renderDiscussions={[Function]}
+                    renderForm={[Function]}
+                    renderStandards={[Function]}
+          />
+          <section
+                    className="bottom-main"
+          >
+                    <CardContainer
+                              comments={Array []}
+                              discussions={Array []}
+                              rendered={true}
+                    />
+          </section>
+</article>,
+      ],
+      "className": "app",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Nav
+              discussions={Array []}
+              handleSearch={[Function]}
+              renderDiscussions={[Function]}
+              renderForm={[Function]}
+              renderStandards={[Function]}
+/>,
+            <section
+              className="bottom-main"
+>
+              <CardContainer
+                            comments={Array []}
+                            discussions={Array []}
+                            rendered={true}
+              />
+</section>,
+          ],
+          "className": "main",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "discussions": Array [],
+              "handleSearch": [Function],
+              "renderDiscussions": [Function],
+              "renderForm": [Function],
+              "renderStandards": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <CardContainer
+                  comments={Array []}
+                  discussions={Array []}
+                  rendered={true}
+/>,
+                null,
+                null,
+              ],
+              "className": "bottom-main",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "comments": Array [],
+                  "discussions": Array [],
+                  "rendered": true,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              null,
+              null,
+            ],
+            "type": "section",
+          },
+        ],
+        "type": "article",
+      },
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Header />,
+          <article
+            className="main"
+>
+            <Nav
+                        discussions={Array []}
+                        handleSearch={[Function]}
+                        renderDiscussions={[Function]}
+                        renderForm={[Function]}
+                        renderStandards={[Function]}
+            />
+            <section
+                        className="bottom-main"
+            >
+                        <CardContainer
+                                    comments={Array []}
+                                    discussions={Array []}
+                                    rendered={true}
+                        />
+            </section>
+</article>,
+        ],
+        "className": "app",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Nav
+                discussions={Array []}
+                handleSearch={[Function]}
+                renderDiscussions={[Function]}
+                renderForm={[Function]}
+                renderStandards={[Function]}
+/>,
+              <section
+                className="bottom-main"
+>
+                <CardContainer
+                                comments={Array []}
+                                discussions={Array []}
+                                rendered={true}
+                />
+</section>,
+            ],
+            "className": "main",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "discussions": Array [],
+                "handleSearch": [Function],
+                "renderDiscussions": [Function],
+                "renderForm": [Function],
+                "renderStandards": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <CardContainer
+                    comments={Array []}
+                    discussions={Array []}
+                    rendered={true}
+/>,
+                  null,
+                  null,
+                ],
+                "className": "bottom-main",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "comments": Array [],
+                    "discussions": Array [],
+                    "rendered": true,
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                null,
+                null,
+              ],
+              "type": "section",
+            },
+          ],
+          "type": "article",
+        },
+      ],
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
