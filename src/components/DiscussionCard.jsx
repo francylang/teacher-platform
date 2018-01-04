@@ -16,19 +16,17 @@ class DiscussionCard extends Component {
     });
   }
 
-  comments() {
-    return this.props.comments.map(comment => comment.discussionId)
-  }
-
   showComments() {
     if (this.state.displayingComment) {
       return this.props.comments.map(comment => {
         return (
           <Comment
+            key={comment.id}
             comment={comment.comment}
             commentId={comment.discussionId}
             discussionId={this.props.discussion.id}
-          />)
+          />
+        )
       })
     }
   }
@@ -46,7 +44,6 @@ class DiscussionCard extends Component {
   }
 
   render() {
-    this.comments()
     const { title, body } = this.props.discussion
     return (
       <article className="card">
