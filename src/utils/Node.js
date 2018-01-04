@@ -1,10 +1,10 @@
-
-export default class Node {
+class Node {
   constructor(letter = null) {
     this.letter = letter;
-    this.isWord = false;
     this.children = {};
+    this.isCompleteWord = false;
     this.frequency = 0;
-    this.mostRecent = 0;
   }
+
 }
+export default Node;

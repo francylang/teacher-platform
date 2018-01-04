@@ -125,6 +125,7 @@ class App extends Component {
             renderDiscussions={this.renderDiscussions}
             handleSearch={this.handleSearch}
             discussions={this.state.discussions}
+            renderFilteredDiscussions={this.renderFilteredDiscussions}
           />
           <section className="bottom-main">
             { showDiscussions }

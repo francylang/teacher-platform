@@ -1,54 +1,33 @@
 import React, { Component } from 'react';
-import Trie from '../utils/Trie';
+import SearchInput, { createFilter } from 'react-search-input';
 
 class Search extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      userInput: '',
-      suggestions: []
+      searchTerm: ''
     }
-
-    this.trie = {};
-
-    this.trie = new Trie()
-    this.handleClick = this.handleClick.bind(this)
-    this.handleChange = this.handleChange.bind(this)
+    this.searchUpdated = this.searchUpdated.bind(this);
   }
 
-  handleChange(event) {
-    const keywordSuggestions = this.trie.suggest(event.target.value);
-    this.setState({
-      userInput: event.target.value,
-      suggestions: keywordSuggestions
-    });
+  searchUpdated(searchTerm) {
+    const KEYS_TO_FILTERS = ['discussions.title', 'discussions.body'];
+    console.log(this.props);
+    this.setState({ searchTerm });
+    const filteredDiscussions = this.props.discussions.filter(createFilter(this.state.searchTerm, KEYS_TO_FILTERS));
+    this.props.renderFilteredDiscussions(filteredDiscussions);
   }
 
-  handleClick() {
-    this.props.handleSearch(this.state.userInput);
+  shouldComponentUpdate(nextProps) {
+    return this.props !== nextProps;
   }
 
   render() {
-    const { handleSearch, discussions } = this.props;
-
-    this.trie.populate(discussions);
+    const { handleSearch, discussions, renderDiscussions, renderFilteredDiscussions } = this.props;
 
     return (
       <aside className="search-section">
-        <label htmlFor="search-input"></label>
-        <input
-          onChange={this.handleChange}
-          type="text"
-          id="search-input"
-          placeholder="Search discussions..."
-        >
-        </input>
-        <button
-          onClick={this.handleClick}
-          discussions={discussions}
-          className="search-btn"
-        >
-        </button>
+        <SearchInput className="search-input" onChange={this.searchUpdated} />
       </aside>
     );
   }
