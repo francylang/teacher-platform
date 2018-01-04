@@ -7,12 +7,14 @@ class DiscussionCard extends Component {
     super();
     this.state = {
       displayingComment: false,
+      displayingCommentForm: false
     };
   }
 
   toggleComments() {
     this.setState({
       displayingComment: !this.state.displayingComment,
+      displayingCommentForm: !this.state.displayingCommentForm
     });
   }
 
@@ -28,6 +30,14 @@ class DiscussionCard extends Component {
           />
         )
       })
+    }
+  }
+
+  showCommentForm() {
+    if (this.state.displayingCommentForm) {
+      return (
+        <CommentForm />
+      )
     }
   }
 
@@ -57,6 +67,7 @@ class DiscussionCard extends Component {
           {this.showMoreLess()}
         </button>
         {this.showComments()}
+        {this.showCommentForm()}
       </article>
     );
   }
