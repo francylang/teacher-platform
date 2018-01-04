@@ -6,10 +6,10 @@ class Nav extends Component {
     const { handleSearch, discussions } = this.props
     return (
       <div className="nav">
-        {/* <Search
+        <Search
           handleSearch={handleSearch}
           discussions={discussions}
-        /> */}
+        />
         <button
           onClick={() => this.props.renderStandards()}
           className="filter-btn"

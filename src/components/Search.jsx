@@ -1,50 +1,44 @@
 import React, { Component } from 'react';
-import Trie from '../utils/Trie';
+import SearchInput, { createFilter } from 'react-search-input';
 
 class Search extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      userInput: '',
-      suggestions: []
+      searchTerm: ''
     }
-
-    this.trie = {};
-
-    this.trie = new Trie()
-    this.handleClick = this.handleClick.bind(this)
-    this.handleChange = this.handleChange.bind(this)
+    this.searchUpdated = this.searchUpdated.bind(this);
   }
 
-  handleChange(event) {
-    const keywordSuggestions = this.trie.suggest(event.target.value);
+  mapTitleBody() {
+    let titlesBodies = []
+    return this.props.discussions.map(discussion => {
+      titlesBodies.push(discussion.title, discussion.body)
+      console.log(titlesBodies);
+      return titlesBodies
+    })
+  }
+
+  searchUpdated(term) {
     this.setState({
-      userInput: event.target.value,
-      suggestions: keywordSuggestions
-    });
-  }
-
-  handleClick() {
-    this.props.handleSearch(this.state.userInput);
+      searchTerm: term
+    })
   }
 
   render() {
+    this.mapTitleBody()
     const { handleSearch, discussions } = this.props;
-
-    this.trie.populate(discussions);
 
     return (
       <aside className="search-section">
         <label htmlFor="search-input"></label>
         <input
-          onChange={this.handleChange}
           type="text"
           id="search-input"
           placeholder="Search discussions..."
         >
         </input>
         <button
-          onClick={this.handleClick}
           discussions={discussions}
           className="search-btn"
         >
