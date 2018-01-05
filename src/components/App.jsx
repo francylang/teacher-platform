@@ -4,6 +4,7 @@ import Nav from './Nav';
 import CardContainer from './CardContainer';
 import DiscussionForm from './DiscussionForm';
 import FilterForm from './FilterForm';
+import { DEV_URL, PROD_URL } from '../url.js';
 // import { fetchComments } from '../utils/getDiscussions';
 
 class App extends Component {
@@ -99,6 +100,7 @@ class App extends Component {
   }
 
   render() {
+    console.log(DEV_URL);
     const { showingDiscussions, showingForm, showingStandards, discussions, comments } = this.state;
     const showDiscussions = showingDiscussions
       ? <CardContainer
