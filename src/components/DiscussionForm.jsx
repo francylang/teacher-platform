@@ -40,6 +40,37 @@ class DiscussionForm extends Component {
     })
   }
 
+  renderDomains() {
+    if (this.state.gradeSelected === "6" || this.state.gradeSelected === "7") {
+      console.log('if', this.state.gradeSelected);
+      return (
+        <div>
+          <h4 className="grade-level-domain">Ratios and Proportional Relationships</h4>
+          <h4 className="grade-level-domain">The Number System</h4>
+          <h4 className="grade-level-domain">Expressions & Equations</h4>
+          <h4 className="grade-level-domain">Geometry</h4>
+          <h4 className="grade-level-domain">Statistics & Probability</h4>
+        </div>
+      )
+    } else if (this.state.gradeSelected === "8") {
+      console.log('else if');
+      return (
+        <div>
+          <h4 className="grade-level-domain">The Number System</h4>
+          <h4 className="grade-level-domain">Expressions & Equations</h4>
+          <h4 className="grade-level-domain">Functions</h4>
+          <h4 className="grade-level-domain">Geometry</h4>
+          <h4 className="grade-level-domain">Statistics & Probability</h4>
+        </div>
+      )
+    } else {
+      console.log('else');
+      return (
+        <div></div>
+      )
+    }
+  }
+
   render() {
     return (
       <article className="discussion-form-section">
@@ -90,14 +121,7 @@ class DiscussionForm extends Component {
               Grade 8
             </button>
           </div>
-          <div className="grade-level-domains">
-            <h4 className="grade-level-domain">Ratios and Proportional Relationships</h4>
-            <h4 className="grade-level-domain">The Number System</h4>
-            <h4 className="grade-level-domain">Expressions & Equations</h4>
-            <h4 className="grade-level-domain">Functions</h4>
-            <h4 className="grade-level-domain">Geometry</h4>
-            <h4 className="grade-level-domain">Statistics & Probability</h4>
-          </div>
+          <div className="grade-level-domains">{this.renderDomains()}</div>
           <button
             className="submit-discussion-btn"
             onClick={(event) => this.handleSubmit(event)}
