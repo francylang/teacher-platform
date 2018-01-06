@@ -1,21 +1,28 @@
 import React, { Component } from 'react';
-import SearchInput, { createFilter } from 'react-search-input';
 
 class Search extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       searchTerm: ''
     }
-    this.searchUpdated = this.searchUpdated.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  searchUpdated(searchTerm) {
-    const KEYS_TO_FILTERS = ['discussions.title', 'discussions.body'];
-    console.log(this.props);
-    this.setState({ searchTerm });
-    const filteredDiscussions = this.props.discussions.filter(createFilter(this.state.searchTerm, KEYS_TO_FILTERS));
-    this.props.renderFilteredDiscussions(filteredDiscussions);
+  handleChange(event) {
+    event.preventDefault();
+    this.setState({ searchTerm: event.target.value });
+    console.log(this.state);
+    this.filterDiscussions();
+  }
+
+  filterDiscussions() {
+    const filtered = this.props.discussions.filter(dicussion => {
+      return dicussion.title.includes(this.state.searchTerm) || dicussion.body.includes(this.state.searchTerm);
+    });
+
+    this.props.renderDiscussions();
+    this.props.renderFilteredDiscussions(filtered);
   }
 
   shouldComponentUpdate(nextProps) {
@@ -27,7 +34,14 @@ class Search extends Component {
 
     return (
       <aside className="search-section">
-        <SearchInput className="search-input" onChange={this.searchUpdated} />
+        <label htmlFor="search-input"></label>
+        <input
+          onChange={this.handleChange.bind(this)}
+          type="text"
+          id="search-input"
+          placeholder="Search discussions..."
+        >
+        </input>
       </aside>
     );
   }
