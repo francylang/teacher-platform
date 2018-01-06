@@ -40,33 +40,91 @@ class DiscussionForm extends Component {
     })
   }
 
+  selectDomain(event) {
+    event.preventDefault();
+    console.log(event.target.value);
+    this.setState({
+      domainSelected: event.target.value
+    })
+  }
+
   renderDomains() {
     if (this.state.gradeSelected === "6" || this.state.gradeSelected === "7") {
-      console.log('if', this.state.gradeSelected);
       return (
-        <div>
-          <h4 className="grade-level-domain">Ratios and Proportional Relationships</h4>
-          <h4 className="grade-level-domain">The Number System</h4>
-          <h4 className="grade-level-domain">Expressions & Equations</h4>
-          <h4 className="grade-level-domain">Geometry</h4>
-          <h4 className="grade-level-domain">Statistics & Probability</h4>
+        <div className="grade-6-7-domains">
+          <button
+            className="grade-level-domain"
+            value={`${this.state.gradeSelected}-RP`}
+            onClick={(event) => this.selectDomain(event)}
+          >
+            Ratios and Proportional Relationships</button>
+          <button
+            className="grade-level-domain"
+            value={`${this.state.gradeSelected}-NS`}
+            onClick={(event) => this.selectDomain(event)}
+          >
+            The Number System</button>
+          <button
+            className="grade-level-domain"
+            value={`${this.state.gradeSelected}-EE`}
+            onClick={(event) => this.selectDomain(event)}
+          >
+            Expressions & Equations</button>
+          <button
+            className="grade-level-domain"
+            value={`${this.state.gradeSelected}-G`}
+            onClick={(event) => this.selectDomain(event)}
+          >
+            Geometry
+          </button>
+          <button
+            className="grade-level-domain"
+            value={`${this.state.gradeSelected}-SP`}
+            onClick={(event) => this.selectDomain(event)}
+          >
+            Statistics & Probability
+          </button>
         </div>
       )
     } else if (this.state.gradeSelected === "8") {
-      console.log('else if');
       return (
-        <div>
-          <h4 className="grade-level-domain">The Number System</h4>
-          <h4 className="grade-level-domain">Expressions & Equations</h4>
-          <h4 className="grade-level-domain">Functions</h4>
-          <h4 className="grade-level-domain">Geometry</h4>
-          <h4 className="grade-level-domain">Statistics & Probability</h4>
+        <div className="grade-8-domains">
+          <button
+            className="grade-level-domain"
+            value={`${this.state.gradeSelected}-NS`}
+            onClick={(event) => this.selectDomain(event)}
+          >
+            The Number System
+          </button>
+          <button
+            className="grade-level-domain"
+            value={`${this.state.gradeSelected}-EE`}
+            onClick={(event) => this.selectDomain(event)}
+          >
+            Expressions & Equations
+          </button>
+          <button
+            className="grade-level-domain"
+            value={`${this.state.gradeSelected}-F`}
+            onClick={(event) => this.selectDomain(event)}
+          >
+            Functions
+          </button>
+          <button
+            className="grade-level-domain"
+            value={`${this.state.gradeSelected}-G`}
+            onClick={(event) => this.selectDomain(event)}
+          >
+            Geometry
+          </button>
+          <button
+            className="grade-level-domain"
+            value={`${this.state.gradeSelected}-SP`}
+            onClick={(event) => this.selectDomain(event)}
+          >
+            Statistics & Probability
+          </button>
         </div>
-      )
-    } else {
-      console.log('else');
-      return (
-        <div></div>
       )
     }
   }
@@ -125,7 +183,8 @@ class DiscussionForm extends Component {
           <button
             className="submit-discussion-btn"
             onClick={(event) => this.handleSubmit(event)}
-          >Submit
+          >
+            Submit
           </button>
         </form>
       </article>
