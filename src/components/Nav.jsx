@@ -4,7 +4,6 @@ import Search from './Search';
 class Nav extends Component {
   render() {
     const { handleSearch, allDiscussions, discussions, renderDiscussions, renderFilteredDiscussions } = this.props;
-    console.log({allDiscussions});
     return (
       <div className="nav">
         <Search

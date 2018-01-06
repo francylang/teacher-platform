@@ -36,7 +36,7 @@ class Search extends Component {
   }
 
   render() {
-    const { handleSearch, discussions, renderDiscussions, renderFilteredDiscussions } = this.props;
+    const { discussions, renderDiscussions, renderFilteredDiscussions, handleSearch } = this.props;
 
     return (
       <aside className="search-section">
