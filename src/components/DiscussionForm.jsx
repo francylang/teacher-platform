@@ -7,6 +7,9 @@ class DiscussionForm extends Component {
     this.state = {
       title: '',
       body: '',
+      gradeSelected: '',
+      domainSelected: '',
+      standardSelected: ''
     };
   }
 
@@ -56,6 +59,18 @@ class DiscussionForm extends Component {
             >
             </textarea>
           </label>
+          <div className="grade-level-buttons">
+            <h4>Choose your grade level</h4>
+            <button className="grade-level-button">Grade 6</button>
+            <button className="grade-level-button">Grade 7</button>
+            <button className="grade-level-button">Grade 8</button>
+          </div>
+          <div className="grade-level-domains">
+            <h4 className="grade-level-domain">Ratios and Proportional Relationships</h4>
+            <h4 className="grade-level-domain">The Number System</h4>
+            <h4 className="grade-level-domain">Expressions & Equations</h4>
+            <h4 className="grade-level-domain">Geometry</h4>
+          </div>
           <button
             className="submit-discussion-btn"
             onClick={(event) => this.handleSubmit(event)}
