@@ -4,6 +4,7 @@ import Nav from './Nav';
 import CardContainer from './CardContainer';
 import DiscussionForm from './DiscussionForm';
 import FilterForm from './FilterForm';
+import { DEV_URL, PROD_URL } from '../url.js';
 // import { fetchComments } from '../utils/getDiscussions';
 
 class App extends Component {
@@ -31,7 +32,7 @@ class App extends Component {
   }
 
   fetchDiscussions() {
-    fetch('http://localhost:3000/api/v1/discussions')
+    fetch(`${DEV_URL}/api/v1/discussions`)
       .then((response) => response.json())
       .then((rawDiscussions) => this.cleanDiscussions(rawDiscussions))
       .then((allDiscussions) => {
