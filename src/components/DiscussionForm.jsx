@@ -71,11 +71,24 @@ class DiscussionForm extends Component {
             <button
               className="grade-level-button"
               value="6"
-              onClick={(event) => this.selectGrade(event)}>
+              onClick={(event) => this.selectGrade(event)}
+            >
               Grade 6
             </button>
-            <button className="grade-level-button">Grade 7</button>
-            <button className="grade-level-button">Grade 8</button>
+            <button
+              className="grade-level-button"
+              value="7"
+              onClick={(event) => this.selectGrade(event)}
+            >
+              Grade 7
+            </button>
+            <button
+              className="grade-level-button"
+              value="8"
+              onClick={(event) => this.selectGrade(event)}
+            >
+              Grade 8
+            </button>
           </div>
           <div className="grade-level-domains">
             <h4 className="grade-level-domain">Ratios and Proportional Relationships</h4>
