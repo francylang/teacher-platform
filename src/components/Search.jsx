@@ -1,21 +1,34 @@
 import React, { Component } from 'react';
-import SearchInput, { createFilter } from 'react-search-input';
 
 class Search extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       searchTerm: ''
     }
-    this.searchUpdated = this.searchUpdated.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  searchUpdated(searchTerm) {
-    const KEYS_TO_FILTERS = ['discussions.title', 'discussions.body'];
-    console.log(this.props);
-    this.setState({ searchTerm });
-    const filteredDiscussions = this.props.discussions.filter(createFilter(this.state.searchTerm, KEYS_TO_FILTERS));
-    this.props.renderFilteredDiscussions(filteredDiscussions);
+  handleChange(event) {
+    event.preventDefault();
+    this.setState({ searchTerm: event.target.value });
+    this.filterDiscussions();
+  }
+
+  filterDiscussions() {
+    let searchTerm = this.state.searchTerm.toLowerCase();
+
+    const filtered = this.props.allDiscussions.filter(discussion => {
+      let title = discussion.title.toLowerCase();
+      let body = discussion.body.toLowerCase();
+
+      if (title.includes(searchTerm) || body.includes(searchTerm)) {
+        return discussion;
+      }
+    });
+
+    this.props.renderDiscussions();
+    this.props.renderFilteredDiscussions(filtered);
   }
 
   shouldComponentUpdate(nextProps) {
@@ -23,11 +36,18 @@ class Search extends Component {
   }
 
   render() {
-    const { handleSearch, discussions, renderDiscussions, renderFilteredDiscussions } = this.props;
+    const { discussions, renderDiscussions, renderFilteredDiscussions, handleSearch } = this.props;
 
     return (
       <aside className="search-section">
-        <SearchInput className="search-input" onChange={this.searchUpdated} />
+        <label htmlFor="search-input"></label>
+        <input
+          onChange={this.handleChange.bind(this)}
+          type="text"
+          id="search-input"
+          placeholder="Search discussions..."
+        >
+        </input>
       </aside>
     );
   }

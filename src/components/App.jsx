@@ -11,18 +11,19 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
+      allDiscussions: [],
       discussions: [],
       comments: [],
       showingDiscussions: true,
       showingForm: false,
       showingStandards: false,
     };
-    this.renderStandards = this.renderStandards.bind(this);
-    this.renderForm = this.renderForm.bind(this);
-    this.renderDiscussions = this.renderDiscussions.bind(this);
     this.fetchDiscussions = this.fetchDiscussions.bind(this);
-    this.handleSearch = this.handleSearch.bind(this);
+    this.renderDiscussions = this.renderDiscussions.bind(this);
+    this.renderForm = this.renderForm.bind(this);
+    this.renderStandards = this.renderStandards.bind(this);
     this.renderFilteredDiscussions = this.renderFilteredDiscussions.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
   }
 
   componentDidMount() {
@@ -30,15 +31,13 @@ class App extends Component {
     this.fetchComments();
   }
 
-  handleSearch() {
-    this.fetchDiscussions()
-  }
-o
   fetchDiscussions() {
     fetch(`${DEV_URL}/api/v1/discussions`)
       .then((response) => response.json())
       .then((rawDiscussions) => this.cleanDiscussions(rawDiscussions))
-      .then((discussions) => this.setState({ discussions }))
+      .then((allDiscussions) => {
+        this.setState({ allDiscussions, discussions: allDiscussions })
+      })
       .catch((error) => console.error({ error }));
   }
 
@@ -79,10 +78,6 @@ o
     });
   }
 
-  renderFilteredDiscussions(discussions) {
-    this.setState({ discussions });
-  }
-
   renderForm() {
     this.setState({
       showingDiscussions: false,
@@ -99,11 +94,20 @@ o
     });
   }
 
+  renderFilteredDiscussions(discussions) {
+    this.setState({ discussions });
+  }
+
+  handleSearch() {
+    this.fetchDiscussions()
+  }
+
   render() {
-    console.log(DEV_URL);
-    const { showingDiscussions, showingForm, showingStandards, discussions, comments } = this.state;
+    const { allDiscussions, discussions, comments, showingDiscussions, showingForm, showingStandards } = this.state;
+
     const showDiscussions = showingDiscussions
       ? <CardContainer
+        allDiscussions={allDiscussions}
         discussions={discussions}
         comments={comments}
         rendered={showingDiscussions}/> : null;
@@ -122,12 +126,13 @@ o
         <Header />
         <article className="main">
           <Nav
-            renderStandards={this.renderStandards}
-            renderForm={this.renderForm}
+            allDiscussions={allDiscussions}
+            discussions={discussions}
             renderDiscussions={this.renderDiscussions}
-            handleSearch={this.handleSearch}
-            discussions={this.state.discussions}
+            renderForm={this.renderForm}
+            renderStandards={this.renderStandards}
             renderFilteredDiscussions={this.renderFilteredDiscussions}
+            handleSearch={this.handleSearch}
           />
           <section className="bottom-main">
             { showDiscussions }
