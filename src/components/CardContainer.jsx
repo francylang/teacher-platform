@@ -16,7 +16,9 @@ class CardContainer extends Component {
 
   buildDiscussionCard() {
     this.matchDiscussionIds()
+    console.log(this.props.discussions);
     return this.props.discussions.map(discussion => {
+      console.log(discussion);
       return (
         <DiscussionCard
           key={discussion.id}

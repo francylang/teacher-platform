@@ -10,6 +10,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
+      allDiscussions: [],
       discussions: [],
       comments: [],
       showingDiscussions: true,
@@ -37,7 +38,9 @@ class App extends Component {
     fetch('http://localhost:3000/api/v1/discussions')
       .then((response) => response.json())
       .then((rawDiscussions) => this.cleanDiscussions(rawDiscussions))
-      .then((discussions) => this.setState({ discussions }))
+      .then((allDiscussions) => {
+        this.setState({ allDiscussions, discussions: allDiscussions })
+      })
       .catch((error) => console.error({ error }));
   }
 
@@ -99,9 +102,12 @@ class App extends Component {
   }
 
   render() {
-    const { showingDiscussions, showingForm, showingStandards, discussions, comments } = this.state;
+    const { showingDiscussions, showingForm, showingStandards, allDiscussions, comments, discussions } = this.state;
+    console.log('in app:::', allDiscussions);
+
     const showDiscussions = showingDiscussions
       ? <CardContainer
+        allDiscussions={allDiscussions}
         discussions={discussions}
         comments={comments}
         rendered={showingDiscussions}/> : null;
@@ -124,7 +130,8 @@ class App extends Component {
             renderForm={this.renderForm}
             renderDiscussions={this.renderDiscussions}
             handleSearch={this.handleSearch}
-            discussions={this.state.discussions}
+            discussions={discussions}
+            allDiscussions={allDiscussions}
             renderFilteredDiscussions={this.renderFilteredDiscussions}
           />
           <section className="bottom-main">

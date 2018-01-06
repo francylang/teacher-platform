@@ -12,13 +12,19 @@ class Search extends Component {
   handleChange(event) {
     event.preventDefault();
     this.setState({ searchTerm: event.target.value });
-    console.log(this.state);
     this.filterDiscussions();
   }
 
   filterDiscussions() {
-    const filtered = this.props.discussions.filter(dicussion => {
-      return dicussion.title.includes(this.state.searchTerm) || dicussion.body.includes(this.state.searchTerm);
+    let searchTerm = this.state.searchTerm.toLowerCase();
+
+    const filtered = this.props.allDiscussions.filter(discussion => {
+      let title = discussion.title.toLowerCase();
+      let body = discussion.body.toLowerCase();
+
+      if (title.includes(searchTerm) || body.includes(searchTerm)) {
+        return discussion;
+      }
     });
 
     this.props.renderDiscussions();
