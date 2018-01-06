@@ -14,8 +14,8 @@ class App extends Component {
       allDiscussions: [],
       discussions: [],
       comments: [],
-      showingDiscussions: true,
-      showingForm: false,
+      showingDiscussions: false,
+      showingForm: true,
       showingStandards: false,
     };
     this.fetchDiscussions = this.fetchDiscussions.bind(this);

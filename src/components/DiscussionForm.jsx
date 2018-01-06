@@ -33,6 +33,13 @@ class DiscussionForm extends Component {
     this.clearInputs();
   }
 
+  selectGrade(event) {
+    event.preventDefault();
+    this.setState({
+      gradeSelected: event.target.value
+    })
+  }
+
   render() {
     return (
       <article className="discussion-form-section">
@@ -61,7 +68,12 @@ class DiscussionForm extends Component {
           </label>
           <div className="grade-level-buttons">
             <h4>Choose your grade level</h4>
-            <button className="grade-level-button">Grade 6</button>
+            <button
+              className="grade-level-button"
+              value="6"
+              onClick={(event) => this.selectGrade(event)}>
+              Grade 6
+            </button>
             <button className="grade-level-button">Grade 7</button>
             <button className="grade-level-button">Grade 8</button>
           </div>
@@ -69,7 +81,9 @@ class DiscussionForm extends Component {
             <h4 className="grade-level-domain">Ratios and Proportional Relationships</h4>
             <h4 className="grade-level-domain">The Number System</h4>
             <h4 className="grade-level-domain">Expressions & Equations</h4>
+            <h4 className="grade-level-domain">Functions</h4>
             <h4 className="grade-level-domain">Geometry</h4>
+            <h4 className="grade-level-domain">Statistics & Probability</h4>
           </div>
           <button
             className="submit-discussion-btn"
