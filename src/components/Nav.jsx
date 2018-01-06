@@ -3,13 +3,14 @@ import Search from './Search';
 
 class Nav extends Component {
   render() {
-    const { handleSearch, discussions, renderDiscussions, renderFilteredDiscussions } = this.props
+    const { handleSearch, allDiscussions, discussions, renderDiscussions, renderFilteredDiscussions } = this.props;
     return (
       <div className="nav">
         <Search
           handleSearch={handleSearch}
           renderDiscussions={renderDiscussions}
           discussions={discussions}
+          allDiscussions={allDiscussions}
           renderFilteredDiscussions={renderFilteredDiscussions}
         />
         <button
