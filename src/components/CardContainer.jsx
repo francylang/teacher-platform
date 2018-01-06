@@ -5,13 +5,15 @@ class CardContainer extends Component {
   matchDiscussionIds() {
     const { comments, discussions } = this.props;
 
-    let filtered = comments.filter(comment => {
-      return discussions.forEach(discussion => {
-        if (discussion.id === comment.id) {
-          return comment.id
-        }
+    if (discussions) {
+      comments.filter(comment => {
+        return discussions.forEach(discussion => {
+          if (discussion.id === comment.id) {
+            return comment.id
+          }
+        })
       })
-    })
+    }
   }
 
   buildDiscussionCard() {

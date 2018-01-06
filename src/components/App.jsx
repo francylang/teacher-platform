@@ -5,7 +5,7 @@ import CardContainer from './CardContainer';
 import DiscussionForm from './DiscussionForm';
 import FilterForm from './FilterForm';
 import { DEV_URL, PROD_URL } from '../url.js';
-// import { fetchComments } from '../utils/getDiscussions';
+// import { fetchDiscussions } from '../utils/getDiscussions.js';
 
 class App extends Component {
   constructor() {
@@ -32,7 +32,7 @@ class App extends Component {
   }
 
   fetchDiscussions() {
-    fetch(`${DEV_URL}/api/v1/discussions`)
+    fetch(`${PROD_URL}/api/v1/discussions`)
       .then((response) => response.json())
       .then((rawDiscussions) => this.cleanDiscussions(rawDiscussions))
       .then((allDiscussions) => {
@@ -102,15 +102,27 @@ class App extends Component {
     this.fetchDiscussions()
   }
 
+  renderCardContainer() {
+    if (this.state.showingDiscussions && this.state.discussions) {
+      return (
+        <CardContainer
+          allDiscussions={this.state.allDiscussions}
+          discussions={this.state.discussions}
+          comments={this.state.comments}
+          rendered={this.state.showingDiscussions}/>
+      )
+    }
+  }
+
   render() {
     const { allDiscussions, discussions, comments, showingDiscussions, showingForm, showingStandards } = this.state;
 
-    const showDiscussions = showingDiscussions
-      ? <CardContainer
-        allDiscussions={allDiscussions}
-        discussions={discussions}
-        comments={comments}
-        rendered={showingDiscussions}/> : null;
+    // const showDiscussions = showingDiscussions
+    //   ? <CardContainer
+    //     allDiscussions={allDiscussions}
+    //     discussions={discussions}
+    //     comments={comments}
+    //     rendered={showingDiscussions}/> : null;
 
     const showForm = showingForm
       ? <DiscussionForm rendered={this.state.showingForm}/> : null;
@@ -135,7 +147,7 @@ class App extends Component {
             handleSearch={this.handleSearch}
           />
           <section className="bottom-main">
-            { showDiscussions }
+            { this.renderCardContainer() }
             { showForm }
             { showStandards }
           </section>

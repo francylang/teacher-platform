@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { postNewDiscussion } from '../utils/postDiscussion';
+import { domainsByGrade } from '../utils/standards';
 
 class DiscussionForm extends Component {
   constructor() {
@@ -42,10 +43,25 @@ class DiscussionForm extends Component {
 
   selectDomain(event) {
     event.preventDefault();
-    console.log(event.target.value);
     this.setState({
-      domainSelected: event.target.value
+      domainSelected: event.target.value,
     })
+  }
+
+  renderDropDown() {
+    console.log(domainsByGrade[this.state.domainSelected]);
+    if (domainsByGrade[this.state.domainSelected]) {
+      const mappedDomains = domainsByGrade[this.state.domainSelected].map(domain => {
+        return (
+          <option value="domain">{domain}</option>
+        )
+      })
+      return (
+        <select>
+          {mappedDomains}
+        </select>
+      )
+    }
   }
 
   renderDomains() {
@@ -180,6 +196,7 @@ class DiscussionForm extends Component {
             </button>
           </div>
           <div className="grade-level-domains">{this.renderDomains()}</div>
+          <div className="grade-level-standards">{this.renderDropDown()}</div>
           <button
             className="submit-discussion-btn"
             onClick={(event) => this.handleSubmit(event)}
@@ -192,4 +209,4 @@ class DiscussionForm extends Component {
   }
 }
 
-export default DiscussionForm
+export default DiscussionForm;
