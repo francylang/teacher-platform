@@ -7,7 +7,7 @@ const CardContainer = ({ comments, discussions }) => {
       comments.filter(comment => {
         return discussions.forEach(discussion => {
           if (discussion.id === comment.id) {
-            return comment.id
+            return comment.id;
           };
         });
       });
@@ -15,7 +15,7 @@ const CardContainer = ({ comments, discussions }) => {
   };
 
   const buildDiscussionCard = () => {
-    matchDiscussionIds()
+    matchDiscussionIds();
     return discussions.map(discussion => {
       return (
         <DiscussionCard
