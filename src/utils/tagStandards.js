@@ -114,3 +114,19 @@ export const domainsByGrade = {
     "8.SP.B.4"
   ]
 };
+
+export const domains67 = [
+  'Ratios and Proportional Relationships',
+  'The Number System',
+  'Expressions & Equations',
+  'Geometry',
+  'Statistics & Probability'
+];
+
+export const domains8 = [
+  'Functions',
+  'The Number System',
+  'Expressions & Equations',
+  'Geometry',
+  'Statistics & Probability'
+];
