@@ -1,15 +1,20 @@
 .card {
   border-radius: 5px;
   background-color: #fff;
-  padding: 2.5% 2.5% 5% 2.5%;
+  padding: 2.5% 2.5% 2.5% 2.5%;
   margin-bottom: 2.5%; }
+
+.card-title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
 
 .card-title {
   text-align: left;
-  margin: 0; }
-
-.card-body {
-  text-align: left; }
+  margin: 0;
+  display: inline-block;
+  font-size: 110%; }
 
 .card-tag {
   border-radius: 5px;
@@ -19,30 +24,39 @@
   font-size: 90%; }
 
 .R {
-  background-color: red; }
+  background-color: #FA76C8; }
 
 .E {
-  background-color: blue; }
+  background-color: #7686FA; }
 
 .N {
-  background-color: pink; }
+  background-color: #FABA76; }
 
 .F {
-  background-color: pink; }
+  background-color: #FABA76; }
 
 .G {
-  background-color: orange; }
+  background-color: #FAEA76; }
 
 .S {
-  background-color: green; }
+  background-color: #86FA76; }
+
+.card-body {
+  text-align: left;
+  margin-top: 0; }
 
 .show-more-btn {
-  padding: 1% 2.5%;
-  float: right;
-  width: 135px; }
+  background-color: #fff;
+  border: none;
+  outline: none; }
+
+.show-more-btn:hover {
+  cursor: pointer; }
 
 .show-more-less-text {
-  color: #fff;
-  font-family: 'Ubuntu Mono';
-  font-size: 90%;
-  margin: 3.5% 0; }
+  text-transform: uppercase;
+  color: #5D5D5D;
+  margin-bottom: 0px; }
+
+.comments-header {
+  text-align: left; }

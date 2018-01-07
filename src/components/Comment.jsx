@@ -14,7 +14,7 @@ class Comment extends Component {
             <li>Date: December 28, 2018</li>
           </ul>
         </article>
-      )
+      );
     } else {
       return null;
     }
