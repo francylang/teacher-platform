@@ -125,6 +125,35 @@ class DiscussionForm extends Component {
     }
   }
 
+  renderGradeLevelButtons() {
+    return (
+      <div className="grade-level-buttons">
+        <h4>Choose a grade level</h4>
+        <button
+          className="grade-level-button btn-6"
+          value="6"
+          onClick={(event) => this.selectGrade(event)}
+        >
+          Grade 6
+        </button>
+        <button
+          className="grade-level-button btn-7"
+          value="7"
+          onClick={(event) => this.selectGrade(event)}
+        >
+          Grade 7
+        </button>
+        <button
+          className="grade-level-button btn-8"
+          value="8"
+          onClick={(event) => this.selectGrade(event)}
+        >
+          Grade 8
+        </button>
+      </div>
+    )
+  }
+
   render() {
     const { title, body, standardSelected } = this.state;
     return (
@@ -153,30 +182,7 @@ class DiscussionForm extends Component {
             </textarea>
             <div>{standardSelected}</div>
           </label>
-          <div className="grade-level-buttons">
-            <h4>Choose a grade level</h4>
-            <button
-              className="grade-level-button btn-6"
-              value="6"
-              onClick={(event) => this.selectGrade(event)}
-            >
-              Grade 6
-            </button>
-            <button
-              className="grade-level-button btn-7"
-              value="7"
-              onClick={(event) => this.selectGrade(event)}
-            >
-              Grade 7
-            </button>
-            <button
-              className="grade-level-button btn-8"
-              value="8"
-              onClick={(event) => this.selectGrade(event)}
-            >
-              Grade 8
-            </button>
-          </div>
+          {this.renderGradeLevelButtons()}
           <div className="grade-level-domains">
             {this.renderDomains()}
           </div>
