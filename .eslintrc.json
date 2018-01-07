@@ -1,4 +1,7 @@
 {
+    "plugins": [
+      "react"
+    ],
     "extends": "standard",
     "rules": {
       "quotes": 0,

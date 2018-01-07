@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Header from './Header';
 import Nav from './Nav';
 import CardContainer from './CardContainer';
@@ -149,5 +150,9 @@ class App extends Component {
     );
   }
 }
+
+App.PropTypes = {
+
+};
 
 export default App;
