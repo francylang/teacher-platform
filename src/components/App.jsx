@@ -116,7 +116,7 @@ class App extends Component {
 
   render() {
     const { allDiscussions, discussions, comments, showingDiscussions, showingForm, showingStandards } = this.state;
-      
+
     const showForm = showingForm
       ? <DiscussionForm rendered={this.state.showingForm}/> : null;
 

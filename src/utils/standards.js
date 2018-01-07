@@ -1,25 +1,3 @@
-export const domainsByGrade = {
-  '6-RP': [
-    "6.RP.A.1",
-    "6.RP.A.2",
-    "6.RP.A.3",
-    "6.RP.A.3.A",
-    "6.RP.A.3.B",
-    "6.RP.A.3.C",
-  ],
-  '6-EE': [
-    "6.EE.A.1",
-    "6.EE.A.2",
-    "6.EE.A.3",
-    "6.EE.A.4",
-    "6.EE.B.5",
-    "6.EE.B.6",
-    "6.EE.B.7",
-    "6.EE.B.8",
-    "6.EE.C.9",
-  ]
-};
-
 export const mathSix = [
   "Ratios & Proportions",
   "6.RP.A.1",

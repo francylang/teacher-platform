@@ -5,6 +5,5 @@ class Node {
     this.isCompleteWord = false;
     this.frequency = 0;
   }
-
 }
 export default Node;
