@@ -46,6 +46,9 @@ class DiscussionForm extends Component {
       gradeSelected: event.target.value,
       isActive: !this.state.isActive
     });
+
+    console.log('this.state', this.state);
+    console.log('event', event.target.value);
   }
 
   selectDomain(event) {
