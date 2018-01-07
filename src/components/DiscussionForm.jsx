@@ -186,7 +186,7 @@ class DiscussionForm extends Component {
             <div>{this.state.standardSelected}</div>
           </label>
           <div className="grade-level-buttons">
-            <h4>Choose your grade level</h4>
+            <h4>Choose a grade level</h4>
             <button
               className="grade-level-button"
               value="6"
