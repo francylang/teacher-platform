@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { postNewDiscussion } from '../utils/postDiscussion';
-import { domainsByGrade } from '../utils/standards';
+import { domainsByGrade } from '../utils/tagStandards';
 
 class DiscussionForm extends Component {
   constructor() {
@@ -49,19 +49,27 @@ class DiscussionForm extends Component {
   }
 
   renderDropDown() {
-    console.log(domainsByGrade[this.state.domainSelected]);
     if (domainsByGrade[this.state.domainSelected]) {
       const mappedDomains = domainsByGrade[this.state.domainSelected].map(domain => {
         return (
-          <option value="domain">{domain}</option>
+          <option value={domain}>{domain}</option>
         )
       })
       return (
-        <select>
+        <select
+          value={this.state.standardSelected}
+          onChange={this.handleStandardSelect.bind(this)}
+        >
           {mappedDomains}
         </select>
       )
     }
+  }
+
+  handleStandardSelect(event) {
+    this.setState({
+      standardSelected: event.target.value
+    })
   }
 
   renderDomains() {
