@@ -9,13 +9,13 @@ class Login extends Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-  }
+  };
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.userStatus === true) {
       this.props.history.push('/');
-    }
-  }
+    };
+  };
 
   handleChange(event, type) {
     let value = event.target.value;
@@ -23,7 +23,7 @@ class Login extends Component {
     this.setState({
       [type]: value
     });
-  }
+  };
 
   handleSubmit(event) {
     event.preventDefault();
@@ -34,7 +34,7 @@ class Login extends Component {
       email: '',
       password: ''
     });
-  }
+  };
 
   render() {
     const isDisabled =
@@ -69,8 +69,8 @@ class Login extends Component {
         </form>
       </div>
     );
-  }
-}
+  };
+};
 
 Login.propTypes = {
   history: PropTypes.object,

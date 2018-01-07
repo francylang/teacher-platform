@@ -4,6 +4,7 @@ import CommentForm from './CommentForm';
 class Comment extends Component {
   render() {
     const { commentId, discussionId, comment } = this.props;
+
     if (commentId === discussionId) {
       return (
         <article className="comment-section">
@@ -17,7 +18,7 @@ class Comment extends Component {
     } else {
       return null;
     }
-  }
-}
+  };
+};
 
 export default Comment;

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Search from './Search';
 
 const Nav = ({ handleSearch, allDiscussions, discussions, renderDiscussions, renderFilteredDiscussions, renderStandards, renderForm }) => {
@@ -22,7 +22,8 @@ const Nav = ({ handleSearch, allDiscussions, discussions, renderDiscussions, ren
       <button
         onClick={() => renderForm()}
         className="toggle-discussion-form-btn"
-        value="form">
+        value="form"
+      >
         <h4 className="new-discussion-option">
           New Discussion
         </h4>
@@ -30,7 +31,8 @@ const Nav = ({ handleSearch, allDiscussions, discussions, renderDiscussions, ren
       <button
         onClick={() => renderDiscussions()}
         className="toggle-discussions-btn"
-        value="form">
+        value="form"
+      >
         <h4 className="new-discussion-option">
           All Discussions
         </h4>

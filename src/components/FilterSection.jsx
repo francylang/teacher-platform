@@ -1,42 +1,37 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { PROD_URL } from '../url.js';
 
-class FilterSection extends Component {
-  constructor() {
-    super();
-    this.getFilteredDiscussions = this.getFilteredDiscussions.bind(this);
-    this.fetchDiscussions = this.fetchDiscussions.bind(this);
-  }
-
-  fetchDiscussions(standard) {
-    fetch('http://localhost:3000/api/v1/discussions')
+const FilterSection = ({ renderFilteredDiscussions, renderDiscussions, domain }) => {
+  const fetchDiscussions = (standard) => {
+    fetch(`${PROD_URL}/api/v1/discussions`)
       .then((response) => response.json())
-      .then((rawDiscussions) => this.findMatchingDiscussions(rawDiscussions, standard))
+      .then((rawDiscussions) => findMatchingDiscussions(rawDiscussions, standard))
       .then((matchingDiscussions) => {
-        this.props.renderFilteredDiscussions(matchingDiscussions);
-        this.props.renderDiscussions();
+        renderFilteredDiscussions(matchingDiscussions);
+        renderDiscussions();
       })
       .catch((error) => console.error({ error }));
   }
 
-  findMatchingDiscussions(rawDiscussions, standard) {
+  const findMatchingDiscussions = (rawDiscussions, standard) => {
     return rawDiscussions.filter((discussion) => {
       return discussion.tagTitle === standard
-    })
+    });
   }
 
-  getFilteredDiscussions(standard) {
-    this.fetchDiscussions(standard);
+  const getFilteredDiscussions = (standard) => {
+    fetchDiscussions(standard);
   }
 
-  buildDomainList() {
-    return this.props.domain.map(standard => {
+  const buildDomainList = () => {
+    return domain.map(standard => {
       let firstChar = standard.charAt(0);
 
       if (firstChar === '6' || firstChar === '7' || firstChar === '8') {
         return (
           <button
             className="standard-link"
-            onClick={() => this.getFilteredDiscussions(standard)}
+            onClick={() => getFilteredDiscussions(standard)}
           >
             <p className="standard-text">
               {standard}
@@ -55,13 +50,11 @@ class FilterSection extends Component {
     });
   }
 
-  render() {
-    return (
-      <aside className="domain-section">
-        {this.buildDomainList()}
-      </aside>
-    );
-  }
+  return (
+    <aside className="domain-section">
+      {buildDomainList()}
+    </aside>
+  );
 }
 
 export default FilterSection;
