@@ -129,7 +129,7 @@ class App extends Component {
 
     return (
       <section className="app">
-        <Header />
+        {/* <Header /> */}
         <article className="main">
           <Nav
             allDiscussions={allDiscussions}
