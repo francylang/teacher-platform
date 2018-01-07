@@ -29,6 +29,7 @@ class DiscussionForm extends Component {
 
   handleSubmit(event) {
     const { title, body, standardSelected } = this.state;
+
     event.preventDefault();
     postNewDiscussion(title, body, standardSelected);
     this.clearInputs();
@@ -45,7 +46,8 @@ class DiscussionForm extends Component {
   }
 
   handleSelectStandard(event) {
-    const { title, body } = this.state
+    const { title, body } = this.state;
+
     this.setState({ standardSelected: event.target.value });
     event.preventDefault()
     postNewDiscussion(title, body)
@@ -54,6 +56,7 @@ class DiscussionForm extends Component {
 
   renderDropDown() {
     const { domainSelected, standardSelected } = this.state;
+
     if (domainsByGrade[domainSelected]) {
       const mappedDomains = domainsByGrade[domainSelected].map(domain => {
         return (
@@ -82,6 +85,7 @@ class DiscussionForm extends Component {
 
   renderDomains() {
     const { gradeSelected } = this.state;
+
     if (gradeSelected === "6" || gradeSelected === "7") {
       return (
         <div className="grade-6-7-domains">
@@ -164,6 +168,7 @@ class DiscussionForm extends Component {
 
   render() {
     const { title, body, standardSelected } = this.state;
+
     return (
       <article className="discussion-form-section">
         <form action="" method="get" className="form">

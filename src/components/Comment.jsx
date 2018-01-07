@@ -3,10 +3,11 @@ import CommentForm from './CommentForm';
 
 class Comment extends Component {
   render() {
-    if (this.props.commentId === this.props.discussionId) {
+    const { commentId, discussionId, comment } = this.props;
+    if (commentId === discussionId) {
       return (
         <article className="comment-section">
-          <p className="comment">{this.props.comment}</p>
+          <p className="comment">{comment}</p>
           <ul>
             <li>From: Amy</li>
             <li>Date: December 28, 2018</li>

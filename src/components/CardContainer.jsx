@@ -17,13 +17,15 @@ class CardContainer extends Component {
   }
 
   buildDiscussionCard() {
+    const { discussions, comments } = this.props;
+
     this.matchDiscussionIds()
-    return this.props.discussions.map(discussion => {
+    return discussions.map(discussion => {
       return (
         <DiscussionCard
           key={discussion.id}
           discussion={discussion}
-          comments={this.props.comments}
+          comments={comments}
         />)
     })
   }
