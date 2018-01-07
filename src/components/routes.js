@@ -3,13 +3,15 @@ import { Route } from 'react-router-dom';
 import LoginContainer from '../containers/LoginContainer.js';
 import AppContainer from '../containers/AppContainer.js';
 import Header from './Header';
+import Nav from './Nav';
 
 class Routes extends Component {
   render() {
     return (
       <div className="routes">
         <Header />
-        <Route path="/" component={ AppContainer }/>
+        <Nav />
+        <Route exact path="/" component={ AppContainer }/>
         <Route path="/login" component={ LoginContainer }/>
       </div>
     );

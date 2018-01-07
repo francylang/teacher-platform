@@ -129,13 +129,12 @@ class App extends Component {
   }
 
   render() {
-    console.log('APP ', this.props);
-
     const { allDiscussions, discussions, comments, showingDiscussions, showingForm, showingStandards } = this.state;
+    console.log(this.props.signedInStatus);
 
-    // if (this.state.isAuthenticated === false) {
-    //   return <Redirect to='/login'/>;
-    // }
+    if (this.props.signedInStatus === false) {
+      return <Redirect to='/login'/>;
+    }
 
     const showForm = showingForm
       ? <DiscussionForm rendered={showingForm}/> : null;

@@ -4,6 +4,7 @@ import { signOut, setCurrentUser } from '../actions/actions.js';
 
 const mapStateToProps = store => ({
   currentUser: store.currentUser,
+  signedInStatus: store.signedInStatus
 });
 
 const mapDispatchToProps = dispatch => ({

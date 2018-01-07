@@ -33,21 +33,10 @@ class Login extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    this.props.history.push('/')
-    // return <Redirect to='/' />
-    // const user = this.state;
-    //
-    // if (user.email === userLoginData.email) {
-    //   return this.props.history.push('/');
-    // }
-    // this.setState({
-    //   email: '',
-    //   password: ''
-    // });
+    this.props.signIn(this.state.email);
   };
 
   render() {
-
     const isDisabled =
     this.state.email.length &&
     this.state.password.length ? false : true;
@@ -70,13 +59,13 @@ class Login extends Component {
             value={this.state.password}
             onChange={ (event) => this.handleChange(event, 'password')}>
           </input>
-          <button
+          <input
             className='login-submit-button'
             disabled={isDisabled}
             type='submit'
-            onClick={() => this.handleSubmit()}
-          ><Link to='/'>submit</Link>
-          </button>
+            onClick={(event) => this.handleSubmit(event)}
+          >
+          </input>
         </form>
       </div>
     );
