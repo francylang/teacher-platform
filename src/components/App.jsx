@@ -103,13 +103,14 @@ class App extends Component {
   }
 
   renderCardContainer() {
-    if (this.state.showingDiscussions && this.state.discussions) {
+    const { showingDiscussions, discussions, allDiscussions, comments } = this.state;
+    if (showingDiscussions && discussions) {
       return (
         <CardContainer
-          allDiscussions={this.state.allDiscussions}
-          discussions={this.state.discussions}
-          comments={this.state.comments}
-          rendered={this.state.showingDiscussions}/>
+          allDiscussions={allDiscussions}
+          discussions={discussions}
+          comments={comments}
+          rendered={showingDiscussions}/>
       )
     }
   }
@@ -118,13 +119,13 @@ class App extends Component {
     const { allDiscussions, discussions, comments, showingDiscussions, showingForm, showingStandards } = this.state;
 
     const showForm = showingForm
-      ? <DiscussionForm rendered={this.state.showingForm}/> : null;
+      ? <DiscussionForm rendered={showingForm}/> : null;
 
     const showStandards = showingStandards
       ? <FilterForm
         renderDiscussions={this.renderDiscussions}
         renderFilteredDiscussions={this.renderFilteredDiscussions}
-        rendered={this.state.showingStandards}/> : null;
+        rendered={showingStandards}/> : null;
 
     return (
       <section className="app">

@@ -28,7 +28,6 @@ class DiscussionForm extends Component {
   }
 
   handleSubmit(event) {
-<<<<<<< HEAD
     event.preventDefault();
     const { title, body, standardSelected } = this.state;
     postNewDiscussion(title, body, standardSelected);
@@ -47,26 +46,10 @@ class DiscussionForm extends Component {
 
   handleSelectStandard(event) {
     this.setState({ standardSelected: event.target.value });
-=======
     event.preventDefault()
     const { title, body } = this.state
     postNewDiscussion(title, body)
     this.clearInputs()
-  }
-
-  selectGrade(event) {
-    event.preventDefault()
-    this.setState({
-      gradeSelected: event.target.value
-    })
-  }
-
-  selectDomain(event) {
-    event.preventDefault()
-    this.setState({
-      domainSelected: event.target.value,
-    })
->>>>>>> login
   }
 
   renderDropDown() {
@@ -74,13 +57,8 @@ class DiscussionForm extends Component {
       const mappedDomains = domainsByGrade[this.state.domainSelected].map(domain => {
         return (
           <option
-<<<<<<< HEAD
-            value={domain}
-            key={domain}
-=======
             key={domain}
             value={domain}
->>>>>>> login
           >
             {domain}
           </option>
@@ -89,12 +67,8 @@ class DiscussionForm extends Component {
       return (
         <select
           value={this.state.standardSelected}
-<<<<<<< HEAD
           onChange={this.handleSelectStandard.bind(this)}>
-=======
-          onChange={this.handleStandardSelect.bind(this)}
         >
->>>>>>> login
           {mappedDomains}
         </select>
       )
@@ -102,9 +76,7 @@ class DiscussionForm extends Component {
   }
 
   handleStandardSelect(event) {
-    this.setState({
-      standardSelected: event.target.value
-    })
+    this.setState({ standardSelected: event.target.value });
   }
 
   renderDomains() {
