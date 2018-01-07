@@ -108,6 +108,7 @@ class DiscussionForm extends Component {
             domain={domain}
             selectDomain={(event) => this.selectDomain(event)}
             gradeSelected={this.state.gradeSelected}
+            color={this.colors[index]}
           />
         );
       });
