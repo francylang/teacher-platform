@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Domain from './Domain';
+import { colors } from '../assets/colors';
 import { postNewDiscussion } from '../utils/postDiscussion';
 import { domainsByGrade, domains67, domains8 } from '../utils/tagStandards';
 
@@ -13,7 +14,6 @@ class DiscussionForm extends Component {
       domainSelected: '',
       standardSelected: ''
     };
-    this.colors = ['red', 'green', 'navy', 'purple', 'yellow', 'blue', 'orange'];
   }
 
   handleChange(key, event) {
@@ -95,8 +95,8 @@ class DiscussionForm extends Component {
             key={domain}
             domain={domain}
             selectDomain={(event) => this.selectDomain(event)}
-            gradeSelected={this.state.gradeSelected}
-            color={this.colors[index]}
+            gradeSelected={gradeSelected}
+            color={colors[index]}
           />
         );
       });
@@ -107,8 +107,8 @@ class DiscussionForm extends Component {
             key={domain}
             domain={domain}
             selectDomain={(event) => this.selectDomain(event)}
-            gradeSelected={this.state.gradeSelected}
-            color={this.colors[index]}
+            gradeSelected={gradeSelected}
+            color={colors[index]}
           />
         );
       });
@@ -160,15 +160,9 @@ class DiscussionForm extends Component {
             </textarea>
             <div>{standardSelected}</div>
           </label>
-          <div className="grade-level-buttons">
-            {this.renderGradeLevelButtons()}
-          </div>
-          <div className="grade-level-domains">
-            {this.renderDomains()}
-          </div>
-          <div className="grade-level-standards">
-            {this.renderDropDown()}
-          </div>
+          <div className="grade-level-buttons">{this.renderGradeLevelButtons()}</div>
+          <div className="grade-level-domains">{this.renderDomains()}</div>
+          <div className="grade-level-standards">{this.renderDropDown()}</div>
           <button
             className="submit-discussion-btn"
             onClick={(event) => this.handleSubmit(event)}
