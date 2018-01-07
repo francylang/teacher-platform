@@ -3,9 +3,6 @@ import PropTypes from 'prop-types';
 import userLoginData from '../utils/userLoginData';
 import { Redirect } from 'react-router';
 import { Link } from 'react-router-dom';
-import createBrowserHistory from '../../node_modules/history/createBrowserHistory';
-
-const history = createBrowserHistory();
 
 class Login extends Component {
   constructor() {
@@ -17,11 +14,11 @@ class Login extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   };
 
-  // componentWillReceiveProps(nextProps) {
-  //   if (nextProps === true) {
-  //     this.props.history.push('/');
-  //   };
-  // };
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.currentUser !== '') {
+      this.props.history.push('/');
+    }
+  }
 
   handleChange(event, type) {
     let value = event.target.value;
@@ -33,7 +30,13 @@ class Login extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    this.props.signIn(this.state.email);
+    this.props.setCurrentUser(this.state.email);
+    this.props.signIn();
+
+    this.setState({
+      email: '',
+      password: ''
+    });
   };
 
   render() {
