@@ -7,7 +7,7 @@
 
 .comment-form-directions {
   grid-area: directions;
-  padding: 0 10px; }
+  padding-right: 10px; }
 
 .comment-form-header {
   text-align: left;
@@ -29,7 +29,7 @@
   border: none;
   color: #5D5B5E;
   outline: none;
-  font-size: 120%;
+  font-size: 110%;
   font-family: Nunito; }
 
 #get-comment::placeholder {

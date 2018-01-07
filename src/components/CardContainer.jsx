@@ -32,7 +32,7 @@ const CardContainer = ({ comments, discussions }) => {
   return (
     <div className="card-section">
       <h2 className="current-feed-title">
-        Discussions:
+        Discussions
       </h2>
       {buildDiscussionCard()}
     </div>
