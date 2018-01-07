@@ -5,7 +5,6 @@ import CardContainer from './CardContainer';
 import DiscussionForm from './DiscussionForm';
 import FilterForm from './FilterForm';
 import { PROD_URL } from '../url.js';
-// import { fetchDiscussions } from '../utils/getDiscussions.js';
 
 class App extends Component {
   constructor() {
@@ -36,7 +35,7 @@ class App extends Component {
       .then((response) => response.json())
       .then((rawDiscussions) => this.cleanDiscussions(rawDiscussions))
       .then((allDiscussions) => {
-        this.setState({ allDiscussions, discussions: allDiscussions })
+        this.setState({ allDiscussions, discussions: allDiscussions });
       })
       .catch((error) => console.error({ error }));
   }
@@ -99,7 +98,7 @@ class App extends Component {
   }
 
   handleSearch() {
-    this.fetchDiscussions()
+    this.fetchDiscussions();
   }
 
   renderCardContainer() {
@@ -111,7 +110,7 @@ class App extends Component {
           discussions={discussions}
           comments={comments}
           rendered={showingDiscussions}/>
-      )
+      );
     }
   }
 
