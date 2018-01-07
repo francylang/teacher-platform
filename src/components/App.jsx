@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Header from './Header';
 import Nav from './Nav';
 import CardContainer from './CardContainer';
 import DiscussionForm from './DiscussionForm';
 import FilterForm from './FilterForm';
-import { DEV_URL, PROD_URL } from '../url.js';
-// import { fetchDiscussions } from '../utils/getDiscussions.js';
+import { PROD_URL } from '../url.js';
 
 class App extends Component {
   constructor() {
@@ -36,7 +36,7 @@ class App extends Component {
       .then((response) => response.json())
       .then((rawDiscussions) => this.cleanDiscussions(rawDiscussions))
       .then((allDiscussions) => {
-        this.setState({ allDiscussions, discussions: allDiscussions })
+        this.setState({ allDiscussions, discussions: allDiscussions });
       })
       .catch((error) => console.error({ error }));
   }
@@ -53,7 +53,7 @@ class App extends Component {
   }
 
   fetchComments() {
-    fetch('http://localhost:3000/api/v1/comments')
+    fetch(`${PROD_URL}/api/v1/comments`)
       .then((response) => response.json())
       .then((comments) => this.cleanComments(comments))
       .then((comments) => this.setState({ comments }))
@@ -99,32 +99,33 @@ class App extends Component {
   }
 
   handleSearch() {
-    this.fetchDiscussions()
+    this.fetchDiscussions();
   }
 
   renderCardContainer() {
-    if (this.state.showingDiscussions && this.state.discussions) {
+    const { showingDiscussions, discussions, allDiscussions, comments } = this.state;
+    if (showingDiscussions && discussions) {
       return (
         <CardContainer
-          allDiscussions={this.state.allDiscussions}
-          discussions={this.state.discussions}
-          comments={this.state.comments}
-          rendered={this.state.showingDiscussions}/>
-      )
+          allDiscussions={allDiscussions}
+          discussions={discussions}
+          comments={comments}
+          rendered={showingDiscussions}/>
+      );
     }
   }
 
   render() {
     const { allDiscussions, discussions, comments, showingDiscussions, showingForm, showingStandards } = this.state;
-      
+
     const showForm = showingForm
-      ? <DiscussionForm rendered={this.state.showingForm}/> : null;
+      ? <DiscussionForm rendered={showingForm}/> : null;
 
     const showStandards = showingStandards
       ? <FilterForm
         renderDiscussions={this.renderDiscussions}
         renderFilteredDiscussions={this.renderFilteredDiscussions}
-        rendered={this.state.showingStandards}/> : null;
+        rendered={showingStandards}/> : null;
 
     return (
       <section className="app">
@@ -149,5 +150,9 @@ class App extends Component {
     );
   }
 }
+
+App.propTypes = {
+
+};
 
 export default App;

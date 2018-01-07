@@ -28,8 +28,8 @@ class DiscussionCard extends Component {
             commentId={comment.discussionId}
             discussionId={this.props.discussion.id}
           />
-        )
-      })
+        );
+      });
     }
   }
 
@@ -38,7 +38,7 @@ class DiscussionCard extends Component {
       return (
         <CommentForm
           discussionId={this.props.discussion.id}/>
-      )
+      );
     }
   }
 
@@ -46,16 +46,16 @@ class DiscussionCard extends Component {
     if (this.state.displayingComment) {
       return (
         <p className="show-more-less-text">Hide Comments</p>
-      )
+      );
     } else {
       return (
         <p className="show-more-less-text">Show Comments</p>
-      )
+      );
     }
   }
 
   render() {
-    const { title, body } = this.props.discussion
+    const { title, body } = this.props.discussion;
     return (
       <article className="card">
         <section className="top-card">
