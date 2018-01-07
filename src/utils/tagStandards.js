@@ -7,7 +7,7 @@ export const domainsByGrade = {
     "6.RP.A.3.B",
     "6.RP.A.3.C"
   ],
-  '6-NP': [
+  '6-NS': [
     "6.NS.A.1",
     "6.NS.B.2",
     "6.NS.B.3",
@@ -46,7 +46,7 @@ export const domainsByGrade = {
     "7.RP.A.2",
     "7.RP.A.3"
   ],
-  '7-NP': [
+  '7-NS': [
     "7.NS.A.1",
     "7.NS.A.2",
     "7.NS.A.3"

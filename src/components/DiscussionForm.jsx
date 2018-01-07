@@ -4,45 +4,45 @@ import { domainsByGrade } from '../utils/tagStandards';
 
 class DiscussionForm extends Component {
   constructor() {
-    super();
+    super()
     this.state = {
       title: '',
       body: '',
       gradeSelected: '',
       domainSelected: '',
       standardSelected: ''
-    };
+    }
   }
 
   handleChange(key, event) {
     this.setState({
       [key]: event.target.value,
-    });
+    })
   }
 
   clearInputs() {
     this.setState({
       title: '',
       body: '',
-    });
+    })
   }
 
   handleSubmit(event) {
-    event.preventDefault();
-    const { title, body } = this.state;
-    postNewDiscussion(title, body);
-    this.clearInputs();
+    event.preventDefault()
+    const { title, body } = this.state
+    postNewDiscussion(title, body)
+    this.clearInputs()
   }
 
   selectGrade(event) {
-    event.preventDefault();
+    event.preventDefault()
     this.setState({
       gradeSelected: event.target.value
     })
   }
 
   selectDomain(event) {
-    event.preventDefault();
+    event.preventDefault()
     this.setState({
       domainSelected: event.target.value,
     })
@@ -183,6 +183,7 @@ class DiscussionForm extends Component {
               onChange={this.handleChange.bind(this, 'body')}
             >
             </textarea>
+            <div>{this.state.standardSelected}</div>
           </label>
           <div className="grade-level-buttons">
             <h4>Choose your grade level</h4>
