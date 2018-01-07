@@ -7,33 +7,34 @@ class Search extends Component {
       searchTerm: ''
     }
     this.handleChange = this.handleChange.bind(this);
-  }
+  };
 
   handleChange(event) {
     event.preventDefault();
     this.setState({ searchTerm: event.target.value });
     this.filterDiscussions();
-  }
+  };
 
   filterDiscussions() {
+    const { allDiscussions, renderDiscussions, renderFilteredDiscussions } = this.props;
+
     let searchTerm = this.state.searchTerm.toLowerCase();
 
-    const filtered = this.props.allDiscussions.filter(discussion => {
+    const filtered = allDiscussions.filter(discussion => {
       let title = discussion.title.toLowerCase();
       let body = discussion.body.toLowerCase();
 
       if (title.includes(searchTerm) || body.includes(searchTerm)) {
         return discussion;
-      }
+      };
     });
-
-    this.props.renderDiscussions();
-    this.props.renderFilteredDiscussions(filtered);
-  }
+    renderDiscussions();
+    renderFilteredDiscussions(filtered);
+  };
 
   shouldComponentUpdate(nextProps) {
     return this.props !== nextProps;
-  }
+  };
 
   render() {
     const { discussions, renderDiscussions, renderFilteredDiscussions, handleSearch } = this.props;
@@ -50,7 +51,7 @@ class Search extends Component {
         </input>
       </aside>
     );
-  }
-}
+  };
+};
 
 export default Search;

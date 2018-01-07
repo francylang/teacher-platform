@@ -13,12 +13,14 @@ class FilterForm extends Component {
   };
 
   showOptions(standardsArray, state) {
+    const { renderDiscussions, renderFilteredDiscussions } = this.props;
+
     if (state) {
       return standardsArray.map((domainArray, i) => {
         return (
           <FilterSection
-            renderDiscussions={this.props.renderDiscussions}
-            renderFilteredDiscussions={this.props.renderFilteredDiscussions}
+            renderDiscussions={renderDiscussions}
+            renderFilteredDiscussions={renderFilteredDiscussions}
             domain={domainArray}
             key={i}/>
         );
