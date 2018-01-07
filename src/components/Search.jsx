@@ -5,7 +5,7 @@ class Search extends Component {
     super();
     this.state = {
       searchTerm: ''
-    }
+    };
     this.handleChange = this.handleChange.bind(this);
   };
 

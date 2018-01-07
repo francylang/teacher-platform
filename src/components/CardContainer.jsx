@@ -2,6 +2,8 @@ import React from 'react';
 import DiscussionCard from './DiscussionCard';
 
 const CardContainer = ({ comments, discussions }) => {
+  // state? render ALL boolean flag?
+
   const matchDiscussionIds = () => {
     if (discussions) {
       comments.filter(comment => {
