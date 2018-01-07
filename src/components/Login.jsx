@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import userLoginData from '../utils/userLoginData';
+import { Redirect } from 'react-router';
 
 class Login extends Component {
   constructor() {
@@ -12,8 +14,8 @@ class Login extends Component {
   };
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.userStatus === true) {
-      this.props.history.push('/');
+    if (nextProps === true) {
+      return <Redirect to='/'/>;
     };
   };
 
@@ -28,8 +30,10 @@ class Login extends Component {
   handleSubmit(event) {
     event.preventDefault();
     const user = this.state;
+    if (user === userLoginData) {
+      return <Redirect to='/'/>;
+    }
 
-    this.props.isAuthenticated(user);
     this.setState({
       email: '',
       password: ''
