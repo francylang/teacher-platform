@@ -11,6 +11,31 @@
 .card-body {
   text-align: left; }
 
+.card-tag {
+  border-radius: 5px;
+  display: inline-block;
+  padding: 4px 6px;
+  color: #fff;
+  font-size: 90%; }
+
+.R {
+  background-color: red; }
+
+.E {
+  background-color: blue; }
+
+.N {
+  background-color: pink; }
+
+.F {
+  background-color: pink; }
+
+.G {
+  background-color: orange; }
+
+.S {
+  background-color: green; }
+
 .show-more-btn {
   padding: 1% 2.5%;
   float: right;

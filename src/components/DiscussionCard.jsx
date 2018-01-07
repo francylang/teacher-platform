@@ -55,12 +55,13 @@ class DiscussionCard extends Component {
   }
 
   render() {
-    const { title, body } = this.props.discussion;
+    const { title, body, tagTitle } = this.props.discussion;
     return (
       <article className="card">
         <section className="top-card">
           <h4 className="card-title">{title}</h4>
           <p className="card-body">{body}</p>
+          <p className={`card-tag ${tagTitle[2]}`}>{tagTitle}</p>
         </section>
         <button
           onClick={() => this.toggleComments()}
