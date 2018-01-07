@@ -28,8 +28,8 @@ class DiscussionForm extends Component {
   }
 
   handleSubmit(event) {
-    event.preventDefault();
     const { title, body, standardSelected } = this.state;
+    event.preventDefault();
     postNewDiscussion(title, body, standardSelected);
     this.clearInputs();
   }
@@ -45,16 +45,17 @@ class DiscussionForm extends Component {
   }
 
   handleSelectStandard(event) {
+    const { title, body } = this.state
     this.setState({ standardSelected: event.target.value });
     event.preventDefault()
-    const { title, body } = this.state
     postNewDiscussion(title, body)
     this.clearInputs()
   }
 
   renderDropDown() {
-    if (domainsByGrade[this.state.domainSelected]) {
-      const mappedDomains = domainsByGrade[this.state.domainSelected].map(domain => {
+    const { domainSelected, standardSelected } = this.state;
+    if (domainsByGrade[domainSelected]) {
+      const mappedDomains = domainsByGrade[domainSelected].map(domain => {
         return (
           <option
             key={domain}
@@ -66,7 +67,7 @@ class DiscussionForm extends Component {
       })
       return (
         <select
-          value={this.state.standardSelected}
+          value={standardSelected}
           onChange={this.handleSelectStandard.bind(this)}>
         >
           {mappedDomains}
@@ -80,77 +81,78 @@ class DiscussionForm extends Component {
   }
 
   renderDomains() {
-    if (this.state.gradeSelected === "6" || this.state.gradeSelected === "7") {
+    const { gradeSelected } = this.state;
+    if (gradeSelected === "6" || gradeSelected === "7") {
       return (
         <div className="grade-6-7-domains">
           <button
             className="grade-level-domain"
-            value={`${this.state.gradeSelected}-RP`}
+            value={`${gradeSelected}-RP`}
             onClick={(event) => this.selectDomain(event)}
           >
             Ratios and Proportional Relationships</button>
           <button
             className="grade-level-domain"
-            value={`${this.state.gradeSelected}-NS`}
+            value={`${gradeSelected}-NS`}
             onClick={(event) => this.selectDomain(event)}
           >
             The Number System</button>
           <button
             className="grade-level-domain"
-            value={`${this.state.gradeSelected}-EE`}
+            value={`${gradeSelected}-EE`}
             onClick={(event) => this.selectDomain(event)}
           >
             Expressions & Equations</button>
           <button
             className="grade-level-domain"
-            value={`${this.state.gradeSelected}-G`}
+            value={`${gradeSelected}-G`}
             onClick={(event) => this.selectDomain(event)}
           >
             Geometry
           </button>
           <button
             className="grade-level-domain"
-            value={`${this.state.gradeSelected}-SP`}
+            value={`${gradeSelected}-SP`}
             onClick={(event) => this.selectDomain(event)}
           >
             Statistics & Probability
           </button>
         </div>
       )
-    } else if (this.state.gradeSelected === "8") {
+    } else if (gradeSelected === "8") {
       return (
         <div className="grade-8-domains">
           <button
             className="grade-level-domain"
-            value={`${this.state.gradeSelected}-NS`}
+            value={`${gradeSelected}-NS`}
             onClick={(event) => this.selectDomain(event)}
           >
             The Number System
           </button>
           <button
             className="grade-level-domain"
-            value={`${this.state.gradeSelected}-EE`}
+            value={`${gradeSelected}-EE`}
             onClick={(event) => this.selectDomain(event)}
           >
             Expressions & Equations
           </button>
           <button
             className="grade-level-domain"
-            value={`${this.state.gradeSelected}-F`}
+            value={`${gradeSelected}-F`}
             onClick={(event) => this.selectDomain(event)}
           >
             Functions
           </button>
           <button
             className="grade-level-domain"
-            value={`${this.state.gradeSelected}-G`}
+            value={`${gradeSelected}-G`}
             onClick={(event) => this.selectDomain(event)}
           >
             Geometry
           </button>
           <button
             className="grade-level-domain"
-            value={`${this.state.gradeSelected}-SP`}
+            value={`${gradeSelected}-SP`}
             onClick={(event) => this.selectDomain(event)}
           >
             Statistics & Probability
@@ -161,6 +163,7 @@ class DiscussionForm extends Component {
   }
 
   render() {
+    const { title, body, standardSelected } = this.state;
     return (
       <article className="discussion-form-section">
         <form action="" method="get" className="form">
@@ -169,7 +172,7 @@ class DiscussionForm extends Component {
               id="dicussion-title"
               type="text"
               name="title"
-              value={this.state.title}
+              value={title}
               placeholder="Title"
               onChange={this.handleChange.bind(this, 'title')}
             >
@@ -180,12 +183,12 @@ class DiscussionForm extends Component {
               id="dicussion-body"
               type="text"
               name="body"
-              value={this.state.body}
+              value={body}
               placeholder="Detailed question"
               onChange={this.handleChange.bind(this, 'body')}
             >
             </textarea>
-            <div>{this.state.standardSelected}</div>
+            <div>{standardSelected}</div>
           </label>
           <div className="grade-level-buttons">
             <h4>Choose a grade level</h4>
