@@ -151,7 +151,7 @@ class App extends Component {
   }
 }
 
-App.PropTypes = {
+App.propTypes = {
 
 };
 

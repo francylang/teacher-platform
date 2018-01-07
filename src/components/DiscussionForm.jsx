@@ -4,27 +4,28 @@ import { domainsByGrade } from '../utils/tagStandards';
 
 class DiscussionForm extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
       title: '',
       body: '',
       gradeSelected: '',
       domainSelected: '',
       standardSelected: ''
-    }
+    };
+    this.colors = ['red', 'green', 'navy', 'purple', 'yellow', 'blue', 'orange'];
   }
 
   handleChange(key, event) {
     this.setState({
       [key]: event.target.value,
-    })
+    });
   }
 
   clearInputs() {
     this.setState({
       title: '',
       body: '',
-    })
+    });
   }
 
   handleSubmit(event) {
@@ -49,9 +50,9 @@ class DiscussionForm extends Component {
     const { title, body } = this.state;
 
     this.setState({ standardSelected: event.target.value });
-    event.preventDefault()
-    postNewDiscussion(title, body)
-    this.clearInputs()
+    event.preventDefault();
+    postNewDiscussion(title, body);
+    this.clearInputs();
   }
 
   renderDropDown() {
@@ -66,8 +67,8 @@ class DiscussionForm extends Component {
           >
             {domain}
           </option>
-        )
-      })
+        );
+      });
       return (
         <select
           value={standardSelected}
@@ -75,7 +76,7 @@ class DiscussionForm extends Component {
         >
           {mappedDomains}
         </select>
-      )
+      );
     }
   }
 
@@ -122,7 +123,7 @@ class DiscussionForm extends Component {
             Statistics & Probability
           </button>
         </div>
-      )
+      );
     } else if (gradeSelected === "8") {
       return (
         <div className="grade-8-domains">
@@ -162,7 +163,7 @@ class DiscussionForm extends Component {
             Statistics & Probability
           </button>
         </div>
-      )
+      );
     }
   }
 
@@ -198,21 +199,21 @@ class DiscussionForm extends Component {
           <div className="grade-level-buttons">
             <h4>Choose a grade level</h4>
             <button
-              className="grade-level-button"
+              className="grade-level-button btn-6"
               value="6"
               onClick={(event) => this.selectGrade(event)}
             >
               Grade 6
             </button>
             <button
-              className="grade-level-button"
+              className="grade-level-button btn-7"
               value="7"
               onClick={(event) => this.selectGrade(event)}
             >
               Grade 7
             </button>
             <button
-              className="grade-level-button"
+              className="grade-level-button btn-8"
               value="8"
               onClick={(event) => this.selectGrade(event)}
             >
@@ -233,7 +234,7 @@ class DiscussionForm extends Component {
           </button>
         </form>
       </article>
-    )
+    );
   }
 }
 
