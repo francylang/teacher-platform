@@ -31,7 +31,7 @@ class App extends Component {
   }
 
   fetchDiscussions() {
-    fetch(`${PROD_URL}/api/v1/discussions`)
+    fetch(`http://localhost:3000/api/v1/discussions`)
       .then((response) => response.json())
       .then((rawDiscussions) => this.cleanDiscussions(rawDiscussions))
       .then((allDiscussions) => {
@@ -47,12 +47,13 @@ class App extends Component {
         title: discussion.title,
         body: discussion.body,
         tagId: discussion.tagId,
+        tagTitle: discussion.tagTitle,
       };
     });
   }
 
   fetchComments() {
-    fetch(`${PROD_URL}/api/v1/comments`)
+    fetch(`http://localhost:3000/api/v1/comments`)
       .then((response) => response.json())
       .then((comments) => this.cleanComments(comments))
       .then((comments) => this.setState({ comments }))
@@ -74,6 +75,7 @@ class App extends Component {
       showingDiscussions: true,
       showingForm: false,
       showingStandards: false,
+      discussions: this.state.allDiscussions,
     });
   }
 
@@ -124,7 +126,8 @@ class App extends Component {
       ? <FilterForm
         renderDiscussions={this.renderDiscussions}
         renderFilteredDiscussions={this.renderFilteredDiscussions}
-        rendered={showingStandards}/> : null;
+        rendered={showingStandards}
+        discussions={discussions} /> : null;
 
     return (
       <section className="app">

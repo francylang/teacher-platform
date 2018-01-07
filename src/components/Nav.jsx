@@ -2,7 +2,14 @@ import React from 'react';
 import Search from './Search';
 import { Link } from 'react-router-dom';
 
-const Nav = ({ handleSearch, allDiscussions, discussions, renderDiscussions, renderFilteredDiscussions, renderStandards, renderForm }) => {
+const Nav = ({
+  handleSearch,
+  allDiscussions,
+  discussions,
+  renderDiscussions,
+  renderFilteredDiscussions,
+  renderStandards,
+  renderForm }) => {
   return (
     <div className="nav">
       <Search
@@ -30,6 +37,7 @@ const Nav = ({ handleSearch, allDiscussions, discussions, renderDiscussions, ren
         </h4>
       </button>
       <button
+        //this is where we need to also tell it to render ALL discussions
         onClick={() => renderDiscussions()}
         className="toggle-discussions-btn"
         value="form"
