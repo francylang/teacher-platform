@@ -1,5 +1,6 @@
 import React from 'react';
 import Search from './Search';
+import { Link } from 'react-router-dom';
 
 const Nav = ({ handleSearch, allDiscussions, discussions, renderDiscussions, renderFilteredDiscussions, renderStandards, renderForm }) => {
   return (
@@ -39,6 +40,6 @@ const Nav = ({ handleSearch, allDiscussions, discussions, renderDiscussions, ren
       </button>
     </div>
   );
-}
+};
 
 export default Nav;
