@@ -12,7 +12,8 @@ class DiscussionForm extends Component {
       body: '',
       gradeSelected: '',
       domainSelected: '',
-      standardSelected: ''
+      standardSelected: '',
+      isActive: false
     };
   }
 
@@ -39,7 +40,12 @@ class DiscussionForm extends Component {
 
   selectGrade(event) {
     event.preventDefault();
-    this.setState({ gradeSelected: event.target.value });
+    event.target.classList.toggle('active');
+
+    this.setState({
+      gradeSelected: event.target.value,
+      isActive: !this.state.isActive
+    });
   }
 
   selectDomain(event) {
