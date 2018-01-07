@@ -76,6 +76,7 @@ class App extends Component {
       showingDiscussions: true,
       showingForm: false,
       showingStandards: false,
+      discussions: this.state.allDiscussions,
     });
   }
 
@@ -127,7 +128,6 @@ class App extends Component {
         renderDiscussions={this.renderDiscussions}
         renderFilteredDiscussions={this.renderFilteredDiscussions}
         rendered={showingStandards}
-        allDiscussions={allDiscussions}
         discussions={discussions} /> : null;
 
     return (

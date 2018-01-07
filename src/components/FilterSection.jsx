@@ -3,9 +3,9 @@ import { PROD_URL } from '../url.js';
 
 class FilterSection extends Component {
   filterDiscussions(standard) {
-    const { allDiscussions, renderDiscussions, renderFilteredDiscussions } = this.props;
+    const { discussions, renderDiscussions, renderFilteredDiscussions } = this.props;
 
-    const filtered = allDiscussions.filter(discussion => {
+    const filtered = discussions.filter(discussion => {
       if (standard === discussion.tagTitle) {
         return discussion;
       };

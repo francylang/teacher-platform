@@ -22,9 +22,8 @@ class FilterForm extends Component {
             renderDiscussions={renderDiscussions}
             renderFilteredDiscussions={renderFilteredDiscussions}
             domain={domainArray}
-            allDiscussions={allDiscussions}
             discussions={discussions}
-            key={i}/>
+            key={domainArray[i]}/>
         );
       });
     }

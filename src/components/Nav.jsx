@@ -36,6 +36,7 @@ const Nav = ({
         </h4>
       </button>
       <button
+        //this is where we need to also tell it to render ALL discussions
         onClick={() => renderDiscussions()}
         className="toggle-discussions-btn"
         value="form"
