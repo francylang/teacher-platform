@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
-import Login from './Login';
-import App from './App';
+import LoginContainer from '../containers/LoginContainer.js';
+import AppContainer from '../containers/AppContainer.js';
 import Header from './Header';
 
 class Routes extends Component {
@@ -9,8 +9,8 @@ class Routes extends Component {
     return (
       <div className="routes">
         <Header />
-        <Route exact path="/" component={ App }/>
-        <Route path="/login" component={ Login }/>
+        <Route path="/" component={ AppContainer }/>
+        <Route path="/login" component={ LoginContainer }/>
       </div>
     );
   }

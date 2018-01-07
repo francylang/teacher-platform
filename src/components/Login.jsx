@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import userLoginData from '../utils/userLoginData';
 import { Redirect } from 'react-router';
+import { Link } from 'react-router-dom';
+import createBrowserHistory from '../../node_modules/history/createBrowserHistory';
+
+const history = createBrowserHistory();
 
 class Login extends Component {
   constructor() {
@@ -13,11 +17,11 @@ class Login extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   };
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps === true) {
-      return <Redirect to='/'/>;
-    };
-  };
+  // componentWillReceiveProps(nextProps) {
+  //   if (nextProps === true) {
+  //     this.props.history.push('/');
+  //   };
+  // };
 
   handleChange(event, type) {
     let value = event.target.value;
@@ -29,18 +33,21 @@ class Login extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const user = this.state;
-    if (user === userLoginData) {
-      return <Redirect to='/'/>;
-    }
-
-    this.setState({
-      email: '',
-      password: ''
-    });
+    this.props.history.push('/')
+    // return <Redirect to='/' />
+    // const user = this.state;
+    //
+    // if (user.email === userLoginData.email) {
+    //   return this.props.history.push('/');
+    // }
+    // this.setState({
+    //   email: '',
+    //   password: ''
+    // });
   };
 
   render() {
+
     const isDisabled =
     this.state.email.length &&
     this.state.password.length ? false : true;
@@ -63,13 +70,13 @@ class Login extends Component {
             value={this.state.password}
             onChange={ (event) => this.handleChange(event, 'password')}>
           </input>
-          <input
+          <button
             className='login-submit-button'
             disabled={isDisabled}
             type='submit'
-            onClick={this.handleSubmit}
-          >
-          </input>
+            onClick={() => this.handleSubmit()}
+          ><Link to='/'>submit</Link>
+          </button>
         </form>
       </div>
     );
