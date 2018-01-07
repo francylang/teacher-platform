@@ -1,30 +1,30 @@
 import React, { Component } from 'react';
 import { postNewDiscussion } from '../utils/postDiscussion';
-import { domainsByGrade } from '../utils/standards';
+import { domainsByGrade } from '../utils/tagStandards';
 
 class DiscussionForm extends Component {
   constructor() {
-    super();
+    super()
     this.state = {
       title: '',
       body: '',
       gradeSelected: '',
       domainSelected: '',
       standardSelected: ''
-    };
+    }
   }
 
   handleChange(key, event) {
     this.setState({
       [key]: event.target.value,
-    });
+    })
   }
 
   clearInputs() {
     this.setState({
       title: '',
       body: '',
-    });
+    })
   }
 
   handleSubmit(event) {
@@ -53,8 +53,8 @@ class DiscussionForm extends Component {
       const mappedDomains = domainsByGrade[this.state.domainSelected].map(domain => {
         return (
           <option
-            value={domain}
             key={domain}
+            value={domain}
           >
             {domain}
           </option>
@@ -63,11 +63,18 @@ class DiscussionForm extends Component {
       return (
         <select
           value={this.state.standardSelected}
-          onChange={this.handleSelectStandard.bind(this)}>
+          onChange={this.handleStandardSelect.bind(this)}
+        >
           {mappedDomains}
         </select>
       )
     }
+  }
+
+  handleStandardSelect(event) {
+    this.setState({
+      standardSelected: event.target.value
+    })
   }
 
   renderDomains() {
@@ -176,9 +183,10 @@ class DiscussionForm extends Component {
               onChange={this.handleChange.bind(this, 'body')}
             >
             </textarea>
+            <div>{this.state.standardSelected}</div>
           </label>
           <div className="grade-level-buttons">
-            <h4>Choose your grade level</h4>
+            <h4>Choose a grade level</h4>
             <button
               className="grade-level-button"
               value="6"
