@@ -117,13 +117,6 @@ class App extends Component {
   render() {
     const { allDiscussions, discussions, comments, showingDiscussions, showingForm, showingStandards } = this.state;
 
-    // const showDiscussions = showingDiscussions
-    //   ? <CardContainer
-    //     allDiscussions={allDiscussions}
-    //     discussions={discussions}
-    //     comments={comments}
-    //     rendered={showingDiscussions}/> : null;
-
     const showForm = showingForm
       ? <DiscussionForm rendered={this.state.showingForm}/> : null;
 
