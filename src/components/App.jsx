@@ -130,7 +130,6 @@ class App extends Component {
 
   render() {
     const { allDiscussions, discussions, comments, showingDiscussions, showingForm, showingStandards } = this.state;
-    console.log(this.props.signedInStatus);
 
     if (this.props.signedInStatus === false) {
       return <Redirect to='/login'/>;

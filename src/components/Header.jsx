@@ -1,10 +1,20 @@
 import React from 'react';
 
-const Header = () => {
+const Header = ({ signedInStatus }) => {
+  const renderSignOut = () => {
+    console.log(signedInStatus);
+    if (signedInStatus === true) {
+      console.log('after if');
+      return (
+        <h3 className="sign-out">Sign Out</h3>
+      );
+    }
+  };
+
   return (
     <header className="header">
       <h1 className="app-name">Teachzilla</h1>
-      <h3 className="sign-out">Sign Out</h3>
+      {renderSignOut()}
     </header>
   );
 };
