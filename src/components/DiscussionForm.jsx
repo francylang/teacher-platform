@@ -29,35 +29,41 @@ class DiscussionForm extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const { title, body } = this.state;
-    postNewDiscussion(title, body);
+    const { title, body, standardSelected } = this.state;
+    postNewDiscussion(title, body, standardSelected);
     this.clearInputs();
   }
 
   selectGrade(event) {
     event.preventDefault();
-    this.setState({
-      gradeSelected: event.target.value
-    })
+    this.setState({ gradeSelected: event.target.value });
   }
 
   selectDomain(event) {
     event.preventDefault();
-    this.setState({
-      domainSelected: event.target.value,
-    })
+    this.setState({ domainSelected: event.target.value });
+  }
+
+  handleSelectStandard(event) {
+    this.setState({ standardSelected: event.target.value });
   }
 
   renderDropDown() {
-    console.log(domainsByGrade[this.state.domainSelected]);
     if (domainsByGrade[this.state.domainSelected]) {
       const mappedDomains = domainsByGrade[this.state.domainSelected].map(domain => {
         return (
-          <option value="domain">{domain}</option>
+          <option
+            value={domain}
+            key={domain}
+          >
+            {domain}
+          </option>
         )
       })
       return (
-        <select>
+        <select
+          value={this.state.standardSelected}
+          onChange={this.handleSelectStandard.bind(this)}>
           {mappedDomains}
         </select>
       )
@@ -195,8 +201,12 @@ class DiscussionForm extends Component {
               Grade 8
             </button>
           </div>
-          <div className="grade-level-domains">{this.renderDomains()}</div>
-          <div className="grade-level-standards">{this.renderDropDown()}</div>
+          <div className="grade-level-domains">
+            {this.renderDomains()}
+          </div>
+          <div className="grade-level-standards">
+            {this.renderDropDown()}
+          </div>
           <button
             className="submit-discussion-btn"
             onClick={(event) => this.handleSubmit(event)}
