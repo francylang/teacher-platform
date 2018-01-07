@@ -28,24 +28,24 @@ class DiscussionForm extends Component {
   }
 
   handleSubmit(event) {
-    event.preventDefault()
-    const { title, body } = this.state
-    postNewDiscussion(title, body)
-    this.clearInputs()
+    event.preventDefault();
+    const { title, body, standardSelected } = this.state;
+    postNewDiscussion(title, body, standardSelected);
+    this.clearInputs();
   }
 
   selectGrade(event) {
-    event.preventDefault()
-    this.setState({
-      gradeSelected: event.target.value
-    })
+    event.preventDefault();
+    this.setState({ gradeSelected: event.target.value });
   }
 
   selectDomain(event) {
-    event.preventDefault()
-    this.setState({
-      domainSelected: event.target.value,
-    })
+    event.preventDefault();
+    this.setState({ domainSelected: event.target.value });
+  }
+
+  handleSelectStandard(event) {
+    this.setState({ standardSelected: event.target.value });
   }
 
   renderDropDown() {
@@ -209,8 +209,12 @@ class DiscussionForm extends Component {
               Grade 8
             </button>
           </div>
-          <div className="grade-level-domains">{this.renderDomains()}</div>
-          <div className="grade-level-standards">{this.renderDropDown()}</div>
+          <div className="grade-level-domains">
+            {this.renderDomains()}
+          </div>
+          <div className="grade-level-standards">
+            {this.renderDropDown()}
+          </div>
           <button
             className="submit-discussion-btn"
             onClick={(event) => this.handleSubmit(event)}
