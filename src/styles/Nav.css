@@ -28,8 +28,8 @@
   background-color: #302E32;
   border: none;
   outline: none;
-  cursor: pointer; }
+  cursor: pointer;
+  padding-right: 0; }
 
 .new-discussion-option {
-  padding-right: 10px;
   color: #fff; }
