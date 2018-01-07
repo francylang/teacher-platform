@@ -14,8 +14,8 @@ class App extends Component {
       allDiscussions: [],
       discussions: [],
       comments: [],
-      showingDiscussions: false,
-      showingForm: true,
+      showingDiscussions: true,
+      showingForm: false,
       showingStandards: false,
     };
     this.fetchDiscussions = this.fetchDiscussions.bind(this);
@@ -129,7 +129,6 @@ class App extends Component {
 
     return (
       <section className="app">
-        {/* <Header /> */}
         <article className="main">
           <Nav
             allDiscussions={allDiscussions}
