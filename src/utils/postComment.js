@@ -8,4 +8,4 @@ export const postComment = (body, discussionId) => {
   })
     .then(response => response.json)
     .catch(error => console.error(error))
-}
+};

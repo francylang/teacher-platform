@@ -32,7 +32,7 @@ class App extends Component {
   }
 
   fetchDiscussions() {
-    fetch(`http://localhost:3000/api/v1/discussions`)
+    fetch(`${PROD_URL}/api/v1/discussions`)
       .then((response) => response.json())
       .then((rawDiscussions) => this.cleanDiscussions(rawDiscussions))
       .then((allDiscussions) => {

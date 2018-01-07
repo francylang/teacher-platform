@@ -3,7 +3,7 @@ import { PROD_URL } from '../url.js';
 
 const FilterSection = ({ renderFilteredDiscussions, renderDiscussions, domain }) => {
   const fetchDiscussions = standard => {
-    fetch('http://localhost:3000/api/v1/discussions')
+    fetch(`${PROD_URL}/api/v1/discussions`)
       .then((response) => response.json())
       .then((rawDiscussions) => findMatchingDiscussions(rawDiscussions, standard))
       .then((matchingDiscussions) => {
