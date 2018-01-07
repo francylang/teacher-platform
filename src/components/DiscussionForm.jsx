@@ -13,20 +13,7 @@ class DiscussionForm extends Component {
       domainSelected: '',
       standardSelected: ''
     };
-    // this.domains67 = [
-    //   'Ratios and Proportional Relationships',
-    //   'The Number System',
-    //   'Expressions & Equations',
-    //   'Geometry',
-    //   'Statistics & Probability'
-    // ];
-    // this.domains8 = [
-    //   'Functions',
-    //   'The Number System',
-    //   'Expressions & Equations',
-    //   'Geometry',
-    //   'Statistics & Probability'
-    // ];
+    this.colors = ['red', 'green', 'navy', 'purple', 'yellow', 'blue', 'orange'];
   }
 
   handleChange(key, event) {
@@ -109,6 +96,7 @@ class DiscussionForm extends Component {
             domain={domain}
             selectDomain={(event) => this.selectDomain(event)}
             gradeSelected={this.state.gradeSelected}
+            color={this.colors[index]}
           />
         );
       });
@@ -134,7 +122,7 @@ class DiscussionForm extends Component {
       return (
         <button
           key={index}
-          className="grade-level-button btn-6"
+          className={`grade-level-button btn-${gradeLevelNums[index]}`}
           value={gradeLevelNums[index]}
           onClick={(event) => this.selectGrade(event)}
         >{grade}</button>
@@ -171,7 +159,9 @@ class DiscussionForm extends Component {
             </textarea>
             <div>{standardSelected}</div>
           </label>
-          {this.renderGradeLevelButtons()}
+          <div className="grade-level-buttons">
+            {this.renderGradeLevelButtons()}
+          </div>
           <div className="grade-level-domains">
             {this.renderDomains()}
           </div>

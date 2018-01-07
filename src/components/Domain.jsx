@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Domain = ({ domain, selectDomain, gradeSelected }) => {
+const Domain = ({ domain, selectDomain, gradeSelected, color }) => {
+  console.log(color);
   return (
-    <div>
+    <div className="grade-level-domains">
       <button
-        className="grade-level-domain"
+        className={`grade-level-domain ${color}`}
         value={`${gradeSelected}-RP`}
         onClick={selectDomain}
       >{domain}

@@ -38,6 +38,9 @@
   background-repeat: no-repeat;
   background-size: cover; }
 
+.grade-level-buttons {
+  display: flex; }
+
 .grade-level-button {
   margin: 0 10px 0 0;
   padding: 10px 36px;
@@ -67,5 +70,25 @@
 .grade-level-domain {
   margin: 10px;
   border: none;
-  padding: 10px;
-  background-color: lightblue; }
+  padding: 10px; }
+
+.green {
+  background-color: #688737; }
+
+.red {
+  background-color: #d35656; }
+
+.blue {
+  background-color: #3364FF; }
+
+.purple {
+  background-color: #A46CC3; }
+
+.yellow {
+  background-color: #ECAF4B; }
+
+.navy {
+  background-color: #405780; }
+
+.orange {
+  background-color: #FF9633; }
