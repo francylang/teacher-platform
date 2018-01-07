@@ -19,7 +19,6 @@ body {
 
 .submit-comment,
 .submit-discussion-btn,
-.show-more-btn,
 .grade-btn {
   margin: 7.5px 0;
   border: none;
@@ -34,7 +33,6 @@ body {
 
 .submit-comment:hover,
 .submit-discussion-btn:hover,
-.show-more-btn:hover,
 .grade-btn:hover {
   cursor: pointer;
   background-color: #8e54e9;

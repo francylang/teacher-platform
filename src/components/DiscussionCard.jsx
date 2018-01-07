@@ -18,6 +18,26 @@ class DiscussionCard extends Component {
     });
   }
 
+  showMoreLess() {
+    if (this.state.displayingComment) {
+      return (
+        <p className="show-more-less-text">Less</p>
+      );
+    } else {
+      return (
+        <p className="show-more-less-text">More</p>
+      );
+    }
+  }
+
+  showCommentsTitle() {
+    if (this.state.displayingComment) {
+      return (
+        <h3 className="comments-header">Comments:</h3>
+      );
+    }
+  }
+
   showComments() {
     if (this.state.displayingComment) {
       return this.props.comments.map(comment => {
@@ -42,24 +62,15 @@ class DiscussionCard extends Component {
     }
   }
 
-  showMoreLess() {
-    if (this.state.displayingComment) {
-      return (
-        <p className="show-more-less-text">Hide Comments</p>
-      );
-    } else {
-      return (
-        <p className="show-more-less-text">Show Comments</p>
-      );
-    }
-  }
-
   render() {
-    const { title, body } = this.props.discussion;
+    const { title, body, tagTitle } = this.props.discussion;
     return (
       <article className="card">
         <section className="top-card">
-          <h4 className="card-title">{title}</h4>
+          <div className="card-title-container">
+            <h4 className="card-title">{title}</h4>
+            <p className={`card-tag ${tagTitle[2]}`}>{tagTitle}</p>
+          </div>
           <p className="card-body">{body}</p>
         </section>
         <button
@@ -67,6 +78,7 @@ class DiscussionCard extends Component {
           className="show-more-btn">
           {this.showMoreLess()}
         </button>
+        {this.showCommentsTitle()}
         {this.showComments()}
         {this.showCommentForm()}
       </article>

@@ -2,6 +2,8 @@ import React from 'react';
 import DiscussionCard from './DiscussionCard';
 
 const CardContainer = ({ comments, discussions }) => {
+  // state? render ALL boolean flag?
+
   const matchDiscussionIds = () => {
     if (discussions) {
       comments.filter(comment => {
@@ -30,7 +32,7 @@ const CardContainer = ({ comments, discussions }) => {
   return (
     <div className="card-section">
       <h2 className="current-feed-title">
-        Discussions:
+        Discussions
       </h2>
       {buildDiscussionCard()}
     </div>

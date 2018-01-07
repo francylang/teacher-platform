@@ -1,27 +1,29 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { PROD_URL } from '../url.js';
 
 const FilterSection = ({ renderFilteredDiscussions, renderDiscussions, domain }) => {
-  const fetchDiscussions = (standard) => {
-    fetch(`${PROD_URL}/api/v1/discussions`)
+  const fetchDiscussions = standard => {
+    fetch(`http://localhost:3000/api/v1/discussions`)
       .then((response) => response.json())
       .then((rawDiscussions) => findMatchingDiscussions(rawDiscussions, standard))
       .then((matchingDiscussions) => {
-        renderFilteredDiscussions(matchingDiscussions);
         renderDiscussions();
+        renderFilteredDiscussions(matchingDiscussions);
       })
       .catch((error) => console.error({ error }));
-  }
+  };
 
   const findMatchingDiscussions = (rawDiscussions, standard) => {
     return rawDiscussions.filter((discussion) => {
-      return discussion.tagTitle === standard
+      if (standard === discussion.tagTitle) {
+        return discussion;
+      };
     });
-  }
+  };
 
-  const getFilteredDiscussions = (standard) => {
+  const getFilteredDiscussions = standard => {
     fetchDiscussions(standard);
-  }
+  };
 
   const buildDomainList = () => {
     return domain.map(standard => {
@@ -48,13 +50,13 @@ const FilterSection = ({ renderFilteredDiscussions, renderDiscussions, domain })
         );
       }
     });
-  }
+  };
 
   return (
     <aside className="domain-section">
       {buildDomainList()}
     </aside>
   );
-}
+};
 
 export default FilterSection;
