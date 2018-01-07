@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Domain from './Domain';
 import { postNewDiscussion } from '../utils/postDiscussion';
 import { domainsByGrade } from '../utils/tagStandards';
 
@@ -12,7 +13,20 @@ class DiscussionForm extends Component {
       domainSelected: '',
       standardSelected: ''
     };
-    this.colors = ['red', 'green', 'navy', 'purple', 'yellow', 'blue', 'orange'];
+    this.domains67 = [
+      'Ratios and Proportional Relationships',
+      'The Number System',
+      'Expressions & Equations',
+      'Geometry',
+      'Statistics & Probability'
+    ];
+    this.domains8 = [
+      'Functions',
+      'The Number System',
+      'Expressions & Equations',
+      'Geometry',
+      'Statistics & Probability'
+    ];
   }
 
   handleChange(key, event) {
@@ -86,90 +100,33 @@ class DiscussionForm extends Component {
 
   renderDomains() {
     const { gradeSelected } = this.state;
-
     if (gradeSelected === "6" || gradeSelected === "7") {
-      return (
-        <div className="grade-6-7-domains">
-          <button
-            className="grade-level-domain"
-            value={`${gradeSelected}-RP`}
-            onClick={(event) => this.selectDomain(event)}
-          >
-            Ratios and Proportional Relationships</button>
-          <button
-            className="grade-level-domain"
-            value={`${gradeSelected}-NS`}
-            onClick={(event) => this.selectDomain(event)}
-          >
-            The Number System</button>
-          <button
-            className="grade-level-domain"
-            value={`${gradeSelected}-EE`}
-            onClick={(event) => this.selectDomain(event)}
-          >
-            Expressions & Equations</button>
-          <button
-            className="grade-level-domain"
-            value={`${gradeSelected}-G`}
-            onClick={(event) => this.selectDomain(event)}
-          >
-            Geometry
-          </button>
-          <button
-            className="grade-level-domain"
-            value={`${gradeSelected}-SP`}
-            onClick={(event) => this.selectDomain(event)}
-          >
-            Statistics & Probability
-          </button>
-        </div>
-      );
+      return this.domains67.map((domain, index) => {
+        return (
+          <Domain
+            key={domain}
+            domain={domain}
+            selectDomain={(event) => this.selectDomain(event)}
+            gradeSelected={this.state.gradeSelected}
+          />
+        );
+      });
     } else if (gradeSelected === "8") {
-      return (
-        <div className="grade-8-domains">
-          <button
-            className="grade-level-domain"
-            value={`${gradeSelected}-NS`}
-            onClick={(event) => this.selectDomain(event)}
-          >
-            The Number System
-          </button>
-          <button
-            className="grade-level-domain"
-            value={`${gradeSelected}-EE`}
-            onClick={(event) => this.selectDomain(event)}
-          >
-            Expressions & Equations
-          </button>
-          <button
-            className="grade-level-domain"
-            value={`${gradeSelected}-F`}
-            onClick={(event) => this.selectDomain(event)}
-          >
-            Functions
-          </button>
-          <button
-            className="grade-level-domain"
-            value={`${gradeSelected}-G`}
-            onClick={(event) => this.selectDomain(event)}
-          >
-            Geometry
-          </button>
-          <button
-            className="grade-level-domain"
-            value={`${gradeSelected}-SP`}
-            onClick={(event) => this.selectDomain(event)}
-          >
-            Statistics & Probability
-          </button>
-        </div>
-      );
+      return this.domains8.map((domain, index) => {
+        return (
+          <Domain
+            key={domain}
+            domain={domain}
+            selectDomain={(event) => this.selectDomain(event)}
+            gradeSelected={this.state.gradeSelected}
+          />
+        );
+      });
     }
   }
 
   render() {
     const { title, body, standardSelected } = this.state;
-
     return (
       <article className="discussion-form-section">
         <form action="" method="get" className="form">
