@@ -3,16 +3,16 @@ import { postComment } from '../utils/postComment.js';
 
 class CommentForm extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
       body: ''
-    }
+    };
   }
 
   handleChange(event) {
     this.setState({
       body: event.target.value
-    })
+    });
   }
 
   handleSubmit(event) {
@@ -20,7 +20,7 @@ class CommentForm extends Component {
     postComment(this.state.body, this.props.discussionId);
     this.setState({
       body: ''
-    })
+    });
   }
 
   render() {
