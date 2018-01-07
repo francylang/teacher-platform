@@ -52,7 +52,12 @@ class DiscussionForm extends Component {
     if (domainsByGrade[this.state.domainSelected]) {
       const mappedDomains = domainsByGrade[this.state.domainSelected].map(domain => {
         return (
-          <option value={domain}>{domain}</option>
+          <option
+            key={domain}
+            value={domain}
+          >
+            {domain}
+          </option>
         )
       })
       return (
