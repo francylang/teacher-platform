@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Domain from './Domain';
 import { postNewDiscussion } from '../utils/postDiscussion';
-import { domainsByGrade } from '../utils/tagStandards';
+import { domainsByGrade, domains67, domains8 } from '../utils/tagStandards';
 
 class DiscussionForm extends Component {
   constructor() {
@@ -13,20 +13,20 @@ class DiscussionForm extends Component {
       domainSelected: '',
       standardSelected: ''
     };
-    this.domains67 = [
-      'Ratios and Proportional Relationships',
-      'The Number System',
-      'Expressions & Equations',
-      'Geometry',
-      'Statistics & Probability'
-    ];
-    this.domains8 = [
-      'Functions',
-      'The Number System',
-      'Expressions & Equations',
-      'Geometry',
-      'Statistics & Probability'
-    ];
+    // this.domains67 = [
+    //   'Ratios and Proportional Relationships',
+    //   'The Number System',
+    //   'Expressions & Equations',
+    //   'Geometry',
+    //   'Statistics & Probability'
+    // ];
+    // this.domains8 = [
+    //   'Functions',
+    //   'The Number System',
+    //   'Expressions & Equations',
+    //   'Geometry',
+    //   'Statistics & Probability'
+    // ];
   }
 
   handleChange(key, event) {
@@ -100,8 +100,9 @@ class DiscussionForm extends Component {
 
   renderDomains() {
     const { gradeSelected } = this.state;
+
     if (gradeSelected === "6" || gradeSelected === "7") {
-      return this.domains67.map((domain, index) => {
+      return domains67.map((domain, index) => {
         return (
           <Domain
             key={domain}
@@ -112,7 +113,7 @@ class DiscussionForm extends Component {
         );
       });
     } else if (gradeSelected === "8") {
-      return this.domains8.map((domain, index) => {
+      return domains8.map((domain, index) => {
         return (
           <Domain
             key={domain}
@@ -126,36 +127,24 @@ class DiscussionForm extends Component {
   }
 
   renderGradeLevelButtons() {
-    return (
-      <div className="grade-level-buttons">
-        <h4>Choose a grade level</h4>
+    const gradeLevels = ['Grade 6', 'Grade 7', 'Grade 8'];
+    const gradeLevelNums = ['6', '7', '8'];
+
+    return gradeLevels.map((grade, index) => {
+      return (
         <button
+          key={index}
           className="grade-level-button btn-6"
-          value="6"
+          value={gradeLevelNums[index]}
           onClick={(event) => this.selectGrade(event)}
-        >
-          Grade 6
-        </button>
-        <button
-          className="grade-level-button btn-7"
-          value="7"
-          onClick={(event) => this.selectGrade(event)}
-        >
-          Grade 7
-        </button>
-        <button
-          className="grade-level-button btn-8"
-          value="8"
-          onClick={(event) => this.selectGrade(event)}
-        >
-          Grade 8
-        </button>
-      </div>
-    )
+        >{grade}</button>
+      );
+    });
   }
 
   render() {
     const { title, body, standardSelected } = this.state;
+
     return (
       <article className="discussion-form-section">
         <form action="" method="get" className="form">
