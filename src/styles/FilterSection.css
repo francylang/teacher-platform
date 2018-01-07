@@ -22,5 +22,8 @@
   outline: none;
   border: none; }
 
+.standard-link:hover {
+  cursor: pointer; }
+
 .standard-text {
   margin: 0; }

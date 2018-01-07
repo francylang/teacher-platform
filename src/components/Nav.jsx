@@ -1,7 +1,14 @@
 import React from 'react';
 import Search from './Search';
 
-const Nav = ({ handleSearch, allDiscussions, discussions, renderDiscussions, renderFilteredDiscussions, renderStandards, renderForm }) => {
+const Nav = ({
+  handleSearch,
+  allDiscussions,
+  discussions,
+  renderDiscussions,
+  renderFilteredDiscussions,
+  renderStandards,
+  renderForm }) => {
   return (
     <div className="nav">
       <Search
@@ -39,6 +46,6 @@ const Nav = ({ handleSearch, allDiscussions, discussions, renderDiscussions, ren
       </button>
     </div>
   );
-}
+};
 
 export default Nav;

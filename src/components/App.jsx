@@ -32,7 +32,7 @@ class App extends Component {
   }
 
   fetchDiscussions() {
-    fetch(`${PROD_URL}/api/v1/discussions`)
+    fetch(`http://localhost:3000/api/v1/discussions`)
       .then((response) => response.json())
       .then((rawDiscussions) => this.cleanDiscussions(rawDiscussions))
       .then((allDiscussions) => {
@@ -48,6 +48,7 @@ class App extends Component {
         title: discussion.title,
         body: discussion.body,
         tagId: discussion.tagId,
+        tagTitle: discussion.tagTitle,
       };
     });
   }
@@ -125,7 +126,9 @@ class App extends Component {
       ? <FilterForm
         renderDiscussions={this.renderDiscussions}
         renderFilteredDiscussions={this.renderFilteredDiscussions}
-        rendered={showingStandards}/> : null;
+        rendered={showingStandards}
+        allDiscussions={allDiscussions}
+        discussions={discussions} /> : null;
 
     return (
       <section className="app">

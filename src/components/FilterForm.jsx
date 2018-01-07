@@ -13,7 +13,7 @@ class FilterForm extends Component {
   };
 
   showOptions(standardsArray, state) {
-    const { renderDiscussions, renderFilteredDiscussions } = this.props;
+    const { renderDiscussions, renderFilteredDiscussions, discussions, allDiscussions } = this.props;
 
     if (state) {
       return standardsArray.map((domainArray, i) => {
@@ -22,9 +22,11 @@ class FilterForm extends Component {
             renderDiscussions={renderDiscussions}
             renderFilteredDiscussions={renderFilteredDiscussions}
             domain={domainArray}
+            allDiscussions={allDiscussions}
+            discussions={discussions}
             key={i}/>
         );
-      })
+      });
     }
   };
 
