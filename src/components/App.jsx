@@ -4,7 +4,7 @@ import Nav from './Nav';
 import CardContainer from './CardContainer';
 import DiscussionForm from './DiscussionForm';
 import FilterForm from './FilterForm';
-import { DEV_URL, PROD_URL } from '../url.js';
+import { PROD_URL } from '../url.js';
 // import { fetchDiscussions } from '../utils/getDiscussions.js';
 
 class App extends Component {
@@ -53,7 +53,7 @@ class App extends Component {
   }
 
   fetchComments() {
-    fetch('http://localhost:3000/api/v1/comments')
+    fetch(`${PROD_URL}/api/v1/comments`)
       .then((response) => response.json())
       .then((comments) => this.cleanComments(comments))
       .then((comments) => this.setState({ comments }))
