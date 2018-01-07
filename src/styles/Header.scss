@@ -1,7 +1,7 @@
 .header {
   background: #4776e6;
-background: -webkit-linear-gradient(to right, #4776e6, #8e54e9);
-background: linear-gradient(to right, #4776e6, #8e54e9);
+  background: -webkit-linear-gradient(to right, #4776e6, #8e54e9);
+  background: linear-gradient(to right, #4776e6, #8e54e9);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -23,4 +23,88 @@ background: linear-gradient(to right, #4776e6, #8e54e9);
 
 .sign-out:hover {
   cursor: pointer;
+}
+
+
+$main-color: #1a90bf ;
+$main-color-hover: #405780;
+
+.login {
+  text-align: center;
+  color: $main-color;
+  font-size: 35px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  height: 400px;
+  width: 500px;
+  border-radius: 5px;
+  padding: 30px;
+  margin: 40px 0 0;
+  box-shadow: 5px 10px 25px #bdbdbd;
+  overflow: hidden;
+  animation: appear 0.2s linear;
+}
+
+input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #bdbdbd;
+  font-size: 20px;
+  font-weight: lighter;
+  margin: 20px 0;
+}
+input:focus {
+  outline: none;
+  border-bottom: 2px solid $main-color;
+}
+
+.login-submit-button {
+  background-color: $main-color;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 25px;
+  margin: 20px 0;
+  width: 100%;
+  cursor: pointer;
+}
+
+.login-submit-button:hover {
+    background-color: $main-color-hover;
+}
+
+.login-submit-button:disabled {
+    background-color: #bdbdbd;
+}
+
+@media screen and (max-width: 500px) {
+  .login {
+    font-size: 23px;
+  }
+
+  .login-form {
+    height: 348px;
+    width: 260px;
+    margin-top: 100px;
+  }
+
+  .login-submit-button,
+  .login-submit-button:hover,
+  .login-submit-button:disabled {
+    margin: 0 0 42px 0;
+    padding: 8px 20px;
+    font-size: 23px;
+  }
 }
