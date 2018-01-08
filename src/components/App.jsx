@@ -4,7 +4,6 @@ import Nav from './Nav';
 import CardContainer from './CardContainer';
 import DiscussionForm from './DiscussionForm';
 import FilterForm from './FilterForm';
-import userLoginData from '../utils/userLoginData';
 import { Redirect } from 'react-router';
 import { PROD_URL } from '../url.js';
 
@@ -18,7 +17,6 @@ class App extends Component {
       showingDiscussions: true,
       showingForm: false,
       showingStandards: false,
-      isAuthenticated: false
     };
     this.fetchDiscussions = this.fetchDiscussions.bind(this);
     this.renderDiscussions = this.renderDiscussions.bind(this);
@@ -106,15 +104,6 @@ class App extends Component {
     this.fetchDiscussions();
   }
 
-  userAuthentication() {
-    if (this.state.email === userLoginData.email &&
-        this.state.password === userLoginData.password) {
-      this.setState({
-        isAuthenticated: true
-      });
-    }
-  }
-
   renderCardContainer() {
     const { showingDiscussions, discussions, allDiscussions, comments } = this.state;
     if (showingDiscussions && discussions) {
@@ -129,7 +118,14 @@ class App extends Component {
   }
 
   render() {
-    const { allDiscussions, discussions, comments, showingDiscussions, showingForm, showingStandards } = this.state;
+    const {
+      allDiscussions,
+      discussions,
+      comments,
+      showingDiscussions,
+      showingForm,
+      showingStandards
+    } = this.state;
 
     if (this.props.signedInStatus === false) {
       return <Redirect to='/login'/>;
