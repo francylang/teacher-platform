@@ -23,6 +23,24 @@ export const fetchCommentsSuccess = comments => ({
   comments,
 });
 
+export const renderedFiltered = filteredDiscussions => ({
+  type: 'RENDER_DISCUSSIONS',
+  filteredDiscussions,
+});
+
+export const filterDiscussions = (discussions, searchTerm) => {
+  const filtered = discussions.filter(discussion => {
+    let title = discussion.title.toLowerCase();
+    let body = discussion.body.toLowerCase();
+    let filteredDiscussions = [];
+
+    if (title.includes(searchTerm) || body.includes(searchTerm)) {
+      return filteredDiscussions.push(discussion);
+    }
+    renderedFiltered(filteredDiscussions);
+  });
+};
+
 const cleanDiscussions = (rawDiscussions) => {
   return rawDiscussions.map(discussion => {
     return {
@@ -35,7 +53,6 @@ const cleanDiscussions = (rawDiscussions) => {
   });
 };
 
-// async await
 export const fetchDiscussions = () => {
   return dispatch => {
     fetch('http://localhost:3000/api/v1/discussions')

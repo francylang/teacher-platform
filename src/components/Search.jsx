@@ -16,14 +16,15 @@ class Search extends Component {
   };
 
   filterDiscussions() {
-    const { allDiscussions, renderDiscussions, renderFilteredDiscussions } = this.props;
+    const { discussions, renderDiscussions, renderFilteredDiscussions } = this.props;
 
     let searchTerm = this.state.searchTerm.toLowerCase();
 
-    const filtered = allDiscussions.filter(discussion => {
+    const filtered = discussions.filter(discussion => {
       let title = discussion.title.toLowerCase();
       let body = discussion.body.toLowerCase();
 
+      console.log(title.includes(searchTerm));
       if (title.includes(searchTerm) || body.includes(searchTerm)) {
         return discussion;
       };

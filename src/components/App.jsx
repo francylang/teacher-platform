@@ -52,6 +52,7 @@ class App extends Component {
   }
 
   renderFilteredDiscussions(discussions) {
+    return discussions
     // this.setState({ discussions });
     // we need to revisit
   }
@@ -68,7 +69,7 @@ class App extends Component {
           // allDiscussions={allDiscussions}
           discussions={this.props.discussions}
           comments={this.props.comments}
-          rendered={showingDiscussions}/>
+        />
       );
     }
   }
@@ -82,6 +83,8 @@ class App extends Component {
       showingForm,
       showingStandards
     } = this.state;
+
+    console.log(this.props);
 
     if (this.props.signedInStatus === false) {
       // return <Redirect to='/login'/>;
