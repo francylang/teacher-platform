@@ -2,7 +2,6 @@ import React from 'react';
 
 const Header = ({ signedInStatus }) => {
   const renderSignOut = () => {
-    console.log(signedInStatus);
     if (signedInStatus === true) {
       console.log('after if');
       return (

@@ -1,5 +1,5 @@
 export const domainsByGrade = {
-  '6-RP': [
+  '6-R': [
     "6.RP.A.1",
     "6.RP.A.2",
     "6.RP.A.3",
@@ -7,7 +7,7 @@ export const domainsByGrade = {
     "6.RP.A.3.B",
     "6.RP.A.3.C"
   ],
-  '6-NS': [
+  '6-N': [
     "6.NS.A.1",
     "6.NS.B.2",
     "6.NS.B.3",
@@ -17,7 +17,7 @@ export const domainsByGrade = {
     "6.NS.C.7",
     "6.NS.C.8"
   ],
-  '6-EE': [
+  '6-E': [
     "6.EE.A.1",
     "6.EE.A.2",
     "6.EE.A.3",
@@ -34,24 +34,24 @@ export const domainsByGrade = {
     "6.G.A.3",
     "6.G.A.4"
   ],
-  '6-SP': [
+  '6-S': [
     "6.SP.A.1",
     "6.SP.A.2",
     "6.SP.A.3",
     "6.SP.A.4",
     "6.SP.B.5"
   ],
-  '7-RP': [
+  '7-R': [
     "7.RP.A.1",
     "7.RP.A.2",
     "7.RP.A.3"
   ],
-  '7-NS': [
+  '7-N': [
     "7.NS.A.1",
     "7.NS.A.2",
     "7.NS.A.3"
   ],
-  '7-EE': [
+  '7-E': [
     "7.EE.A.1",
     "7.EE.A.2",
     "7.EE.A.3",
@@ -65,7 +65,7 @@ export const domainsByGrade = {
     "7.G.B.5",
     "7.G.B.6"
   ],
-  '7-SP': [
+  '7-S': [
     "7.SP.A.1",
     "7.SP.A.2",
     "7.SP.B.3",
@@ -75,11 +75,11 @@ export const domainsByGrade = {
     "7.SP.C.7",
     "7.SP.C.8"
   ],
-  '8-NS': [
+  '8-N': [
     "8.NS.A.1",
     "8.NS.A.2"
   ],
-  '8-EE': [
+  '8-E': [
     "8.EE.A.1",
     "8.EE.A.2",
     "8.EE.A.3",
@@ -107,7 +107,7 @@ export const domainsByGrade = {
     "8.G.B.8",
     "8.G.C.9"
   ],
-  '8-SP': [
+  '8-S': [
     "8.SP.A.1",
     "8.SP.A.2",
     "8.SP.A.3",

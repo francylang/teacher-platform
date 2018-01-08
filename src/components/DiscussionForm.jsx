@@ -15,6 +15,7 @@ class DiscussionForm extends Component {
       standardSelected: '',
       isActive: false
     };
+    this.selectDomain = this.selectDomain.bind(this);
   }
 
   handleChange(key, event) {
@@ -50,23 +51,25 @@ class DiscussionForm extends Component {
 
   selectDomain(event) {
     event.preventDefault();
-    this.setState({ domainSelected: event.target.value });
+    console.log(event.target.value[0]);
+    this.setState({ domainSelected: event.target.value[0] });
   }
 
   handleSelectStandard(event) {
     const { title, body } = this.state;
 
-    this.setState({ standardSelected: event.target.value });
     event.preventDefault();
+    this.setState({ standardSelected: event.target.value });
     postNewDiscussion(title, body);
     this.clearInputs();
   }
 
   renderDropDown() {
-    const { domainSelected, standardSelected } = this.state;
+    const { domainSelected, standardSelected, gradeSelected } = this.state;
+    const standardAbbrev = (`${gradeSelected}-${domainSelected}`);
 
-    if (domainsByGrade[domainSelected]) {
-      const mappedDomains = domainsByGrade[domainSelected].map(domain => {
+    if (domainSelected) {
+      const mappedDomains = domainsByGrade[standardAbbrev].map(domain => {
         return (
           <option
             key={domain}
@@ -93,15 +96,14 @@ class DiscussionForm extends Component {
 
   renderDomains() {
     const { gradeSelected } = this.state;
-
     if (gradeSelected === "6" || gradeSelected === "7") {
       return domains67.map((domain, index) => {
         return (
           <Domain
             key={domain}
             domain={domain}
-            selectDomain={(event) => this.selectDomain(event)}
-            gradeSelected={gradeSelected}
+            selectDomain={this.selectDomain}
+            domainSelected={this.state.domainSelected}
             color={colorsByDomain[index]}
           />
         );
@@ -112,8 +114,8 @@ class DiscussionForm extends Component {
           <Domain
             key={domain}
             domain={domain}
-            selectDomain={(event) => this.selectDomain(event)}
-            gradeSelected={gradeSelected}
+            selectDomain={this.selectDomain}
+            domainSelected={this.state.domainSelected}
             color={colorsByDomain[index]}
           />
         );

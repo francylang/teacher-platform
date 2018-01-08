@@ -128,7 +128,7 @@ class App extends Component {
     } = this.state;
 
     if (this.props.signedInStatus === false) {
-      return <Redirect to='/login'/>;
+      // return <Redirect to='/login'/>;
     }
 
     const showForm = showingForm
