@@ -15,7 +15,8 @@
 
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  color: #2B2B2B; }
 
 .submit-comment,
 .submit-discussion-btn,
@@ -24,6 +25,7 @@ body {
   border: none;
   outline: none;
   background-color: #838C91;
+  text-shadow: -1px 1px #62696D;
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.13);
   border-radius: 5px;
   color: #fff;
@@ -35,5 +37,5 @@ body {
 .submit-discussion-btn:hover,
 .grade-btn:hover {
   cursor: pointer;
-  background-color: #3F5664;
+  background-color: #737B7F;
   box-shadow: 0 14px 22px 0 rgba(0, 0, 0, 0.19); }
