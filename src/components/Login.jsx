@@ -11,17 +11,18 @@ class Login extends Component {
       email: '',
       password: ''
     };
-    this.handleSubmit = this.handleSubmit.bind(this);
   };
 
   componentWillReceiveProps(nextProps) {
+    const { history } = this.props;
+
     if (nextProps.currentUser !== '') {
-      this.props.history.push('/');
+      history.push('/');
     }
   }
 
   handleChange(event, type) {
-    let value = event.target.value;
+    const value = event.target.value;
 
     this.setState({
       [type]: value
@@ -29,9 +30,11 @@ class Login extends Component {
   };
 
   handleSubmit(event) {
+    const { setCurrentUser, signIn } = this.props;
+
     event.preventDefault();
-    this.props.setCurrentUser(this.state.email);
-    this.props.signIn();
+    setCurrentUser(this.state.email);
+    signIn();
 
     this.setState({
       email: '',
