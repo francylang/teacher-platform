@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import userLoginData from '../utils/userLoginData';
+import { Redirect } from 'react-router';
+import { Link } from 'react-router-dom';
 
 class Login extends Component {
   constructor() {
@@ -12,10 +15,10 @@ class Login extends Component {
   };
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.userStatus === true) {
+    if (nextProps.currentUser !== '') {
       this.props.history.push('/');
-    };
-  };
+    }
+  }
 
   handleChange(event, type) {
     let value = event.target.value;
@@ -27,9 +30,9 @@ class Login extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const user = this.state;
+    this.props.setCurrentUser(this.state.email);
+    this.props.signIn();
 
-    this.props.isAuthenticated(user);
     this.setState({
       email: '',
       password: ''
@@ -63,7 +66,7 @@ class Login extends Component {
             className='login-submit-button'
             disabled={isDisabled}
             type='submit'
-            onClick={this.handleSubmit}
+            onClick={(event) => this.handleSubmit(event)}
           >
           </input>
         </form>
