@@ -142,6 +142,8 @@ class DiscussionForm extends Component {
 
     return (
       <article className="discussion-form-section">
+        <h3 className="form-directions">Start a discussion.</h3>
+        <p className="form-directions">Be clear and specific so others can be as helpful as possible! After writing your question, you will be prompted to select a CCSS that aligns to your question.</p>
         <form action="" method="get" className="form">
           <label htmlFor="dicussion-title">
             <input
@@ -166,7 +168,7 @@ class DiscussionForm extends Component {
             </textarea>
             <div>{standardSelected}</div>
           </label>
-          <h3>Select a grade level, then a domain:</h3>
+          <h3 className="grade-directions">Select a grade level, then a domain:</h3>
           <div className="grade-level-buttons">{this.renderGradeLevelButtons()}</div>
           <div className="grade-level-domains">{this.renderDomains()}</div>
           <div className="grade-level-standards">{this.renderDropDown()}</div>

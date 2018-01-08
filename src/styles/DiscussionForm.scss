@@ -9,6 +9,16 @@
   flex-direction: column;
 }
 
+h3.form-directions {
+  font-family: 'Ubuntu Mono';
+  font-size: 135%;
+}
+
+.form-directions {
+  text-align: left;
+  line-height: 120%;
+}
+
 #dicussion-title,
 #dicussion-body {
   display: inline-block;
@@ -28,6 +38,11 @@
 #dicussion-title::placeholder,
 #dicussion-body::placeholder {
   color: #9A979D;
+}
+
+.grade-directions {
+  margin-bottom: 0;
+  text-align: left;
 }
 
 .submit-discussion-btn {
