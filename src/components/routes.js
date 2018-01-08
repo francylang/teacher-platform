@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
-import Login from './Login';
-import App from './App';
-import Header from './Header';
+import LoginContainer from '../containers/LoginContainer.js';
+import AppContainer from '../containers/AppContainer.js';
+import HeaderContainer from '../containers/HeaderContainer.js';
 
 class Routes extends Component {
   render() {
     return (
       <div className="routes">
-        <Header />
-        <Route exact path="/" component={ App }/>
-        <Route path="/login" component={ Login }/>
+        <HeaderContainer />
+        <Route exact path="/" component={ AppContainer }/>
+        <Route path="/login" component={ LoginContainer }/>
       </div>
     );
   }
