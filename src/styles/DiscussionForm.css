@@ -1,6 +1,6 @@
 .discussion-form-section {
   margin: 10px;
-  width: 30%;
+  width: 40%;
   height: 70vh; }
 
 .form {
@@ -19,7 +19,8 @@
   color: #5D5B5E;
   outline: none;
   font-size: 120%;
-  font-family: Nunito; }
+  font-family: Nunito;
+  background-color: #fff; }
 
 #dicussion-title::placeholder,
 #dicussion-body::placeholder {
@@ -50,76 +51,66 @@
   line-height: 1.8;
   border-radius: 5px;
   color: #fff;
-  text-shadow: -2px 2px #413F43;
-  background-color: #4A484C;
-  border: 1px solid #4A484C;
+  text-shadow: -2px 2px #B5B9BC;
+  background-color: #B5B9BC;
+  border: 1px solid #838C91;
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.13);
   border: none;
   cursor: pointer;
   font-family: 'Ubuntu Mono';
-  outline: none; }
+  outline: none;
+  transition: all 0.5s; }
 
 .grade-level-button:hover {
+  text-shadow: -2px 2px #354F60;
+  background-color: #3F5664;
   box-shadow: 0 14px 22px 0 rgba(0, 0, 0, 0.19); }
 
 .active {
-  text-shadow: -2px 2px #5F5DC8;
-  background-color: #6c6ae5; }
+  text-shadow: -2px 2px #354F60;
+  background-color: #3F5664; }
 
 .active:hover {
-  text-shadow: -2px 2px #5F5DC8;
-  background-color: #6c6ae5;
+  text-shadow: -2px 2px #354F60;
+  background-color: #3F5664;
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.13); }
 
 .grade-level-domains {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center; }
+  flex-direction: row;
+  justify-content: space-between; }
 
 .grade-level-domain {
   margin: 5px;
   border: none;
   padding: 10px;
-  cursor: pointer; }
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+  font-size: 70%;
+  color: #fff; }
 
-.green {
-  border: 1px solid #688737; }
+.grade-level-domain.N,
+.grade-level-domain.E,
+.grade-level-domain.R,
+.grade-level-domain.G,
+.grade-level-domain.S {
+  background-color: #C2C7CB; }
 
-.red {
-  border: 1px solid #d35656; }
+.N:hover {
+  background-color: #FABA76; }
 
-.blue {
-  border: 1px solid #3364FF; }
+.E:hover {
+  background-color: #7686FA; }
 
-.purple {
-  border: 1px solid #A46CC3; }
+.G:hover {
+  background-color: #FAEA76; }
 
-.yellow {
-  border: 1px solid #ECAF4B; }
+.S:hover {
+  background-color: #86FA76; }
 
-.navy {
-  border: 1px solid #405780; }
+.F:hover {
+  background-color: pink; }
 
-.orange {
-  border: 1px solid #FF9633; }
-
-.green:hover {
-  background-color: #688737; }
-
-.red:hover {
-  background-color: #d35656; }
-
-.blue:hover {
-  background-color: #3364FF; }
-
-.purple:hover {
-  background-color: #A46CC3; }
-
-.yellow:hover {
-  background-color: #ECAF4B; }
-
-.navy:hover {
-  background-color: #405780; }
-
-.orange:hover {
-  background-color: #FF9633; }
+.R:hover {
+  background-color: #FA76C8; }
