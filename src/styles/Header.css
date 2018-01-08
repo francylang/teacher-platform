@@ -68,7 +68,7 @@ input:focus {
   cursor: pointer; }
 
 .login-submit-button:hover {
-  background-color: #405780; }
+  background-color: #2B2B2B; }
 
 .login-submit-button:disabled {
   background-color: #bdbdbd; }
