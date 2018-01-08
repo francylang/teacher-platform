@@ -52,7 +52,7 @@ class App extends Component {
   }
 
   renderFilteredDiscussions(discussions) {
-    return discussions
+    this.props.renderedFiltered(discussions)
     // this.setState({ discussions });
     // we need to revisit
   }
@@ -63,11 +63,10 @@ class App extends Component {
 
   renderCardContainer() {
     const { showingDiscussions } = this.state;
-    if (showingDiscussions && this.props.discussions) {
+    if (showingDiscussions && this.props.filteredDiscussions) {
       return (
         <CardContainer
-          // allDiscussions={allDiscussions}
-          discussions={this.props.discussions}
+          filteredDiscussions={this.props.filteredDiscussions}
           comments={this.props.comments}
         />
       );
@@ -75,14 +74,7 @@ class App extends Component {
   }
 
   render() {
-    const {
-      allDiscussions,
-      discussions,
-      comments,
-      showingDiscussions,
-      showingForm,
-      showingStandards
-    } = this.state;
+    const { showingDiscussions, showingForm, showingStandards } = this.state;
 
     console.log(this.props);
 
@@ -97,14 +89,13 @@ class App extends Component {
         renderDiscussions={this.renderDiscussions}
         renderFilteredDiscussions={this.renderFilteredDiscussions}
         rendered={showingStandards}
-        discussions={this.props.discussions} /> : null;
+        filteredDiscussions={this.props.filteredDiscussions} /> : null;
 
     return (
       <section className="app">
         <article className="main">
           <Nav
-            // allDiscussions={allDiscussions}
-            discussions={this.props.discussions}
+            filteredDiscussions={this.props.filteredDiscussions}
             renderDiscussions={this.renderDiscussions}
             renderForm={this.renderForm}
             renderStandards={this.renderStandards}

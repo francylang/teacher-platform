@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 
 const Nav = ({
   handleSearch,
-  allDiscussions,
-  discussions,
   renderDiscussions,
   renderFilteredDiscussions,
   renderStandards,
@@ -15,8 +13,6 @@ const Nav = ({
       <Search
         handleSearch={handleSearch}
         renderDiscussions={renderDiscussions}
-        discussions={discussions}
-        allDiscussions={allDiscussions}
         renderFilteredDiscussions={renderFilteredDiscussions}
       />
       <button
