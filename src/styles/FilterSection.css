@@ -9,7 +9,7 @@
 
 .domain-label {
   text-transform: uppercase;
-  border-bottom: 1px solid #4a484c;
+  border-bottom: 1px solid #A2A9AD;
   width: 90%;
   display: inline-block;
   height: 28px;
@@ -18,27 +18,27 @@
 .standard-link {
   margin: 0px 25% 10px 30%;
   display: flex;
-  background-color: #fafafa;
+  background-color: #F7FAFC;
   outline: none;
   border: none; }
 
+.F-link:hover {
+  color: #D155FF; }
+
 .R-link:hover {
-  color: #FA76C8; }
+  color: #D155FF; }
 
 .N-link:hover {
-  color: #FABA76; }
-
-.F-link:hover {
-  color: #FABA76; }
-
-.G-link:hover {
-  color: #FAEA76; }
+  color: #40ECB2; }
 
 .E-link:hover {
-  color: #7686FA; }
+  color: #5C40EC; }
+
+.G-link:hover {
+  color: #D0EC40; }
 
 .S-link:hover {
-  color: #86FA76; }
+  color: #FF7C55; }
 
 .standard-link:hover {
   cursor: pointer; }

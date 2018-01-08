@@ -45,25 +45,25 @@ class Login extends Component {
     this.state.password.length ? false : true;
 
     return (
-      <div>
-        <form className='login-form'>
-          <h2 className='login'>Login</h2>
+      <div className="login-form-container">
+        <form className="login-form">
+          <h2 className="login">Sign In</h2>
           <input
-            className='login-form-email'
-            type='text'
-            placeholder='Email'
+            className="login-form-text"
+            type="text"
+            placeholder="Email"
             value={this.state.email}
-            onChange={ (event) => this.handleChange(event, 'email')}>
+            onChange={ (event) => this.handleChange(event, "email")}>
           </input>
           <input
-            className='login-form-password'
-            type='password'
-            placeholder='Password'
+            className="login-form-text"
+            type="password"
+            placeholder="Password"
             value={this.state.password}
-            onChange={ (event) => this.handleChange(event, 'password')}>
+            onChange={ (event) => this.handleChange(event, "password")}>
           </input>
           <input
-            className='login-submit-button'
+            className="login-submit-btn"
             disabled={isDisabled}
             type='submit'
             onClick={(event) => this.handleSubmit(event)}
