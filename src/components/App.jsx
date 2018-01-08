@@ -11,9 +11,6 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      allDiscussions: [],
-      discussions: [],
-      comments: [],
       showingDiscussions: true,
       showingForm: false,
       showingStandards: false,
@@ -35,7 +32,6 @@ class App extends Component {
       showingDiscussions: true,
       showingForm: false,
       showingStandards: false,
-      discussions: this.state.allDiscussions,
     });
   }
 
@@ -56,21 +52,22 @@ class App extends Component {
   }
 
   renderFilteredDiscussions(discussions) {
-    this.setState({ discussions });
+    // this.setState({ discussions });
+    // we need to revisit
   }
 
   handleSearch() {
-    this.fetchDiscussions();
+    this.props.retrieveDiscussions();
   }
 
   renderCardContainer() {
-    const { showingDiscussions, discussions, allDiscussions, comments } = this.state;
-    if (showingDiscussions && discussions) {
+    const { showingDiscussions } = this.state;
+    if (showingDiscussions && this.props.discussions) {
       return (
         <CardContainer
-          allDiscussions={allDiscussions}
-          discussions={discussions}
-          comments={comments}
+          // allDiscussions={allDiscussions}
+          discussions={this.props.discussions}
+          comments={this.props.comments}
           rendered={showingDiscussions}/>
       );
     }
@@ -97,14 +94,14 @@ class App extends Component {
         renderDiscussions={this.renderDiscussions}
         renderFilteredDiscussions={this.renderFilteredDiscussions}
         rendered={showingStandards}
-        discussions={discussions} /> : null;
+        discussions={this.props.discussions} /> : null;
 
     return (
       <section className="app">
         <article className="main">
           <Nav
-            allDiscussions={allDiscussions}
-            discussions={discussions}
+            // allDiscussions={allDiscussions}
+            discussions={this.props.discussions}
             renderDiscussions={this.renderDiscussions}
             renderForm={this.renderForm}
             renderStandards={this.renderStandards}
