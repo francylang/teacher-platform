@@ -12,3 +12,56 @@ export const setCurrentUser = username => ({
   type: 'CURRENT_USER',
   username,
 });
+
+export const fetchDiscussionsSuccess = discussions => ({
+  type: 'FETCH_DISCUSSIONS_SUCCESS',
+  discussions,
+});
+
+export const fetchCommentsSuccess = comments => ({
+  type: 'FETCH_COMMENTS_SUCCESS',
+  comments,
+});
+
+const cleanDiscussions = (rawDiscussions) => {
+  return rawDiscussions.map(discussion => {
+    return {
+      id: discussion.id,
+      title: discussion.title,
+      body: discussion.body,
+      tagId: discussion.tagId,
+      tagTitle: discussion.tagTitle,
+    };
+  });
+};
+
+// async await
+export const fetchDiscussions = () => {
+  return dispatch => {
+    fetch('http://localhost:3000/api/v1/discussions')
+      .then(response => response.json())
+      .then(rawDiscussions => cleanDiscussions(rawDiscussions))
+      .then(cleanedDiscussions => dispatch(fetchDiscussionsSuccess(cleanedDiscussions)))
+      .catch(() => console.error('error'));
+  };
+};
+
+const cleanComments = (rawComments) => {
+  return rawComments.map(comment => {
+    return {
+      id: comment.id,
+      comment: comment.body,
+      discussionId: comment.discussionId
+    };
+  });
+};
+
+export const fetchComments = () => {
+  return dispatch => {
+    fetch('http://localhost:3000/api/v1/comments')
+      .then((response) => response.json())
+      .then((comments) => cleanComments(comments))
+      .then(cleanedComments => dispatch(fetchCommentsSuccess(cleanedComments)))
+      .catch(() => console.error('error'));
+  };
+};

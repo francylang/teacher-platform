@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import thunk from 'redux-thunk';
 import Login from '../components/Login';
 import { signIn, setCurrentUser } from '../actions/actions.js';
 
