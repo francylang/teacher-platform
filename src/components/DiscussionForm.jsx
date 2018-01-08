@@ -51,7 +51,6 @@ class DiscussionForm extends Component {
 
   selectDomain(event) {
     event.preventDefault();
-    console.log(event.target.value[0]);
     this.setState({ domainSelected: event.target.value[0] });
   }
 

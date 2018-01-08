@@ -3,7 +3,6 @@ import React from 'react';
 const Header = ({ signedInStatus }) => {
   const renderSignOut = () => {
     if (signedInStatus === true) {
-      console.log('after if');
       return (
         <h3 className="sign-out">Sign Out</h3>
       );

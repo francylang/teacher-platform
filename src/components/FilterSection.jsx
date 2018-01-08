@@ -30,7 +30,6 @@ const FilterSection = ({ renderFilteredDiscussions, renderDiscussions, domain })
       let firstChar = standard.charAt(0);
 
       if (firstChar === '6' || firstChar === '7' || firstChar === '8') {
-        console.log(standard[2]);
         return (
           <button
             className="standard-link"
