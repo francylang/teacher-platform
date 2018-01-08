@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Domain from './Domain';
-import { colors } from '../assets/colors';
+import { colors, colorsByDomain } from '../assets/colors';
 import { postNewDiscussion } from '../utils/postDiscussion';
 import { domainsByGrade, domains67, domains8 } from '../utils/tagStandards';
 
@@ -102,7 +102,7 @@ class DiscussionForm extends Component {
             domain={domain}
             selectDomain={(event) => this.selectDomain(event)}
             gradeSelected={gradeSelected}
-            color={colors[index]}
+            color={colorsByDomain[index]}
           />
         );
       });
@@ -114,7 +114,7 @@ class DiscussionForm extends Component {
             domain={domain}
             selectDomain={(event) => this.selectDomain(event)}
             gradeSelected={gradeSelected}
-            color={colors[index]}
+            color={colorsByDomain[index]}
           />
         );
       });
@@ -166,6 +166,7 @@ class DiscussionForm extends Component {
             </textarea>
             <div>{standardSelected}</div>
           </label>
+          <h3>Select a grade level, then a domain:</h3>
           <div className="grade-level-buttons">{this.renderGradeLevelButtons()}</div>
           <div className="grade-level-domains">{this.renderDomains()}</div>
           <div className="grade-level-standards">{this.renderDropDown()}</div>

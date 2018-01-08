@@ -116,7 +116,7 @@ export const domainsByGrade = {
 };
 
 export const domains67 = [
-  'Ratios and Proportional Relationships',
+  'Ratios & Proportions',
   'The Number System',
   'Expressions & Equations',
   'Geometry',
