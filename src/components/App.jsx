@@ -11,14 +11,10 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      allDiscussions: [],
-      discussions: [],
-      comments: [],
       showingDiscussions: true,
       showingForm: false,
       showingStandards: false,
     };
-    this.fetchDiscussions = this.fetchDiscussions.bind(this);
     this.renderDiscussions = this.renderDiscussions.bind(this);
     this.renderForm = this.renderForm.bind(this);
     this.renderStandards = this.renderStandards.bind(this);
@@ -27,48 +23,8 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.fetchDiscussions();
-    this.fetchComments();
-  }
-
-  fetchDiscussions() {
-    fetch(`http://localhost:3000/api/v1/discussions`)
-      .then((response) => response.json())
-      .then((rawDiscussions) => this.cleanDiscussions(rawDiscussions))
-      .then((allDiscussions) => {
-        this.setState({ allDiscussions, discussions: allDiscussions });
-      })
-      .catch((error) => console.error({ error }));
-  }
-
-  cleanDiscussions(rawDiscussions) {
-    return rawDiscussions.map(discussion => {
-      return {
-        id: discussion.id,
-        title: discussion.title,
-        body: discussion.body,
-        tagId: discussion.tagId,
-        tagTitle: discussion.tagTitle,
-      };
-    });
-  }
-
-  fetchComments() {
-    fetch(`http://localhost:3000/api/v1/comments`)
-      .then((response) => response.json())
-      .then((comments) => this.cleanComments(comments))
-      .then((comments) => this.setState({ comments }))
-      .catch((error) => console.error({ error }));
-  }
-
-  cleanComments(rawComments) {
-    return rawComments.map(comment => {
-      return {
-        id: comment.id,
-        comment: comment.body,
-        discussionId: comment.discussionId
-      };
-    });
+    this.props.retrieveDiscussions();
+    this.props.retrieveComments();
   }
 
   renderDiscussions() {
@@ -76,7 +32,6 @@ class App extends Component {
       showingDiscussions: true,
       showingForm: false,
       showingStandards: false,
-      discussions: this.state.allDiscussions,
     });
   }
 
@@ -97,40 +52,35 @@ class App extends Component {
   }
 
   renderFilteredDiscussions(discussions) {
-    this.setState({ discussions });
+    this.props.renderedFiltered(discussions)
+    // this.setState({ discussions });
+    // we need to revisit
   }
 
   handleSearch() {
-    this.fetchDiscussions();
+    this.props.retrieveDiscussions();
   }
 
   renderCardContainer() {
-    const { showingDiscussions, discussions, allDiscussions, comments } = this.state;
-    if (showingDiscussions && discussions) {
+    const { showingDiscussions } = this.state;
+    if (showingDiscussions && this.props.filteredDiscussions) {
       return (
         <CardContainer
-          allDiscussions={allDiscussions}
-          discussions={discussions}
-          comments={comments}
-          rendered={showingDiscussions}/>
+          filteredDiscussions={this.props.filteredDiscussions}
+          comments={this.props.comments}
+        />
       );
     }
   }
 
   render() {
-    const {
-      allDiscussions,
-      discussions,
-      comments,
-      showingDiscussions,
-      showingForm,
-      showingStandards
-    } = this.state;
+    const { showingDiscussions, showingForm, showingStandards } = this.state;
+
+    console.log(this.props);
 
     if (this.props.signedInStatus === false) {
       // return <Redirect to='/login'/>;
     }
-
     const showForm = showingForm
       ? <DiscussionForm rendered={showingForm}/> : null;
 
@@ -139,14 +89,13 @@ class App extends Component {
         renderDiscussions={this.renderDiscussions}
         renderFilteredDiscussions={this.renderFilteredDiscussions}
         rendered={showingStandards}
-        discussions={discussions} /> : null;
+        filteredDiscussions={this.props.filteredDiscussions} /> : null;
 
     return (
       <section className="app">
         <article className="main">
           <Nav
-            allDiscussions={allDiscussions}
-            discussions={discussions}
+            filteredDiscussions={this.props.filteredDiscussions}
             renderDiscussions={this.renderDiscussions}
             renderForm={this.renderForm}
             renderStandards={this.renderStandards}

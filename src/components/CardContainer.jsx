@@ -1,11 +1,11 @@
 import React from 'react';
 import DiscussionCard from './DiscussionCard';
 
-const CardContainer = ({ comments, discussions }) => {
+const CardContainer = ({ comments, filteredDiscussions }) => {
   const matchDiscussionIds = () => {
-    if (discussions) {
+    if (filteredDiscussions) {
       comments.filter(comment => {
-        return discussions.forEach(discussion => {
+        return filteredDiscussions.forEach(discussion => {
           if (discussion.id === comment.id) {
             return comment.id;
           };
@@ -16,7 +16,7 @@ const CardContainer = ({ comments, discussions }) => {
 
   const buildDiscussionCard = () => {
     matchDiscussionIds();
-    return discussions.map(discussion => {
+    return filteredDiscussions.map(discussion => {
       return (
         <DiscussionCard
           key={discussion.id}

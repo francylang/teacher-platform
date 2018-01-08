@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = ({ signedInStatus }) => {
   const renderSignOut = () => {
@@ -11,7 +12,7 @@ const Header = ({ signedInStatus }) => {
 
   return (
     <header className="header">
-      <h1 className="app-name">Teachzilla</h1>
+      <Link to='/'><h1 className="app-name">Teachzilla</h1></Link>
       {renderSignOut()}
     </header>
   );

@@ -17,3 +17,30 @@ export const signedInStatus = (state = false, action) => {
       return state;
   }
 };
+
+export const discussions = (state = [], action) => {
+  switch (action.type) {
+    case 'FETCH_DISCUSSIONS_SUCCESS':
+      return action.discussions;
+    default:
+      return state;
+  }
+};
+
+export const renderDiscussions = (state = [], action) => {
+  switch (action.type) {
+    case 'RENDER_DISCUSSIONS':
+      return action.filteredDiscussions;
+    default:
+      return state;
+  }
+};
+
+export const comments = (state = [], action) => {
+  switch (action.type) {
+    case 'FETCH_COMMENTS_SUCCESS':
+      return action.comments;
+    default:
+      return state;
+  }
+};
