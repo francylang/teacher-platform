@@ -53,4 +53,4 @@ describe('<DiscussionCard />', () => {
   it('should match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
-})
+});

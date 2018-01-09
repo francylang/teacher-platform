@@ -47,6 +47,7 @@ ShallowWrapper {
                     className="options"
           >
                     <FilterSection
+                              discussions={undefined}
                               domain={
                                         Array [
                                                   "Ratios & Proportions",
@@ -62,6 +63,7 @@ ShallowWrapper {
                               renderFilteredDiscussions={undefined}
                     />
                     <FilterSection
+                              discussions={undefined}
                               domain={
                                         Array [
                                                   "The Number System",
@@ -79,6 +81,7 @@ ShallowWrapper {
                               renderFilteredDiscussions={undefined}
                     />
                     <FilterSection
+                              discussions={undefined}
                               domain={
                                         Array [
                                                   "Expressions & Equations",
@@ -97,6 +100,7 @@ ShallowWrapper {
                               renderFilteredDiscussions={undefined}
                     />
                     <FilterSection
+                              discussions={undefined}
                               domain={
                                         Array [
                                                   "Geometry & Measurement",
@@ -110,6 +114,7 @@ ShallowWrapper {
                               renderFilteredDiscussions={undefined}
                     />
                     <FilterSection
+                              discussions={undefined}
                               domain={
                                         Array [
                                                   "Statistics & Probability",
@@ -217,6 +222,7 @@ ShallowWrapper {
               className="options"
 >
               <FilterSection
+                            discussions={undefined}
                             domain={
                                           Array [
                                                         "Ratios & Proportions",
@@ -232,6 +238,7 @@ ShallowWrapper {
                             renderFilteredDiscussions={undefined}
               />
               <FilterSection
+                            discussions={undefined}
                             domain={
                                           Array [
                                                         "The Number System",
@@ -249,6 +256,7 @@ ShallowWrapper {
                             renderFilteredDiscussions={undefined}
               />
               <FilterSection
+                            discussions={undefined}
                             domain={
                                           Array [
                                                         "Expressions & Equations",
@@ -267,6 +275,7 @@ ShallowWrapper {
                             renderFilteredDiscussions={undefined}
               />
               <FilterSection
+                            discussions={undefined}
                             domain={
                                           Array [
                                                         "Geometry & Measurement",
@@ -280,6 +289,7 @@ ShallowWrapper {
                             renderFilteredDiscussions={undefined}
               />
               <FilterSection
+                            discussions={undefined}
                             domain={
                                           Array [
                                                         "Statistics & Probability",
@@ -312,6 +322,7 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <FilterSection
+                  discussions={undefined}
                   domain={
                                     Array [
                                                       "Ratios & Proportions",
@@ -327,6 +338,7 @@ ShallowWrapper {
                   renderFilteredDiscussions={undefined}
 />,
                 <FilterSection
+                  discussions={undefined}
                   domain={
                                     Array [
                                                       "The Number System",
@@ -344,6 +356,7 @@ ShallowWrapper {
                   renderFilteredDiscussions={undefined}
 />,
                 <FilterSection
+                  discussions={undefined}
                   domain={
                                     Array [
                                                       "Expressions & Equations",
@@ -362,6 +375,7 @@ ShallowWrapper {
                   renderFilteredDiscussions={undefined}
 />,
                 <FilterSection
+                  discussions={undefined}
                   domain={
                                     Array [
                                                       "Geometry & Measurement",
@@ -375,6 +389,7 @@ ShallowWrapper {
                   renderFilteredDiscussions={undefined}
 />,
                 <FilterSection
+                  discussions={undefined}
                   domain={
                                     Array [
                                                       "Statistics & Probability",
@@ -395,9 +410,10 @@ ShallowWrapper {
             "rendered": Array [
               Object {
                 "instance": null,
-                "key": "0",
-                "nodeType": "class",
+                "key": "Ratios & Proportions",
+                "nodeType": "function",
                 "props": Object {
+                  "discussions": undefined,
                   "domain": Array [
                     "Ratios & Proportions",
                     "6.RP.A.1",
@@ -416,9 +432,10 @@ ShallowWrapper {
               },
               Object {
                 "instance": null,
-                "key": "1",
-                "nodeType": "class",
+                "key": "6.NS.A.1",
+                "nodeType": "function",
                 "props": Object {
+                  "discussions": undefined,
                   "domain": Array [
                     "The Number System",
                     "6.NS.A.1",
@@ -439,9 +456,10 @@ ShallowWrapper {
               },
               Object {
                 "instance": null,
-                "key": "2",
-                "nodeType": "class",
+                "key": "6.EE.A.2",
+                "nodeType": "function",
                 "props": Object {
+                  "discussions": undefined,
                   "domain": Array [
                     "Expressions & Equations",
                     "6.EE.A.1",
@@ -463,9 +481,10 @@ ShallowWrapper {
               },
               Object {
                 "instance": null,
-                "key": "3",
-                "nodeType": "class",
+                "key": "6.G.A.3",
+                "nodeType": "function",
                 "props": Object {
+                  "discussions": undefined,
                   "domain": Array [
                     "Geometry & Measurement",
                     "6.G.A.1",
@@ -482,9 +501,10 @@ ShallowWrapper {
               },
               Object {
                 "instance": null,
-                "key": "4",
-                "nodeType": "class",
+                "key": "6.SP.A.4",
+                "nodeType": "function",
                 "props": Object {
+                  "discussions": undefined,
                   "domain": Array [
                     "Statistics & Probability",
                     "6.SP.A.1",
@@ -569,6 +589,7 @@ ShallowWrapper {
                         className="options"
             >
                         <FilterSection
+                                    discussions={undefined}
                                     domain={
                                                 Array [
                                                             "Ratios & Proportions",
@@ -584,6 +605,7 @@ ShallowWrapper {
                                     renderFilteredDiscussions={undefined}
                         />
                         <FilterSection
+                                    discussions={undefined}
                                     domain={
                                                 Array [
                                                             "The Number System",
@@ -601,6 +623,7 @@ ShallowWrapper {
                                     renderFilteredDiscussions={undefined}
                         />
                         <FilterSection
+                                    discussions={undefined}
                                     domain={
                                                 Array [
                                                             "Expressions & Equations",
@@ -619,6 +642,7 @@ ShallowWrapper {
                                     renderFilteredDiscussions={undefined}
                         />
                         <FilterSection
+                                    discussions={undefined}
                                     domain={
                                                 Array [
                                                             "Geometry & Measurement",
@@ -632,6 +656,7 @@ ShallowWrapper {
                                     renderFilteredDiscussions={undefined}
                         />
                         <FilterSection
+                                    discussions={undefined}
                                     domain={
                                                 Array [
                                                             "Statistics & Probability",
@@ -739,6 +764,7 @@ ShallowWrapper {
                 className="options"
 >
                 <FilterSection
+                                discussions={undefined}
                                 domain={
                                                 Array [
                                                                 "Ratios & Proportions",
@@ -754,6 +780,7 @@ ShallowWrapper {
                                 renderFilteredDiscussions={undefined}
                 />
                 <FilterSection
+                                discussions={undefined}
                                 domain={
                                                 Array [
                                                                 "The Number System",
@@ -771,6 +798,7 @@ ShallowWrapper {
                                 renderFilteredDiscussions={undefined}
                 />
                 <FilterSection
+                                discussions={undefined}
                                 domain={
                                                 Array [
                                                                 "Expressions & Equations",
@@ -789,6 +817,7 @@ ShallowWrapper {
                                 renderFilteredDiscussions={undefined}
                 />
                 <FilterSection
+                                discussions={undefined}
                                 domain={
                                                 Array [
                                                                 "Geometry & Measurement",
@@ -802,6 +831,7 @@ ShallowWrapper {
                                 renderFilteredDiscussions={undefined}
                 />
                 <FilterSection
+                                discussions={undefined}
                                 domain={
                                                 Array [
                                                                 "Statistics & Probability",
@@ -834,6 +864,7 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <FilterSection
+                    discussions={undefined}
                     domain={
                                         Array [
                                                             "Ratios & Proportions",
@@ -849,6 +880,7 @@ ShallowWrapper {
                     renderFilteredDiscussions={undefined}
 />,
                   <FilterSection
+                    discussions={undefined}
                     domain={
                                         Array [
                                                             "The Number System",
@@ -866,6 +898,7 @@ ShallowWrapper {
                     renderFilteredDiscussions={undefined}
 />,
                   <FilterSection
+                    discussions={undefined}
                     domain={
                                         Array [
                                                             "Expressions & Equations",
@@ -884,6 +917,7 @@ ShallowWrapper {
                     renderFilteredDiscussions={undefined}
 />,
                   <FilterSection
+                    discussions={undefined}
                     domain={
                                         Array [
                                                             "Geometry & Measurement",
@@ -897,6 +931,7 @@ ShallowWrapper {
                     renderFilteredDiscussions={undefined}
 />,
                   <FilterSection
+                    discussions={undefined}
                     domain={
                                         Array [
                                                             "Statistics & Probability",
@@ -917,9 +952,10 @@ ShallowWrapper {
               "rendered": Array [
                 Object {
                   "instance": null,
-                  "key": "0",
-                  "nodeType": "class",
+                  "key": "Ratios & Proportions",
+                  "nodeType": "function",
                   "props": Object {
+                    "discussions": undefined,
                     "domain": Array [
                       "Ratios & Proportions",
                       "6.RP.A.1",
@@ -938,9 +974,10 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "1",
-                  "nodeType": "class",
+                  "key": "6.NS.A.1",
+                  "nodeType": "function",
                   "props": Object {
+                    "discussions": undefined,
                     "domain": Array [
                       "The Number System",
                       "6.NS.A.1",
@@ -961,9 +998,10 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "2",
-                  "nodeType": "class",
+                  "key": "6.EE.A.2",
+                  "nodeType": "function",
                   "props": Object {
+                    "discussions": undefined,
                     "domain": Array [
                       "Expressions & Equations",
                       "6.EE.A.1",
@@ -985,9 +1023,10 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "3",
-                  "nodeType": "class",
+                  "key": "6.G.A.3",
+                  "nodeType": "function",
                   "props": Object {
+                    "discussions": undefined,
                     "domain": Array [
                       "Geometry & Measurement",
                       "6.G.A.1",
@@ -1004,9 +1043,10 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "4",
-                  "nodeType": "class",
+                  "key": "6.SP.A.4",
+                  "nodeType": "function",
                   "props": Object {
+                    "discussions": undefined,
                     "domain": Array [
                       "Statistics & Probability",
                       "6.SP.A.1",

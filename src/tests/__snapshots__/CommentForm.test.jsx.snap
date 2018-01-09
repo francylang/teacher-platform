@@ -41,12 +41,14 @@ ShallowWrapper {
                     <textarea
                               id="get-comment"
                               name="comment"
+                              onChange={[Function]}
                               type="text"
                     />
           </label>
           <button
                     className="submit-comment"
                     name="submit"
+                    onClick={[Function]}
                     type="submit"
           >
                     Submit
@@ -117,12 +119,14 @@ ShallowWrapper {
               <textarea
                             id="get-comment"
                             name="comment"
+                            onChange={[Function]}
                             type="text"
               />
 </label>,
             <button
               className="submit-comment"
               name="submit"
+              onClick={[Function]}
               type="submit"
 >
               Submit
@@ -140,6 +144,7 @@ ShallowWrapper {
               "children": <textarea
                 id="get-comment"
                 name="comment"
+                onChange={[Function]}
                 type="text"
 />,
               "htmlFor": "get-comment",
@@ -152,6 +157,7 @@ ShallowWrapper {
               "props": Object {
                 "id": "get-comment",
                 "name": "comment",
+                "onChange": [Function],
                 "type": "text",
               },
               "ref": null,
@@ -168,6 +174,7 @@ ShallowWrapper {
               "children": "Submit",
               "className": "submit-comment",
               "name": "submit",
+              "onClick": [Function],
               "type": "submit",
             },
             "ref": null,
@@ -210,12 +217,14 @@ ShallowWrapper {
                         <textarea
                                     id="get-comment"
                                     name="comment"
+                                    onChange={[Function]}
                                     type="text"
                         />
             </label>
             <button
                         className="submit-comment"
                         name="submit"
+                        onClick={[Function]}
                         type="submit"
             >
                         Submit
@@ -286,12 +295,14 @@ ShallowWrapper {
                 <textarea
                                 id="get-comment"
                                 name="comment"
+                                onChange={[Function]}
                                 type="text"
                 />
 </label>,
               <button
                 className="submit-comment"
                 name="submit"
+                onClick={[Function]}
                 type="submit"
 >
                 Submit
@@ -309,6 +320,7 @@ ShallowWrapper {
                 "children": <textarea
                   id="get-comment"
                   name="comment"
+                  onChange={[Function]}
                   type="text"
 />,
                 "htmlFor": "get-comment",
@@ -321,6 +333,7 @@ ShallowWrapper {
                 "props": Object {
                   "id": "get-comment",
                   "name": "comment",
+                  "onChange": [Function],
                   "type": "text",
                 },
                 "ref": null,
@@ -337,6 +350,7 @@ ShallowWrapper {
                 "children": "Submit",
                 "className": "submit-comment",
                 "name": "submit",
+                "onClick": [Function],
                 "type": "submit",
               },
               "ref": null,

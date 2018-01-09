@@ -14,9 +14,8 @@ describe('<Nav />', () => {
 
   it('should exist', () => {
     expect(wrapper).toBeDefined();
-  });y
+  });
   
-
   it('should render a nav', () => {
     const nav = wrapper.find('.nav');
 

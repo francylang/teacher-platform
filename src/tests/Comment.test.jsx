@@ -22,25 +22,13 @@ describe('<Comment />', () => {
     expect(comment.length).toEqual(1);
   });
 
-  it('should render a comment header', () => {
-    const header = wrapper.find('.comments-header');
-
-    expect(header.length).toEqual(1);
-  });
-
   it('should render comments', () => {
     const comment = wrapper.find('.comment');
 
     expect(comment.length).toBeDefined();
   });
 
-  it('should render a list with comment info', () => {
-    const list = wrapper.find('ul');
-
-    expect(list.length).toBeDefined();
-  });
-
   it('should match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
-})
+});

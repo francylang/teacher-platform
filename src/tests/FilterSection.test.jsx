@@ -49,4 +49,4 @@ describe('<FilterSection />', () => {
   it('should match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
-})
+});
