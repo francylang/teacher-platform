@@ -22,6 +22,7 @@ class App extends Component {
     this.renderStandards = this.renderStandards.bind(this);
     this.renderFilteredDiscussions = this.renderFilteredDiscussions.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
+    this.fetchDiscussions = this.fetchDiscussions.bind(this);
   }
 
   componentDidMount() {
@@ -123,13 +124,14 @@ class App extends Component {
       <section className="app">
         <article className="main">
           <Nav
-            discussions={this.props.discussions}
+            // discussions={this.props.discussions}
             filteredDiscussions={filteredDiscussions}
             renderDiscussions={this.renderDiscussions}
             renderForm={this.renderForm}
             renderStandards={this.renderStandards}
             renderFilteredDiscussions={this.renderFilteredDiscussions}
             handleSearch={this.handleSearch}
+            fetchDiscussions={this.fetchDiscussions}
           />
           <section className="bottom-main">
             { this.renderCardContainer() }

@@ -8,7 +8,8 @@ const Nav = ({
   renderFilteredDiscussions,
   renderStandards,
   renderForm,
-  filteredDiscussions }) => {
+  filteredDiscussions,
+  fetchDiscussions }) => {
   return (
     <div className="nav">
       <SearchContainer
@@ -35,7 +36,10 @@ const Nav = ({
         </h4>
       </button>
       <button
-        onClick={() => renderDiscussions()}
+        onClick={() => {
+          renderDiscussions();
+          fetchDiscussions();
+        }}
         className="toggle-discussions-btn"
         value="form"
       >
