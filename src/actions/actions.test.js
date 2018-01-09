@@ -27,4 +27,40 @@ describe('actions', () => {
 
     expect(actions.setCurrentUser('Francy')).toEqual(expectedAction);
   });
+
+  it('should create an action to successfully fetch discussions', () => {
+    const discussions = [
+      {title: 'Math', body: 'important math things'},
+      {title: 'Crucial Learning', body: 'Lots of important things'}
+    ];
+    const expectedAction = {
+      type: 'FETCH_DISCUSSIONS_SUCCESS',
+      discussions
+    };
+    expect(actions.fetchDiscussionsSuccess(discussions)).toEqual(expectedAction);
+  });
+
+  it('should create an action to successfully fetch comments', () => {
+    const comments = [
+      {body: 'teaching is hard'},
+      {body: 'but so much fun'}
+    ];
+    const expectedAction = {
+      type: 'FETCH_COMMENTS_SUCCESS',
+      comments
+    };
+    expect(actions.fetchCommentsSuccess(comments)).toEqual(expectedAction);
+  });
+
+  it('should create an action to successfully update filtered discussions', () => {
+    const updatedDiscussions = [
+      {title: 'Math', body: 'is magic'},
+      {title: 'Math Learning', body: 'it is amazing'}
+    ];
+    const expectedAction = {
+      type: 'UPDATE_FILTER_DISCUSSIONS',
+      updatedDiscussions
+    };
+    expect(actions.updateDiscussions(updatedDiscussions)).toEqual(expectedAction);
+  });
 });
