@@ -1,7 +1,7 @@
 import { PROD_URL } from '../utils/url.js';
 
 export const postComment = (body, discussionId) => {
-  fetch(`${PROD_URL}/${discussionId}/comments`, {
+  fetch(`${PROD_URL}/api/v1/discussions/${discussionId}/comments`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
