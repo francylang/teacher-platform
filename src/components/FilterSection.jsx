@@ -27,12 +27,13 @@ const FilterSection = ({ renderFilteredDiscussions, renderDiscussions, domain })
   };
 
   const buildDomainList = () => {
-    return domain.map(standard => {
+    return domain.map((standard, index) => {
       let firstChar = standard.charAt(0);
 
       if (firstChar === '6' || firstChar === '7' || firstChar === '8') {
         return (
           <button
+            key={index}
             className="standard-link"
             onClick={() => getFilteredDiscussions(standard)}
           >
@@ -43,7 +44,9 @@ const FilterSection = ({ renderFilteredDiscussions, renderDiscussions, domain })
         );
       } else {
         return (
-          <section className="domain-label-container">
+          <section
+            key={index}
+            className="domain-label-container">
             <h5 className="domain-label">
               {standard}
             </h5>
