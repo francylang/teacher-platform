@@ -17,8 +17,7 @@ describe('<App />', () => {
   });
 
   it('should have a false default state', () => {
-    expect(wrapper.state().discussions).toEqual([]);
-    expect(wrapper.state().comments).toEqual([]);
+    expect(wrapper.state().filteredDiscussions).toEqual([]);
     expect(wrapper.state().showingDiscussions).toEqual(true);
     expect(wrapper.state().showingForm).toEqual(false);
     expect(wrapper.state().showingStandards).toEqual(false);
