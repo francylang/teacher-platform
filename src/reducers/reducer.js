@@ -27,15 +27,6 @@ export const discussions = (state = [], action) => {
   }
 };
 
-export const filteredDiscussions = (state = [], action) => {
-  switch (action.type) {
-    case 'FILTERED_DISCUSSIONS':
-      return action.filteredDiscussions;
-    default:
-      return state;
-  }
-};
-
 export const renderDiscussions = (state = [], action) => {
   switch (action.type) {
     case 'RENDER_DISCUSSIONS':

@@ -7,11 +7,13 @@ const Nav = ({
   renderDiscussions,
   renderFilteredDiscussions,
   renderStandards,
-  renderForm }) => {
+  renderForm,
+  filteredDiscussions }) => {
   return (
     <div className="nav">
       <SearchContainer
         handleSearch={handleSearch}
+        filteredDiscussions={filteredDiscussions}
         renderDiscussions={renderDiscussions}
         renderFilteredDiscussions={renderFilteredDiscussions}
       />

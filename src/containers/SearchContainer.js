@@ -5,7 +5,6 @@ import { updateDiscussions } from '../actions/actions.js';
 
 const mapStateToProps = store => ({
   discussions: store.discussions,
-  filteredDiscussions: store.filteredDiscussions,
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -8,7 +8,6 @@ const mapStateToProps = store => ({
   signedInStatus: store.signedInStatus,
   comments: store.comments,
   discussions: store.discussions,
-  filteredDiscussions: store.discussions,
 });
 
 const mapDispatchToProps = dispatch => ({

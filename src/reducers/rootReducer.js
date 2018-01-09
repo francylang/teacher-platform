@@ -1,5 +1,11 @@
 import { combineReducers } from 'redux';
-import { currentUser, signedInStatus, discussions, comments, renderDiscussions, filteredDiscussions } from './reducer';
+import {
+  currentUser,
+  signedInStatus,
+  discussions,
+  comments,
+  renderDiscussions,
+} from './reducer';
 
 const rootReducer = combineReducers({
   currentUser,
@@ -7,7 +13,6 @@ const rootReducer = combineReducers({
   discussions,
   comments,
   renderDiscussions,
-  filteredDiscussions,
 });
 
 export default rootReducer;

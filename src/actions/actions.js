@@ -18,11 +18,6 @@ export const fetchDiscussionsSuccess = discussions => ({
   discussions,
 });
 
-export const fetchFilteredDiscussions = filteredDiscussions => ({
-  type: 'FILTERED_DISCUSSIONS',
-  filteredDiscussions,
-});
-
 export const fetchCommentsSuccess = comments => ({
   type: 'FETCH_COMMENTS_SUCCESS',
   comments,
@@ -52,7 +47,6 @@ export const fetchDiscussions = () => {
       .then(rawDiscussions => cleanDiscussions(rawDiscussions))
       .then(cleanedDiscussions => {
         dispatch(fetchDiscussionsSuccess(cleanedDiscussions));
-        dispatch(fetchFilteredDiscussions(cleanedDiscussions));
       })
       .catch(() => console.error('error'));
   };

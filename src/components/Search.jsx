@@ -16,22 +16,19 @@ class Search extends Component {
   };
 
   filterDiscussions() {
-    const { filteredDiscussions, renderDiscussions, renderFilteredDiscussions } = this.props;
+    const { discussions, filteredDiscussions, renderDiscussions, renderFilteredDiscussions } = this.props;
 
     let searchTerm = this.state.searchTerm.toLowerCase();
 
     const filtered = filteredDiscussions.filter(discussion => {
       let title = discussion.title.toLowerCase();
       let body = discussion.body.toLowerCase();
-
       if (title.includes(searchTerm) || body.includes(searchTerm)) {
         return discussion;
       };
     });
     renderDiscussions();
-    console.log(filtered);
-    // filtered is what we want it to be right here
-    this.props.updateDiscussions(filtered);
+    renderFilteredDiscussions(filtered);
   };
 
   shouldComponentUpdate(nextProps) {
@@ -40,7 +37,6 @@ class Search extends Component {
 
   render() {
     const { renderDiscussions, renderFilteredDiscussions, handleSearch } = this.props;
-    console.log(this.props);
     return (
       <aside className="search-section">
         <label htmlFor="search-input"></label>
