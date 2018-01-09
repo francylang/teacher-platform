@@ -19,10 +19,9 @@ const CardContainer = ({ comments, filteredDiscussions }) => {
     matchDiscussionIds();
     if (filteredDiscussions.length === 0) {
       return (
-        <h3 className="no-discussions-msg">There are no discussions for this standard yet!</h3>
+        <h3>There are not any discussions for this standard yet!</h3>
       );
     } else {
-      console.log('yes discussions');
       return filteredDiscussions.map(discussion => {
         return (
           <DiscussionCard
