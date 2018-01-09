@@ -6,7 +6,7 @@ const Header = ({ signedInStatus }) => {
   const renderSignOut = () => {
     if (signedInStatus === true) {
       return (
-        <h3 className="sign-out">Sign Out</h3>
+        <Link to='/Login' className="sign-out">Sign Out</Link>
       );
     }
   };
