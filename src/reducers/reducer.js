@@ -27,6 +27,15 @@ export const discussions = (state = [], action) => {
   }
 };
 
+export const filteredDiscussions = (state = [], action) => {
+  switch (action.type) {
+    case 'FILTERED_DISCUSSIONS':
+      return action.filteredDiscussions;
+    default:
+      return state;
+  }
+};
+
 export const renderDiscussions = (state = [], action) => {
   switch (action.type) {
     case 'RENDER_DISCUSSIONS':
@@ -40,16 +49,6 @@ export const comments = (state = [], action) => {
   switch (action.type) {
     case 'FETCH_COMMENTS_SUCCESS':
       return action.comments;
-    default:
-      return state;
-  }
-};
-
-export const filteredDiscussions = (state = [], action) => {
-  switch (action.type) {
-    case 'UPDATE_FILTER_DISCUSSIONS':
-    // how do we get this case to change the filteredDiscussions prop?!?!
-      return action.updatedDiscussions;
     default:
       return state;
   }

@@ -18,6 +18,11 @@ export const fetchDiscussionsSuccess = discussions => ({
   discussions,
 });
 
+export const fetchFilteredDiscussions = filteredDiscussions => ({
+  type: 'FILTERED_DISCUSSIONS',
+  filteredDiscussions,
+});
+
 export const fetchCommentsSuccess = comments => ({
   type: 'FETCH_COMMENTS_SUCCESS',
   comments,
@@ -45,7 +50,10 @@ export const fetchDiscussions = () => {
     fetch('http://localhost:3000/api/v1/discussions')
       .then(response => response.json())
       .then(rawDiscussions => cleanDiscussions(rawDiscussions))
-      .then(cleanedDiscussions => dispatch(fetchDiscussionsSuccess(cleanedDiscussions)))
+      .then(cleanedDiscussions => {
+        dispatch(fetchDiscussionsSuccess(cleanedDiscussions));
+        dispatch(fetchFilteredDiscussions(cleanedDiscussions));
+      })
       .catch(() => console.error('error'));
   };
 };
