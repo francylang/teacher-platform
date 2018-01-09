@@ -2,11 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-const Header = ({ signedInStatus }) => {
+const Header = ({ signedInStatus, signOut, setCurrentUser }) => {
   const renderSignOut = () => {
     if (signedInStatus === true) {
       return (
-        <h3 className="sign-out">Sign Out</h3>
+        <Link
+          to='/login'
+          className="sign-out"
+          onClick={() => {
+            signOut();
+            setCurrentUser('');
+          }}
+        >
+          Sign Out
+        </Link>
       );
     }
   };

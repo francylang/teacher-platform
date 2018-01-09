@@ -1,4 +1,4 @@
-import { PROD_URL } from '../url.js';
+import { PROD_URL } from '../utils/url.js';
 
 export const signIn = boolean => ({
   type: 'TOGGLE_SIGN_IN',
