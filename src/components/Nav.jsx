@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import SearchContainer from '../containers/SearchContainer';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Nav = ({
   handleSearch,
@@ -27,16 +27,18 @@ const Nav = ({
           Standards
         </h4>
       </button>
-      <button
-        onClick={() => renderForm()}
+      <Link
+        to='/discussionform'
+        // onClick={() => renderForm()}
         className="toggle-discussion-form-btn"
         value="form"
       >
         <h4 className="new-discussion-option">
           New Discussion
         </h4>
-      </button>
-      <button
+      </Link>
+      <Link
+        to='/'
         onClick={() => {
           renderDiscussions();
           fetchDiscussions();
@@ -47,7 +49,7 @@ const Nav = ({
         <h4 className="new-discussion-option">
           All Discussions
         </h4>
-      </button>
+      </Link>
     </div>
   );
 };
