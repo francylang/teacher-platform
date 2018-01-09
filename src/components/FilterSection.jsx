@@ -8,10 +8,20 @@ const FilterSection = ({ renderFilteredDiscussions, renderDiscussions, domain })
       .then((response) => response.json())
       .then((rawDiscussions) => findMatchingDiscussions(rawDiscussions, standard))
       .then((matchingDiscussions) => {
+        renderNoDiscussions(matchingDiscussions);
         renderDiscussions();
         renderFilteredDiscussions(matchingDiscussions);
       })
       .catch((error) => console.error({ error }));
+  };
+
+  const renderNoDiscussions = (matchingDiscussions) => {
+    if (matchingDiscussions.length === 0) {
+      console.log('no discussions!');
+      return (
+        <h3>There are no discussions for this standard</h3>
+      );
+    };
   };
 
   const findMatchingDiscussions = (rawDiscussions, standard) => {
@@ -22,10 +32,6 @@ const FilterSection = ({ renderFilteredDiscussions, renderDiscussions, domain })
     });
   };
 
-  const getFilteredDiscussions = standard => {
-    fetchDiscussions(standard);
-  };
-
   const buildDomainList = () => {
     return domain.map(standard => {
       let firstChar = standard.charAt(0);
@@ -34,7 +40,7 @@ const FilterSection = ({ renderFilteredDiscussions, renderDiscussions, domain })
         return (
           <button
             className="standard-link"
-            onClick={() => getFilteredDiscussions(standard)}
+            onClick={() => fetchDiscussions(standard)}
             key={standard}
           >
             <p className={`standard-text ${standard[2]}-link`}>
