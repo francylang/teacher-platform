@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import FilterSection from './FilterSection';
 import { mathSixStandards, mathSevenStandards, mathEightStandards } from '../utils/standards';
 
@@ -90,5 +91,11 @@ class FilterForm extends Component {
     );
   }
 }
+
+FilterForm.propTypes = {
+  discussions: PropTypes.array,
+  renderDiscussions: PropTypes.func,
+  renderFilteredDiscussions: PropTypes.func,
+};
 
 export default FilterForm;

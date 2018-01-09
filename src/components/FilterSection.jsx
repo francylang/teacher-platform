@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 // import { PROD_URL } from '../url.js';
 
 const FilterSection = ({ renderFilteredDiscussions, renderDiscussions, domain }) => {
@@ -59,4 +60,9 @@ const FilterSection = ({ renderFilteredDiscussions, renderDiscussions, domain })
   );
 };
 
+FilterSection.propTypes = {
+  domain: PropTypes.array,
+  renderDiscussions: PropTypes.func,
+  renderFilteredDiscussions: PropTypes.func,
+};
 export default FilterSection;

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { postComment } from '../utils/postComment.js';
 
 class CommentForm extends Component {
@@ -54,5 +55,9 @@ class CommentForm extends Component {
     );
   }
 }
+
+CommentForm.propTypes = {
+  discussionId: PropTypes.number,
+};
 
 export default CommentForm;
