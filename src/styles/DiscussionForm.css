@@ -128,3 +128,10 @@ h3.form-directions {
 
 .S:hover {
   background-color: #FF7C55; }
+
+.grade-level-domain {
+  font-family: Nunito; }
+
+.drop-down-standards {
+  width: 100%;
+  margin: 15px 0; }

@@ -39,7 +39,6 @@ class DiscussionForm extends Component {
     event.preventDefault();
     postNewDiscussion(title, body, standardSelected);
     this.clearInputs();
-    this.props.history.push('/');
   }
 
   selectGrade(event) {
@@ -80,6 +79,7 @@ class DiscussionForm extends Component {
       });
       return (
         <select
+          className="drop-down-standards"
           value={standardSelected}
           onChange={this.handleSelectStandard.bind(this)}>
         >
