@@ -5,6 +5,8 @@
   align-items: center;
   background-color: #EAF2F8;
   border: 1px solid #EAF2F8;
+  box-shadow: 5px 5px 12px #bdbdbd;
+  z-index: 100;
   padding: 0 2%; }
 
 .filter-btn {
@@ -16,9 +18,15 @@
   outline: none;
   cursor: pointer; }
 
-.standard-option {
-  padding-right: 10px;
-  color: #2B2B2B; }
+.standard-option,
+.new-discussion-option {
+  color: #2B2B2B;
+  border-bottom: #EAF2F8 2px solid; }
+
+.standard-option:hover,
+.new-discussion-option:hover {
+  border-bottom: #2B2B2B 2px solid;
+  transition: all 0.5s; }
 
 .toggle-discussion-form-btn,
 .toggle-discussions-btn {

@@ -13,7 +13,10 @@ const Header = ({ signedInStatus }) => {
 
   return (
     <header className="header">
-      <Link to='/'><h1 className="app-name">Teachzilla</h1></Link>
+      <div className="header-icon-container">
+        <Link to='/' className="header-link"><h1 className="app-name">Edvice</h1></Link>
+        <div className="header-image"></div>
+      </div>
       {renderSignOut()}
     </header>
   );
