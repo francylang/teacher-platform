@@ -8,9 +8,9 @@ const mapStateToProps = store => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  // filterDiscussions: (filteredDiscussions, searchTerm) => {
-  //   dispatch(filterDiscussions(filteredDiscussions, searchTerm));
-  // }
+  filterDiscussions: (filteredDiscussions, searchTerm) => {
+    dispatch(filterDiscussions(filteredDiscussions, searchTerm));
+  }
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CardContainer);
