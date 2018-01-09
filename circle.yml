@@ -15,4 +15,4 @@ deployment:
   production:
     branch: master
     heroku:
-      appname: teacher-forum
+      appname: turing-teachzilla
