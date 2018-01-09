@@ -35,6 +35,7 @@ const FilterSection = ({ renderFilteredDiscussions, renderDiscussions, domain })
           <button
             className="standard-link"
             onClick={() => getFilteredDiscussions(standard)}
+            key={standard}
           >
             <p className={`standard-text ${standard[2]}-link`}>
               {standard}
@@ -43,7 +44,10 @@ const FilterSection = ({ renderFilteredDiscussions, renderDiscussions, domain })
         );
       } else {
         return (
-          <section className="domain-label-container">
+          <section
+            className="domain-label-container"
+            key={standard}
+          >
             <h5 className="domain-label">
               {standard}
             </h5>
