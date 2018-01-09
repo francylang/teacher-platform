@@ -1,5 +1,4 @@
 import { connect } from 'react-redux';
-import thunk from 'redux-thunk';
 import Search from '../components/Search.jsx';
 
 const mapStateToProps = store => ({

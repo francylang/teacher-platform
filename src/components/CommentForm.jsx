@@ -11,17 +11,13 @@ class CommentForm extends Component {
   }
 
   handleChange(event) {
-    this.setState({
-      body: event.target.value
-    });
+    this.setState({ body: event.target.value });
   }
 
   handleSubmit(event) {
     event.preventDefault();
     postComment(this.state.body, this.props.discussionId);
-    this.setState({
-      body: ''
-    });
+    this.setState({ body: '' });
   }
 
   render() {
@@ -39,6 +35,7 @@ class CommentForm extends Component {
               id="get-comment"
               type="text"
               name="comment"
+              value={this.state.body}
               onChange={this.handleChange.bind(this)}
             >
             </textarea>

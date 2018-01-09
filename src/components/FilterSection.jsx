@@ -1,17 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { PROD_URL } from '../url.js';
+import { PROD_URL } from '../url.js';
 
 const FilterSection = ({ renderFilteredDiscussions, renderDiscussions, domain }) => {
   const fetchDiscussions = standard => {
-    fetch(`http://localhost:3000/api/v1/discussions`)
+    fetch(`${PROD_URL}/api/v1/discussions`)
       .then((response) => response.json())
       .then((rawDiscussions) => findMatchingDiscussions(rawDiscussions, standard))
       .then((matchingDiscussions) => {
+        renderNoDiscussions(matchingDiscussions);
         renderDiscussions();
         renderFilteredDiscussions(matchingDiscussions);
       })
       .catch((error) => console.error({ error }));
+  };
+
+  const renderNoDiscussions = (matchingDiscussions) => {
+    if (matchingDiscussions.length === 0) {
+      console.log('no discussions!');
+      return (
+        <h3>There are no discussions for this standard</h3>
+      );
+    };
   };
 
   const findMatchingDiscussions = (rawDiscussions, standard) => {
@@ -20,10 +30,6 @@ const FilterSection = ({ renderFilteredDiscussions, renderDiscussions, domain })
         return discussion;
       };
     });
-  };
-
-  const getFilteredDiscussions = standard => {
-    fetchDiscussions(standard);
   };
 
   const buildDomainList = () => {
@@ -35,7 +41,8 @@ const FilterSection = ({ renderFilteredDiscussions, renderDiscussions, domain })
           <button
             key={index}
             className="standard-link"
-            onClick={() => getFilteredDiscussions(standard)}
+            onClick={() => fetchDiscussions(standard)}
+            key={standard}
           >
             <p className={`standard-text ${standard[2]}-link`}>
               {standard}
@@ -45,8 +52,9 @@ const FilterSection = ({ renderFilteredDiscussions, renderDiscussions, domain })
       } else {
         return (
           <section
-            key={index}
-            className="domain-label-container">
+            className="domain-label-container"
+            key={standard}
+          >
             <h5 className="domain-label">
               {standard}
             </h5>

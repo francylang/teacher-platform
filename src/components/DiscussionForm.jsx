@@ -59,12 +59,8 @@ class DiscussionForm extends Component {
   }
 
   handleSelectStandard(event) {
-    const { title, body } = this.state;
-
     event.preventDefault();
     this.setState({ standardSelected: event.target.value });
-    postNewDiscussion(title, body);
-    this.clearInputs();
   }
 
   renderDropDown() {

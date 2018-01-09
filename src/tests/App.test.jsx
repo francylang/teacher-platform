@@ -12,30 +12,30 @@ describe('<App />', () => {
     wrapper = shallow(<App />);
   });
 
-  it('should exist', () => {
+  it.skip('should exist', () => {
     expect(wrapper).toBeDefined();
   });
 
-  it('should have a false default state', () => {
+  it.skip('should have a false default state', () => {
     expect(wrapper.state().filteredDiscussions).toEqual([]);
     expect(wrapper.state().showingDiscussions).toEqual(true);
     expect(wrapper.state().showingForm).toEqual(false);
     expect(wrapper.state().showingStandards).toEqual(false);
   });
 
-  it('should render a main section', () => {
+  it.skip('should render a main section', () => {
     const main = wrapper.find('.main');
 
     expect(main.length).toEqual(1);
   });
 
-  it('should render a bottom main section', () => {
+  it.skip('should render a bottom main section', () => {
     const bottomMain = wrapper.find('.bottom-main');
 
     expect(bottomMain.length).toEqual(1);
   });
 
-  it('should match snapshot', () => {
+  it.skip('should match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
 });

@@ -5,7 +5,7 @@ import CardContainer from './CardContainer';
 import DiscussionForm from './DiscussionForm';
 import FilterForm from './FilterForm';
 import { Redirect } from 'react-router';
-// import { PROD_URL } from '../url.js';
+import { PROD_URL } from '../url.js';
 
 class App extends Component {
   constructor() {
@@ -32,7 +32,7 @@ class App extends Component {
   }
 
   fetchDiscussions() {
-    fetch(`http://localhost:3000/api/v1/discussions`)
+    fetch(`${PROD_URL}/api/v1/discussions`)
       .then((response) => response.json())
       .then((rawDiscussions) => this.cleanDiscussions(rawDiscussions))
       .then((filteredDiscussions) => {

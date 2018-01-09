@@ -1,3 +1,5 @@
+import { PROD_URL } from '../url.js';
+
 export const signIn = boolean => ({
   type: 'TOGGLE_SIGN_IN',
   boolean,
@@ -42,7 +44,7 @@ const cleanDiscussions = (rawDiscussions) => {
 
 export const fetchDiscussions = () => {
   return dispatch => {
-    fetch('http://localhost:3000/api/v1/discussions')
+    fetch(`${PROD_URL}/api/v1/discussions`)
       .then(response => response.json())
       .then(rawDiscussions => cleanDiscussions(rawDiscussions))
       .then(cleanedDiscussions => {
@@ -64,7 +66,7 @@ const cleanComments = (rawComments) => {
 
 export const fetchComments = () => {
   return dispatch => {
-    fetch('http://localhost:3000/api/v1/comments')
+    fetch(`${PROD_URL}/api/v1/comments`)
       .then((response) => response.json())
       .then((comments) => cleanComments(comments))
       .then(cleanedComments => dispatch(fetchCommentsSuccess(cleanedComments)))
