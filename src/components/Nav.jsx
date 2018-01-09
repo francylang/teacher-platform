@@ -27,29 +27,24 @@ const Nav = ({
           Standards
         </h4>
       </button>
-      <Link
-        to='/discussionform'
-        // onClick={() => renderForm()}
+      <button
+        onClick={() => renderForm()}
         className="toggle-discussion-form-btn"
         value="form"
       >
         <h4 className="new-discussion-option">
           New Discussion
         </h4>
-      </Link>
-      <Link
-        to='/'
-        onClick={() => {
-          renderDiscussions();
-          fetchDiscussions();
-        }}
+      </button>
+      <button
+        onClick={() => renderDiscussions()}
         className="toggle-discussions-btn"
         value="form"
       >
         <h4 className="new-discussion-option">
           All Discussions
         </h4>
-      </Link>
+      </button>
     </div>
   );
 };

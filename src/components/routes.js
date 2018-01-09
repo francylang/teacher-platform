@@ -12,7 +12,6 @@ class Routes extends Component {
         <HeaderContainer />
         <Route exact path="/" component={ AppContainer }/>
         <Route path="/login" component={ LoginContainer }/>
-        <Route path="/discussionform" component={ DiscussionFormContainer }/>
       </div>
     );
   }

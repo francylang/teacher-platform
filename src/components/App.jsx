@@ -18,7 +18,7 @@ class App extends Component {
     };
 
     this.renderDiscussions = this.renderDiscussions.bind(this);
-    // this.renderForm = this.renderForm.bind(this);
+    this.renderForm = this.renderForm.bind(this);
     this.renderStandards = this.renderStandards.bind(this);
     this.renderFilteredDiscussions = this.renderFilteredDiscussions.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
@@ -61,13 +61,13 @@ class App extends Component {
     });
   }
 
-  // renderForm() {
-  //   this.setState({
-  //     showingDiscussions: false,
-  //     showingForm: true,
-  //     showingStandards: false,
-  //   });
-  // }
+  renderForm() {
+    this.setState({
+      showingDiscussions: false,
+      showingForm: true,
+      showingStandards: false,
+    });
+  }
 
   renderStandards() {
     this.setState({
@@ -108,8 +108,8 @@ class App extends Component {
       return <Redirect to='/login'/>;
     }
 
-    // const showForm = showingForm
-    //   ? <DiscussionForm /> : null;
+    const showForm = showingForm
+      ? <DiscussionForm rendered={showingForm}/> : null;
 
     const showStandards = showingStandards
       ? <FilterForm
@@ -125,7 +125,7 @@ class App extends Component {
           <Nav
             filteredDiscussions={filteredDiscussions}
             renderDiscussions={this.renderDiscussions}
-            // renderForm={this.renderForm}
+            renderForm={this.renderForm}
             renderStandards={this.renderStandards}
             renderFilteredDiscussions={this.renderFilteredDiscussions}
             handleSearch={this.handleSearch}
@@ -133,7 +133,7 @@ class App extends Component {
           />
           <section className="bottom-main">
             { this.renderCardContainer() }
-            {/* { showForm } */}
+            { showForm }
             { showStandards }
           </section>
         </article>
