@@ -1,5 +1,7 @@
+import { PROD_URL } from '../url.js';
+
 export const postNewDiscussion = (title, body, tagTitle) => {
-  fetch('http://localhost:3000/api/v1/discussions', {
+  fetch(`${PROD_URL}/api/v1/discussions`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

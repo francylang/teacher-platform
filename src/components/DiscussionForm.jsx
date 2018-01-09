@@ -138,7 +138,6 @@ class DiscussionForm extends Component {
   }
 
   render() {
-    console.log(this.props);
     const { title, body, standardSelected } = this.state;
 
     return (
