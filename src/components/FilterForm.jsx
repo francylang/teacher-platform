@@ -13,7 +13,7 @@ class FilterForm extends Component {
   };
 
   showOptions(standardsArray, state) {
-    const { renderDiscussions, renderFilteredDiscussions, discussions, allDiscussions } = this.props;
+    const { renderDiscussions, renderFilteredDiscussions, discussions } = this.props;
 
     if (state) {
       return standardsArray.map((domainArray, i) => {

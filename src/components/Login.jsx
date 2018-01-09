@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import userLoginData from '../utils/userLoginData';
-import { Redirect } from 'react-router';
-import { Link } from 'react-router-dom';
+// import userLoginData from '../utils/userLoginData';
+// import { Redirect } from 'react-router';
+// import { Link } from 'react-router-dom';
 
 class Login extends Component {
   constructor() {

@@ -1,20 +1,22 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import Nav from './Nav';
 import CardContainer from './CardContainer';
 import DiscussionForm from './DiscussionForm';
 import FilterForm from './FilterForm';
-import { Redirect } from 'react-router';
-import { PROD_URL } from '../url.js';
+// import { Redirect } from 'react-router';
+// import { PROD_URL } from '../url.js';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
+      filteredDiscussions: [],
       showingDiscussions: true,
       showingForm: false,
       showingStandards: false,
     };
+
     this.renderDiscussions = this.renderDiscussions.bind(this);
     this.renderForm = this.renderForm.bind(this);
     this.renderStandards = this.renderStandards.bind(this);
@@ -24,7 +26,30 @@ class App extends Component {
 
   componentDidMount() {
     this.props.retrieveDiscussions();
+    this.fetchDiscussions();
     this.props.retrieveComments();
+  }
+
+  fetchDiscussions() {
+    fetch(`http://localhost:3000/api/v1/discussions`)
+      .then((response) => response.json())
+      .then((rawDiscussions) => this.cleanDiscussions(rawDiscussions))
+      .then((filteredDiscussions) => {
+        this.setState({ filteredDiscussions });
+      })
+      .catch((error) => console.error({ error }));
+  }
+
+  cleanDiscussions(rawDiscussions) {
+    return rawDiscussions.map(discussion => {
+      return {
+        id: discussion.id,
+        title: discussion.title,
+        body: discussion.body,
+        tagId: discussion.tagId,
+        tagTitle: discussion.tagTitle,
+      };
+    });
   }
 
   renderDiscussions() {
@@ -51,10 +76,9 @@ class App extends Component {
     });
   }
 
-  renderFilteredDiscussions(discussions) {
-    this.props.renderedFiltered(discussions)
-    // this.setState({ discussions });
-    // we need to revisit
+  renderFilteredDiscussions(filteredDiscussions) {
+    this.setState({ filteredDiscussions });
+    this.props.updateDiscussions(filteredDiscussions);
   }
 
   handleSearch() {
@@ -62,25 +86,27 @@ class App extends Component {
   }
 
   renderCardContainer() {
-    const { showingDiscussions } = this.state;
-    if (showingDiscussions && this.props.filteredDiscussions) {
+    const { showingDiscussions, filteredDiscussions } = this.state;
+    const { comments, discussions } = this.props;
+
+    if (showingDiscussions && this.props.discussions) {
       return (
         <CardContainer
-          filteredDiscussions={this.props.filteredDiscussions}
-          comments={this.props.comments}
+          discussions={discussions}
+          filteredDiscussions={filteredDiscussions}
+          comments={comments}
         />
       );
     }
   }
 
   render() {
-    const { showingDiscussions, showingForm, showingStandards } = this.state;
-
-    console.log(this.props);
+    const { showingForm, showingStandards, filteredDiscussions } = this.state;
 
     if (this.props.signedInStatus === false) {
       // return <Redirect to='/login'/>;
     }
+
     const showForm = showingForm
       ? <DiscussionForm rendered={showingForm}/> : null;
 
@@ -89,13 +115,16 @@ class App extends Component {
         renderDiscussions={this.renderDiscussions}
         renderFilteredDiscussions={this.renderFilteredDiscussions}
         rendered={showingStandards}
-        filteredDiscussions={this.props.filteredDiscussions} /> : null;
+        discussions={this.props.discussions}
+        filteredDiscussions={filteredDiscussions}
+      /> : null;
 
     return (
       <section className="app">
         <article className="main">
           <Nav
-            filteredDiscussions={this.props.filteredDiscussions}
+            discussions={this.props.discussions}
+            filteredDiscussions={filteredDiscussions}
             renderDiscussions={this.renderDiscussions}
             renderForm={this.renderForm}
             renderStandards={this.renderStandards}
