@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { PROD_URL } from '../url.js';
+import React from 'react';
+// import { PROD_URL } from '../url.js';
 
 const FilterSection = ({ renderFilteredDiscussions, renderDiscussions, domain }) => {
   const fetchDiscussions = standard => {

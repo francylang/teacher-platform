@@ -1,5 +1,4 @@
 import { connect } from 'react-redux';
-import thunk from 'redux-thunk';
 import CardContainer from '../components/CardContainer.jsx';
 import { filterDiscussions } from '../actions/actions.js';
 

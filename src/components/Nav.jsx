@@ -1,6 +1,6 @@
 import React from 'react';
 import SearchContainer from '../containers/SearchContainer';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 const Nav = ({
   handleSearch,

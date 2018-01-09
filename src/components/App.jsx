@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import Nav from './Nav';
 import CardContainer from './CardContainer';
 import DiscussionForm from './DiscussionForm';
 import FilterForm from './FilterForm';
-import { Redirect } from 'react-router';
-import { PROD_URL } from '../url.js';
+// import { Redirect } from 'react-router';
+// import { PROD_URL } from '../url.js';
 
 class App extends Component {
   constructor() {
@@ -101,7 +101,7 @@ class App extends Component {
   }
 
   render() {
-    const { showingDiscussions, showingForm, showingStandards, filteredDiscussions } = this.state;
+    const { showingForm, showingStandards, filteredDiscussions } = this.state;
 
     if (this.props.signedInStatus === false) {
       // return <Redirect to='/login'/>;
