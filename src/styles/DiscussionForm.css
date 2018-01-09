@@ -43,7 +43,11 @@ h3.form-directions {
 .submit-discussion-btn {
   padding: 3.5%;
   width: 100%;
-  font-size: 115%; }
+  font-size: 115%;
+  background-color: #737B7F; }
+
+.submit-discussion-btn:disabled {
+  background-color: #B5B9BC; }
 
 .down-arrow {
   height: 15px;

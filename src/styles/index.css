@@ -94,7 +94,14 @@ body {
   font-size: 110%; }
 
 .login-submit-btn:disabled {
-  background-color: #c4c3c6; }
+  background-color: #c4c3c6;
+  text-shadow: -1px 1px #c4c3c6;
+  cursor: arrow; }
+
+.login-submit-btn:disabled:hover {
+  background-color: #c4c3c6;
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.13);
+  cursor: arrow; }
 
 @media screen and (max-width: 500px) {
   .login {

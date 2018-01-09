@@ -38,9 +38,7 @@ class Login extends Component {
   };
 
   render() {
-    const isDisabled =
-    this.state.email.length &&
-    this.state.password.length ? false : true;
+    const isDisabled = !this.state.password.length;
 
     return (
       <div className="login-form-container">

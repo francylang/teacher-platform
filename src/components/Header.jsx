@@ -23,7 +23,7 @@ const Header = ({ signedInStatus, signOut, setCurrentUser }) => {
   return (
     <header className="header">
       <div className="header-icon-container">
-        <Link to='/' className="header-link"><h1 className="app-name">Edvice</h1></Link>
+        <h1 className="app-name">Edvice</h1>
         <div className="header-image"></div>
       </div>
       {renderSignOut()}

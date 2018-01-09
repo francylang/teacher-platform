@@ -140,7 +140,8 @@ class DiscussionForm extends Component {
 
   render() {
     const { title, body, standardSelected } = this.state;
-
+    const isDisabled = !this.renderDropDown();
+    
     return (
       <article className="discussion-form-section">
         <h3 className="form-directions">Start a discussion.</h3>
@@ -174,6 +175,7 @@ class DiscussionForm extends Component {
           <div className="grade-level-domains">{this.renderDomains()}</div>
           <div className="grade-level-standards">{this.renderDropDown()}</div>
           <button
+            disabled={isDisabled}
             className="submit-discussion-btn"
             onClick={(event) => this.handleSubmit(event)}
           >
