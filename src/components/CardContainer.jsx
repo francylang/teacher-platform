@@ -17,15 +17,22 @@ const CardContainer = ({ comments, filteredDiscussions }) => {
 
   const buildDiscussionCard = () => {
     matchDiscussionIds();
-    return filteredDiscussions.map(discussion => {
+    if (filteredDiscussions.length === 0) {
       return (
-        <DiscussionCard
-          key={discussion.id}
-          discussion={discussion}
-          comments={comments}
-        />
+        <h3 className="no-discussions-msg">There are no discussions for this standard yet!</h3>
       );
-    });
+    } else {
+      console.log('yes discussions');
+      return filteredDiscussions.map(discussion => {
+        return (
+          <DiscussionCard
+            key={discussion.id}
+            discussion={discussion}
+            comments={comments}
+          />
+        );
+      });
+    }
   };
 
   return (
