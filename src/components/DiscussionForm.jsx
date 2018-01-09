@@ -53,8 +53,12 @@ class DiscussionForm extends Component {
 
   selectDomain(event) {
     event.preventDefault();
+    event.target.classList.toggle('active');
 
-    this.setState({ domainSelected: event.target.value[0] });
+    this.setState({
+      domainSelected: event.target.value[0],
+      isActive: !this.state.isActive
+    });
   }
 
   handleSelectStandard(event) {

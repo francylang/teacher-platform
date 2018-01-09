@@ -124,33 +124,42 @@ h3.form-directions {
 .grade-level-domain.E,
 .grade-level-domain.R,
 .grade-level-domain.G,
-.grade-level-domain.S,
- {
+.grade-level-domain.S {
   background-color: #C2C7CB;
 }
 
-.F:hover {
+.F:hover,
+.grade-level-domain.F.active {
   background-color: #D155FF;
 }
 
-.R:hover {
+.R:hover,
+.grade-level-domain.R.active {
   background-color: #D155FF;
 }
 
-.N:hover {
+.N:hover,
+.grade-level-domain.N.active {
   background-color: #40ECB2;
 }
 
-.E:hover {
+.E:hover,
+.grade-level-domain.E.active {
   background-color: #5C40EC;
 }
 
-.G:hover {
+.G:hover,
+.grade-level-domain.G.active {
   background-color: #D0EC40;
 }
 
-.S:hover {
+.S:hover,
+.grade-level-domain.S.active {
   background-color: #FF7C55;
+}
+
+.grade-level-domain.active {
+  text-shadow: none;
 }
 
 .grade-level-domain {
