@@ -5,6 +5,8 @@
   align-items: center;
   background-color: #EAF2F8;
   border: 1px solid #EAF2F8;
+  box-shadow: 5px 5px 12px #bdbdbd;
+  z-index: 100;
   padding: 0 2%; }
 
 .filter-btn {

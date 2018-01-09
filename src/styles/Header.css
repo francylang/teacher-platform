@@ -4,13 +4,30 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 2%;
-  box-shadow: 0 8px 6px -6px #999; }
+  padding: 20px 2%;
+  box-shadow: 5px 5px 12px #bdbdbd;
+  text-decoration: none; }
+
+.header-link {
+  text-decoration: none;
+  margin-top: 6px; }
+
+.header-image {
+  background-image: url("../assets/chat.svg");
+  background-repeat: no-repeat;
+  height: 70px;
+  width: 70px;
+  margin-left: 20px; }
+
+.header-icon-container {
+  display: flex; }
 
 .app-name {
   color: #2B2B2B;
   margin: 0;
-  font-family: 'Ubuntu Mono'; }
+  font-size: 45px;
+  font-family: 'Ubuntu Mono';
+  text-decoration: none; }
 
 .sign-out {
   color: #2B2B2B;

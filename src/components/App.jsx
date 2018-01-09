@@ -4,7 +4,7 @@ import Nav from './Nav';
 import CardContainer from './CardContainer';
 import DiscussionForm from './DiscussionForm';
 import FilterForm from './FilterForm';
-// import { Redirect } from 'react-router';
+import { Redirect } from 'react-router';
 // import { PROD_URL } from '../url.js';
 
 class App extends Component {
@@ -104,7 +104,7 @@ class App extends Component {
     const { showingForm, showingStandards, filteredDiscussions } = this.state;
 
     if (this.props.signedInStatus === false) {
-      // return <Redirect to='/login'/>;
+      return <Redirect to='/login'/>;
     }
 
     const showForm = showingForm
