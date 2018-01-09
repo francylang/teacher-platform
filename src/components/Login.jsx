@@ -79,8 +79,8 @@ class Login extends Component {
 };
 
 Login.propTypes = {
-  history: PropTypes.object,
-  isAuthenticated: PropTypes.func
+  setCurrentUser: PropTypes.func,
+  signIn: PropTypes.func,
 };
 
 export default Login;

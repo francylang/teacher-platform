@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import SearchContainer from '../containers/SearchContainer';
 // import { Link } from 'react-router-dom';
 
@@ -8,7 +9,8 @@ const Nav = ({
   renderFilteredDiscussions,
   renderStandards,
   renderForm,
-  filteredDiscussions }) => {
+  filteredDiscussions,
+  fetchDiscussions }) => {
   return (
     <div className="nav">
       <SearchContainer
@@ -35,7 +37,10 @@ const Nav = ({
         </h4>
       </button>
       <button
-        onClick={() => renderDiscussions()}
+        onClick={() => {
+          renderDiscussions();
+          fetchDiscussions();
+        }}
         className="toggle-discussions-btn"
         value="form"
       >
@@ -45,6 +50,17 @@ const Nav = ({
       </button>
     </div>
   );
+};
+
+Nav.propTypes = {
+  filteredDiscussions: PropTypes.array,
+  fetchDiscussions: PropTypes.func,
+  handleSearch: PropTypes.func,
+  renderForm: PropTypes.func,
+  renderStandards: PropTypes.func,
+  renderDiscussions: PropTypes.func,
+  renderFilteredDiscussions: PropTypes.func,
+  signedInStatus: PropTypes.func,
 };
 
 export default Nav;

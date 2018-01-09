@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Comment extends Component {
   render() {
@@ -8,16 +9,18 @@ class Comment extends Component {
       return (
         <article className="comment-section">
           <p className="comment">{comment}</p>
-          {/* <ul>
-            <li>From: Amy</li>
-            <li>Date: December 28, 2018</li>
-          </ul> */}
         </article>
       );
     } else {
       return null;
     }
   };
+};
+
+Comment.propTypes = {
+  commentId: PropTypes.number,
+  discussionId: PropTypes.number,
+  comment: PropTypes.string,
 };
 
 export default Comment;

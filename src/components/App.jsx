@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import Nav from './Nav';
 import CardContainer from './CardContainer';
 import DiscussionForm from './DiscussionForm';
@@ -22,6 +22,7 @@ class App extends Component {
     this.renderStandards = this.renderStandards.bind(this);
     this.renderFilteredDiscussions = this.renderFilteredDiscussions.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
+    this.fetchDiscussions = this.fetchDiscussions.bind(this);
   }
 
   componentDidMount() {
@@ -108,13 +109,12 @@ class App extends Component {
     }
 
     const showForm = showingForm
-      ? <DiscussionForm rendered={showingForm}/> : null;
+      ? <DiscussionForm /> : null;
 
     const showStandards = showingStandards
       ? <FilterForm
         renderDiscussions={this.renderDiscussions}
         renderFilteredDiscussions={this.renderFilteredDiscussions}
-        rendered={showingStandards}
         discussions={this.props.discussions}
         filteredDiscussions={filteredDiscussions}
       /> : null;
@@ -123,13 +123,13 @@ class App extends Component {
       <section className="app">
         <article className="main">
           <Nav
-            discussions={this.props.discussions}
             filteredDiscussions={filteredDiscussions}
             renderDiscussions={this.renderDiscussions}
             renderForm={this.renderForm}
             renderStandards={this.renderStandards}
             renderFilteredDiscussions={this.renderFilteredDiscussions}
             handleSearch={this.handleSearch}
+            fetchDiscussions={this.fetchDiscussions}
           />
           <section className="bottom-main">
             { this.renderCardContainer() }
@@ -143,7 +143,13 @@ class App extends Component {
 }
 
 App.propTypes = {
-
+  discussions: PropTypes.array,
+  signedInStatus: PropTypes.bool,
+  signOut: PropTypes.func,
+  setCurrentUser: PropTypes.func,
+  updateDiscussions: PropTypes.func,
+  retrieveComments: PropTypes.func,
+  retrieveDiscussions: PropTypes.func,
 };
 
 export default App;

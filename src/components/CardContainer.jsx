@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import DiscussionCard from './DiscussionCard';
 
 const CardContainer = ({ comments, filteredDiscussions }) => {
@@ -35,6 +36,12 @@ const CardContainer = ({ comments, filteredDiscussions }) => {
       {buildDiscussionCard()}
     </div>
   );
+};
+
+CardContainer.propTypes = {
+  discussions: PropTypes.array,
+  filteredDiscussions: PropTypes.array,
+  comments: PropTypes.array,
 };
 
 export default CardContainer;
