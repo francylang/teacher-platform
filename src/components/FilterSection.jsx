@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { PROD_URL } from '../url.js';
+import { PROD_URL } from '../url.js';
 
 const FilterSection = ({ renderFilteredDiscussions, renderDiscussions, domain }) => {
   const fetchDiscussions = standard => {
-    fetch(`http://localhost:3000/api/v1/discussions`)
+    fetch(`${PROD_URL}/api/v1/discussions`)
       .then((response) => response.json())
       .then((rawDiscussions) => findMatchingDiscussions(rawDiscussions, standard))
       .then((matchingDiscussions) => {
@@ -35,6 +35,7 @@ const FilterSection = ({ renderFilteredDiscussions, renderDiscussions, domain })
           <button
             className="standard-link"
             onClick={() => getFilteredDiscussions(standard)}
+            key={standard}
           >
             <p className={`standard-text ${standard[2]}-link`}>
               {standard}
@@ -43,7 +44,10 @@ const FilterSection = ({ renderFilteredDiscussions, renderDiscussions, domain })
         );
       } else {
         return (
-          <section className="domain-label-container">
+          <section
+            className="domain-label-container"
+            key={standard}
+          >
             <h5 className="domain-label">
               {standard}
             </h5>
