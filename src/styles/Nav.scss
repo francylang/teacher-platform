@@ -18,9 +18,16 @@
   cursor: pointer;
 }
 
-.standard-option {
-  padding-right: 10px;
+.standard-option,
+.new-discussion-option {
   color: #2B2B2B;
+  border-bottom: #EAF2F8 2px solid;
+}
+
+.standard-option:hover,
+.new-discussion-option:hover {
+  border-bottom: #2B2B2B 2px solid;
+  transition: all 0.5s;
 }
 
 .toggle-discussion-form-btn,
