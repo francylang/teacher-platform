@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Search extends Component {
   constructor() {
@@ -36,7 +37,6 @@ class Search extends Component {
   };
 
   render() {
-    const { renderDiscussions, renderFilteredDiscussions, handleSearch } = this.props;
     return (
       <aside className="search-section">
         <label htmlFor="search-input"></label>
@@ -50,6 +50,13 @@ class Search extends Component {
       </aside>
     );
   };
+};
+
+Search.propTypes = {
+  discussions: PropTypes.array,
+  renderDiscussions: PropTypes.func,
+  renderFilteredDiscussions: PropTypes.func,
+  handleSearch: PropTypes.func,
 };
 
 export default Search;
