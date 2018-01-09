@@ -1,5 +1,5 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const Domain = ({ domain, selectDomain, domainSelected, color }) => {
   return (
@@ -12,6 +12,13 @@ const Domain = ({ domain, selectDomain, domainSelected, color }) => {
       </button>
     </div>
   );
+};
+
+Domain.propTypes = {
+  domain: PropTypes.string,
+  selectDomain: PropTypes.func,
+  domainSelected: PropTypes.string,
+  color: PropTypes.string
 };
 
 export default Domain;

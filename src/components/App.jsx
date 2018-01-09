@@ -109,13 +109,12 @@ class App extends Component {
     }
 
     const showForm = showingForm
-      ? <DiscussionForm rendered={showingForm}/> : null;
+      ? <DiscussionForm /> : null;
 
     const showStandards = showingStandards
       ? <FilterForm
         renderDiscussions={this.renderDiscussions}
         renderFilteredDiscussions={this.renderFilteredDiscussions}
-        rendered={showingStandards}
         discussions={this.props.discussions}
         filteredDiscussions={filteredDiscussions}
       /> : null;

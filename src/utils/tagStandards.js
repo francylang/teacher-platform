@@ -132,7 +132,7 @@ export const domainsByGrade = {
 
 export const domains67 = [
   'Ratios & Proportions',
-  'The Number System',
+  'Number System',
   'Expressions & Equations',
   'Geometry',
   'Statistics & Probability'
@@ -140,7 +140,7 @@ export const domains67 = [
 
 export const domains8 = [
   'Functions',
-  'The Number System',
+  'Number System',
   'Expressions & Equations',
   'Geometry',
   'Statistics & Probability'
