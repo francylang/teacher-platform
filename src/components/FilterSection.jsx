@@ -8,20 +8,10 @@ const FilterSection = ({ renderFilteredDiscussions, renderDiscussions, domain })
       .then((response) => response.json())
       .then((rawDiscussions) => findMatchingDiscussions(rawDiscussions, standard))
       .then((matchingDiscussions) => {
-        renderNoDiscussions(matchingDiscussions);
         renderDiscussions();
         renderFilteredDiscussions(matchingDiscussions);
       })
       .catch((error) => console.error({ error }));
-  };
-
-  const renderNoDiscussions = (matchingDiscussions) => {
-    if (matchingDiscussions.length === 0) {
-      console.log('no discussions!');
-      return (
-        <h3>There are no discussions for this standard</h3>
-      );
-    };
   };
 
   const findMatchingDiscussions = (rawDiscussions, standard) => {
