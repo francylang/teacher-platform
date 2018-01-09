@@ -7,5 +7,5 @@ export const postComment = (body, discussionId) => {
     body: JSON.stringify({ body })
   })
     .then(response => response.json)
-    .catch(error => console.error(error))
+    .catch(error => console.error(error));
 };
