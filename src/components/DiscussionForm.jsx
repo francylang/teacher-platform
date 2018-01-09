@@ -3,6 +3,8 @@ import Domain from './Domain';
 import { colorsByDomain } from '../assets/colors';
 import { postNewDiscussion } from '../utils/postDiscussion';
 import { domainsByGrade, domains67, domains8 } from '../utils/tagStandards';
+// import { Link } from 'react-router-dom';
+// import { Redirect } from 'react-router';
 
 class DiscussionForm extends Component {
   constructor() {
@@ -37,6 +39,7 @@ class DiscussionForm extends Component {
     event.preventDefault();
     postNewDiscussion(title, body, standardSelected);
     this.clearInputs();
+    this.props.history.push('/');
   }
 
   selectGrade(event) {

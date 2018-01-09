@@ -37,7 +37,8 @@ const Nav = ({
           New Discussion
         </h4>
       </Link>
-      <button
+      <Link
+        to='/'
         onClick={() => {
           renderDiscussions();
           fetchDiscussions();
@@ -45,10 +46,10 @@ const Nav = ({
         className="toggle-discussions-btn"
         value="form"
       >
-        <h4 to='/discussions' className="new-discussion-option">
+        <h4 className="new-discussion-option">
           All Discussions
         </h4>
-      </button>
+      </Link>
     </div>
   );
 };
