@@ -22,19 +22,16 @@ const FilterSection = ({ renderFilteredDiscussions, renderDiscussions, domain })
     });
   };
 
-  const getFilteredDiscussions = standard => {
-    fetchDiscussions(standard);
-  };
-
   const buildDomainList = () => {
-    return domain.map(standard => {
+    return domain.map((standard, index) => {
       let firstChar = standard.charAt(0);
 
       if (firstChar === '6' || firstChar === '7' || firstChar === '8') {
         return (
           <button
+            key={index}
             className="standard-link"
-            onClick={() => getFilteredDiscussions(standard)}
+            onClick={() => fetchDiscussions(standard)}
             key={standard}
           >
             <p className={`standard-text ${standard[2]}-link`}>
