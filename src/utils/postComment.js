@@ -1,4 +1,4 @@
-import { PROD_URL } from '../url.js';
+import { PROD_URL } from '../utils/url.js';
 
 export const postComment = (body, discussionId) => {
   fetch(`${PROD_URL}/${discussionId}/comments`, {
