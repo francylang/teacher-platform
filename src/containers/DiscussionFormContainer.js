@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
-import CardContainer from '../components/CardContainer.jsx';
+import DiscussionForm from '../components/DiscussionForm.jsx';
 
 const mapStateToProps = store => ({
-  discussions: store.discussions,
-  filteredDiscussions: store.filteredDiscussions,
-  comments: store.comments,
+  // discussions: store.discussions,
+  // filteredDiscussions: store.filteredDiscussions,
+  // comments: store.comments,
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -13,4 +13,4 @@ const mapDispatchToProps = dispatch => ({
   // }
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(CardContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(DiscussionForm);

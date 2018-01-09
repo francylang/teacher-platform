@@ -20,11 +20,12 @@ class FilterForm extends Component {
       return standardsArray.map((domainArray, i) => {
         return (
           <FilterSection
+            key={domainArray[i]}
             renderDiscussions={renderDiscussions}
             renderFilteredDiscussions={renderFilteredDiscussions}
             domain={domainArray}
             discussions={discussions}
-            key={domainArray[i]}/>
+          />
         );
       });
     }
