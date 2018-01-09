@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Domain from './Domain';
-import { colors, colorsByDomain } from '../assets/colors';
+import { colorsByDomain } from '../assets/colors';
 import { postNewDiscussion } from '../utils/postDiscussion';
 import { domainsByGrade, domains67, domains8 } from '../utils/tagStandards';
 
