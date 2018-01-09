@@ -42,7 +42,7 @@ describe('<CardContainer />', () => {
     );
   });
 
-  it.only('should exist', () => {
+  it('should exist', () => {
     expect(wrapper).toBeDefined();
   });
 
@@ -53,7 +53,7 @@ describe('<CardContainer />', () => {
   });
 
   it('should render a card section title', () => {
-    const title = wrapper.find('.current-feed-title');
+    const title = wrapper.find('.discussions-heading');
 
     expect(title.length).toEqual(1);
   });
