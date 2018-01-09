@@ -5,7 +5,7 @@ import CardContainer from './CardContainer';
 import DiscussionForm from './DiscussionForm';
 import FilterForm from './FilterForm';
 import { Redirect } from 'react-router';
-import { PROD_URL } from '../url.js';
+import { PROD_URL } from '../utils/url.js';
 
 class App extends Component {
   constructor() {

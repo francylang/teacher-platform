@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { PROD_URL } from '../url.js';
+import { PROD_URL } from '../utils/url.js';
 
 const FilterSection = ({ renderFilteredDiscussions, renderDiscussions, domain }) => {
   const fetchDiscussions = standard => {
