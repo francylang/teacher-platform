@@ -18,16 +18,24 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Link
-          replace={false}
-          to="/"
+        <div
+          className="header-icon-container"
 >
-          <h1
-                    className="app-name"
+          <Link
+                    className="header-link"
+                    replace={false}
+                    to="/"
           >
-                    Teachzilla
-          </h1>
-</Link>,
+                    <h1
+                              className="app-name"
+                    >
+                              Edvice
+                    </h1>
+          </Link>
+          <div
+                    className="header-image"
+          />
+</div>,
         undefined,
       ],
       "className": "header",
@@ -37,30 +45,70 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
+        "nodeType": "host",
         "props": Object {
-          "children": <h1
-            className="app-name"
+          "children": Array [
+            <Link
+              className="header-link"
+              replace={false}
+              to="/"
 >
-            Teachzilla
-</h1>,
-          "replace": false,
-          "to": "/",
+              <h1
+                            className="app-name"
+              >
+                            Edvice
+              </h1>
+</Link>,
+            <div
+              className="header-image"
+/>,
+          ],
+          "className": "header-icon-container",
         },
         "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Teachzilla",
-            "className": "app-name",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <h1
+                className="app-name"
+>
+                Edvice
+</h1>,
+              "className": "header-link",
+              "replace": false,
+              "to": "/",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Edvice",
+                "className": "app-name",
+              },
+              "ref": null,
+              "rendered": "Edvice",
+              "type": "h1",
+            },
+            "type": [Function],
           },
-          "ref": null,
-          "rendered": "Teachzilla",
-          "type": "h1",
-        },
-        "type": [Function],
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "header-image",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+        ],
+        "type": "div",
       },
       undefined,
     ],
@@ -73,16 +121,24 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Link
-            replace={false}
-            to="/"
+          <div
+            className="header-icon-container"
 >
-            <h1
-                        className="app-name"
+            <Link
+                        className="header-link"
+                        replace={false}
+                        to="/"
             >
-                        Teachzilla
-            </h1>
-</Link>,
+                        <h1
+                                    className="app-name"
+                        >
+                                    Edvice
+                        </h1>
+            </Link>
+            <div
+                        className="header-image"
+            />
+</div>,
           undefined,
         ],
         "className": "header",
@@ -92,30 +148,70 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "host",
           "props": Object {
-            "children": <h1
-              className="app-name"
+            "children": Array [
+              <Link
+                className="header-link"
+                replace={false}
+                to="/"
 >
-              Teachzilla
-</h1>,
-            "replace": false,
-            "to": "/",
+                <h1
+                                className="app-name"
+                >
+                                Edvice
+                </h1>
+</Link>,
+              <div
+                className="header-image"
+/>,
+            ],
+            "className": "header-icon-container",
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Teachzilla",
-              "className": "app-name",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <h1
+                  className="app-name"
+>
+                  Edvice
+</h1>,
+                "className": "header-link",
+                "replace": false,
+                "to": "/",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Edvice",
+                  "className": "app-name",
+                },
+                "ref": null,
+                "rendered": "Edvice",
+                "type": "h1",
+              },
+              "type": [Function],
             },
-            "ref": null,
-            "rendered": "Teachzilla",
-            "type": "h1",
-          },
-          "type": [Function],
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "header-image",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+          ],
+          "type": "div",
         },
         undefined,
       ],
