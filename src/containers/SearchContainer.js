@@ -1,16 +1,16 @@
 import { connect } from 'react-redux';
 import thunk from 'redux-thunk';
 import Search from '../components/Search.jsx';
-import { renderedFiltered } from '../actions/actions.js';
+import { updateDiscussions } from '../actions/actions.js';
 
 const mapStateToProps = store => ({
   discussions: store.discussions,
-  filteredDiscussions: store.filteredDiscussions,
+  filteredDiscussions: store.discussions,
 });
 
 const mapDispatchToProps = dispatch => ({
-  renderedFiltered: (discussions, searchTerm) => {
-    dispatch(renderedFiltered(discussions, searchTerm));
+  updateDiscussions: updatedDiscussions => {
+    dispatch(updateDiscussions(updatedDiscussions));
   }
 });
 

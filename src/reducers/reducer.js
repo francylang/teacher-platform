@@ -44,3 +44,13 @@ export const comments = (state = [], action) => {
       return state;
   }
 };
+
+export const filteredDiscussions = (state = [], action) => {
+  switch (action.type) {
+    case 'UPDATE_FILTER_DISCUSSIONS':
+    // how do we get this case to change the filteredDiscussions prop?!?!
+      return action.updatedDiscussions;
+    default:
+      return state;
+  }
+};

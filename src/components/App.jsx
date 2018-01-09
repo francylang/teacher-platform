@@ -51,10 +51,9 @@ class App extends Component {
     });
   }
 
-  renderFilteredDiscussions(discussions) {
-    this.props.renderedFiltered(discussions)
-    // this.setState({ discussions });
-    // we need to revisit
+  renderFilteredDiscussions(filteredDiscussions) {
+  // change filteredDiscussions in STORE! HOW?
+  // store.filteredDiscussions = filteredDiscussions
   }
 
   handleSearch() {

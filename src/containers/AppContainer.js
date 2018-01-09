@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import thunk from 'redux-thunk';
 import App from '../components/App.jsx';
-import { signOut, setCurrentUser, fetchDiscussions, fetchComments, renderedFiltered } from '../actions/actions.js';
+import { signOut, setCurrentUser, fetchDiscussions, fetchComments, renderedFiltered, updateDiscussions } from '../actions/actions.js';
 
 const mapStateToProps = store => ({
   currentUser: store.currentUser,
@@ -24,8 +24,8 @@ const mapDispatchToProps = dispatch => ({
   retrieveDiscussions: () => {
     dispatch(fetchDiscussions());
   },
-  renderedFiltered: (discussions, searchTerm) => {
-    dispatch(renderedFiltered(discussions, searchTerm));
+  updateDiscussions: updatedDiscussions => {
+    dispatch(updateDiscussions(updatedDiscussions));
   }
 });
 

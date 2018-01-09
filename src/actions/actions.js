@@ -23,23 +23,10 @@ export const fetchCommentsSuccess = comments => ({
   comments,
 });
 
-export const renderedFiltered = filteredDiscussions => ({
-  type: 'RENDER_DISCUSSIONS',
-  filteredDiscussions,
+export const updateDiscussions = updatedDiscussions => ({
+  type: 'UPDATE_FILTER_DISCUSSIONS',
+  updatedDiscussions,
 });
-
-export const filterDiscussions = (discussions, searchTerm) => {
-  const filtered = discussions.filter(discussion => {
-    let title = discussion.title.toLowerCase();
-    let body = discussion.body.toLowerCase();
-    let filteredDiscussions = [];
-
-    if (title.includes(searchTerm) || body.includes(searchTerm)) {
-      return filteredDiscussions.push(discussion);
-    }
-    renderedFiltered(filteredDiscussions);
-  });
-};
 
 const cleanDiscussions = (rawDiscussions) => {
   return rawDiscussions.map(discussion => {
@@ -68,7 +55,7 @@ const cleanComments = (rawComments) => {
     return {
       id: comment.id,
       comment: comment.body,
-      discussionId: comment.discussionId
+      discussionId: comment.discussionId,
     };
   });
 };
