@@ -61,4 +61,4 @@ describe('<FilterForm />', () => {
   it('should match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
-})
+});

@@ -1,3 +1,610 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<FilterSection /> should match snapshot 1`] = `undefined`;
+exports[`<FilterSection /> should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <FilterSection
+    discussions={
+        Array [
+            Object {
+              "discussions": Array [
+                Object {
+                  "body": "Didn't kids get this in Grade 5? I'm confused about why it's in the standards.",
+                  "tagTitle": "6.RP.A.1",
+                  "title": "Unit Rate",
+                },
+              ],
+              "id": 1,
+              "tagTitle": "6.RP.A.1",
+            },
+          ]
+    }
+    domain={
+        Array [
+            "Ratios & Proportions",
+            "6.RP.A.1",
+            "6.RP.A.2",
+            "6.RP.A.3",
+            "6.RP.A.3.A",
+            "6.RP.A.3.B",
+            "6.RP.A.3.C",
+          ]
+    }
+    renderDiscussions={[Function]}
+    renderFilteredDiscussions={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <section
+          className="domain-label-container"
+>
+          <h5
+                    className="domain-label"
+          >
+                    Ratios & Proportions
+          </h5>
+</section>,
+        <button
+          className="standard-link"
+          onClick={[Function]}
+>
+          <p
+                    className="standard-text R-link"
+          >
+                    6.RP.A.1
+          </p>
+</button>,
+        <button
+          className="standard-link"
+          onClick={[Function]}
+>
+          <p
+                    className="standard-text R-link"
+          >
+                    6.RP.A.2
+          </p>
+</button>,
+        <button
+          className="standard-link"
+          onClick={[Function]}
+>
+          <p
+                    className="standard-text R-link"
+          >
+                    6.RP.A.3
+          </p>
+</button>,
+        <button
+          className="standard-link"
+          onClick={[Function]}
+>
+          <p
+                    className="standard-text R-link"
+          >
+                    6.RP.A.3.A
+          </p>
+</button>,
+        <button
+          className="standard-link"
+          onClick={[Function]}
+>
+          <p
+                    className="standard-text R-link"
+          >
+                    6.RP.A.3.B
+          </p>
+</button>,
+        <button
+          className="standard-link"
+          onClick={[Function]}
+>
+          <p
+                    className="standard-text R-link"
+          >
+                    6.RP.A.3.C
+          </p>
+</button>,
+      ],
+      "className": "domain-section",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <h5
+            className="domain-label"
+>
+            Ratios & Proportions
+</h5>,
+          "className": "domain-label-container",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Ratios & Proportions",
+            "className": "domain-label",
+          },
+          "ref": null,
+          "rendered": "Ratios & Proportions",
+          "type": "h5",
+        },
+        "type": "section",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <p
+            className="standard-text R-link"
+>
+            6.RP.A.1
+</p>,
+          "className": "standard-link",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "6.RP.A.1",
+            "className": "standard-text R-link",
+          },
+          "ref": null,
+          "rendered": "6.RP.A.1",
+          "type": "p",
+        },
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <p
+            className="standard-text R-link"
+>
+            6.RP.A.2
+</p>,
+          "className": "standard-link",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "6.RP.A.2",
+            "className": "standard-text R-link",
+          },
+          "ref": null,
+          "rendered": "6.RP.A.2",
+          "type": "p",
+        },
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <p
+            className="standard-text R-link"
+>
+            6.RP.A.3
+</p>,
+          "className": "standard-link",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "6.RP.A.3",
+            "className": "standard-text R-link",
+          },
+          "ref": null,
+          "rendered": "6.RP.A.3",
+          "type": "p",
+        },
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <p
+            className="standard-text R-link"
+>
+            6.RP.A.3.A
+</p>,
+          "className": "standard-link",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "6.RP.A.3.A",
+            "className": "standard-text R-link",
+          },
+          "ref": null,
+          "rendered": "6.RP.A.3.A",
+          "type": "p",
+        },
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <p
+            className="standard-text R-link"
+>
+            6.RP.A.3.B
+</p>,
+          "className": "standard-link",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "6.RP.A.3.B",
+            "className": "standard-text R-link",
+          },
+          "ref": null,
+          "rendered": "6.RP.A.3.B",
+          "type": "p",
+        },
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <p
+            className="standard-text R-link"
+>
+            6.RP.A.3.C
+</p>,
+          "className": "standard-link",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "6.RP.A.3.C",
+            "className": "standard-text R-link",
+          },
+          "ref": null,
+          "rendered": "6.RP.A.3.C",
+          "type": "p",
+        },
+        "type": "button",
+      },
+    ],
+    "type": "aside",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <section
+            className="domain-label-container"
+>
+            <h5
+                        className="domain-label"
+            >
+                        Ratios & Proportions
+            </h5>
+</section>,
+          <button
+            className="standard-link"
+            onClick={[Function]}
+>
+            <p
+                        className="standard-text R-link"
+            >
+                        6.RP.A.1
+            </p>
+</button>,
+          <button
+            className="standard-link"
+            onClick={[Function]}
+>
+            <p
+                        className="standard-text R-link"
+            >
+                        6.RP.A.2
+            </p>
+</button>,
+          <button
+            className="standard-link"
+            onClick={[Function]}
+>
+            <p
+                        className="standard-text R-link"
+            >
+                        6.RP.A.3
+            </p>
+</button>,
+          <button
+            className="standard-link"
+            onClick={[Function]}
+>
+            <p
+                        className="standard-text R-link"
+            >
+                        6.RP.A.3.A
+            </p>
+</button>,
+          <button
+            className="standard-link"
+            onClick={[Function]}
+>
+            <p
+                        className="standard-text R-link"
+            >
+                        6.RP.A.3.B
+            </p>
+</button>,
+          <button
+            className="standard-link"
+            onClick={[Function]}
+>
+            <p
+                        className="standard-text R-link"
+            >
+                        6.RP.A.3.C
+            </p>
+</button>,
+        ],
+        "className": "domain-section",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <h5
+              className="domain-label"
+>
+              Ratios & Proportions
+</h5>,
+            "className": "domain-label-container",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Ratios & Proportions",
+              "className": "domain-label",
+            },
+            "ref": null,
+            "rendered": "Ratios & Proportions",
+            "type": "h5",
+          },
+          "type": "section",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <p
+              className="standard-text R-link"
+>
+              6.RP.A.1
+</p>,
+            "className": "standard-link",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "6.RP.A.1",
+              "className": "standard-text R-link",
+            },
+            "ref": null,
+            "rendered": "6.RP.A.1",
+            "type": "p",
+          },
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <p
+              className="standard-text R-link"
+>
+              6.RP.A.2
+</p>,
+            "className": "standard-link",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "6.RP.A.2",
+              "className": "standard-text R-link",
+            },
+            "ref": null,
+            "rendered": "6.RP.A.2",
+            "type": "p",
+          },
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <p
+              className="standard-text R-link"
+>
+              6.RP.A.3
+</p>,
+            "className": "standard-link",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "6.RP.A.3",
+              "className": "standard-text R-link",
+            },
+            "ref": null,
+            "rendered": "6.RP.A.3",
+            "type": "p",
+          },
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <p
+              className="standard-text R-link"
+>
+              6.RP.A.3.A
+</p>,
+            "className": "standard-link",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "6.RP.A.3.A",
+              "className": "standard-text R-link",
+            },
+            "ref": null,
+            "rendered": "6.RP.A.3.A",
+            "type": "p",
+          },
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <p
+              className="standard-text R-link"
+>
+              6.RP.A.3.B
+</p>,
+            "className": "standard-link",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "6.RP.A.3.B",
+              "className": "standard-text R-link",
+            },
+            "ref": null,
+            "rendered": "6.RP.A.3.B",
+            "type": "p",
+          },
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <p
+              className="standard-text R-link"
+>
+              6.RP.A.3.C
+</p>,
+            "className": "standard-link",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "6.RP.A.3.C",
+              "className": "standard-text R-link",
+            },
+            "ref": null,
+            "rendered": "6.RP.A.3.C",
+            "type": "p",
+          },
+          "type": "button",
+        },
+      ],
+      "type": "aside",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

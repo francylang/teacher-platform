@@ -8,10 +8,6 @@ class Comment extends Component {
       return (
         <article className="comment-section">
           <p className="comment">{comment}</p>
-          {/* <ul>
-            <li>From: Amy</li>
-            <li>Date: December 28, 2018</li>
-          </ul> */}
         </article>
       );
     } else {

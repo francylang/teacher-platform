@@ -18,6 +18,12 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
+        <Connect(Search)
+          filteredDiscussions={undefined}
+          handleSearch={undefined}
+          renderDiscussions={undefined}
+          renderFilteredDiscussions={undefined}
+/>,
         <button
           className="filter-btn"
           onClick={[Function]}
@@ -55,6 +61,20 @@ ShallowWrapper {
     },
     "ref": null,
     "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "filteredDiscussions": undefined,
+          "handleSearch": undefined,
+          "renderDiscussions": undefined,
+          "renderFilteredDiscussions": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
       Object {
         "instance": null,
         "key": undefined,
@@ -151,6 +171,12 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          <Connect(Search)
+            filteredDiscussions={undefined}
+            handleSearch={undefined}
+            renderDiscussions={undefined}
+            renderFilteredDiscussions={undefined}
+/>,
           <button
             className="filter-btn"
             onClick={[Function]}
@@ -188,6 +214,20 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "filteredDiscussions": undefined,
+            "handleSearch": undefined,
+            "renderDiscussions": undefined,
+            "renderFilteredDiscussions": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
         Object {
           "instance": null,
           "key": undefined,
