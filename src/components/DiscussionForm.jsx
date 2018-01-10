@@ -13,7 +13,9 @@ class DiscussionForm extends Component {
       gradeSelected: '',
       domainSelected: '',
       standardSelected: '',
-      isActive: false
+      isActive: false,
+      isActiveDropDown: false
+
     };
     this.selectDomain = this.selectDomain.bind(this);
   }
@@ -59,9 +61,9 @@ class DiscussionForm extends Component {
     });
   }
 
-  handleSelectStandard(event) {
+  handleSelectStandard(event, domain) {
     event.preventDefault();
-    this.setState({ standardSelected: event.target.value });
+    this.setState({ standardSelected: domain });
   }
 
   renderDropDown() {
@@ -72,9 +74,10 @@ class DiscussionForm extends Component {
       const mappedDomains = StandardsByDomain[standardAbbrev].map(domain => {
         return (
           <li
-            className={this.state.isActive ? "reveal-standards" : "standard"}
+            className={this.state.isActiveDropDown ? "reveal-standards" : "standard"}
             key={domain}
             value={domain}
+            onClick={(event) => this.handleSelectStandard(event, domain)}
           >
             {domain}
           </li>
@@ -83,8 +86,7 @@ class DiscussionForm extends Component {
       return (
         <ul
           className="drop-down-standards"
-          value={standardSelected}
-          onChange={this.handleSelectStandard.bind(this)}>
+          value={standardSelected}>
           <li className="select-standard" onClick={(event) => this.removeClass(event)}>Select a Standard</li>
           {mappedDomains}
         </ul>
@@ -93,11 +95,7 @@ class DiscussionForm extends Component {
   }
 
   removeClass(event) {
-    this.setState({ isActive: !this.state.isActive });
-  }
-
-  handleStandardSelect(event) {
-    this.setState({ standardSelected: event.target.value });
+    this.setState({ isActiveDropDown: !this.state.isActiveDropDown });
   }
 
   renderDomains() {
@@ -147,7 +145,6 @@ class DiscussionForm extends Component {
 
   render() {
     const { title, body, standardSelected } = this.state;
-
     return (
       <article className="discussion-form-section">
         <h3 className="form-directions">Start a discussion.</h3>

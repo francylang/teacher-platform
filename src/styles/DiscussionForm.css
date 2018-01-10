@@ -150,13 +150,14 @@ h3.form-directions {
 .reveal-standards {
   cursor: pointer;
   display: flex;
-  color: #fff;
-  border-top: 1px solid #62696D;
-  background-color: #C2C7CB;
+  color: #9A979D;
+  border-top: 1px solid #9A979D;
+  background-color: #fff;
   padding: 10px; }
 
 .reveal-standards:hover {
-  background-color: #B5B9BC; }
+  background-color: #B5B9BC;
+  color: #fff; }
 
 .select-standard {
   cursor: pointer;
