@@ -20,122 +20,122 @@ ShallowWrapper {
       "children": Array [
         <article
           className="grade-btn-container"
->
+        >
           <button
-                    className="grade-btn grade-selected"
-                    onClick={[Function]}
+            className="grade-btn grade-selected"
+            onClick={[Function]}
           >
-                    Grade 6
+            Grade 6
           </button>
           <button
-                    className="grade-btn"
-                    onClick={[Function]}
+            className="grade-btn"
+            onClick={[Function]}
           >
-                    Grade 7
+            Grade 7
           </button>
           <button
-                    className="grade-btn"
-                    onClick={[Function]}
+            className="grade-btn"
+            onClick={[Function]}
           >
-                    Grade 8
+            Grade 8
           </button>
-</article>,
+        </article>,
         <section
           className="options-container"
->
+        >
           <article
-                    className="options"
+            className="options"
           >
-                    <FilterSection
-                              discussions={undefined}
-                              domain={
-                                        Array [
-                                                  "Ratios & Proportions",
-                                                  "6.RP.A.1",
-                                                  "6.RP.A.2",
-                                                  "6.RP.A.3",
-                                                  "6.RP.A.3.A",
-                                                  "6.RP.A.3.B",
-                                                  "6.RP.A.3.C",
-                                                ]
-                              }
-                              renderDiscussions={undefined}
-                              renderFilteredDiscussions={undefined}
-                    />
-                    <FilterSection
-                              discussions={undefined}
-                              domain={
-                                        Array [
-                                                  "The Number System",
-                                                  "6.NS.A.1",
-                                                  "6.NS.B.2",
-                                                  "6.NS.B.3",
-                                                  "6.NS.B.4",
-                                                  "6.NS.C.5",
-                                                  "6.NS.C.6",
-                                                  "6.NS.C.7",
-                                                  "6.NS.C.8",
-                                                ]
-                              }
-                              renderDiscussions={undefined}
-                              renderFilteredDiscussions={undefined}
-                    />
-                    <FilterSection
-                              discussions={undefined}
-                              domain={
-                                        Array [
-                                                  "Expressions & Equations",
-                                                  "6.EE.A.1",
-                                                  "6.EE.A.2",
-                                                  "6.EE.A.3",
-                                                  "6.EE.A.4",
-                                                  "6.EE.B.5",
-                                                  "6.EE.B.6",
-                                                  "6.EE.B.7",
-                                                  "6.EE.B.8",
-                                                  "6.EE.C.9",
-                                                ]
-                              }
-                              renderDiscussions={undefined}
-                              renderFilteredDiscussions={undefined}
-                    />
-                    <FilterSection
-                              discussions={undefined}
-                              domain={
-                                        Array [
-                                                  "Geometry & Measurement",
-                                                  "6.G.A.1",
-                                                  "6.G.A.2",
-                                                  "6.G.A.3",
-                                                  "6.G.A.4",
-                                                ]
-                              }
-                              renderDiscussions={undefined}
-                              renderFilteredDiscussions={undefined}
-                    />
-                    <FilterSection
-                              discussions={undefined}
-                              domain={
-                                        Array [
-                                                  "Statistics & Probability",
-                                                  "6.SP.A.1",
-                                                  "6.SP.A.2",
-                                                  "6.SP.A.3",
-                                                  "6.SP.A.4",
-                                                  "6.SP.B.5",
-                                                ]
-                              }
-                              renderDiscussions={undefined}
-                              renderFilteredDiscussions={undefined}
-                    />
+            <FilterSection
+              discussions={undefined}
+              domain={
+                Array [
+                  "Ratios & Proportions",
+                  "6.RP.A.1",
+                  "6.RP.A.2",
+                  "6.RP.A.3",
+                  "6.RP.A.3.A",
+                  "6.RP.A.3.B",
+                  "6.RP.A.3.C",
+                ]
+              }
+              renderDiscussions={undefined}
+              renderFilteredDiscussions={undefined}
+            />
+            <FilterSection
+              discussions={undefined}
+              domain={
+                Array [
+                  "The Number System",
+                  "6.NS.A.1",
+                  "6.NS.B.2",
+                  "6.NS.B.3",
+                  "6.NS.B.4",
+                  "6.NS.C.5",
+                  "6.NS.C.6",
+                  "6.NS.C.7",
+                  "6.NS.C.8",
+                ]
+              }
+              renderDiscussions={undefined}
+              renderFilteredDiscussions={undefined}
+            />
+            <FilterSection
+              discussions={undefined}
+              domain={
+                Array [
+                  "Expressions & Equations",
+                  "6.EE.A.1",
+                  "6.EE.A.2",
+                  "6.EE.A.3",
+                  "6.EE.A.4",
+                  "6.EE.B.5",
+                  "6.EE.B.6",
+                  "6.EE.B.7",
+                  "6.EE.B.8",
+                  "6.EE.C.9",
+                ]
+              }
+              renderDiscussions={undefined}
+              renderFilteredDiscussions={undefined}
+            />
+            <FilterSection
+              discussions={undefined}
+              domain={
+                Array [
+                  "Geometry & Measurement",
+                  "6.G.A.1",
+                  "6.G.A.2",
+                  "6.G.A.3",
+                  "6.G.A.4",
+                ]
+              }
+              renderDiscussions={undefined}
+              renderFilteredDiscussions={undefined}
+            />
+            <FilterSection
+              discussions={undefined}
+              domain={
+                Array [
+                  "Statistics & Probability",
+                  "6.SP.A.1",
+                  "6.SP.A.2",
+                  "6.SP.A.3",
+                  "6.SP.A.4",
+                  "6.SP.B.5",
+                ]
+              }
+              renderDiscussions={undefined}
+              renderFilteredDiscussions={undefined}
+            />
           </article>
           <article
-                    className="options"
+            className="options"
           />
           <article
-                    className="options"
+            className="options"
           />
-</section>,
+        </section>,
       ],
       "className": "filter-section",
     },
@@ -150,21 +150,21 @@ ShallowWrapper {
             <button
               className="grade-btn grade-selected"
               onClick={[Function]}
->
+            >
               Grade 6
-</button>,
+            </button>,
             <button
               className="grade-btn"
               onClick={[Function]}
->
+            >
               Grade 7
-</button>,
+            </button>,
             <button
               className="grade-btn"
               onClick={[Function]}
->
+            >
               Grade 8
-</button>,
+            </button>,
           ],
           "className": "grade-btn-container",
         },
@@ -220,96 +220,96 @@ ShallowWrapper {
           "children": Array [
             <article
               className="options"
->
+            >
               <FilterSection
-                            discussions={undefined}
-                            domain={
-                                          Array [
-                                                        "Ratios & Proportions",
-                                                        "6.RP.A.1",
-                                                        "6.RP.A.2",
-                                                        "6.RP.A.3",
-                                                        "6.RP.A.3.A",
-                                                        "6.RP.A.3.B",
-                                                        "6.RP.A.3.C",
-                                                      ]
-                            }
-                            renderDiscussions={undefined}
-                            renderFilteredDiscussions={undefined}
+                discussions={undefined}
+                domain={
+                  Array [
+                    "Ratios & Proportions",
+                    "6.RP.A.1",
+                    "6.RP.A.2",
+                    "6.RP.A.3",
+                    "6.RP.A.3.A",
+                    "6.RP.A.3.B",
+                    "6.RP.A.3.C",
+                  ]
+                }
+                renderDiscussions={undefined}
+                renderFilteredDiscussions={undefined}
               />
               <FilterSection
-                            discussions={undefined}
-                            domain={
-                                          Array [
-                                                        "The Number System",
-                                                        "6.NS.A.1",
-                                                        "6.NS.B.2",
-                                                        "6.NS.B.3",
-                                                        "6.NS.B.4",
-                                                        "6.NS.C.5",
-                                                        "6.NS.C.6",
-                                                        "6.NS.C.7",
-                                                        "6.NS.C.8",
-                                                      ]
-                            }
-                            renderDiscussions={undefined}
-                            renderFilteredDiscussions={undefined}
+                discussions={undefined}
+                domain={
+                  Array [
+                    "The Number System",
+                    "6.NS.A.1",
+                    "6.NS.B.2",
+                    "6.NS.B.3",
+                    "6.NS.B.4",
+                    "6.NS.C.5",
+                    "6.NS.C.6",
+                    "6.NS.C.7",
+                    "6.NS.C.8",
+                  ]
+                }
+                renderDiscussions={undefined}
+                renderFilteredDiscussions={undefined}
               />
               <FilterSection
-                            discussions={undefined}
-                            domain={
-                                          Array [
-                                                        "Expressions & Equations",
-                                                        "6.EE.A.1",
-                                                        "6.EE.A.2",
-                                                        "6.EE.A.3",
-                                                        "6.EE.A.4",
-                                                        "6.EE.B.5",
-                                                        "6.EE.B.6",
-                                                        "6.EE.B.7",
-                                                        "6.EE.B.8",
-                                                        "6.EE.C.9",
-                                                      ]
-                            }
-                            renderDiscussions={undefined}
-                            renderFilteredDiscussions={undefined}
+                discussions={undefined}
+                domain={
+                  Array [
+                    "Expressions & Equations",
+                    "6.EE.A.1",
+                    "6.EE.A.2",
+                    "6.EE.A.3",
+                    "6.EE.A.4",
+                    "6.EE.B.5",
+                    "6.EE.B.6",
+                    "6.EE.B.7",
+                    "6.EE.B.8",
+                    "6.EE.C.9",
+                  ]
+                }
+                renderDiscussions={undefined}
+                renderFilteredDiscussions={undefined}
               />
               <FilterSection
-                            discussions={undefined}
-                            domain={
-                                          Array [
-                                                        "Geometry & Measurement",
-                                                        "6.G.A.1",
-                                                        "6.G.A.2",
-                                                        "6.G.A.3",
-                                                        "6.G.A.4",
-                                                      ]
-                            }
-                            renderDiscussions={undefined}
-                            renderFilteredDiscussions={undefined}
+                discussions={undefined}
+                domain={
+                  Array [
+                    "Geometry & Measurement",
+                    "6.G.A.1",
+                    "6.G.A.2",
+                    "6.G.A.3",
+                    "6.G.A.4",
+                  ]
+                }
+                renderDiscussions={undefined}
+                renderFilteredDiscussions={undefined}
               />
               <FilterSection
-                            discussions={undefined}
-                            domain={
-                                          Array [
-                                                        "Statistics & Probability",
-                                                        "6.SP.A.1",
-                                                        "6.SP.A.2",
-                                                        "6.SP.A.3",
-                                                        "6.SP.A.4",
-                                                        "6.SP.B.5",
-                                                      ]
-                            }
-                            renderDiscussions={undefined}
-                            renderFilteredDiscussions={undefined}
+                discussions={undefined}
+                domain={
+                  Array [
+                    "Statistics & Probability",
+                    "6.SP.A.1",
+                    "6.SP.A.2",
+                    "6.SP.A.3",
+                    "6.SP.A.4",
+                    "6.SP.B.5",
+                  ]
+                }
+                renderDiscussions={undefined}
+                renderFilteredDiscussions={undefined}
               />
-</article>,
+            </article>,
             <article
               className="options"
-/>,
+            />,
             <article
               className="options"
-/>,
+            />,
           ],
           "className": "options-container",
         },
@@ -324,85 +324,85 @@ ShallowWrapper {
                 <FilterSection
                   discussions={undefined}
                   domain={
-                                    Array [
-                                                      "Ratios & Proportions",
-                                                      "6.RP.A.1",
-                                                      "6.RP.A.2",
-                                                      "6.RP.A.3",
-                                                      "6.RP.A.3.A",
-                                                      "6.RP.A.3.B",
-                                                      "6.RP.A.3.C",
-                                                    ]
+                    Array [
+                      "Ratios & Proportions",
+                      "6.RP.A.1",
+                      "6.RP.A.2",
+                      "6.RP.A.3",
+                      "6.RP.A.3.A",
+                      "6.RP.A.3.B",
+                      "6.RP.A.3.C",
+                    ]
                   }
                   renderDiscussions={undefined}
                   renderFilteredDiscussions={undefined}
-/>,
+                />,
                 <FilterSection
                   discussions={undefined}
                   domain={
-                                    Array [
-                                                      "The Number System",
-                                                      "6.NS.A.1",
-                                                      "6.NS.B.2",
-                                                      "6.NS.B.3",
-                                                      "6.NS.B.4",
-                                                      "6.NS.C.5",
-                                                      "6.NS.C.6",
-                                                      "6.NS.C.7",
-                                                      "6.NS.C.8",
-                                                    ]
+                    Array [
+                      "The Number System",
+                      "6.NS.A.1",
+                      "6.NS.B.2",
+                      "6.NS.B.3",
+                      "6.NS.B.4",
+                      "6.NS.C.5",
+                      "6.NS.C.6",
+                      "6.NS.C.7",
+                      "6.NS.C.8",
+                    ]
                   }
                   renderDiscussions={undefined}
                   renderFilteredDiscussions={undefined}
-/>,
+                />,
                 <FilterSection
                   discussions={undefined}
                   domain={
-                                    Array [
-                                                      "Expressions & Equations",
-                                                      "6.EE.A.1",
-                                                      "6.EE.A.2",
-                                                      "6.EE.A.3",
-                                                      "6.EE.A.4",
-                                                      "6.EE.B.5",
-                                                      "6.EE.B.6",
-                                                      "6.EE.B.7",
-                                                      "6.EE.B.8",
-                                                      "6.EE.C.9",
-                                                    ]
+                    Array [
+                      "Expressions & Equations",
+                      "6.EE.A.1",
+                      "6.EE.A.2",
+                      "6.EE.A.3",
+                      "6.EE.A.4",
+                      "6.EE.B.5",
+                      "6.EE.B.6",
+                      "6.EE.B.7",
+                      "6.EE.B.8",
+                      "6.EE.C.9",
+                    ]
                   }
                   renderDiscussions={undefined}
                   renderFilteredDiscussions={undefined}
-/>,
+                />,
                 <FilterSection
                   discussions={undefined}
                   domain={
-                                    Array [
-                                                      "Geometry & Measurement",
-                                                      "6.G.A.1",
-                                                      "6.G.A.2",
-                                                      "6.G.A.3",
-                                                      "6.G.A.4",
-                                                    ]
+                    Array [
+                      "Geometry & Measurement",
+                      "6.G.A.1",
+                      "6.G.A.2",
+                      "6.G.A.3",
+                      "6.G.A.4",
+                    ]
                   }
                   renderDiscussions={undefined}
                   renderFilteredDiscussions={undefined}
-/>,
+                />,
                 <FilterSection
                   discussions={undefined}
                   domain={
-                                    Array [
-                                                      "Statistics & Probability",
-                                                      "6.SP.A.1",
-                                                      "6.SP.A.2",
-                                                      "6.SP.A.3",
-                                                      "6.SP.A.4",
-                                                      "6.SP.B.5",
-                                                    ]
+                    Array [
+                      "Statistics & Probability",
+                      "6.SP.A.1",
+                      "6.SP.A.2",
+                      "6.SP.A.3",
+                      "6.SP.A.4",
+                      "6.SP.B.5",
+                    ]
                   }
                   renderDiscussions={undefined}
                   renderFilteredDiscussions={undefined}
-/>,
+                />,
               ],
               "className": "options",
             },
@@ -562,122 +562,122 @@ ShallowWrapper {
         "children": Array [
           <article
             className="grade-btn-container"
->
+          >
             <button
-                        className="grade-btn grade-selected"
-                        onClick={[Function]}
+              className="grade-btn grade-selected"
+              onClick={[Function]}
             >
-                        Grade 6
+              Grade 6
             </button>
             <button
-                        className="grade-btn"
-                        onClick={[Function]}
+              className="grade-btn"
+              onClick={[Function]}
             >
-                        Grade 7
+              Grade 7
             </button>
             <button
-                        className="grade-btn"
-                        onClick={[Function]}
+              className="grade-btn"
+              onClick={[Function]}
             >
-                        Grade 8
+              Grade 8
             </button>
-</article>,
+          </article>,
           <section
             className="options-container"
->
+          >
             <article
-                        className="options"
+              className="options"
             >
-                        <FilterSection
-                                    discussions={undefined}
-                                    domain={
-                                                Array [
-                                                            "Ratios & Proportions",
-                                                            "6.RP.A.1",
-                                                            "6.RP.A.2",
-                                                            "6.RP.A.3",
-                                                            "6.RP.A.3.A",
-                                                            "6.RP.A.3.B",
-                                                            "6.RP.A.3.C",
-                                                          ]
-                                    }
-                                    renderDiscussions={undefined}
-                                    renderFilteredDiscussions={undefined}
-                        />
-                        <FilterSection
-                                    discussions={undefined}
-                                    domain={
-                                                Array [
-                                                            "The Number System",
-                                                            "6.NS.A.1",
-                                                            "6.NS.B.2",
-                                                            "6.NS.B.3",
-                                                            "6.NS.B.4",
-                                                            "6.NS.C.5",
-                                                            "6.NS.C.6",
-                                                            "6.NS.C.7",
-                                                            "6.NS.C.8",
-                                                          ]
-                                    }
-                                    renderDiscussions={undefined}
-                                    renderFilteredDiscussions={undefined}
-                        />
-                        <FilterSection
-                                    discussions={undefined}
-                                    domain={
-                                                Array [
-                                                            "Expressions & Equations",
-                                                            "6.EE.A.1",
-                                                            "6.EE.A.2",
-                                                            "6.EE.A.3",
-                                                            "6.EE.A.4",
-                                                            "6.EE.B.5",
-                                                            "6.EE.B.6",
-                                                            "6.EE.B.7",
-                                                            "6.EE.B.8",
-                                                            "6.EE.C.9",
-                                                          ]
-                                    }
-                                    renderDiscussions={undefined}
-                                    renderFilteredDiscussions={undefined}
-                        />
-                        <FilterSection
-                                    discussions={undefined}
-                                    domain={
-                                                Array [
-                                                            "Geometry & Measurement",
-                                                            "6.G.A.1",
-                                                            "6.G.A.2",
-                                                            "6.G.A.3",
-                                                            "6.G.A.4",
-                                                          ]
-                                    }
-                                    renderDiscussions={undefined}
-                                    renderFilteredDiscussions={undefined}
-                        />
-                        <FilterSection
-                                    discussions={undefined}
-                                    domain={
-                                                Array [
-                                                            "Statistics & Probability",
-                                                            "6.SP.A.1",
-                                                            "6.SP.A.2",
-                                                            "6.SP.A.3",
-                                                            "6.SP.A.4",
-                                                            "6.SP.B.5",
-                                                          ]
-                                    }
-                                    renderDiscussions={undefined}
-                                    renderFilteredDiscussions={undefined}
-                        />
+              <FilterSection
+                discussions={undefined}
+                domain={
+                  Array [
+                    "Ratios & Proportions",
+                    "6.RP.A.1",
+                    "6.RP.A.2",
+                    "6.RP.A.3",
+                    "6.RP.A.3.A",
+                    "6.RP.A.3.B",
+                    "6.RP.A.3.C",
+                  ]
+                }
+                renderDiscussions={undefined}
+                renderFilteredDiscussions={undefined}
+              />
+              <FilterSection
+                discussions={undefined}
+                domain={
+                  Array [
+                    "The Number System",
+                    "6.NS.A.1",
+                    "6.NS.B.2",
+                    "6.NS.B.3",
+                    "6.NS.B.4",
+                    "6.NS.C.5",
+                    "6.NS.C.6",
+                    "6.NS.C.7",
+                    "6.NS.C.8",
+                  ]
+                }
+                renderDiscussions={undefined}
+                renderFilteredDiscussions={undefined}
+              />
+              <FilterSection
+                discussions={undefined}
+                domain={
+                  Array [
+                    "Expressions & Equations",
+                    "6.EE.A.1",
+                    "6.EE.A.2",
+                    "6.EE.A.3",
+                    "6.EE.A.4",
+                    "6.EE.B.5",
+                    "6.EE.B.6",
+                    "6.EE.B.7",
+                    "6.EE.B.8",
+                    "6.EE.C.9",
+                  ]
+                }
+                renderDiscussions={undefined}
+                renderFilteredDiscussions={undefined}
+              />
+              <FilterSection
+                discussions={undefined}
+                domain={
+                  Array [
+                    "Geometry & Measurement",
+                    "6.G.A.1",
+                    "6.G.A.2",
+                    "6.G.A.3",
+                    "6.G.A.4",
+                  ]
+                }
+                renderDiscussions={undefined}
+                renderFilteredDiscussions={undefined}
+              />
+              <FilterSection
+                discussions={undefined}
+                domain={
+                  Array [
+                    "Statistics & Probability",
+                    "6.SP.A.1",
+                    "6.SP.A.2",
+                    "6.SP.A.3",
+                    "6.SP.A.4",
+                    "6.SP.B.5",
+                  ]
+                }
+                renderDiscussions={undefined}
+                renderFilteredDiscussions={undefined}
+              />
             </article>
             <article
-                        className="options"
+              className="options"
             />
             <article
-                        className="options"
+              className="options"
             />
-</section>,
+          </section>,
         ],
         "className": "filter-section",
       },
@@ -692,21 +692,21 @@ ShallowWrapper {
               <button
                 className="grade-btn grade-selected"
                 onClick={[Function]}
->
+              >
                 Grade 6
-</button>,
+              </button>,
               <button
                 className="grade-btn"
                 onClick={[Function]}
->
+              >
                 Grade 7
-</button>,
+              </button>,
               <button
                 className="grade-btn"
                 onClick={[Function]}
->
+              >
                 Grade 8
-</button>,
+              </button>,
             ],
             "className": "grade-btn-container",
           },
@@ -762,96 +762,96 @@ ShallowWrapper {
             "children": Array [
               <article
                 className="options"
->
+              >
                 <FilterSection
-                                discussions={undefined}
-                                domain={
-                                                Array [
-                                                                "Ratios & Proportions",
-                                                                "6.RP.A.1",
-                                                                "6.RP.A.2",
-                                                                "6.RP.A.3",
-                                                                "6.RP.A.3.A",
-                                                                "6.RP.A.3.B",
-                                                                "6.RP.A.3.C",
-                                                              ]
-                                }
-                                renderDiscussions={undefined}
-                                renderFilteredDiscussions={undefined}
+                  discussions={undefined}
+                  domain={
+                    Array [
+                      "Ratios & Proportions",
+                      "6.RP.A.1",
+                      "6.RP.A.2",
+                      "6.RP.A.3",
+                      "6.RP.A.3.A",
+                      "6.RP.A.3.B",
+                      "6.RP.A.3.C",
+                    ]
+                  }
+                  renderDiscussions={undefined}
+                  renderFilteredDiscussions={undefined}
                 />
                 <FilterSection
-                                discussions={undefined}
-                                domain={
-                                                Array [
-                                                                "The Number System",
-                                                                "6.NS.A.1",
-                                                                "6.NS.B.2",
-                                                                "6.NS.B.3",
-                                                                "6.NS.B.4",
-                                                                "6.NS.C.5",
-                                                                "6.NS.C.6",
-                                                                "6.NS.C.7",
-                                                                "6.NS.C.8",
-                                                              ]
-                                }
-                                renderDiscussions={undefined}
-                                renderFilteredDiscussions={undefined}
+                  discussions={undefined}
+                  domain={
+                    Array [
+                      "The Number System",
+                      "6.NS.A.1",
+                      "6.NS.B.2",
+                      "6.NS.B.3",
+                      "6.NS.B.4",
+                      "6.NS.C.5",
+                      "6.NS.C.6",
+                      "6.NS.C.7",
+                      "6.NS.C.8",
+                    ]
+                  }
+                  renderDiscussions={undefined}
+                  renderFilteredDiscussions={undefined}
                 />
                 <FilterSection
-                                discussions={undefined}
-                                domain={
-                                                Array [
-                                                                "Expressions & Equations",
-                                                                "6.EE.A.1",
-                                                                "6.EE.A.2",
-                                                                "6.EE.A.3",
-                                                                "6.EE.A.4",
-                                                                "6.EE.B.5",
-                                                                "6.EE.B.6",
-                                                                "6.EE.B.7",
-                                                                "6.EE.B.8",
-                                                                "6.EE.C.9",
-                                                              ]
-                                }
-                                renderDiscussions={undefined}
-                                renderFilteredDiscussions={undefined}
+                  discussions={undefined}
+                  domain={
+                    Array [
+                      "Expressions & Equations",
+                      "6.EE.A.1",
+                      "6.EE.A.2",
+                      "6.EE.A.3",
+                      "6.EE.A.4",
+                      "6.EE.B.5",
+                      "6.EE.B.6",
+                      "6.EE.B.7",
+                      "6.EE.B.8",
+                      "6.EE.C.9",
+                    ]
+                  }
+                  renderDiscussions={undefined}
+                  renderFilteredDiscussions={undefined}
                 />
                 <FilterSection
-                                discussions={undefined}
-                                domain={
-                                                Array [
-                                                                "Geometry & Measurement",
-                                                                "6.G.A.1",
-                                                                "6.G.A.2",
-                                                                "6.G.A.3",
-                                                                "6.G.A.4",
-                                                              ]
-                                }
-                                renderDiscussions={undefined}
-                                renderFilteredDiscussions={undefined}
+                  discussions={undefined}
+                  domain={
+                    Array [
+                      "Geometry & Measurement",
+                      "6.G.A.1",
+                      "6.G.A.2",
+                      "6.G.A.3",
+                      "6.G.A.4",
+                    ]
+                  }
+                  renderDiscussions={undefined}
+                  renderFilteredDiscussions={undefined}
                 />
                 <FilterSection
-                                discussions={undefined}
-                                domain={
-                                                Array [
-                                                                "Statistics & Probability",
-                                                                "6.SP.A.1",
-                                                                "6.SP.A.2",
-                                                                "6.SP.A.3",
-                                                                "6.SP.A.4",
-                                                                "6.SP.B.5",
-                                                              ]
-                                }
-                                renderDiscussions={undefined}
-                                renderFilteredDiscussions={undefined}
+                  discussions={undefined}
+                  domain={
+                    Array [
+                      "Statistics & Probability",
+                      "6.SP.A.1",
+                      "6.SP.A.2",
+                      "6.SP.A.3",
+                      "6.SP.A.4",
+                      "6.SP.B.5",
+                    ]
+                  }
+                  renderDiscussions={undefined}
+                  renderFilteredDiscussions={undefined}
                 />
-</article>,
+              </article>,
               <article
                 className="options"
-/>,
+              />,
               <article
                 className="options"
-/>,
+              />,
             ],
             "className": "options-container",
           },
@@ -866,85 +866,85 @@ ShallowWrapper {
                   <FilterSection
                     discussions={undefined}
                     domain={
-                                        Array [
-                                                            "Ratios & Proportions",
-                                                            "6.RP.A.1",
-                                                            "6.RP.A.2",
-                                                            "6.RP.A.3",
-                                                            "6.RP.A.3.A",
-                                                            "6.RP.A.3.B",
-                                                            "6.RP.A.3.C",
-                                                          ]
+                      Array [
+                        "Ratios & Proportions",
+                        "6.RP.A.1",
+                        "6.RP.A.2",
+                        "6.RP.A.3",
+                        "6.RP.A.3.A",
+                        "6.RP.A.3.B",
+                        "6.RP.A.3.C",
+                      ]
                     }
                     renderDiscussions={undefined}
                     renderFilteredDiscussions={undefined}
-/>,
+                  />,
                   <FilterSection
                     discussions={undefined}
                     domain={
-                                        Array [
-                                                            "The Number System",
-                                                            "6.NS.A.1",
-                                                            "6.NS.B.2",
-                                                            "6.NS.B.3",
-                                                            "6.NS.B.4",
-                                                            "6.NS.C.5",
-                                                            "6.NS.C.6",
-                                                            "6.NS.C.7",
-                                                            "6.NS.C.8",
-                                                          ]
+                      Array [
+                        "The Number System",
+                        "6.NS.A.1",
+                        "6.NS.B.2",
+                        "6.NS.B.3",
+                        "6.NS.B.4",
+                        "6.NS.C.5",
+                        "6.NS.C.6",
+                        "6.NS.C.7",
+                        "6.NS.C.8",
+                      ]
                     }
                     renderDiscussions={undefined}
                     renderFilteredDiscussions={undefined}
-/>,
+                  />,
                   <FilterSection
                     discussions={undefined}
                     domain={
-                                        Array [
-                                                            "Expressions & Equations",
-                                                            "6.EE.A.1",
-                                                            "6.EE.A.2",
-                                                            "6.EE.A.3",
-                                                            "6.EE.A.4",
-                                                            "6.EE.B.5",
-                                                            "6.EE.B.6",
-                                                            "6.EE.B.7",
-                                                            "6.EE.B.8",
-                                                            "6.EE.C.9",
-                                                          ]
+                      Array [
+                        "Expressions & Equations",
+                        "6.EE.A.1",
+                        "6.EE.A.2",
+                        "6.EE.A.3",
+                        "6.EE.A.4",
+                        "6.EE.B.5",
+                        "6.EE.B.6",
+                        "6.EE.B.7",
+                        "6.EE.B.8",
+                        "6.EE.C.9",
+                      ]
                     }
                     renderDiscussions={undefined}
                     renderFilteredDiscussions={undefined}
-/>,
+                  />,
                   <FilterSection
                     discussions={undefined}
                     domain={
-                                        Array [
-                                                            "Geometry & Measurement",
-                                                            "6.G.A.1",
-                                                            "6.G.A.2",
-                                                            "6.G.A.3",
-                                                            "6.G.A.4",
-                                                          ]
+                      Array [
+                        "Geometry & Measurement",
+                        "6.G.A.1",
+                        "6.G.A.2",
+                        "6.G.A.3",
+                        "6.G.A.4",
+                      ]
                     }
                     renderDiscussions={undefined}
                     renderFilteredDiscussions={undefined}
-/>,
+                  />,
                   <FilterSection
                     discussions={undefined}
                     domain={
-                                        Array [
-                                                            "Statistics & Probability",
-                                                            "6.SP.A.1",
-                                                            "6.SP.A.2",
-                                                            "6.SP.A.3",
-                                                            "6.SP.A.4",
-                                                            "6.SP.B.5",
-                                                          ]
+                      Array [
+                        "Statistics & Probability",
+                        "6.SP.A.1",
+                        "6.SP.A.2",
+                        "6.SP.A.3",
+                        "6.SP.A.4",
+                        "6.SP.B.5",
+                      ]
                     }
                     renderDiscussions={undefined}
                     renderFilteredDiscussions={undefined}
-/>,
+                  />,
                 ],
                 "className": "options",
               },

@@ -144,3 +144,10 @@ h3.form-directions {
 .drop-down-standards {
   width: 100%;
   margin: 15px 0; }
+
+.standard {
+  display: none; }
+
+.revealStandards {
+  display: flex;
+  border: 2px solid red; }

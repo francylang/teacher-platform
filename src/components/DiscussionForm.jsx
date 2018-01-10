@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Domain from './Domain';
 import { colorsByDomain } from '../assets/colors';
 import { postNewDiscussion } from '../utils/postDiscussion';
-import { domainsByGrade, domains67, domains8 } from '../utils/tagStandards';
+import { StandardsByDomain, domains67, domains8 } from '../utils/tagStandards';
+// <span>▼</span>
 
 class DiscussionForm extends Component {
   constructor() {
@@ -69,26 +70,31 @@ class DiscussionForm extends Component {
     const standardAbbrev = (`${gradeSelected}-${domainSelected}`);
 
     if (domainSelected) {
-      const mappedDomains = domainsByGrade[standardAbbrev].map(domain => {
+      const mappedDomains = StandardsByDomain[standardAbbrev].map(domain => {
         return (
-          <option
+          <li
+            className={this.state.isActive ? "revealStandards" : "standard"}
             key={domain}
             value={domain}
           >
             {domain}
-          </option>
+          </li>
         );
       });
       return (
-        <select
+        <ul
           className="drop-down-standards"
           value={standardSelected}
           onChange={this.handleSelectStandard.bind(this)}>
-        >
+          <li className="select-standard" onClick={(event) => this.removeClass(event)}>Select a Standard</li>
           {mappedDomains}
-        </select>
+        </ul>
       );
     }
+  }
+
+  removeClass(event) {
+    this.setState({ isActive: !this.state.isActive });
   }
 
   handleStandardSelect(event) {

@@ -20,41 +20,41 @@ ShallowWrapper {
       "children": Array [
         <aside
           className="comment-form-directions"
->
+        >
           <h4
-                    className="comment-form-header"
+            className="comment-form-header"
           >
-                    Add a comment:
+            Add a comment:
           </h4>
           <p
-                    className="directions-text"
+            className="directions-text"
           >
-                    Please be kind and specific, and provide links to any references resources. 
+            Please be kind and specific, and provide links to any references resources. 
           </p>
-</aside>,
+        </aside>,
         <form
           className="comment-form"
->
+        >
           <label
-                    htmlFor="get-comment"
+            htmlFor="get-comment"
           >
-                    <textarea
-                              id="get-comment"
-                              name="comment"
-                              onChange={[Function]}
-                              type="text"
-                              value=""
-                    />
+            <textarea
+              id="get-comment"
+              name="comment"
+              onChange={[Function]}
+              type="text"
+              value=""
+            />
           </label>
           <button
-                    className="submit-comment"
-                    name="submit"
-                    onClick={[Function]}
-                    type="submit"
+            className="submit-comment"
+            name="submit"
+            onClick={[Function]}
+            type="submit"
           >
-                    Submit
+            Submit
           </button>
-</form>,
+        </form>,
       ],
       "className": "comment-form-containter",
     },
@@ -68,14 +68,14 @@ ShallowWrapper {
           "children": Array [
             <h4
               className="comment-form-header"
->
+            >
               Add a comment:
-</h4>,
+            </h4>,
             <p
               className="directions-text"
->
+            >
               Please be kind and specific, and provide links to any references resources. 
-</p>,
+            </p>,
           ],
           "className": "comment-form-directions",
         },
@@ -116,23 +116,23 @@ ShallowWrapper {
           "children": Array [
             <label
               htmlFor="get-comment"
->
+            >
               <textarea
-                            id="get-comment"
-                            name="comment"
-                            onChange={[Function]}
-                            type="text"
-                            value=""
+                id="get-comment"
+                name="comment"
+                onChange={[Function]}
+                type="text"
+                value=""
               />
-</label>,
+            </label>,
             <button
               className="submit-comment"
               name="submit"
               onClick={[Function]}
               type="submit"
->
+            >
               Submit
-</button>,
+            </button>,
           ],
           "className": "comment-form",
         },
@@ -149,7 +149,7 @@ ShallowWrapper {
                 onChange={[Function]}
                 type="text"
                 value=""
-/>,
+              />,
               "htmlFor": "get-comment",
             },
             "ref": null,
@@ -200,41 +200,41 @@ ShallowWrapper {
         "children": Array [
           <aside
             className="comment-form-directions"
->
+          >
             <h4
-                        className="comment-form-header"
+              className="comment-form-header"
             >
-                        Add a comment:
+              Add a comment:
             </h4>
             <p
-                        className="directions-text"
+              className="directions-text"
             >
-                        Please be kind and specific, and provide links to any references resources. 
+              Please be kind and specific, and provide links to any references resources. 
             </p>
-</aside>,
+          </aside>,
           <form
             className="comment-form"
->
+          >
             <label
-                        htmlFor="get-comment"
+              htmlFor="get-comment"
             >
-                        <textarea
-                                    id="get-comment"
-                                    name="comment"
-                                    onChange={[Function]}
-                                    type="text"
-                                    value=""
-                        />
+              <textarea
+                id="get-comment"
+                name="comment"
+                onChange={[Function]}
+                type="text"
+                value=""
+              />
             </label>
             <button
-                        className="submit-comment"
-                        name="submit"
-                        onClick={[Function]}
-                        type="submit"
+              className="submit-comment"
+              name="submit"
+              onClick={[Function]}
+              type="submit"
             >
-                        Submit
+              Submit
             </button>
-</form>,
+          </form>,
         ],
         "className": "comment-form-containter",
       },
@@ -248,14 +248,14 @@ ShallowWrapper {
             "children": Array [
               <h4
                 className="comment-form-header"
->
+              >
                 Add a comment:
-</h4>,
+              </h4>,
               <p
                 className="directions-text"
->
+              >
                 Please be kind and specific, and provide links to any references resources. 
-</p>,
+              </p>,
             ],
             "className": "comment-form-directions",
           },
@@ -296,23 +296,23 @@ ShallowWrapper {
             "children": Array [
               <label
                 htmlFor="get-comment"
->
+              >
                 <textarea
-                                id="get-comment"
-                                name="comment"
-                                onChange={[Function]}
-                                type="text"
-                                value=""
+                  id="get-comment"
+                  name="comment"
+                  onChange={[Function]}
+                  type="text"
+                  value=""
                 />
-</label>,
+              </label>,
               <button
                 className="submit-comment"
                 name="submit"
                 onClick={[Function]}
                 type="submit"
->
+              >
                 Submit
-</button>,
+              </button>,
             ],
             "className": "comment-form",
           },
@@ -329,7 +329,7 @@ ShallowWrapper {
                   onChange={[Function]}
                   type="text"
                   value=""
-/>,
+                />,
                 "htmlFor": "get-comment",
               },
               "ref": null,

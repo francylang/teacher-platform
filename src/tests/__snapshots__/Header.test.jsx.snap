@@ -20,22 +20,22 @@ ShallowWrapper {
       "children": Array [
         <div
           className="header-icon-container"
->
+        >
           <Link
-                    className="header-link"
-                    replace={false}
-                    to="/"
+            className="header-link"
+            replace={false}
+            to="/"
           >
-                    <h1
-                              className="app-name"
-                    >
-                              Edvice
-                    </h1>
+            <h1
+              className="app-name"
+            >
+              Edvice
+            </h1>
           </Link>
           <div
-                    className="header-image"
+            className="header-image"
           />
-</div>,
+        </div>,
         undefined,
       ],
       "className": "header",
@@ -52,16 +52,16 @@ ShallowWrapper {
               className="header-link"
               replace={false}
               to="/"
->
+            >
               <h1
-                            className="app-name"
+                className="app-name"
               >
-                            Edvice
+                Edvice
               </h1>
-</Link>,
+            </Link>,
             <div
               className="header-image"
-/>,
+            />,
           ],
           "className": "header-icon-container",
         },
@@ -74,9 +74,9 @@ ShallowWrapper {
             "props": Object {
               "children": <h1
                 className="app-name"
->
+              >
                 Edvice
-</h1>,
+              </h1>,
               "className": "header-link",
               "replace": false,
               "to": "/",
@@ -123,22 +123,22 @@ ShallowWrapper {
         "children": Array [
           <div
             className="header-icon-container"
->
+          >
             <Link
-                        className="header-link"
-                        replace={false}
-                        to="/"
+              className="header-link"
+              replace={false}
+              to="/"
             >
-                        <h1
-                                    className="app-name"
-                        >
-                                    Edvice
-                        </h1>
+              <h1
+                className="app-name"
+              >
+                Edvice
+              </h1>
             </Link>
             <div
-                        className="header-image"
+              className="header-image"
             />
-</div>,
+          </div>,
           undefined,
         ],
         "className": "header",
@@ -155,16 +155,16 @@ ShallowWrapper {
                 className="header-link"
                 replace={false}
                 to="/"
->
+              >
                 <h1
-                                className="app-name"
+                  className="app-name"
                 >
-                                Edvice
+                  Edvice
                 </h1>
-</Link>,
+              </Link>,
               <div
                 className="header-image"
-/>,
+              />,
             ],
             "className": "header-icon-container",
           },
@@ -177,9 +177,9 @@ ShallowWrapper {
               "props": Object {
                 "children": <h1
                   className="app-name"
->
+                >
                   Edvice
-</h1>,
+                </h1>,
                 "className": "header-link",
                 "replace": false,
                 "to": "/",

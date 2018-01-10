@@ -1,6 +1,5 @@
-export const domainsByGrade = {
+export const StandardsByDomain = {
   '6-R': [
-    "Select a Standard",
     "6.RP.A.1",
     "6.RP.A.2",
     "6.RP.A.3",
@@ -9,7 +8,6 @@ export const domainsByGrade = {
     "6.RP.A.3.C"
   ],
   '6-N': [
-    "Select a Standard",
     "6.NS.A.1",
     "6.NS.B.2",
     "6.NS.B.3",
@@ -20,7 +18,6 @@ export const domainsByGrade = {
     "6.NS.C.8"
   ],
   '6-E': [
-    "Select a Standard",
     "6.EE.A.1",
     "6.EE.A.2",
     "6.EE.A.3",
@@ -32,14 +29,12 @@ export const domainsByGrade = {
     "6.EE.C.9"
   ],
   '6-G': [
-    "Select a Standard",
     "6.G.A.1",
     "6.G.A.2",
     "6.G.A.3",
     "6.G.A.4"
   ],
   '6-S': [
-    "Select a Standard",
     "6.SP.A.1",
     "6.SP.A.2",
     "6.SP.A.3",
@@ -47,26 +42,22 @@ export const domainsByGrade = {
     "6.SP.B.5"
   ],
   '7-R': [
-    "Select a Standard",
     "7.RP.A.1",
     "7.RP.A.2",
     "7.RP.A.3"
   ],
   '7-N': [
-    "Select a Standard",
     "7.NS.A.1",
     "7.NS.A.2",
     "7.NS.A.3"
   ],
   '7-E': [
-    "Select a Standard",
     "7.EE.A.1",
     "7.EE.A.2",
     "7.EE.A.3",
     "7.EE.A.4"
   ],
   '7-G': [
-    "Select a Standard",
     "7.G.A.1",
     "7.G.A.2",
     "7.G.A.3",
@@ -75,7 +66,6 @@ export const domainsByGrade = {
     "7.G.B.6"
   ],
   '7-S': [
-    "Select a Standard",
     "7.SP.A.1",
     "7.SP.A.2",
     "7.SP.B.3",
@@ -86,12 +76,10 @@ export const domainsByGrade = {
     "7.SP.C.8"
   ],
   '8-N': [
-    "Select a Standard",
     "8.NS.A.1",
     "8.NS.A.2"
   ],
   '8-E': [
-    "Select a Standard",
     "8.EE.A.1",
     "8.EE.A.2",
     "8.EE.A.3",
@@ -102,7 +90,6 @@ export const domainsByGrade = {
     "8.EE.C.8"
   ],
   '8-F': [
-    "Select a Standard",
     "8.F.A.1",
     "8.F.A.2",
     "8.F.A.3",
@@ -110,7 +97,6 @@ export const domainsByGrade = {
     "8.F.B.5"
   ],
   '8-G': [
-    "Select a Standard",
     "8.G.A.1",
     "8.G.A.2",
     "8.G.A.3",
@@ -122,7 +108,6 @@ export const domainsByGrade = {
     "8.G.C.9"
   ],
   '8-S': [
-    "Select a Standard",
     "8.SP.A.1",
     "8.SP.A.2",
     "8.SP.A.3",

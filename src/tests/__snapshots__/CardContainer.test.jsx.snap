@@ -6,35 +6,35 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <CardContainer
     comments={
-        Array [
+      Array [
+        Object {
+          "comments": Array [
             Object {
-              "comments": Array [
-                Object {
-                  "body": "Yes but it's important",
-                },
-                Object {
-                  "body": "Here is a link to the progression docs: LINK",
-                },
-              ],
+              "body": "Yes but it's important",
             },
-          ]
+            Object {
+              "body": "Here is a link to the progression docs: LINK",
+            },
+          ],
+        },
+      ]
     }
     filteredDiscussions={
-        Array [
+      Array [
+        Object {
+          "discussions": Array [
             Object {
-              "discussions": Array [
-                Object {
-                  "body": "Didn't kids get this in Grade 5? I'm confused about why it's in the standards.",
-                  "tagTitle": "6.RP.A.1",
-                  "title": "Unit Rate",
-                },
-              ],
-              "id": 1,
+              "body": "Didn't kids get this in Grade 5? I'm confused about why it's in the standards.",
               "tagTitle": "6.RP.A.1",
+              "title": "Unit Rate",
             },
-          ]
+          ],
+          "id": 1,
+          "tagTitle": "6.RP.A.1",
+        },
+      ]
     }
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -50,39 +50,39 @@ ShallowWrapper {
       "children": Array [
         <h2
           className="discussions-heading"
->
+        >
           Discussions
-</h2>,
+        </h2>,
         Array [
           <DiscussionCard
             comments={
-                        Array [
-                                    Object {
-                                      "comments": Array [
-                                        Object {
-                                          "body": "Yes but it's important",
-                                        },
-                                        Object {
-                                          "body": "Here is a link to the progression docs: LINK",
-                                        },
-                                      ],
-                                    },
-                                  ]
+              Array [
+                Object {
+                  "comments": Array [
+                    Object {
+                      "body": "Yes but it's important",
+                    },
+                    Object {
+                      "body": "Here is a link to the progression docs: LINK",
+                    },
+                  ],
+                },
+              ]
             }
             discussion={
-                        Object {
-                                    "discussions": Array [
-                                      Object {
-                                        "body": "Didn't kids get this in Grade 5? I'm confused about why it's in the standards.",
-                                        "tagTitle": "6.RP.A.1",
-                                        "title": "Unit Rate",
-                                      },
-                                    ],
-                                    "id": 1,
-                                    "tagTitle": "6.RP.A.1",
-                                  }
+              Object {
+                "discussions": Array [
+                  Object {
+                    "body": "Didn't kids get this in Grade 5? I'm confused about why it's in the standards.",
+                    "tagTitle": "6.RP.A.1",
+                    "title": "Unit Rate",
+                  },
+                ],
+                "id": 1,
+                "tagTitle": "6.RP.A.1",
+              }
             }
-/>,
+          />,
         ],
       ],
       "className": "card-section",
@@ -146,39 +146,39 @@ ShallowWrapper {
         "children": Array [
           <h2
             className="discussions-heading"
->
+          >
             Discussions
-</h2>,
+          </h2>,
           Array [
             <DiscussionCard
               comments={
-                            Array [
-                                          Object {
-                                            "comments": Array [
-                                              Object {
-                                                "body": "Yes but it's important",
-                                              },
-                                              Object {
-                                                "body": "Here is a link to the progression docs: LINK",
-                                              },
-                                            ],
-                                          },
-                                        ]
+                Array [
+                  Object {
+                    "comments": Array [
+                      Object {
+                        "body": "Yes but it's important",
+                      },
+                      Object {
+                        "body": "Here is a link to the progression docs: LINK",
+                      },
+                    ],
+                  },
+                ]
               }
               discussion={
-                            Object {
-                                          "discussions": Array [
-                                            Object {
-                                              "body": "Didn't kids get this in Grade 5? I'm confused about why it's in the standards.",
-                                              "tagTitle": "6.RP.A.1",
-                                              "title": "Unit Rate",
-                                            },
-                                          ],
-                                          "id": 1,
-                                          "tagTitle": "6.RP.A.1",
-                                        }
+                Object {
+                  "discussions": Array [
+                    Object {
+                      "body": "Didn't kids get this in Grade 5? I'm confused about why it's in the standards.",
+                      "tagTitle": "6.RP.A.1",
+                      "title": "Unit Rate",
+                    },
+                  ],
+                  "id": 1,
+                  "tagTitle": "6.RP.A.1",
+                }
               }
-/>,
+            />,
           ],
         ],
         "className": "card-section",

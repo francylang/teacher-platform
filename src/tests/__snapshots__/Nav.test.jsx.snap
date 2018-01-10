@@ -23,39 +23,39 @@ ShallowWrapper {
           handleSearch={undefined}
           renderDiscussions={undefined}
           renderFilteredDiscussions={undefined}
-/>,
+        />,
         <button
           className="filter-btn"
           onClick={[Function]}
->
+        >
           <h4
-                    className="standard-option"
+            className="standard-option"
           >
-                    Standards
+            Standards
           </h4>
-</button>,
+        </button>,
         <button
           className="toggle-discussion-form-btn"
           onClick={[Function]}
           value="form"
->
+        >
           <h4
-                    className="new-discussion-option"
+            className="new-discussion-option"
           >
-                    New Discussion
+            New Discussion
           </h4>
-</button>,
+        </button>,
         <button
           className="toggle-discussions-btn"
           onClick={[Function]}
           value="form"
->
+        >
           <h4
-                    className="new-discussion-option"
+            className="new-discussion-option"
           >
-                    All Discussions
+            All Discussions
           </h4>
-</button>,
+        </button>,
       ],
       "className": "nav",
     },
@@ -82,9 +82,9 @@ ShallowWrapper {
         "props": Object {
           "children": <h4
             className="standard-option"
->
+          >
             Standards
-</h4>,
+          </h4>,
           "className": "filter-btn",
           "onClick": [Function],
         },
@@ -110,9 +110,9 @@ ShallowWrapper {
         "props": Object {
           "children": <h4
             className="new-discussion-option"
->
+          >
             New Discussion
-</h4>,
+          </h4>,
           "className": "toggle-discussion-form-btn",
           "onClick": [Function],
           "value": "form",
@@ -139,9 +139,9 @@ ShallowWrapper {
         "props": Object {
           "children": <h4
             className="new-discussion-option"
->
+          >
             All Discussions
-</h4>,
+          </h4>,
           "className": "toggle-discussions-btn",
           "onClick": [Function],
           "value": "form",
@@ -176,39 +176,39 @@ ShallowWrapper {
             handleSearch={undefined}
             renderDiscussions={undefined}
             renderFilteredDiscussions={undefined}
-/>,
+          />,
           <button
             className="filter-btn"
             onClick={[Function]}
->
+          >
             <h4
-                        className="standard-option"
+              className="standard-option"
             >
-                        Standards
+              Standards
             </h4>
-</button>,
+          </button>,
           <button
             className="toggle-discussion-form-btn"
             onClick={[Function]}
             value="form"
->
+          >
             <h4
-                        className="new-discussion-option"
+              className="new-discussion-option"
             >
-                        New Discussion
+              New Discussion
             </h4>
-</button>,
+          </button>,
           <button
             className="toggle-discussions-btn"
             onClick={[Function]}
             value="form"
->
+          >
             <h4
-                        className="new-discussion-option"
+              className="new-discussion-option"
             >
-                        All Discussions
+              All Discussions
             </h4>
-</button>,
+          </button>,
         ],
         "className": "nav",
       },
@@ -235,9 +235,9 @@ ShallowWrapper {
           "props": Object {
             "children": <h4
               className="standard-option"
->
+            >
               Standards
-</h4>,
+            </h4>,
             "className": "filter-btn",
             "onClick": [Function],
           },
@@ -263,9 +263,9 @@ ShallowWrapper {
           "props": Object {
             "children": <h4
               className="new-discussion-option"
->
+            >
               New Discussion
-</h4>,
+            </h4>,
             "className": "toggle-discussion-form-btn",
             "onClick": [Function],
             "value": "form",
@@ -292,9 +292,9 @@ ShallowWrapper {
           "props": Object {
             "children": <h4
               className="new-discussion-option"
->
+            >
               All Discussions
-</h4>,
+            </h4>,
             "className": "toggle-discussions-btn",
             "onClick": [Function],
             "value": "form",
