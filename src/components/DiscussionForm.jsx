@@ -171,12 +171,12 @@ class DiscussionForm extends Component {
               onChange={this.handleChange.bind(this, 'body')}
             >
             </textarea>
-            <div>{standardSelected}</div>
+            <div className={standardSelected ? "standard-selected" : "not-selected"}>{standardSelected}</div>
           </label>
           <h3 className="grade-directions">Select a grade level, then a domain:</h3>
           <div className="grade-level-buttons">{this.renderGradeLevelButtons()}</div>
           <div className="grade-level-domains">{this.renderDomains()}</div>
-          <div className="grade-level-standards">{this.renderDropDown()}</div>
+          {this.renderDropDown()}
           <button
             className="submit-discussion-btn"
             onClick={(event) => this.handleSubmit(event)}

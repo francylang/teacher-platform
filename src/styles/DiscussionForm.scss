@@ -168,6 +168,10 @@ h3.form-directions {
 
 .drop-down-standards {
   margin: 15px 0;
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.13);
+  border-radius: 5px;
+  border: none;
+  padding: 0;
 }
 
 .standard {
@@ -196,4 +200,17 @@ h3.form-directions {
   font-size: 16px;
   color: #fff;
   background-color: #62696D;
+}
+
+.standard-selected {
+  border-radius: 5px;
+  border: 1px solid #62696D;
+  display: inline-block;
+  padding: 4px 6px;
+  // color: #fff;
+  font-size: 90%;
+}
+
+.not-selected {
+  display: none;
 }
