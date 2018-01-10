@@ -87,7 +87,7 @@ class DiscussionForm extends Component {
         <ul
           className="drop-down-standards"
           value={standardSelected}>
-          <li className="select-standard" onClick={(event) => this.removeClass(event)}>Select a Standard</li>
+          <li className="select-standard" onClick={(event) => this.removeClass(event)}>Select a Standard<div className={this.state.isActiveDropDown ? "drop-down-icon" : "drop-up-icon"}></div></li>
           {mappedDomains}
         </ul>
       );
