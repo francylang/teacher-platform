@@ -3,7 +3,6 @@ import Domain from './Domain';
 import { colorsByDomain } from '../assets/colors';
 import { postNewDiscussion } from '../utils/postDiscussion';
 import { StandardsByDomain, domains67, domains8 } from '../utils/tagStandards';
-// <span>▼</span>
 
 class DiscussionForm extends Component {
   constructor() {
@@ -73,7 +72,7 @@ class DiscussionForm extends Component {
       const mappedDomains = StandardsByDomain[standardAbbrev].map(domain => {
         return (
           <li
-            className={this.state.isActive ? "revealStandards" : "standard"}
+            className={this.state.isActive ? "reveal-standards" : "standard"}
             key={domain}
             value={domain}
           >

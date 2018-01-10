@@ -142,12 +142,27 @@ h3.form-directions {
   font-family: Nunito; }
 
 .drop-down-standards {
-  width: 100%;
   margin: 15px 0; }
 
 .standard {
   display: none; }
 
-.revealStandards {
+.reveal-standards {
+  cursor: pointer;
   display: flex;
-  border: 2px solid red; }
+  color: #fff;
+  border-top: 1px solid #62696D;
+  background-color: #C2C7CB;
+  padding: 10px; }
+
+.reveal-standards:hover {
+  background-color: #B5B9BC; }
+
+.select-standard {
+  cursor: pointer;
+  display: block;
+  padding: 10px;
+  position: relative;
+  font-size: 16px;
+  color: #fff;
+  background-color: #62696D; }
