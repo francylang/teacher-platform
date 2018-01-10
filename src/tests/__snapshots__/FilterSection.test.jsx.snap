@@ -6,34 +6,34 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <FilterSection
     discussions={
-        Array [
+      Array [
+        Object {
+          "discussions": Array [
             Object {
-              "discussions": Array [
-                Object {
-                  "body": "Didn't kids get this in Grade 5? I'm confused about why it's in the standards.",
-                  "tagTitle": "6.RP.A.1",
-                  "title": "Unit Rate",
-                },
-              ],
-              "id": 1,
+              "body": "Didn't kids get this in Grade 5? I'm confused about why it's in the standards.",
               "tagTitle": "6.RP.A.1",
+              "title": "Unit Rate",
             },
-          ]
+          ],
+          "id": 1,
+          "tagTitle": "6.RP.A.1",
+        },
+      ]
     }
     domain={
-        Array [
-            "Ratios & Proportions",
-            "6.RP.A.1",
-            "6.RP.A.2",
-            "6.RP.A.3",
-            "6.RP.A.3.A",
-            "6.RP.A.3.B",
-            "6.RP.A.3.C",
-          ]
+      Array [
+        "Ratios & Proportions",
+        "6.RP.A.1",
+        "6.RP.A.2",
+        "6.RP.A.3",
+        "6.RP.A.3.A",
+        "6.RP.A.3.B",
+        "6.RP.A.3.C",
+      ]
     }
-    renderDiscussions={[Function]}
-    renderFilteredDiscussions={[Function]}
-/>,
+    renderDiscussions={[MockFunction]}
+    renderFilteredDiscussions={[MockFunction]}
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -49,73 +49,73 @@ ShallowWrapper {
       "children": Array [
         <section
           className="domain-label-container"
->
+        >
           <h5
-                    className="domain-label"
+            className="domain-label"
           >
-                    Ratios & Proportions
+            Ratios & Proportions
           </h5>
-</section>,
+        </section>,
         <button
           className="standard-link"
           onClick={[Function]}
->
+        >
           <p
-                    className="standard-text R-link"
+            className="standard-text R-link"
           >
-                    6.RP.A.1
+            6.RP.A.1
           </p>
-</button>,
+        </button>,
         <button
           className="standard-link"
           onClick={[Function]}
->
+        >
           <p
-                    className="standard-text R-link"
+            className="standard-text R-link"
           >
-                    6.RP.A.2
+            6.RP.A.2
           </p>
-</button>,
+        </button>,
         <button
           className="standard-link"
           onClick={[Function]}
->
+        >
           <p
-                    className="standard-text R-link"
+            className="standard-text R-link"
           >
-                    6.RP.A.3
+            6.RP.A.3
           </p>
-</button>,
+        </button>,
         <button
           className="standard-link"
           onClick={[Function]}
->
+        >
           <p
-                    className="standard-text R-link"
+            className="standard-text R-link"
           >
-                    6.RP.A.3.A
+            6.RP.A.3.A
           </p>
-</button>,
+        </button>,
         <button
           className="standard-link"
           onClick={[Function]}
->
+        >
           <p
-                    className="standard-text R-link"
+            className="standard-text R-link"
           >
-                    6.RP.A.3.B
+            6.RP.A.3.B
           </p>
-</button>,
+        </button>,
         <button
           className="standard-link"
           onClick={[Function]}
->
+        >
           <p
-                    className="standard-text R-link"
+            className="standard-text R-link"
           >
-                    6.RP.A.3.C
+            6.RP.A.3.C
           </p>
-</button>,
+        </button>,
       ],
       "className": "domain-section",
     },
@@ -128,9 +128,9 @@ ShallowWrapper {
         "props": Object {
           "children": <h5
             className="domain-label"
->
+          >
             Ratios & Proportions
-</h5>,
+          </h5>,
           "className": "domain-label-container",
         },
         "ref": null,
@@ -155,9 +155,9 @@ ShallowWrapper {
         "props": Object {
           "children": <p
             className="standard-text R-link"
->
+          >
             6.RP.A.1
-</p>,
+          </p>,
           "className": "standard-link",
           "onClick": [Function],
         },
@@ -183,9 +183,9 @@ ShallowWrapper {
         "props": Object {
           "children": <p
             className="standard-text R-link"
->
+          >
             6.RP.A.2
-</p>,
+          </p>,
           "className": "standard-link",
           "onClick": [Function],
         },
@@ -211,9 +211,9 @@ ShallowWrapper {
         "props": Object {
           "children": <p
             className="standard-text R-link"
->
+          >
             6.RP.A.3
-</p>,
+          </p>,
           "className": "standard-link",
           "onClick": [Function],
         },
@@ -239,9 +239,9 @@ ShallowWrapper {
         "props": Object {
           "children": <p
             className="standard-text R-link"
->
+          >
             6.RP.A.3.A
-</p>,
+          </p>,
           "className": "standard-link",
           "onClick": [Function],
         },
@@ -267,9 +267,9 @@ ShallowWrapper {
         "props": Object {
           "children": <p
             className="standard-text R-link"
->
+          >
             6.RP.A.3.B
-</p>,
+          </p>,
           "className": "standard-link",
           "onClick": [Function],
         },
@@ -295,9 +295,9 @@ ShallowWrapper {
         "props": Object {
           "children": <p
             className="standard-text R-link"
->
+          >
             6.RP.A.3.C
-</p>,
+          </p>,
           "className": "standard-link",
           "onClick": [Function],
         },
@@ -328,73 +328,73 @@ ShallowWrapper {
         "children": Array [
           <section
             className="domain-label-container"
->
+          >
             <h5
-                        className="domain-label"
+              className="domain-label"
             >
-                        Ratios & Proportions
+              Ratios & Proportions
             </h5>
-</section>,
+          </section>,
           <button
             className="standard-link"
             onClick={[Function]}
->
+          >
             <p
-                        className="standard-text R-link"
+              className="standard-text R-link"
             >
-                        6.RP.A.1
+              6.RP.A.1
             </p>
-</button>,
+          </button>,
           <button
             className="standard-link"
             onClick={[Function]}
->
+          >
             <p
-                        className="standard-text R-link"
+              className="standard-text R-link"
             >
-                        6.RP.A.2
+              6.RP.A.2
             </p>
-</button>,
+          </button>,
           <button
             className="standard-link"
             onClick={[Function]}
->
+          >
             <p
-                        className="standard-text R-link"
+              className="standard-text R-link"
             >
-                        6.RP.A.3
+              6.RP.A.3
             </p>
-</button>,
+          </button>,
           <button
             className="standard-link"
             onClick={[Function]}
->
+          >
             <p
-                        className="standard-text R-link"
+              className="standard-text R-link"
             >
-                        6.RP.A.3.A
+              6.RP.A.3.A
             </p>
-</button>,
+          </button>,
           <button
             className="standard-link"
             onClick={[Function]}
->
+          >
             <p
-                        className="standard-text R-link"
+              className="standard-text R-link"
             >
-                        6.RP.A.3.B
+              6.RP.A.3.B
             </p>
-</button>,
+          </button>,
           <button
             className="standard-link"
             onClick={[Function]}
->
+          >
             <p
-                        className="standard-text R-link"
+              className="standard-text R-link"
             >
-                        6.RP.A.3.C
+              6.RP.A.3.C
             </p>
-</button>,
+          </button>,
         ],
         "className": "domain-section",
       },
@@ -407,9 +407,9 @@ ShallowWrapper {
           "props": Object {
             "children": <h5
               className="domain-label"
->
+            >
               Ratios & Proportions
-</h5>,
+            </h5>,
             "className": "domain-label-container",
           },
           "ref": null,
@@ -434,9 +434,9 @@ ShallowWrapper {
           "props": Object {
             "children": <p
               className="standard-text R-link"
->
+            >
               6.RP.A.1
-</p>,
+            </p>,
             "className": "standard-link",
             "onClick": [Function],
           },
@@ -462,9 +462,9 @@ ShallowWrapper {
           "props": Object {
             "children": <p
               className="standard-text R-link"
->
+            >
               6.RP.A.2
-</p>,
+            </p>,
             "className": "standard-link",
             "onClick": [Function],
           },
@@ -490,9 +490,9 @@ ShallowWrapper {
           "props": Object {
             "children": <p
               className="standard-text R-link"
->
+            >
               6.RP.A.3
-</p>,
+            </p>,
             "className": "standard-link",
             "onClick": [Function],
           },
@@ -518,9 +518,9 @@ ShallowWrapper {
           "props": Object {
             "children": <p
               className="standard-text R-link"
->
+            >
               6.RP.A.3.A
-</p>,
+            </p>,
             "className": "standard-link",
             "onClick": [Function],
           },
@@ -546,9 +546,9 @@ ShallowWrapper {
           "props": Object {
             "children": <p
               className="standard-text R-link"
->
+            >
               6.RP.A.3.B
-</p>,
+            </p>,
             "className": "standard-link",
             "onClick": [Function],
           },
@@ -574,9 +574,9 @@ ShallowWrapper {
           "props": Object {
             "children": <p
               className="standard-text R-link"
->
+            >
               6.RP.A.3.C
-</p>,
+            </p>,
             "className": "standard-link",
             "onClick": [Function],
           },

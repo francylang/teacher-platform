@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Domain from './Domain';
 import { colorsByDomain } from '../assets/colors';
 import { postNewDiscussion } from '../utils/postDiscussion';
-import { domainsByGrade, domains67, domains8 } from '../utils/tagStandards';
+import { StandardsByDomain, domains67, domains8 } from '../utils/tagStandards';
 
 class DiscussionForm extends Component {
   constructor() {
@@ -13,7 +13,9 @@ class DiscussionForm extends Component {
       gradeSelected: '',
       domainSelected: '',
       standardSelected: '',
-      isActive: false
+      isActive: false,
+      isActiveDropDown: false
+
     };
     this.selectDomain = this.selectDomain.bind(this);
   }
@@ -59,9 +61,9 @@ class DiscussionForm extends Component {
     });
   }
 
-  handleSelectStandard(event) {
+  handleSelectStandard(event, domain) {
     event.preventDefault();
-    this.setState({ standardSelected: event.target.value });
+    this.setState({ standardSelected: domain });
   }
 
   renderDropDown() {
@@ -69,30 +71,31 @@ class DiscussionForm extends Component {
     const standardAbbrev = (`${gradeSelected}-${domainSelected}`);
 
     if (domainSelected) {
-      const mappedDomains = domainsByGrade[standardAbbrev].map(domain => {
+      const mappedDomains = StandardsByDomain[standardAbbrev].map(domain => {
         return (
-          <option
+          <li
+            className={this.state.isActiveDropDown ? "reveal-standards" : "standard"}
             key={domain}
             value={domain}
+            onClick={(event) => this.handleSelectStandard(event, domain)}
           >
             {domain}
-          </option>
+          </li>
         );
       });
       return (
-        <select
+        <ul
           className="drop-down-standards"
-          value={standardSelected}
-          onChange={this.handleSelectStandard.bind(this)}>
-        >
+          value={standardSelected}>
+          <li className="select-standard" onClick={(event) => this.removeClass(event)}>Select a Standard</li>
           {mappedDomains}
-        </select>
+        </ul>
       );
     }
   }
 
-  handleStandardSelect(event) {
-    this.setState({ standardSelected: event.target.value });
+  removeClass(event) {
+    this.setState({ isActiveDropDown: !this.state.isActiveDropDown });
   }
 
   renderDomains() {
@@ -142,7 +145,6 @@ class DiscussionForm extends Component {
 
   render() {
     const { title, body, standardSelected } = this.state;
-
     return (
       <article className="discussion-form-section">
         <h3 className="form-directions">Start a discussion.</h3>
@@ -169,12 +171,12 @@ class DiscussionForm extends Component {
               onChange={this.handleChange.bind(this, 'body')}
             >
             </textarea>
-            <div>{standardSelected}</div>
+            <div className={standardSelected ? "standard-selected" : "not-selected"}>{standardSelected}</div>
           </label>
           <h3 className="grade-directions">Select a grade level, then a domain:</h3>
           <div className="grade-level-buttons">{this.renderGradeLevelButtons()}</div>
           <div className="grade-level-domains">{this.renderDomains()}</div>
-          <div className="grade-level-standards">{this.renderDropDown()}</div>
+          {this.renderDropDown()}
           <button
             className="submit-discussion-btn"
             onClick={(event) => this.handleSubmit(event)}

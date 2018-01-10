@@ -19,7 +19,7 @@ ShallowWrapper {
     "props": Object {
       "children": <p
         className="comment"
-/>,
+      />,
       "className": "comment-section",
     },
     "ref": null,
@@ -45,7 +45,7 @@ ShallowWrapper {
       "props": Object {
         "children": <p
           className="comment"
-/>,
+        />,
         "className": "comment-section",
       },
       "ref": null,
