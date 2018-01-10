@@ -180,10 +180,10 @@ h3.form-directions {
 
 .standard-selected {
   border-radius: 5px;
-  border: 1px solid #62696D;
   display: inline-block;
   padding: 4px 6px;
-  font-size: 90%; }
+  font-size: 90%;
+  color: #fff; }
 
 .not-selected {
   display: none; }
