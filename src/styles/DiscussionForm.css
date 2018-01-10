@@ -150,17 +150,33 @@ h3.form-directions {
   color: #9A979D;
   border-top: 1px solid #9A979D;
   background-color: #fff;
-  padding: 10px; }
+  padding: 10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px; }
 
 .reveal-standards:hover {
   background-color: #B5B9BC;
-  color: #fff; }
+  color: #fff;
+  border-radius: 0; }
 
 .select-standard {
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   padding: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  position: relative;
+  font-size: 16px;
+  color: #fff;
+  background-color: #62696D; }
+
+.select-standard-inactive {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 5px;
   position: relative;
   font-size: 16px;
   color: #fff;
@@ -179,7 +195,6 @@ h3.form-directions {
   background-size: cover; }
 
 .standard-selected {
-  border-radius: 5px;
   display: inline-block;
   padding: 4px 6px;
   font-size: 90%;
@@ -187,3 +202,24 @@ h3.form-directions {
 
 .not-selected {
   display: none; }
+
+.hover-F:hover {
+  background-color: #D155FF; }
+
+.hover-R:hover {
+  background-color: #D155FF; }
+
+.hover-P:hover {
+  background-color: #D155FF; }
+
+.hover-N:hover {
+  background-color: #40ECB2; }
+
+.hover-E:hover {
+  background-color: #5C40EC; }
+
+.hover-G:hover {
+  background-color: #D0EC40; }
+
+.hover-S:hover {
+  background-color: #FF7C55; }

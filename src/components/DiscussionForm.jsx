@@ -74,7 +74,7 @@ class DiscussionForm extends Component {
       const mappedDomains = StandardsByDomain[standardAbbrev].map((domain) => {
         return (
           <li
-            className={this.state.isActiveDropDown ? "reveal-standards" : "standard"}
+            className={this.state.isActiveDropDown ? `reveal-standards hover-${domainSelected}` : "standard"}
             key={domain}
             value={domain}
             onClick={(event) => this.handleSelectStandard(event, domain)}
@@ -88,7 +88,7 @@ class DiscussionForm extends Component {
           className="drop-down-standards"
           value={standardSelected}>
           <li
-            className="select-standard"
+            className={this.state.isActiveDropDown ? "select-standard" : "select-standard-inactive"}
             onClick={(event) => this.removeClass(event)}
           >
             Select a Standard
@@ -147,7 +147,9 @@ class DiscussionForm extends Component {
           className={`grade-level-button btn-${gradeLevelNums[index]}`}
           value={gradeLevelNums[index]}
           onClick={(event) => this.selectGrade(event)}
-        >{grade}</button>
+        >
+          {grade}
+        </button>
       );
     });
   }
