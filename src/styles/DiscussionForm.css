@@ -150,7 +150,7 @@ h3.form-directions {
   color: #9A979D;
   border-top: 1px solid #9A979D;
   background-color: #fff;
-  padding: 10px;
+  padding: 10px 15px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px; }
 
@@ -163,7 +163,7 @@ h3.form-directions {
   cursor: pointer;
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  padding: 10px 15px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   position: relative;
@@ -196,6 +196,7 @@ h3.form-directions {
 
 .standard-selected {
   display: inline-block;
+  border-radius: 5px;
   padding: 4px 6px;
   font-size: 90%;
   color: #fff; }
