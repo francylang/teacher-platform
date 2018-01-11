@@ -4,6 +4,7 @@ import Nav from './Nav';
 import CardContainer from './CardContainer';
 import DiscussionForm from './DiscussionForm';
 import FilterForm from './FilterForm';
+import Landing from './Landing';
 import { Redirect } from 'react-router';
 import { PROD_URL } from '../utils/url.js';
 
@@ -131,6 +132,7 @@ class App extends Component {
             handleSearch={this.handleSearch}
             fetchDiscussions={this.fetchDiscussions}
           />
+          <Landing />
           <section className="bottom-main">
             { this.renderCardContainer() }
             { showForm }

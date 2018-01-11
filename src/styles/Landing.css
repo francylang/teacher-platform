@@ -1,0 +1,41 @@
+.victory-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
+
+.domain-breakdown {
+  height: 350px;
+  width: 350px; }
+
+.data-title {
+  text-transform: uppercase; }
+
+.activity-chart {
+  height: 400px;
+  width: 400px; }
+
+.discussion-data,
+.comment-data {
+  outline: 1px solid red;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.discussion-icon {
+  background-image: url(../assets/discussion.svg);
+  height: 60px;
+  width: 60px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.comment-icon {
+  background-image: url(../assets/comment.svg);
+  height: 60px;
+  width: 60px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
