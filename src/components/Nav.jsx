@@ -24,7 +24,7 @@ const Nav = ({
         onClick={() => renderData()}
         className="data-btn"
       >
-        <h4 className="standard-option">
+        <h4 className="data-option">
           Data
         </h4>
       </button>
