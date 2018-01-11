@@ -1,3 +1,7 @@
+* {
+  color: #2B2B2B;
+}
+
 .victory-container {
   display: flex;
   flex-direction: row;
@@ -10,8 +14,30 @@
   width: 350px;
 }
 
+.icon-data {
+  display: flex;
+  flex-direction: column;
+  margin: 0 5%;
+}
+
 .data-title {
   text-transform: uppercase;
+}
+
+.acitivty-data-title {
+  text-transform: uppercase;
+  margin: 0;
+  position: absolute;
+  top: 40px;
+  left: 32.5%;
+}
+
+.breakdown-data-title {
+  text-transform: uppercase;
+  margin: 0;
+  position: absolute;
+  top: 20px;
+  left: 27.5%;
 }
 
 .activity-chart {
@@ -43,4 +69,10 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.domain-breakdown,
+.activity-chart,
+.icon-data {
+  position: relative;
 }
