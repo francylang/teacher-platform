@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 import { VictoryPie, VictoryBar, VictoryChart } from 'victory';
 
 const data = [
-  {week: 1, "discussions/comments": 13000},
-  {week: 2, "discussions/comments": 16500},
-  {week: 3, "discussions/comments": 14250},
-  {week: 4, "discussions/comments": 19000}
+  {week: "Q1", "discussions/comments": 13000},
+  {week: "Q2", "discussions/comments": 16500},
+  {week: "Q3", "discussions/comments": 14250},
+  {week: "Q4", "discussions/comments": 19000}
 ];
 
 class Landing extends React.Component {
@@ -19,13 +19,16 @@ class Landing extends React.Component {
             <VictoryBar
               style={{ data: { fill: "#40ECB2" } }}
               data={[
-                {week: 1, "discussions/comments": 13000},
-                {week: 2, "discussions/comments": 16500},
-                {week: 3, "discussions/comments": 14250},
-                {week: 4, "discussions/comments": 19000}
+                {week: "Q1", "discussions/comments": 7},
+                {week: "Q2", "discussions/comments": 12},
+                {week: "Q3", "discussions/comments": 15},
+                {week: "Q4", "discussions/comments": 5},
+                {week: "", "discussions/comments": 0},
               ]}
               x="week"
               y="discussions/comments"
+              alignment="start"
+              barRatio={0.8}
 
             />
           </VictoryChart>
