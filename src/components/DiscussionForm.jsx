@@ -71,10 +71,10 @@ class DiscussionForm extends Component {
     const standardAbbrev = (`${gradeSelected}-${domainSelected}`);
 
     if (domainSelected) {
-      const mappedDomains = StandardsByDomain[standardAbbrev].map(domain => {
+      const mappedDomains = StandardsByDomain[standardAbbrev].map((domain) => {
         return (
           <li
-            className={this.state.isActiveDropDown ? "reveal-standards" : "standard"}
+            className={this.state.isActiveDropDown ? `reveal-standards hover-${domainSelected}` : "standard"}
             key={domain}
             value={domain}
             onClick={(event) => this.handleSelectStandard(event, domain)}
@@ -87,7 +87,16 @@ class DiscussionForm extends Component {
         <ul
           className="drop-down-standards"
           value={standardSelected}>
-          <li className="select-standard" onClick={(event) => this.removeClass(event)}>Select a Standard</li>
+          <li
+            className={this.state.isActiveDropDown ? "select-standard" : "select-standard-inactive"}
+            onClick={(event) => this.removeClass(event)}
+          >
+            Select a Standard
+            <div
+              className={this.state.isActiveDropDown ? "drop-down-icon" : "drop-up-icon"}
+            >
+            </div>
+          </li>
           {mappedDomains}
         </ul>
       );
@@ -138,7 +147,9 @@ class DiscussionForm extends Component {
           className={`grade-level-button btn-${gradeLevelNums[index]}`}
           value={gradeLevelNums[index]}
           onClick={(event) => this.selectGrade(event)}
-        >{grade}</button>
+        >
+          {grade}
+        </button>
       );
     });
   }
@@ -171,7 +182,7 @@ class DiscussionForm extends Component {
               onChange={this.handleChange.bind(this, 'body')}
             >
             </textarea>
-            <div className={standardSelected ? "standard-selected" : "not-selected"}>{standardSelected}</div>
+            <div className={standardSelected ? `${standardSelected[2]} standard-selected` : "not-selected"}>{standardSelected}</div>
           </label>
           <h3 className="grade-directions">Select a grade level, then a domain:</h3>
           <div className="grade-level-buttons">{this.renderGradeLevelButtons()}</div>
