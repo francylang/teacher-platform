@@ -13,14 +13,16 @@ class App extends Component {
     super();
     this.state = {
       filteredDiscussions: [],
-      showingDiscussions: true,
+      showingDiscussions: false,
       showingForm: false,
       showingStandards: false,
+      showingData: true,
     };
 
     this.renderDiscussions = this.renderDiscussions.bind(this);
     this.renderForm = this.renderForm.bind(this);
     this.renderStandards = this.renderStandards.bind(this);
+    this.renderData = this.renderData.bind(this);
     this.renderFilteredDiscussions = this.renderFilteredDiscussions.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
     this.fetchDiscussions = this.fetchDiscussions.bind(this);
@@ -59,6 +61,7 @@ class App extends Component {
       showingDiscussions: true,
       showingForm: false,
       showingStandards: false,
+      showingData: false,
     });
   }
 
@@ -67,6 +70,7 @@ class App extends Component {
       showingDiscussions: false,
       showingForm: true,
       showingStandards: false,
+      showingData: false,
     });
   }
 
@@ -75,6 +79,16 @@ class App extends Component {
       showingDiscussions: false,
       showingForm: false,
       showingStandards: true,
+      showingData: false,
+    });
+  }
+
+  renderData() {
+    this.setState({
+      showingDiscussions: false,
+      showingForm: false,
+      showingStandards: false,
+      showingData: true,
     });
   }
 
@@ -103,7 +117,7 @@ class App extends Component {
   }
 
   render() {
-    const { showingForm, showingStandards, filteredDiscussions } = this.state;
+    const { showingForm, showingStandards, filteredDiscussions, showingData } = this.state;
 
     if (this.props.signedInStatus === false) {
       return <Redirect to='/login'/>;
@@ -120,6 +134,9 @@ class App extends Component {
         filteredDiscussions={filteredDiscussions}
       /> : null;
 
+    const showData = showingData
+      ? <Landing /> : null;
+
     return (
       <section className="app">
         <article className="main">
@@ -131,12 +148,13 @@ class App extends Component {
             renderFilteredDiscussions={this.renderFilteredDiscussions}
             handleSearch={this.handleSearch}
             fetchDiscussions={this.fetchDiscussions}
+            renderData={this.renderData}
           />
-          <Landing />
           <section className="bottom-main">
             { this.renderCardContainer() }
             { showForm }
             { showStandards }
+            { showData }
           </section>
         </article>
       </section>

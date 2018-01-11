@@ -10,7 +10,8 @@ const Nav = ({
   renderStandards,
   renderForm,
   filteredDiscussions,
-  fetchDiscussions }) => {
+  fetchDiscussions,
+  renderData }) => {
   return (
     <div className="nav">
       <SearchContainer
@@ -19,6 +20,14 @@ const Nav = ({
         renderDiscussions={renderDiscussions}
         renderFilteredDiscussions={renderFilteredDiscussions}
       />
+      <button
+        onClick={() => renderData()}
+        className="data-btn"
+      >
+        <h4 className="standard-option">
+          Data
+        </h4>
+      </button>
       <button
         onClick={() => renderStandards()}
         className="filter-btn"
@@ -55,6 +64,7 @@ Nav.propTypes = {
   handleSearch: PropTypes.func,
   renderForm: PropTypes.func,
   renderStandards: PropTypes.func,
+  renderData: PropTypes.func,
   renderDiscussions: PropTypes.func,
   renderFilteredDiscussions: PropTypes.func,
   signedInStatus: PropTypes.func,
