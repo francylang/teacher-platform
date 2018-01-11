@@ -19,7 +19,7 @@ class Landing extends React.Component {
             <h4 className="acitivty-data-title">Your activity</h4>
             <VictoryChart>
               <VictoryBar
-                style={{ data: { fill: "#40ECB2" } }}
+                style={{ data: { fill: "#5C40EC" } }}
                 data={[
                   {week: "Q1", "discussions/comments": 7},
                   {week: "Q2", "discussions/comments": 12},
