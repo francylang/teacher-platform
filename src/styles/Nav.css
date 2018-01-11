@@ -19,17 +19,20 @@
   cursor: pointer; }
 
 .standard-option,
-.new-discussion-option {
+.new-discussion-option,
+.data-option {
   color: #2B2B2B;
   border-bottom: #EAF2F8 2px solid; }
 
 .standard-option:hover,
-.new-discussion-option:hover {
+.new-discussion-option:hover,
+.data-option:hover {
   border-bottom: #2B2B2B 2px solid;
   transition: all 0.5s; }
 
 .toggle-discussion-form-btn,
-.toggle-discussions-btn {
+.toggle-discussions-btn,
+.data-btn {
   display: flex;
   flex-direction: row;
   align-items: center;
