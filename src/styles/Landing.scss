@@ -2,10 +2,14 @@
   color: #2B2B2B;
 }
 
+.greeting {
+  font-family: 'Ubuntu Mono';
+  font-size: 170%;
+}
+
 .victory-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -18,17 +22,23 @@
   display: flex;
   flex-direction: column;
   margin: 0 5%;
+  height: 333px;
 }
 
 .data-title {
   text-transform: uppercase;
+  margin: 15px;
+}
+
+span {
+  color: #F7FAFC;
 }
 
 .acitivty-data-title {
   text-transform: uppercase;
   margin: 0;
   position: absolute;
-  top: 40px;
+  top: 50px;
   left: 32.5%;
 }
 
@@ -56,16 +66,17 @@
 
 .discussion-icon {
   background-image: url(../assets/discussion.svg);
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .comment-icon {
-  background-image: url(../assets/comment.svg);  height: 60px;
-  width: 60px;
+  background-image: url(../assets/comment.svg);
+  height: 50px;
+  width: 50px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
